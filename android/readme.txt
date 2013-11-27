@@ -1,0 +1,90 @@
+Activity的生命周期(7个方法、3个阶段)
+
+onCreate
+onStart
+onRestart
+onResume
+onPause
+onStop
+onDestroy
+
+--------------------------------------
+开始Activity
+onCreate -> onStart -> onResume
+
+结束Activity
+onPause -> onStop -> onDestroy
+
+重新获取焦点
+onRestart -> onStart -> onResume
+
+--------------------------------------
+焦点生命周期：Activity始终可见
+onPause -> onResume -> onPause
+
+生命周期：
+onStart -> onRestart -> onResume -> onPause -> onStop -> onStart
+
+--------------------------------------
+
+Activity 之间传递数据
+
+Intent
+
+Intent Structure
+action：
+ACTION_EDIT 
+ACTION_MAIN
+ACTION_VIEW
+
+category：类别， Gives additional information about the action.
+
+CATEGORY_LAUNCHER means it should appear in the Launcher as a top-level application
+CATEGORY_ALTERNATIVE means it should be included in a list of alternative actions the user can perform on a piece of data.
+
+
+data：uri形式
+
+type ： Specifies an explicit type (a MIME type) of the intent data.
+
+component: 若以上找不到，则指定组件。
+
+extras：This is a Bundle of any additional information.
+
+
+---------------------------
+通过静态变量传递数据
+
+布局文件
+  <button   android:id 
+  ></button>
+
+activity类中：
+private Button button;
+
+oncreat()中：
+setContentView(R.layout.main); //加载布局文件
+button = (Button)this.findViewById(R.id.button);
+button.setOnClickListener(new View.onClickListener());
+
+public void onClick(View v){
+
+    Intent intent = new Intent(main.this, otherActivity.class);//选择指定组件的方法
+    Intent.putExtra("name", "张三");
+    Intent.putExtra("age","23");
+    startActivity(intent);
+}
+
+取数据
+在otherActivity类中：
+onCreate()中：
+setContentView(R.layout.other);
+Intent intent = getIntent();
+String name = intent.getStringExtra("name");
+int age = intent.getStringExtra("age");
+textView.setText("age--->>" + age);
+
+---------------------------------------------------------
+通过剪切板传递数据
+
+

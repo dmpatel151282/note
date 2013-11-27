@@ -1,0 +1,14 @@
+1.adb安装
+1）sudo apt-get install android-tools-adb 
+
+2.设备连接
+1）mkdir ~/.android/
+   vim ~/.android/adb_usb.ini 添加:设备的UID(?)，0x1f3a
+
+llusb
+sudo /etc/udev/rules.d/70-persistent-cd.rules 添加:
+SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="0003", MODE="0666"
+sudo service udev restart
+adb kill-server
+adb devices
+

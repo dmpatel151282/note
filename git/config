@@ -1,0 +1,23 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+
+[user]
+    name = liushui
+    email = 15980936990@163.com
+    
+[alias]
+    br = branch
+    co = checkout
+    ci = commit
+    st = status
+    af = am --ignore-whitespace --3way
+
+[remote "origin"]
+	url = https://github.com/liushui312/note.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+[http]
+	postBuffer = 524288000

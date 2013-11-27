@@ -1,0 +1,466 @@
+一、正则表达式
+
+	Regular Expression
+	
+	正则表达式就是对在某个字母表Sigma上的字符串集合的符号描述.
+	比较容易理解的说法: 正则表达式是一种对字符串集合的表示方法.
+	or: 正则表达式描述一种模式(pattern).
+
+	一个RE描述了一个定义在某个字母表Sigma上的字符串的集合, 外加一个表示空串的字符epsilon.
+	将字符串的这种集合称为一种语言.
+	对于给定的RE r来说, 我们将它规定的语言(or:字符串集合)记作L(r)
+
+	正则表达式的三个基本运算:
+	选择: R | S
+		ex: a是一个正则表达式, 匹配字符串a; b是一个正则表达式, 匹配字符串b;
+		那么 a|b 是一个正则表达式, 匹配字符a 或者 b.
+
+	连接: RS
+		ex: ab匹配ab
+
+	闭包: R* (Kleen closure, 柯林闭包)
+		ex: a*匹配epsilon, a, aa, aaa, aaaa...
+
+	为消除二义性, 括号具有最高优先级, 其次为闭包, 连接和选择.
+	基础正则表达式只具有闭包和连接功能, 扩展正则表达式则支持括号分组和选择.
+
+	tips:
+		不要把正则表达式和bash通配符混为一谈.
+		bash通配符是由bash解释器扩展和匹配的, 它不是通用的描述字符串集合的表达方式.
+		而正则表达式则是通用的描述字符串集合的表达方式, -- 它被Unix like系统中广泛的
+		应用程序以及程式设计语言支持.
+
+==============================================================================
+
+二、常用正则表达式符号
+
+	基础正则表达式
+	\		转义, 将元字符转换为普通字符, or将普通字符转义为元字符
+			注意: \本身也是元字符.
+			因此, \\转义其自身为普通字符.
+	^		锚定行首
+	$		锚定行尾
+	\<good		表示以good开头的单词
+	sh\>		表示以sh结尾的单词
+	.		表示[字母表中的, 以下略]任何一个单一字符		
+	*		柯林闭包, 重复0到无穷次前一个字符
+	[abc]		表示当前位置为a或b或c其中任意一个
+	[^abc]		表示当前位置除了a,b,c以外任意一个字符
+	[0-9]		表示0-9中的一个字符. 注意语系.
+	\{n,m\}		见下示例
+	a\{3\}		匹配a为3次
+	a\{3,\}		匹配a为至少3次
+	a\{3,100\}	匹配a为3到100次		
+
+	扩展正则表达式(需要用egrep测试)
+	()		括号优先级分组
+	r|s		选择运算
+	+		重复1到无穷次前一个字符, 例: a+ 等价于 aa* ,亦等价于 a\{1,\}
+	?		0个或者1个前一个字符, 例: a? 等价于 a\{0,1\}
+
+			POSIX egrep和awk而不是传统的egrep和awk
+	{n,m}		见下示例(即, 扩展正则表达式中{和}成为元字符)
+	{3}		    匹配a为3次
+	{3,}		匹配a为至少3次
+	{3,100}		匹配a为3到100次
+
+
+==============================================================================
+
+三、grep
+	globe regular expression print
+
+	man grep查看grep synopsis.
+
+
+	grep "r..t" passwd              搜索第一个字符是r，第二和第三个字符为任意字符，第四字符为t的字符串的行
+	grep "r.*t" passwd              搜索第一个字符是r，中间为任意长度任意字符，最后一个字符为t的字符串的行
+	grep "r*t"  passwd              搜索第一个是零个r或多个r,最后一个字符为t的字符串的行
+	grep "^r" passwd                搜索以r为首字符的行
+	grep "t$" passwd                搜索以t为尾字符的行
+	grep "^rt$" passwd              搜索只有两人字符为rt的行
+	grep "\<root" passwd            搜索以root开头的单词的行
+	grep "root\>" passwd            搜索以root结尾的单词的行
+	grep "\<root\>" passwd          搜索完全匹配root的单词的行
+	grep "[abc]" passwd             搜索有a或b或c字符的行
+	grep "[^abc]" passwd            搜索没有a或b或c字符的行
+	grep "ga\{3\}" passwd           搜索以g开头，后面跟3个a的字符串的行
+	grep "ga\{3,\}" passwd          搜索以g开头，后面跟3个以上的a字符的字符串的行
+	grep "ga\{3,6\}" passwd         搜索以g开头，后面跟3个到6个a字符的字符串的行
+
+	egrep "r+t" passwd              搜索以一个r或多个r,后面跟t的字符串的行
+	egrep "r?t" passwd              搜索以一个r或空,后面跟t的字符串的行
+	egrep "r|t" passwd              搜索出现r或t字符的行
+	egrep "root|madao" passwd         搜索出现root或madao单词的行
+	egrep "r(abc)+t" passwd         以r开头中间至少有一个或多个abc后面跟上t字符的字符串的行
+
+==============================================================================
+
+四、Sed 流编辑器
+
+    删除(过滤输出) d
+        
+        指定删除第一行
+
+            sed -e '1d' /etc/passwd             
+
+        删除第二行到第四行
+
+            sed -e '2,4d' /etc/passwd
+
+        删除第二和第四行
+
+            sed -e '2d;4d' /etc/passwd
+
+        删除第一行到第三行和第五行
+
+            sed -e '1,3d;5d' /etc/passwd
+
+        删除匹配root的行
+
+            sed -e '/root/d' /etc/passwd
+
+        删除匹配以ftp开头的行
+            
+            sed -e '/^ftp/d' /etc/passwd
+
+        删除匹配以bash为结尾的行
+            
+            sed -e '/bash$/d' /etc/passwd
+
+        删除空行
+            
+            sed -e '/^$/d' /etc/passwd
+
+        删除以小写字母开头的行
+            
+            sed -e '/^[a-z]/d' /etc/passwd
+
+            sed -e '/^[[:lower:]]/d' /etc/passwd
+
+        删除以大写字母开头的行
+            
+            sed -e '/^[A-Z]/d' /etc/passwd
+
+            sed -e '/^[[:upper:]]/d' /etc/passwd
+
+        删除以数字开头的行
+            
+            sed -e '/^[0-9]/d' /etc/passwd
+
+            sed -e '/^[[:digit:]]/d' /etc/passwd
+
+        删除以字母开头的行
+            
+            sed -e '/^[A-Za-z]/d' /etc/passwd
+
+        删除以空格开头的行
+            
+            sed -e '/^\ /d' /etc/passwd
+
+            sed -e '/^[[:blank:]]/d' /etc/passwd
+
+        删除以特殊符号开头的行
+            
+            sed -e '/^[[:punct:]]/d' /etc/passwd
+
+
+    打印 p
+        
+        打印第一行
+            
+            sed -ne '1p' /etc/passwd        不加n参数没有效果
+
+        打印匹配root开头的行
+            
+            sed -ne '/^root/p' /etc/passwd
+
+        打印以小写字母开头，和以nologin结尾的行
+            
+            sed -ne '/^[a-z]/p;/nologin$/p'
+
+        打印以root开头和以ftp开头的行
+            
+            sed -ne '/^root/p;/^ftp/p' /etc/passwd
+
+
+    替换 s
+    
+        把每行的第一个root替换成kyo
+            
+            sed -e 's/root/kyo/' /etc/passwd
+
+        把每行的root替换成kyo
+            
+            sed -e 's/root/kyo/g' /etc/passwd
+
+        把每行的第二个root替换成kyo
+            
+            sed -e 's/root/kyo/2' /etc/passwd
+
+        指定2到10行范围把root替换成kyo
+
+            sed -e '2,10s/root/kyo/g' /etc/passwd
+
+        把root替换成rootboot ,&代表前面被替换的字符
+            
+            sed -e 's/root/&boot/' /etc/passwd
+
+        把以bin开头的行到以adm开头的行，把a换成abc
+            
+            sed -e '/^bin/,/^adm/s/a/&bc/g'
+
+        支持扩展正则表达式把-e换成-r
+            
+            sed -r '/^a+/&b/g' 
+
+    
+    对源文件内容进行实际操作 ,把-e换成-i
+        
+        删除文件中第一行
+            
+            sed -i '1d' /tmp/passwd
+
+    
+    使用域进行定位
+        
+        \(\)将\(和\)之间的字符串定义为一个域，并且将匹配这个表达式保存到一个区域,一个正则表达式最多可以保存9个域，访问域\1到\9来表示
+
+        -e 就要用\(\)
+        -r 不需要转义直接()
+
+        删除每行的第一个字符
+            
+            sed -e 's/.\(.*\)/\1/'      
+        
+        
+        删除每行的第二个字符
+            
+            sed -e 's/\(.\).\(.*\)/\1\2/'
+
+        删除最行最后一个字符
+            
+            sed -e 's/\(.*\)./\1/'
+
+        删除每行的倒数第二个字符
+            
+            sed -e 's/.\(.\)$/\1/'
+
+        删除每行的第二个单词
+
+            sed -r 's/[a-zA-Z]+//2'
+
+        删除每行倒数第二个单词
+
+            sed -r 's/[a-zA-Z]+([ \t]+[a-zA-Z]+)$/\1/'
+
+        删除每行的最后一个单词
+            
+            sed -r 's/[a-zA-Z]+$//'
+
+        交换每行的第一个字符和第二个字符
+            
+            sed -r 's/^(.)(.)/\2\1/'
+
+        交换每行的第一个单词和第二个单词
+            
+            sed -r 's/([a-zA-Z]+)([^a-zA-Z]+)([a-zA-Z]+)/\3\2\1/'
+
+        交换每行的第一个单词和最后一个单词
+            
+            sed -r 's/([a-zA-Z]+)([^a-zA-Z]+.*[^a-zA-Z]+)([a-zA-Z]+)$/\3\2\1/'
+
+        删除文件中所有的数字
+
+            sed -e 's/[0-9]//g'
+
+        把所有大写字母用括号()括起来
+            
+            sed -r 's/[A-Z]/(&)/g'
+
+        只显示每行的第一个单词
+            
+            sed -r 's/^([a-zA-Z]+).*/\1/'
+
+        打印每行的第一个单词和第三个单词
+
+            sed -r 's/^([a-zA-Z]+)[^a-zA-Z]+[a-zA-Z]+[^a-zA-Z]+([a-zA-Z]+).*/\1\2/'
+
+    
+
+    basename `pwd`      取得当前目录名
+
+    dirname `pwd`       取得当前路径，不包含当前目录名
+
+    tac                 倒转文件里的内容
+
+    rev                 倒转文件里的单词顺序
+
+==============================================================================
+
+五、awk
+
+
+Awk是一门编程语言，有很多版本，我们用的是GNU的gawk
+
+        
+        以:为分隔符打印第三列
+
+            awk -F : '{print $3}' /etc/passwd
+
+
+        以:为分隔符统计/sbin/nologin有多少个
+
+            awk 'BEGIN{FS=":" ;count=0}{if($7 = "/sbin/nologin")count+=1}END{print count}' /etc/passwd
+
+                BEGIN      在读记录之前执行
+                END        在读完记录后再执行
+                $0         代表所有记录
+                $1-n       代表一个记录的第几个字段
+
+        使用awk脚本
+            
+            #!/bin/awk
+            
+            BEGIN{              
+                FS=:
+                count=0         定义变量
+            }
+
+            {
+                if($7 == "/sbin/nologin")
+                {
+                    count += 1
+                    print $0
+                }
+            }
+
+            END{
+                print "count="count 
+            }
+            
+            awk -f 1.awk /etc/passwd        运行上面的脚本
+
+            FNR         当前处理到第几个文件
+            NF          当前多个个字段
+            NR          当前处理到第几个记录
+            OFS         输入指定字段分隔符
+            ORS         输出记录分隔符
+
+
+        打印所有行
+            
+            awk '{ print $0 }' /etc/passwd
+
+        打印第一列
+            
+            awk -F ":" '{print $1}' /etc/passwd
+        
+        打印第一列和第三列
+            
+            awk -F ":" '{print $1"\t"$3" welcome"}' /etc/passwd
+
+        打印每行的最后一列
+            
+            awk -F : '{print $NF}' /etc/passwd
+
+        打印第八行
+            
+            awk -F : '{if (NR == 8){print $0}}' /etc/passwd
+            awk -F : 'NR == 8 {print $0}' /etc/passwd
+
+        打印行总数
+            
+            awk -F : 'END{print NR}' /etc/passwd
+
+        打印每行的字段数
+            
+            awk -F : '{print NF}' /etc/passwd
+
+        打印最后一行的最后一列
+            
+            awk -F : 'END{print $NF}' /etc/passwd
+        
+        打印字段数大于4的行
+            
+            awk -F : 'NF > 4 {printf $0}' /etc/passwd
+
+        打印文件里所有字段总数
+            
+            awk -F : 'BEGIN{c = 0}{c=c+NF}END{print c}' /etc/passwd
+
+        打印uid在30~40范围内的用户名
+            
+            awk -F : '$3 >= 30 && $3 <= 40{print $1}' /etc/passwd
+        
+        打印5到56行
+            
+            awk -F : 'NR >= 5 && NR <= 56 {print $0}' /etc/passwd
+
+        隔行删除
+            
+            awk '{if (NR % 2 == 0)print $0}' /etc/passwd
+
+        打印每行的第一单词
+            
+            awk 'BEGIN{FS="[^A-Za-z]"}{print $1}' /etc/passwd
+
+        打印每行的第一个和第三个单词
+            
+            awk 'BEGIN{FS="[^a-zA-Z]+"}{print $1,$3}' /etc/passwd
+
+        打印字段数大于5个的行总数
+            
+            awk 'BEGIN{FS=":";sum=0}{NF > 5{sum=sum+1}}END{print sum}' /etc/passwd
+
+==============================================================================
+
+dialog
+
+
+
+--checklist	text height width list-height [tag text status]
+--infobox	text height width
+--inputbox	text height width [inital string]
+--menu		text height width menu-height [tag item]...
+--msgbox	text height width
+--radiolist	text height width list-height [tag txt status]...
+--textbox	filename height width
+--yesno		text height width
+
+dialog --title "Check me" --checklist "Pick Numbers" 15 36 3 1 "one" "off" 2 "two" "on" 3 "three" "off"
+
+
+#!/bin/bash
+
+# 1. 用一个消息框提示用户
+dialog --title "Questionnaire" --msgbox "Welcome to my simple survey" 9 48
+
+# 2. 用一个yesno框询问用户是否要继续
+dialog --title "Confirm" --yesno "Are you willing to take part?" 9 48
+if [ $? != 0 ]; then
+	dialog --infobox "Thank you anyway" 5 36
+	sleep 2
+	dialog --clear
+	exit 0
+fi
+
+# 3. 用一个输入框询问用户姓名. 重定向标准错误流2到临时文件/tmp/_1dialog.txt
+# 然后再将其放到变量Q_NAME中.
+dialog --title "Questionnaire" --inputbox "Pls enter your name:" 9 48 2>/tmp/_1dialog.txt
+Q_NAME=$(cat /tmp/_1dialog.txt)
+
+# 4. 显示一个菜单, 再次重定向标准错误流并将其装载到一个变量中.
+dialog --menu "$Q_NAME, what music do you like best?" 15 48 4 1 "Classical" 2 "Jazz" 3 "Country" 4 "Other" 2>/tmp/_1dialog.txt
+Q_MUSIC=$(cat /tmp/_1dialog.txt)
+if [ "$Q_MUSIC" = "1" ]; then
+	dialog --title "Likes Classical" --msgbox "Good choice!" 12 36
+else
+	dialog --title "Doesn't like Classical" --msgbox "Shame" 12 36
+fi
+
+sleep 1
+clear
+exit 0
+
+==============================================================================
