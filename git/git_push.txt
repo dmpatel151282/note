@@ -1,3 +1,12 @@
+推送远程仓库：
+$ git push [remoteName] [localBranchName];
+
+$git push origin test:master    // 提交本地test分支作为远程的master分支
+$git push origin test:test      // 提交本地test分支作为远程的test分支
+
+git config http.postBuffer [bytes];  524288000
+
+
 1.issue
 
 1）git push错误；fatal: The remote end hung up unexpectedly
@@ -14,7 +23,5 @@ git config http.postBuffer *bytes*.  524288000
 
 
 Does the push operation take longer than the configured timeout of your webserver? Or is the size of the data to push larger than the maximum post size configured in your webserver
-
-
 
 
