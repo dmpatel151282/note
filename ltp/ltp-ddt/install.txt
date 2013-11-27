@@ -1,0 +1,7 @@
+
+HOW TO ADD NEW DDT TESTS:
+You only need to add files to two directories:
+
+testcases/ddt: Contains the test logic files (either c code or shell script)
+
+runtest/ddt  : Contains the test scenario files. It calls the test logic files.

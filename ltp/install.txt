@@ -1,0 +1,53 @@
+complie
+--------------
+1. 交叉编译arm
+
+1）./configure CC=arm-none-linux-gnueabi-gcc AR=arm-none-linux-gnueabi-ar RANLIB=arm-none-linux-gnueabi-ranlib --host=arm-linux --build=i686-pc-linux-gnu --target=arm-linux CFLAGS="-static" LDFLAGS="-static -pthread"
+
+修改对应文件：include/mk/config.mk
+
+获取帮助：./configure --help
+
+2）make;
+    [make 过程中遇到的Error的修改]
+    (1) make[4]: *** [test_arch_stripped] Error 1
+    解决方法: 只要再运行make命令，就OK了。
+    (2) syslog.c:(.text+0x930): multiple definition of `openlog'
+        make[4]: *** [random-access] Error 1
+    解决方法:将./testcases/kernel/fs/fs-bench/random-access.c文件中的openlog变量全部替换掉:
+    :%s/openlog/test_openlog/g
+    (3) syslog.c:(.text+0x930): multiple definition of `openlog'
+        make[4]: *** [random-access-del-create] Error 1
+    解决方法:将./testcases/kernel/fs/fs-bench/random-access-del-create.c文件中的openlog变量全部替换掉:
+    :%s/openlog/openlog_test/g
+
+3）make install prefix="INSTALL_PATH"; 默认/opt/ltp
+
+INSTALL_PATH下就是可以在Android上运行的binary
+
+--------------------------------------------------------------------
+2. LTP 运行环境的建立
+
+1）板子导入busybox
+    android_busybox.sh
+
+2）板子导入编译好的binary
+
+  adb push ltp.tar.bz2 /data/
+  /data/busybox tar jxf ltp.tar.bz2        
+  /data/busybox chmod 777 ltp -R
+
+issue:
+  /data 空间不足; testcases 目录有选择的拷贝
+
+--------------------------------------------------------------------
+3. LTP测试运行
+
+ 1）在adb shell中运行如下命令：
+        mount -o remount rootfs /
+
+ 2）运行LTP测试的命令:
+        ./runltp -t 1m
+                                 
+
+--------------------------------------------------------------------

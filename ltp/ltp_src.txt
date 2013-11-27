@@ -1,0 +1,18 @@
+In the Package
+--------------
+testcases/*
+    Contains all tests that run under the LTP as well as the "bin"
+    directory, which has hardlinks to all the test executables.
+
+runtest/*
+    It houses command lists that are used by ltp-pan for automated testing.
+
+pan/*
+    The pan directory contains a simple, lightweight test harness.  lpt-pan
+    has the ability to run tests randomly and in parallel.See ltp-pan's man 
+    page for more information.
+
+scratch/*
+    The scratch directory is a dumping ground for snippets and test cases
+    that we found but haven't integrated into LTP yet.  Feel free to suggest
+    new snippets to be added, or take one of these and finish it off.

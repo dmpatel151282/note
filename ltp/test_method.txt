@@ -1,0 +1,61 @@
+
+
+1）初始测试
+
+ a) ./runltp -p -l /tmp/resultlog -d /tmp -o /tmp/ltpscreen -t 24h
+
+    -p:人为指定日志格式,保证日志为可读格式                       
+    -l:记录测试日志的文件
+    -d:指定临时存储目录,默认为/tmp
+    -o:直接打印测试输出到/tmp/ltpscreen.20111207
+    -t:指定测试的持续时间
+
+ b) ./runalltests.sh                    
+
+2）压力测试
+
+ 在使用testscripts/ltpstress.sh脚本之前需要对系统进行配置
+
+  -rsh必须配置完毕并再运行。
+  -内核支持NFS，并且安装NFS软件，通过网络测试。
+  -"sar"或"top"工具需要被安装，执行ltpstress时需要添加"sar"或"top"工具。 
+
+执行测试:
+./ltpstress.sh -d /tmp/sardata -l /tmp/ltpstress.log -I /tmp/iofile -i 5 -m 128 -t 24 -S 
+
+    -d:指定sar或top记录文件,默认/tmp/ltpstress.data 
+    -l:记录测试结果到/tmp/ltpstress.log (小写L)
+    -I:记录"iostat"结果到iofile,默认是/tmp/ltpstress.iostat (大写i)
+    -i:指定sar或top快照时间间隔,默认为10秒
+    -m: 指定最小的内存使用,默认为: RAM + 1/2 swap
+    -n:不对网络进行压力测试
+    -S :用sar捕捉数据
+    -T:利用LTP修改过的top工具捕捉数据
+    -t: 指定测试时间  
+    
+3）用户自定义测试:
+
+  a) 创建命令文件，这个命令文件包括两部分: tag和test case
+        tag即为标签项,起到一个说明的目的,方便我们知道是干什么的.
+        test case即为要测试的项目,此部分为/opt/ltp/testcases/bin/下的命令
+        加上相关的选项
+
+     例如:  self.sh 
+     #Tag       Test case
+     #------------------------------------
+     mtest01     mtest01 -p 10
+     mmstress    mmstress -x 100
+     fork01      fork01
+     chdir01     symlink01 -T chdir01
+     #------------------------------------
+     
+则可运行:
+ ./runltp -p -l self.log -f /opt/ltp/self.sh
+
+  如果未指定日志文件存储路径将会默认保存到/opt/ltp/results/self.log下
+  如果-f选项后的文件不指定绝对路径,将会默认的到目录/opt/ltp/runtest下去寻找
+
+    b) 单独测试runtest目录里的项目,以tracing为例,则可
+        ./runltp -p -l tracing.log -f tracing
+
+
