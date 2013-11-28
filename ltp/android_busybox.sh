@@ -21,6 +21,8 @@ adb shell rm /system/bin/awk
 adb shell ln -s /data/busybox /system/bin/awk
 adb shell rm /system/bin/grep
 adb shell ln -s /data/busybox /system/bin/grep
+adb shell rm /system/bin/find
+adb shell ln -s /data/busybox /system/bin/find
 adb shell rm /system/bin/sed
 adb shell ln -s /data/busybox /system/bin/sed
 adb shell rm /system/bin/cut
@@ -39,3 +41,7 @@ adb shell rm /system/bin/tr
 adb shell ln -s /data/busybox /system/bin/tr
 adb shell rm /system/bin/tar
 adb shell ln -s /data/busybox /system/bin/tar
+adb shell rm /system/bin/printf
+adb shell ln -s /data/busybox /system/bin/printf
+adb shell rm /system/bin/expr
+adb shell ln -s /data/busybox /system/bin/expr

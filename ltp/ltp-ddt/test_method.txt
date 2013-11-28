@@ -1,0 +1,24 @@
+
+
+ a) ./runltp -P am335x-evm -f ddt/lmbench -t 24h
+
+    -P:选择platform
+    -p:人为指定日志格式,保证日志为可读格式                       
+    -l:记录测试日志的文件
+    -d:指定临时存储目录,默认为/tmp
+    -o:直接打印测试输出到/tmp/ltpscreen.20111207
+    -t:指定测试的持续时间
+    
+-t DURATION: Define duration of the test in s,m,h,d.
+-x INSTANCES: Run multiple test instances in parallel.
+-c <options>: Run test under additional background CPU load
+-D <options>: Run test under additional background load on Secondary storage
+-m <options>: Run test under additional background load on Main memory
+-i <options>: Run test under additional background load on IO Bus
+-n          : Run test with network traffic in background.
+
+The platform name specified with -P option must exist in the platforms/ dir.
+It is also possible to run tests without -P option, in such case the ltprun
+script won't filter test cases and it is possible that tests cases not
+supported by the platform you are running on will be called.
+
