@@ -1,9 +1,38 @@
+--------------------------------------------------------------------
+compile
 
-HOW TO ADD NEW DDT TESTS
-------------------------------------
-You only need to add files to two directories:
-  testcases/ddt: the test logic files (either c code or shell script)
-  runtest/ddt  : the test scenario files. It calls the test logic files.
+1. 增加新的平台
+ 1）cd platforms; cp TEMPLATE a23-evm;
+ 2）修改a23-evm
+    
+
+2.交叉编译arm
+
+1）配置
+  cp include/config.h.default include/config.h
+  cp include/mk/config.mk.default include/mk/config.mk
+  cp include/mk/features.mk.default include/mk/features.mk
+2）
+    cd linux-3.4
+    cp arch/arm/configs/xxx .config
+    make CROSS_COMPILE=arm-none-linux-gnueabi- headers_install 
+
+3）编译
+  make CROSS_COMPILE=<CC PREFIX> SKIP_IDCHECK=1 KERNEL_INC=
+  <Kernel include directory> KERNEL_USR_INC=<Kernel usr include directory>
+  PLATFORM=<Platform name>
+
+  make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhengjinyong/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhengjinyong/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm
+
+  编译模块
+    make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhengjinyong/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhengjinyong/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm modules
+
+4）安装
+  make DESTDIR=<destination directory> SKIP_IDCHECK=1 PLATFORM=<Platform name> install
+
+  make DESTDIR=/home/zhengjinyong/opt/ltp-ddt/ PLATFORM=a23-evm install 
+
+------------------------------------------------------------------------
 
 HOW TO ADD NEW PLATFORMS
 ------------------------------------
@@ -35,42 +64,13 @@ HOW TO ADD NEW PLATFORMS
    strategy is to try to run an existing test plan and then analyze the test   failures to determine probable test cases where you need to define 
    override values.
    
---------------------------------------------------------------------
-compile
 
-1. 增加新的平台
- 1）cd platforms; cp TEMPLATE a23-evm
- 2）修改a23-evm
-    
+HOW TO ADD NEW DDT TESTS
 
-2.交叉编译arm
+You only need to add files to two directories:
+  testcases/ddt: the test logic files (either c code or shell script)
+  runtest/ddt  : the test scenario files. It calls the test logic files.
 
-1）配置
-  cp include/config.h.default include/config.h
-  cp include/mk/config.mk.default include/mk/config.mk
-  cp include/mk/features.mk.default include/mk/features.mk
-2）
-    cd linux-3.4
-    cp arch/arm/configs/xxx .config
-    make CROSS_COMPILE=arm-none-linux-gnueabi- headers_install 
 
-3）编译
-  make CROSS_COMPILE=<CC PREFIX> SKIP_IDCHECK=1 KERNEL_INC=
-  <Kernel include directory> KERNEL_USR_INC=<Kernel usr include directory>
-  PLATFORM=<Platform name>
-
-  make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhengjinyong/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhengjinyong/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm
-
-4）编译模块
-  make CROSS_COMPILE=<CC PREFIX> SKIP_IDCHECK=1 
-  KERNEL_INC=<Kernel include directory> 
-  KERNEL_USR_INC=<Kernel usr include directory> 
-  PLATFORM=<Platform name> modules
-
-  make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhengjinyong/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhengjinyong/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm modules
-
-  make DESTDIR=<destination directory> SKIP_IDCHECK=1 PLATFORM=<Platform name> install
-
-  make DESTDIR=/home/zhengjinyong/opt/ltp-ddt/ PLATFORM=a23-evm install 
 
 

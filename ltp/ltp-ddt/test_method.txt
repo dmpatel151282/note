@@ -1,5 +1,4 @@
 
-
  a) ./runltp -P am335x-evm -f ddt/lmbench -t 24h
 
     -P:选择platform
