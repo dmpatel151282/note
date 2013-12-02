@@ -21,3 +21,24 @@ It is also possible to run tests without -P option, in such case the ltprun
 script won't filter test cases and it is possible that tests cases not
 supported by the platform you are running on will be called.
 
+
+---------------------------------------------------------------------------
+issue:
+  1.无法执行ltp-pan，/system/bin/sh: ./ltp-pan: No such file or directory
+原因：用readelf查看ltp-pan，它包含3个动态库。
+      有INTERP段，它指明了程序在加载过程中需要使用的动态链接加载器，如果指定
+      的这个加载器未找到，那么就会提示“ No such file or directory”
+解决：ltp-ddt源码，include/mk/config.mk中，CFLAGS=-static，LDFLAGS=-static
+      再重新编译；make clean; make ....
+    
+  2.测试时出现：testcases/bin/ddt/common/install_modules.sh[24]: 
+                udevadm: not found
+
+  3.测试时出现：testcases/bin/ddt/common/common.sh: line 284: 
+                syntax error: bad substitution
+原因： busybox默认的shell为ash，有些语法是/bin/bash才有的
+解决： 编译或下载可执行文件bash，
+       adb push bash /system/bin/; 
+       ln -s /bin/sh /system/bin/bash;
+       ln -s /bin/bash /system/bin/bash;
+

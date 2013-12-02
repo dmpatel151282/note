@@ -73,6 +73,8 @@ issue
 原因：在android shell环境下无法直接执行IDcheck.sh和ver_linux脚本.
 解决：修改Ver_linux和IDcheck.sh：
         #!/bin/sh  ->   #!/system/bin/sh
+      更好的方法是：在开发板中：
+                        mkdir /bin; cd /bin; ln -s /data/busybox sh
 
 2.运行runltp出现：
     FATAL: LTP not installed correctly
