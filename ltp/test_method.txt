@@ -1,5 +1,4 @@
 
-
 1）初始测试
 
  a) ./runltp -p -l /tmp/resultlog -d /tmp -o /tmp/ltpscreen -t 24h
@@ -11,6 +10,7 @@
     -t:指定测试的持续时间
 
  b) ./runalltests.sh                    
+
 
 2）压力测试
 
@@ -58,4 +58,26 @@
     b) 单独测试runtest目录里的项目,以tracing为例,则可
         ./runltp -p -l tracing.log -f tracing
 
+    c) 对runtest中文件进行修改,取消我们不需要测试的部分
 
+-----------------------------------------------------------------------
+issue
+
+1.运行runltp出现： 
+    ./runltp: line 989: /data/ltp/IDcheck.sh: not found
+    WARNING: required users and groups not present
+    WARNING: some test cases may fail
+    ./runltp: line 989: /data/ltp/ver_linux: not found
+    WARNING: unable to display versions of software installed
+
+原因：在android shell环境下无法直接执行IDcheck.sh和ver_linux脚本.
+解决：修改Ver_linux和IDcheck.sh：
+        #!/bin/sh  ->   #!/system/bin/sh
+      更好的方法是：在开发板中：
+                        mkdir /bin; cd /bin; ln -s /data/busybox sh
+
+2.运行runltp出现：
+    FATAL: LTP not installed correctly
+    INFO:  Follow directions in INSTALL!
+
+原因：ltp 的默认安装路径是/opt/ltp

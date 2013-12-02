@@ -4,7 +4,7 @@ complie
 
 1）./configure CC=arm-none-linux-gnueabi-gcc AR=arm-none-linux-gnueabi-ar RANLIB=arm-none-linux-gnueabi-ranlib --host=arm-linux --build=i686-pc-linux-gnu --target=arm-linux CFLAGS="-static" LDFLAGS="-static -pthread"
 
-修改对应文件：include/mk/config.mk
+或者修改对应文件：include/mk/config.mk
 
 获取帮助：./configure --help
 
@@ -28,7 +28,7 @@ INSTALL_PATH下就是可以在Android上运行的binary
 --------------------------------------------------------------------
 2. LTP 运行环境的建立
 
-1）板子导入busybox
+1）板子获得root权限，导入busybox
     android_busybox.sh
 
 2）板子导入编译好的binary

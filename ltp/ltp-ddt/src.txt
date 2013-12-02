@@ -1,0 +1,6 @@
+
+先手动执行./IDcheck.sh
+
+runltp 处理参数 -> bin/ltp-pan
+
+

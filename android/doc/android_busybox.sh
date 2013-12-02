@@ -2,7 +2,7 @@
 adb remount
 adb push busybox /data/
 adb shell chmod 777 /data/busybox
-adb shell mount -o remount,rw /dev/block/nandd /system
+mount -o remount,rw -t yaffs2 /dev/block/nandd /system
 
 adb shell ln -s /data/busybox /system/bin/sh
 adb shell rm /system/bin/ls
@@ -21,6 +21,8 @@ adb shell rm /system/bin/awk
 adb shell ln -s /data/busybox /system/bin/awk
 adb shell rm /system/bin/grep
 adb shell ln -s /data/busybox /system/bin/grep
+adb shell rm /system/bin/find
+adb shell ln -s /data/busybox /system/bin/find
 adb shell rm /system/bin/sed
 adb shell ln -s /data/busybox /system/bin/sed
 adb shell rm /system/bin/cut
@@ -39,3 +41,9 @@ adb shell rm /system/bin/tr
 adb shell ln -s /data/busybox /system/bin/tr
 adb shell rm /system/bin/tar
 adb shell ln -s /data/busybox /system/bin/tar
+adb shell rm /system/bin/printf
+adb shell ln -s /data/busybox /system/bin/printf
+adb shell rm /system/bin/expr
+adb shell ln -s /data/busybox /system/bin/expr
+adb shell rm /system/bin/uname
+adb shell ln -s /data/busybox /system/bin/uname
