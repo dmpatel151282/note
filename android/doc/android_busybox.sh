@@ -47,3 +47,5 @@ adb shell rm /system/bin/expr
 adb shell ln -s /data/busybox /system/bin/expr
 adb shell rm /system/bin/uname
 adb shell ln -s /data/busybox /system/bin/uname
+adb shell rm /system/bin/zcat
+adb shell ln -s /bin/sh /system/bin/zcat

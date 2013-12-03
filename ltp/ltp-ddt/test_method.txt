@@ -41,4 +41,12 @@ issue:
        adb push bash /system/bin/; 
        ln -s /bin/sh /system/bin/bash;
        ln -s /bin/bash /system/bin/bash;
+       
+  4. 测试时出现：Config Option and Module name not found.  
+原因：在get_modular_config_names.sh中，
+解决：在get_modular_config_names.sh中，加入
+        *rtc0)
+          rtc="CONFIG_RTC_HCTOSYS:rtc0";;
 
+  5. 测试时出现：FATAL: error during prcessing alltests file by sed
+原因：部分testscenarios没有通过check_feature_support
