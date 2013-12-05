@@ -1,6 +1,24 @@
 
 先手动执行./IDcheck.sh
 
-runltp 处理参数 -> bin/ltp-pan
+runltp 处理参数 -> bin/ltp-pan 
+                    1.读取runtest中的文件
+                    2.执行testcase中的脚本和可执行文件   
+
+例：rtc_alarm
+
+1. source 'common.sh'; 
+2. do_cmd install_modules.sh 'rtc' ; 
+    1) get_modular_config_names.sh
+         获取模块名和配置项
+    2) zcat /proc/config.gz 确认是否编译到内核
+    3) 如果是模块，则执行insmod.sh脚本，插入模块
+  
+3. DEV_NODE=`get_devnode.sh "rtc"` || die "error getting devnode for rtc"; 
+    1) case 列表中找[rtc]，/dev/rtc0
+    2）未找到，调用get_blk_device_node.sh "rtc"
+
+4. do_cmd rtc_tests -device $DEV_NODE  -ioctltest alarm -ioctltestarg 30 
+     调用测试程序rtc_test测试；
 
 

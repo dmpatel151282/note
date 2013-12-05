@@ -6,15 +6,14 @@
     -l:记录测试日志的文件
     -d:指定临时存储目录,默认为/tmp
     -o:直接打印测试输出到/tmp/ltpscreen.20111207
-    -t:指定测试的持续时间
+    -t:指定测试的持续时,Define duration of the test in s,m,h,d.       
     
--t DURATION: Define duration of the test in s,m,h,d.
--x INSTANCES: Run multiple test instances in parallel.
--c <options>: Run test under additional background CPU load
--D <options>: Run test under additional background load on Secondary storage
--m <options>: Run test under additional background load on Main memory
--i <options>: Run test under additional background load on IO Bus
--n          : Run test with network traffic in background.
+    -x INSTANCES: Run multiple test instances in parallel.
+    -c <options>: Run test under additional background CPU load
+    -D <options>: Run test under additional background load on Secondary storage
+    -m <options>: Run test under additional background load on Main memory
+    -i <options>: Run test under additional background load on IO Bus
+    -n          : Run test with network traffic in background.
 
 The platform name specified with -P option must exist in the platforms/ dir.
 It is also possible to run tests without -P option, in such case the ltprun
@@ -46,7 +45,14 @@ issue:
 原因：在get_modular_config_names.sh中，
 解决：在get_modular_config_names.sh中，加入
         *rtc0)
-          rtc="CONFIG_RTC_HCTOSYS:rtc0";;
+          rtc="CONFIG_RTC_DRV_SUNXI:rtc0";;
 
   5. 测试时出现：FATAL: error during prcessing alltests file by sed
 原因：部分testscenarios没有通过check_feature_support
+
+  6. 测试时出现：/proc/config.gz: cannot execute binary file
+                 FATAL: Could not find CONFIG_RTC_HCTOSYS in config or 
+                 the option was not set to m or y
+原因：zcat命令不存在
+解决：ln -s /data/busybox /system/bin/zcat
+

@@ -1,0 +1,11 @@
+
+打开打印log
+1.drivers/rtc/rtc-sunxi.c
+
+@@ -33,7 +33,7 @@
+#undef RTC_ERR
+-#if (0)
++#if (1)
+#define RTC_DBG(format,args...)  printk("[rtc] "format,##args)
+
+2.
