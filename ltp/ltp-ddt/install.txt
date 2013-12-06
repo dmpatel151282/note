@@ -28,7 +28,6 @@ compile
 
   编译模块
     make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhengjinyong/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhengjinyong/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm modules
-    make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhkkk/server/172.20.1.86/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhkkk/server/172.20.1.86/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm
 
 4）安装
   make DESTDIR=<destination directory> SKIP_IDCHECK=1 PLATFORM=<Platform name> install
@@ -40,6 +39,9 @@ issue
 
 1.编译时出现：make[2]: *** [alsa_perf_tests] Error 1
 原因：当编译alsa_test_suite时，需要alsa库和头文件
+解决：1) 下载alsa-lib源码包，编译 、安装
+      2) 修改alsa_test_suit/Makefile 中,ALSA_INCPATH ?= 和 ALSA_LIBPATH ?=
+      3) 修改alsa_test_suit/Makefile 中编译的地方, 加入 -ldl -lrt 
 
 ------------------------------------
 HOW TO ADD NEW PLATFORMS
