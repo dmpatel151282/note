@@ -48,9 +48,29 @@ Util 会生成用于播放，录制，配置音频的应用文件，对测试很
   2. make 
   3. sudo make install 
   4. 安装
+        bin/下的可执行文件 copy 板子/system/bin/
+        alsa.conf copy 板子/usr/local/share/alsa.conf 
+
+util 的使用
+
+arecord [flags] [filename]
+aplay [flags] [filename [filename]] ...
+
+设备: -D
+采样格式: -f    [U8]
+采样率: -r      [8000hz]
+通道: -c        [1]
+录音时间：-d    [0]         Interrupt after # seconds
+--period-size
+--buffer-size
 
 ---------------------------------------------------------------------------
 issue
+
+1.执行命令时：No such file or directory
+原因：动态编译的程序有INTERP段，它指明了程序在加载过程中需要使用的动态链接加
+      载器，如果这个加载器未找到，那么就会提示“ No such file or directory”
+解决：使用readelf -l查看可执行文件需要的动态链接加载器，在板子上创建拷贝它。
 
 遇到 configure: error: required curses helper header not found
 →执行 sudo apt-get install libncurses5-dev 安装缺少的套件   
@@ -58,3 +78,5 @@ issue
 →改执行./configure --with-curses=ncurses
 遇到 /bin/bash: xmlto: command not found
 →执行 sudo apt-get install xmlto 安装缺少的套件 
+
+

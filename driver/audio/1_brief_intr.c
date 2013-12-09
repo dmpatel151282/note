@@ -67,10 +67,10 @@ Linux ALSA 音频设备驱动
   5.支持 OSS API，兼容 OSS 应用程序
 
 ALSA 系统：
-必需1.alsa-driver       驱动包              内核驱动程序
-    2.alsa-libs         开发包              用户空间的函数库
+必需1.alsa-driver       驱动包                  内核驱动程序
+    2.alsa-libs         开发包                  用户空间的函数库
     3.alsa-libplugins   开发包插件 
-    4.alsa-utils        设置管理工具包 
+    4.alsa-utils        设置管理工具包          aplay、arecord
     5.alsa-tools        相关处理小程序包 
     6.alsa-firmware     特殊音频固件支持包 
     7.alsa-oss          OSS接口兼容模拟层工具  
@@ -116,7 +116,6 @@ struct snd_card {
     struct list_head devices;           /* devices */  
     struct list_head controls;          /* all controls for this card */  
     
-    struct device *dev;     /* device assigned to this card */  
     ...
 };  
 
@@ -152,6 +151,7 @@ pcm 设备
 
 结构体
 pcm_struct.png
+
   snd_pcm是挂在snd_card下面的一个snd_device
   snd_pcm中的字段：streams[2]，元素指向snd_pcm_str结构，
                                分别代表playback stream和capture stream
@@ -164,6 +164,7 @@ pcm_struct.png
 
 
 时序图：create_pcm_seq.png
+
 1.snd_card_create
 2.snd_pcm_new
 3.建立playback stream，相应的substream也同时建立
