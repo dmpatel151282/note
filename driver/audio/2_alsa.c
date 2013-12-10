@@ -6,7 +6,7 @@ Lib 移植不需要修改一丁点儿的源码，只需要重新编译 lib 以�
 编译过程如下：
 1.Configure
 
-./configure --host=arm-none-linux-gnueabi --prefix=/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/ --enable-static=yes --enable-shared=no --with-configdir=/usr/local/share
+./configure --host=arm-none-linux-gnueabi --prefix=/home/zhkkk/github/out/alsa-lib/arm-linux/ --enable-static=yes --enable-shared=no --with-configdir=/home/zhkkk/github/out/alsa-lib/arm-linux/config/
 
 配置会先对此命令中的配置项进行检查，然后实现配置。需要注意的是：
 配置如果出错，未必一定报错，而是会采用默认的配置选项。几个重要的配置项：
@@ -35,7 +35,7 @@ Util 会生成用于播放，录制，配置音频的应用文件，对测试很
 编译过程如下： 
 1. Configure
 
-./configure --host=arm-none-linux-gnueabi --prefix=/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/ CFLAGS="-I/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/include" LDFLAGS="-L/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/lib -lasound" --disable-alsamixer --disable-xmlto --with-alsa-inc-prefix=/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/include --with-curses=ncurses --enable-static 
+./configure --host=arm-none-linux-gnueabi --prefix=/home/zhkkk/github/out/alsa-lib/arm-linux/ CFLAGS="-I/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/include" LDFLAGS="-L/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/lib -lasound" --disable-alsamixer --disable-xmlto --with-alsa-inc-prefix=/home/zhkkk/server/172.20.1.86/opt/alsa-lib/out/arm-linux/include --with-curses=ncurses --enable-static 
 
   1）--host 指定编译器，与 lib 的配置选项相同
   2）--prefix 指定编译后文件的安装路径，与 lib 的配置选项相同
@@ -79,4 +79,5 @@ issue
 遇到 /bin/bash: xmlto: command not found
 →执行 sudo apt-get install xmlto 安装缺少的套件 
 
-
+2.执行aplay时，未指定period-size参数则kernel panic; 
+  指定则出现aplay: pcm_write:1939: write error: Input/output error

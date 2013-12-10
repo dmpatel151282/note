@@ -29,10 +29,10 @@ pan/*
  pan: 该目录存储的是LTP测试套件的测试驱动程序pan
 
 文件列表:
- IDcheck.sh：检查系统是否缺少执行LTP测试套件所需的用户和用户组，
-             如果缺少则为LTP测试套件创建所需的用户和用户组。
+ IDcheck.sh   ：检查系统是否缺少执行LTP测试套件所需的用户和用户组，
+                如果缺少则为LTP测试套件创建所需的用户和用户组。
  runltplite.sh：用来测试LTP安装，也可用来对测试套件的子项目进行测试。
- ver_linux：获取硬件、软件、环境信息。
+ ver_linux    ：获取硬件、软件、环境信息。
 
 ------------------------------------------------------------------------
 pan工作原理
@@ -50,5 +50,28 @@ pan工作原理
 
   LTP测试套件通过执行测试脚本runalltests.sh(或runltp或runltplite.sh)或
   /testscripts内的测试脚本调用驱动程序pan执行/testcases内的测试项目.
+
+ltp-pan可执行文件的参数：
+    -q   quiet_mode
+    -e   track_exit_stats, exit non-zero if any test exists non-zero
+    -S   run tests sequentially  
+    -O   [目录] output buffering directory   
+    -t   [time] s|m|h|d 结尾
+    -a   [zooname]  name of the zoo file to use
+    -n   [panname]  tag given to pan
+    -p   formatted printing
+    -f   [filename] filename to read test tags from
+    -l   [logfilename]
+    -o   [outputfile]
+    -C   [failcmdfilename] the file where all failed commands will be
+    -A   
+    -d
+    -f
+    -h
+    -r
+    -s
+
+
+
 
 --------------------------------------------------------------------------

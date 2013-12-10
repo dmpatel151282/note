@@ -58,8 +58,8 @@ issue:
   7. 重启板子，/bin/目录、/usr目录消失; 
 解决：在板子的/system/etc/下创建install-recovery.sh; chmod 755 ..
         #!/system/bin/sh
-        mkdir -p /usr/local/share/
-        cp /data/ltp/alsa.conf /usr/local/share/alsa.conf
+        mkdir -p /usr/local/
+        cp /data/ltp/share -rf /usr/local/
         mkdir /bin/
         ln -s /system/bin/bash /bin/sh
         ln -s /system/bin/bash /bin/bash

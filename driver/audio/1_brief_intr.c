@@ -183,7 +183,6 @@ int snd_pcm_new(struct snd_card *card, const char *id, int device,
 void snd_pcm_set_ops(struct snd_pcm *pcm, int direction, 
     struct snd_pcm_ops *ops);
 
-
 设备文件节点的建立
 struct snd_minor
 每个snd_minor结构体保存了声卡下某个逻辑设备的上下文信息，他在逻辑设备建立

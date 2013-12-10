@@ -1,4 +1,13 @@
 
+#include <string.h>
+
+strcmp
+snprintf
+
+strcasecmp
+
+
+--------------------------------------------------------------------------
 1.
 #include <unistd.h>
 int getopt(int argc, char * const argv[], const char* optstring)；
@@ -48,6 +57,14 @@ struct option {
   对getopt_long和getopt_long_only
       返回val变量（flag is NULL）
 
+-------------------------------------------------------------------------
+strdup
+功能: 将字符串拷贝到新建的位置处
 
+-------------------------------------------------------------------------
+get_env
 
+#include <stdlib.h>
+char *getenv(const char *name);
+char *secure_getenv(const char *name);
 

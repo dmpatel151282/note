@@ -24,7 +24,7 @@ compile
   <Kernel include directory> KERNEL_USR_INC=<Kernel usr include directory>
   PLATFORM=<Platform name> 
 
-  make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhengjinyong/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhengjinyong/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm 
+  make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhkkk/server/172.20.1.86/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhkkk/server/172.20.1.86/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm 
 
   编译模块
     make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/zhengjinyong/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/zhengjinyong/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm modules
@@ -32,7 +32,7 @@ compile
 4）安装
   make DESTDIR=<destination directory> SKIP_IDCHECK=1 PLATFORM=<Platform name> install
 
-  make DESTDIR=/home/zhengjinyong/opt/ltp-ddt/ PLATFORM=a23-evm install 
+  make DESTDIR=/home/zhkkk/github/out/ltp-ddt/ PLATFORM=a23-evm install 
 
 ------------------------------------------------------------------------
 issue
