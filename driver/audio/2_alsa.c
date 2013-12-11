@@ -27,6 +27,17 @@ Lib 移植不需要修改一丁点儿的源码，只需要重新编译 lib 以�
 4.安装到嵌入式平台
   1）lib 库文件，放在 /system/lib/ 中
   2）conf 文件，应放在 /usr/local/share 中
+-------------------------------------------------------------------------
+alsa-lib 库函数
+
+snd_pcm_sframes_t snd_pcm_writei(snd_pcm_t *pcm, const void *buffer, snd_pcm_uframes_t size);
+
+snd_pcm_sframes_t snd_pcm_readi(snd_pcm_t *pcm, void *buffer, snd_pcm_uframes_t size);
+
+snd_pcm_sframes_t snd_pcm_writen(snd_pcm_t *pcm, void **bufs, snd_pcm_uframes_t size);
+
+snd_pcm_sframes_t snd_pcm_readn(snd_pcm_t *pcm, void **bufs, snd_pcm_uframes_t size);
+
 
 --------------------------------------------------------------------------
 Alsa Util 移植
@@ -56,13 +67,13 @@ util 的使用
 arecord [flags] [filename]
 aplay [flags] [filename [filename]] ...
 
-设备: -D
-采样格式: -f    [U8]
-采样率: -r      [8000hz]
-通道: -c        [1]
-录音时间：-d    [0]         Interrupt after # seconds
---period-size
---buffer-size
+设备:       -D
+采样格式:   -f    [U8]
+采样率:     -r    [8000hz]
+通道:       -c    [1]
+录音时间：  -d    [0]         Interrupt after # seconds
+数据帧大小：--period-size     PCM DMA单次传送数据帧的大小
+            --buffer-size
 
 ---------------------------------------------------------------------------
 issue

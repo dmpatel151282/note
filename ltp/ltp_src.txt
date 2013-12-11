@@ -55,11 +55,11 @@ ltp-pan可执行文件的参数：
     -q   quiet_mode
     -e   track_exit_stats, exit non-zero if any test exists non-zero
     -S   run tests sequentially  
-    -O   [目录] output buffering directory   
-    -t   [time] s|m|h|d 结尾
+    -p   formatted printing
+    -O   [目录]     output buffering directory   
+    -t   [time]     s|m|h|d 结尾
     -a   [zooname]  name of the zoo file to use
     -n   [panname]  tag given to pan
-    -p   formatted printing
     -f   [filename] filename to read test tags from
     -l   [logfilename]
     -o   [outputfile]
