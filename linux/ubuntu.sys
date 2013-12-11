@@ -1,0 +1,40 @@
+﻿dpkg -l *apache*
+dpkg -L exuberant-ctags
+sudo apt-get remove apache2 --purge
+netstat –apn | grep 8080
+
+--------------------------------------
+ubuntu下不能输入中文
+  确保系统已经安装ibus，如无，则 sudo apt-get install ibus ibus-qt4 ibus-gtk
+  按下面的文件来修改配置文件 sudo vim /etc/X11/xinit/xinput.d/default
+    XIM=ibus
+    XIM_PROGRAM=/usr/bin/ibus-daemon
+    XIM_ARGS="--xim"
+    GTK_IM_MODULE=ibus
+    QT_IM_MODULE=ibus
+    DEPENDS="ibus, ibus-gtk, ibus-qt4"
+ 
+  安装fcitx
+   rime中州韵
+    sudo add-apt-repository ppa:fcitx-team/nightly && sudo apt-get update
+    sudo apt-get install fcitx-rime
+----------------------------------------------
+截图，KSnapshot
+----------------------------------------------
+gconf-editor 为GNOME桌面环境下的一个配置编辑软件
+ubuntu12.04 应该是dconf-tools
+----------------------------------------------------
+
+find . -name "*.o"  | xargs rm -f
+
+
+
+
+
+
+
+
+
+
+
+

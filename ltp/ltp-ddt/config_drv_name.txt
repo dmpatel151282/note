@@ -1,0 +1,9 @@
+
+# allwinertech sunxi a23
+*rtc0)
+    rtc="CONFIG_RTC_DRV_SUNXI:rtc0";; 
+*disp)
+    disp="CONFIG_FB_SUNXI:disp";;
+
+*controlC0)
+    sound="CONFIG_SND_SUN8IW3_SNDCODEC:controlC0";;

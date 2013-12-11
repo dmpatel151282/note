@@ -1,0 +1,91 @@
+
+#include <string.h>
+
+strcmp
+snprintf
+
+strcasecmp
+
+---------------------------------------------------------------------------
+#include <signal.h>
+
+信号是程序执行过程中发生的异常事件。
+  同步信号:程序自身的某些动作产生的，如除零
+  异步信号:程序外部产生
+
+处理信号：
+  1.默认处理，终止程序
+  2.信号忽略
+  3.信号处理，把控制权转移给一个指定的函数
+
+函数raise  报告一个同步信号
+函数signal 指定一种信号的处理方法
+
+
+struct sigaction
+sigemptyset
+
+int sigaction(int signum, const struct sigaction *act,
+                     struct sigaction *oldact);
+
+--------------------------------------------------------------------------
+1.
+#include <unistd.h>
+int getopt(int argc, char * const argv[], const char* optstring)；
+
+#include <getopt.h>
+支持长选项
+int getopt_long(int argc, char * const argv[], const char *optstring, 
+        const struct option *longopts, int *longindex);
+
+int getopt_long_only(int argc, char * const argv[],const char *optstring,
+        const struct option *longopts, int *longindex);
+
+2.
+参数argc和argv是由main()传递的参数个数和内容，argc计算参数的个数是以空格为分隔符的；
+参数optstring则表示欲处理的选项字符串，optstring选项字符串可能有以下三种格式的字符：
+1.单个字符，表示选项
+2.单个字符后接一个冒号：表示该选项后必须跟一个参数。参数紧跟在选项后或者以空格隔开。该参数的指针赋给optarg。
+3 单个字符后跟两个冒号：表示该选项后必须跟一个参数。参数必须紧跟在选项后不能以空格隔开。该参数的指针赋给optarg。
+举例：optstring="a:b::cd"，表示选项a还跟有参数，可能以空格隔开，选项b后还跟有参数，
+                           直接接在选项后面，选项c,d均无参数。
+补充一点，该函数判断是选项或是参数，依据是字符（串）是否是以-开头，如-ab中，-a为选项,b则为参数
+
+
+3.影响的全局变量有四个
+extern char *optarg; //选项的参数指针
+extern int optind,   //下一次调用getopt的时，从optind存储的位置处重新开始检查选项。 
+extern int opterr,   //当opterr=0时，getopt不向stderr输出错误信息。
+extern int optopt;   //当命令行选项字符不包括在optstring中或者选项缺少必要的参数时，该选项存储在optopt中
+
+struct option {
+    const char *name;
+    int         has_arg; //no_argument、optional_argument, 或required_argument,  <getopt.h>
+    int        *flag;
+    int         val;
+};
+
+4. 各种返回值的含义：
+    返回值          含 义
+      '?'          无效选项
+      ':'          缺少选项参数
+      -1           选项解析结束
+ 
+ 成功找到选项
+  对getopt()
+      返回选项字符
+
+  对getopt_long和getopt_long_only
+      返回val变量（flag is NULL）
+
+-------------------------------------------------------------------------
+strdup
+功能: 将字符串拷贝到新建的位置处
+
+-------------------------------------------------------------------------
+get_env
+
+#include <stdlib.h>
+char *getenv(const char *name);
+char *secure_getenv(const char *name);
+

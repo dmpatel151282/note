@@ -76,6 +76,10 @@ Shell script.
     环境变量
         $IFS     Internal Field Separator （内部字段分隔符）
 
+    变量
+      定义
+        echo ${!DEVICE_TYPE}
+        eval MODULE_NAME=\$$DEVICE_TYPE
 
 ===========================================================================
 

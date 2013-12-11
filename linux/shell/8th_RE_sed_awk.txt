@@ -417,8 +417,6 @@ Awk是一门编程语言，有很多版本，我们用的是GNU的gawk
 
 dialog
 
-
-
 --checklist	text height width list-height [tag text status]
 --infobox	text height width
 --inputbox	text height width [inital string]

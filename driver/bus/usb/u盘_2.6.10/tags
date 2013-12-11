@@ -1,0 +1,215 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABORTING_OR_DISCONNECTING	usb.h	83;"	d
+CB_RESET_CMD_SIZE	transport.c	1170;"	d	file:
+CDB	transport.h	/^	__u8	CDB[16];		\/* max command *\/$/;"	m	struct:bulk_cb_wrap
+DO_FLAG	scsiglue.c	330;"	d	file:
+DataTransferLength	transport.h	/^	__le32	DataTransferLength;	\/* size of data *\/$/;"	m	struct:bulk_cb_wrap
+FROM_XFER_BUF	protocol.h	/^enum xfer_buf_dir	{TO_XFER_BUF, FROM_XFER_BUF};$/;"	e	enum:xfer_buf_dir
+Filler	transport.h	/^	__u8	Filler[18];$/;"	m	struct:bulk_cs_wrap
+Flags	transport.h	/^	__u8	Flags;			\/* direction in bit 0 *\/$/;"	m	struct:bulk_cb_wrap
+Length	transport.h	/^	__u8	Length;			\/* of of the CDB *\/$/;"	m	struct:bulk_cb_wrap
+Lun	transport.h	/^	__u8	Lun;			\/* LUN normally 0 *\/$/;"	m	struct:bulk_cb_wrap
+Residue	transport.h	/^	__le32	Residue;		\/* amount not transferred *\/$/;"	m	struct:bulk_cs_wrap
+SPRINTF	scsiglue.c	327;"	d	file:
+SPRINTF	scsiglue.c	328;"	d	file:
+Signature	transport.h	/^	__le32	Signature;		\/* contains 'USBC' *\/$/;"	m	struct:bulk_cb_wrap
+Signature	transport.h	/^	__le32	Signature;		\/* should = 'USBS' *\/$/;"	m	struct:bulk_cs_wrap
+Status	transport.h	/^	__u8	Status;			\/* see below *\/$/;"	m	struct:bulk_cs_wrap
+TO_XFER_BUF	protocol.h	/^enum xfer_buf_dir	{TO_XFER_BUF, FROM_XFER_BUF};$/;"	e	enum:xfer_buf_dir
+Tag	transport.h	/^	__u32	Tag;			\/* same as original command *\/$/;"	m	struct:bulk_cs_wrap
+Tag	transport.h	/^	__u32	Tag;			\/* unique per command id *\/$/;"	m	struct:bulk_cb_wrap
+UNUSUAL_DEV	usb.c	116;"	d	file:
+UNUSUAL_DEV	usb.c	124;"	d	file:
+UNUSUAL_DEV	usb.c	168;"	d	file:
+UNUSUAL_DEV	usb.c	169;"	d	file:
+UNUSUAL_DEV	usb.c	183;"	d	file:
+USB_STOR_STRING_LEN	usb.h	89;"	d
+USB_STOR_TRANSPORT_ERROR	transport.h	138;"	d
+USB_STOR_TRANSPORT_FAILED	transport.h	136;"	d
+USB_STOR_TRANSPORT_GOOD	transport.h	135;"	d
+USB_STOR_TRANSPORT_NO_SENSE	transport.h	137;"	d
+USB_STOR_XFER_ERROR	transport.h	129;"	d
+USB_STOR_XFER_GOOD	transport.h	125;"	d
+USB_STOR_XFER_LONG	transport.h	128;"	d
+USB_STOR_XFER_SHORT	transport.h	126;"	d
+USB_STOR_XFER_STALLED	transport.h	127;"	d
+USB_VENDOR_ID_GENESYS	usb.h	181;"	d
+US_BULK_CB_SIGN	transport.h	96;"	d
+US_BULK_CB_WRAP_LEN	transport.h	95;"	d
+US_BULK_CS_OLYMPUS_SIGN	transport.h	112;"	d
+US_BULK_CS_SIGN	transport.h	110;"	d
+US_BULK_CS_WRAP_LEN	transport.h	109;"	d
+US_BULK_FLAG_IN	transport.h	97;"	d
+US_BULK_FLAG_OUT	transport.h	98;"	d
+US_BULK_GET_MAX_LUN	transport.h	119;"	d
+US_BULK_RESET_REQUEST	transport.h	118;"	d
+US_BULK_STAT_FAIL	transport.h	114;"	d
+US_BULK_STAT_OK	transport.h	113;"	d
+US_BULK_STAT_PHASE	transport.h	115;"	d
+US_CBI_ADSC	transport.h	152;"	d
+US_FLIDX_ABORTING	usb.h	81;"	d
+US_FLIDX_DISCONNECTING	usb.h	82;"	d
+US_FLIDX_RESETTING	usb.h	85;"	d
+US_FLIDX_SG_ACTIVE	usb.h	80;"	d
+US_FLIDX_TIMED_OUT	usb.h	86;"	d
+US_FLIDX_URB_ACTIVE	usb.h	79;"	d
+US_FL_FIX_CAPACITY	usb.h	75;"	d
+US_FL_FIX_INQUIRY	usb.h	74;"	d
+US_FL_IGNORE_RESIDUE	usb.h	76;"	d
+US_FL_IGNORE_SER	usb.h	72;"	d
+US_FL_MODE_XLATE	usb.h	70;"	d
+US_FL_NEED_OVERRIDE	usb.h	71;"	d
+US_FL_SCM_MULT_TARG	usb.h	73;"	d
+US_FL_SINGLE_LUN	usb.h	69;"	d
+US_IOBUF_SIZE	usb.h	98;"	d
+US_PR_BULK	transport.h	54;"	d
+US_PR_CB	transport.h	53;"	d
+US_PR_CBI	transport.h	52;"	d
+US_PR_DATAFAB	transport.h	71;"	d
+US_PR_DEVICE	transport.h	78;"	d
+US_PR_DPCM_USB	transport.h	64;"	d
+US_PR_EUSB_SDDR09	transport.h	59;"	d
+US_PR_FREECOM	transport.h	67;"	d
+US_PR_JUMPSHOT	transport.h	75;"	d
+US_PR_SCM_ATAPI	transport.h	56;"	d
+US_PR_SDDR55	transport.h	62;"	d
+US_SC_8020	protocol.h	50;"	d
+US_SC_8070	protocol.h	53;"	d
+US_SC_DEVICE	protocol.h	59;"	d
+US_SC_ISD200	protocol.h	55;"	d
+US_SC_MAX	protocol.h	57;"	d
+US_SC_MIN	protocol.h	56;"	d
+US_SC_QIC	protocol.h	51;"	d
+US_SC_RBC	protocol.h	49;"	d
+US_SC_SCSI	protocol.h	54;"	d
+US_SC_UFI	protocol.h	52;"	d
+_PROTOCOL_H_	protocol.h	42;"	d
+_SCSIGLUE_H_	scsiglue.h	42;"	d
+_TRANSPORT_H_	transport.h	42;"	d
+_USB_H_	usb.h	45;"	d
+associate_dev	usb.c	/^static int associate_dev(struct us_data *us, struct usb_interface *intf)$/;"	f	file:
+bulk_cb_wrap	transport.h	/^struct bulk_cb_wrap {$/;"	s
+bulk_cs_wrap	transport.h	/^struct bulk_cs_wrap {$/;"	s
+bus_reset	scsiglue.c	/^static int bus_reset(struct scsi_cmnd *srb)$/;"	f	file:
+command_abort	scsiglue.c	/^static int command_abort(struct scsi_cmnd *srb )$/;"	f	file:
+cr	usb.h	/^	struct usb_ctrlrequest	*cr;		 \/* control requests	 *\/$/;"	m	struct:us_data	typeref:struct:us_data::usb_ctrlrequest
+cr_dma	usb.h	/^	dma_addr_t		cr_dma;		 \/* buffer DMA addresses *\/$/;"	m	struct:us_data
+current_sg	usb.h	/^	struct usb_sg_request	current_sg;	 \/* scatter-gather req.  *\/$/;"	m	struct:us_data	typeref:struct:us_data::usb_sg_request
+current_urb	usb.h	/^	struct urb		*current_urb;	 \/* USB requests	 *\/$/;"	m	struct:us_data	typeref:struct:us_data::urb
+delay_use	usb.c	/^static unsigned int delay_use = 5;$/;"	v	file:
+dev_reset_wait	usb.h	/^	wait_queue_head_t	dev_reset_wait;  \/* wait during reset    *\/$/;"	m	struct:us_data
+dev_semaphore	usb.h	/^	struct semaphore	dev_semaphore;	 \/* protect pusb_dev *\/$/;"	m	struct:us_data	typeref:struct:us_data::semaphore
+device_reset	scsiglue.c	/^static int device_reset(struct scsi_cmnd *srb)$/;"	f	file:
+dissociate_dev	usb.c	/^static void dissociate_dev(struct us_data *us)$/;"	f	file:
+ep_bInterval	usb.h	/^	u8			ep_bInterval;	 \/* interrupt interval *\/ $/;"	m	struct:us_data
+extra	usb.h	/^	void			*extra;		 \/* Any extra data          *\/$/;"	m	struct:us_data
+extra_data_destructor	usb.h	/^typedef void (*extra_data_destructor)(void *);	 \/* extra data destructor   *\/$/;"	t
+extra_destructor	usb.h	/^	extra_data_destructor	extra_destructor;\/* extra data destructor   *\/$/;"	m	struct:us_data
+fill_inquiry_response	usb.c	/^void fill_inquiry_response(struct us_data *us, unsigned char *data,$/;"	f
+fix_read_capacity	protocol.c	/^static void fix_read_capacity(struct scsi_cmnd *srb)$/;"	f	file:
+flags	usb.h	/^	unsigned int flags;$/;"	m	struct:us_unusual_dev
+flags	usb.h	/^	unsigned long		flags;		 \/* from filter initially *\/$/;"	m	struct:us_data
+get_device_info	usb.c	/^static void get_device_info(struct us_data *us, int id_index)$/;"	f	file:
+get_pipes	usb.c	/^static int get_pipes(struct us_data *us)$/;"	f	file:
+get_protocol	usb.c	/^static int get_protocol(struct us_data *us)$/;"	f	file:
+get_transport	usb.c	/^static int get_transport(struct us_data *us)$/;"	f	file:
+host	usb.h	/^	struct Scsi_Host	*host;		 \/* our dummy host data *\/$/;"	m	struct:us_data	typeref:struct:us_data::Scsi_Host
+host_info	scsiglue.c	/^static const char* host_info(struct Scsi_Host *host)$/;"	f	file:
+ifnum	usb.h	/^	u8			ifnum;		 \/* interface number   *\/$/;"	m	struct:us_data
+initFunction	usb.h	/^	int (*initFunction)(struct us_data *);$/;"	m	struct:us_unusual_dev
+interpret_urb_result	transport.c	/^static int interpret_urb_result(struct us_data *us, unsigned int pipe,$/;"	f	file:
+iobuf	usb.h	/^	unsigned char		*iobuf;		 \/* I\/O buffer		 *\/$/;"	m	struct:us_data
+iobuf_dma	usb.h	/^	dma_addr_t		iobuf_dma;$/;"	m	struct:us_data
+max_lun	usb.h	/^	u8			max_lun;$/;"	m	struct:us_data
+notify	usb.h	/^	struct completion	notify;		 \/* thread begin\/end	 *\/$/;"	m	struct:us_data	typeref:struct:us_data::completion
+pid	usb.h	/^	int			pid;		 \/* control thread	 *\/$/;"	m	struct:us_data
+proc_info	scsiglue.c	/^static int proc_info (struct Scsi_Host *hostptr, char *buffer, char **start, off_t offset,$/;"	f	file:
+product	usb.h	/^	char			product[USB_STOR_STRING_LEN];$/;"	m	struct:us_data
+productName	usb.h	/^	const char* productName;$/;"	m	struct:us_unusual_dev
+proto_cmnd	usb.h	/^typedef void (*proto_cmnd)(struct scsi_cmnd*, struct us_data*);$/;"	t
+proto_handler	usb.h	/^	proto_cmnd		proto_handler;	 \/* protocol handler	   *\/$/;"	m	struct:us_data
+protocol	usb.h	/^	u8			protocol;$/;"	m	struct:us_data
+protocol_name	usb.h	/^	char			*protocol_name;$/;"	m	struct:us_data
+pusb_dev	usb.h	/^	struct usb_device	*pusb_dev;	 \/* this usb_device *\/$/;"	m	struct:us_data	typeref:struct:us_data::usb_device
+pusb_intf	usb.h	/^	struct usb_interface	*pusb_intf;	 \/* this interface *\/$/;"	m	struct:us_data	typeref:struct:us_data::usb_interface
+queuecommand	scsiglue.c	/^static int queuecommand(struct scsi_cmnd *srb,$/;"	f	file:
+recv_bulk_pipe	usb.h	/^	unsigned int		recv_bulk_pipe;$/;"	m	struct:us_data
+recv_ctrl_pipe	usb.h	/^	unsigned int		recv_ctrl_pipe;$/;"	m	struct:us_data
+recv_intr_pipe	usb.h	/^	unsigned int		recv_intr_pipe;$/;"	m	struct:us_data
+scsi_lock	usb.h	177;"	d
+scsi_scan_done	usb.h	/^	struct completion	scsi_scan_done;	 \/* scan thread end	 *\/$/;"	m	struct:us_data	typeref:struct:us_data::completion
+scsi_scan_wait	usb.h	/^	wait_queue_head_t	scsi_scan_wait;	 \/* wait before scanning *\/$/;"	m	struct:us_data
+scsi_unlock	usb.h	176;"	d
+sema	usb.h	/^	struct semaphore	sema;		 \/* to sleep thread on   *\/$/;"	m	struct:us_data	typeref:struct:us_data::semaphore
+send_bulk_pipe	usb.h	/^	unsigned int		send_bulk_pipe;	 \/* cached pipe values *\/$/;"	m	struct:us_data
+send_ctrl_pipe	usb.h	/^	unsigned int		send_ctrl_pipe;$/;"	m	struct:us_data
+serial	usb.h	/^	char			serial[USB_STOR_STRING_LEN];$/;"	m	struct:us_data
+show_max_sectors	scsiglue.c	/^static ssize_t show_max_sectors(struct device *dev, char *buf)$/;"	f	file:
+slave_alloc	scsiglue.c	/^static int slave_alloc (struct scsi_device *sdev)$/;"	f	file:
+slave_configure	scsiglue.c	/^static int slave_configure(struct scsi_device *sdev)$/;"	f	file:
+srb	usb.h	/^	struct scsi_cmnd	*srb;		 \/* current srb		*\/$/;"	m	struct:us_data	typeref:struct:us_data::scsi_cmnd
+storage_disconnect	usb.c	/^static void storage_disconnect(struct usb_interface *intf)$/;"	f	file:
+storage_probe	usb.c	/^static int storage_probe(struct usb_interface *intf,$/;"	f	file:
+storage_usb_ids	usb.c	/^static struct usb_device_id storage_usb_ids [] = {$/;"	v	typeref:struct:usb_device_id	file:
+store_max_sectors	scsiglue.c	/^static ssize_t store_max_sectors(struct device *dev, const char *buf,$/;"	f	file:
+subclass	usb.h	/^	u8			subclass;$/;"	m	struct:us_data
+sysfs_device_attr_list	scsiglue.c	/^static struct device_attribute *sysfs_device_attr_list[] = {$/;"	v	typeref:struct:device_attribute	file:
+timeout_handler	transport.c	/^static void timeout_handler(unsigned long us_)$/;"	f	file:
+trans_cmnd	usb.h	/^typedef int (*trans_cmnd)(struct scsi_cmnd *, struct us_data*);$/;"	t
+trans_reset	usb.h	/^typedef int (*trans_reset)(struct us_data*);$/;"	t
+transport	usb.h	/^	trans_cmnd		transport;	 \/* transport function	   *\/$/;"	m	struct:us_data
+transport_name	usb.h	/^	char			*transport_name;$/;"	m	struct:us_data
+transport_reset	usb.h	/^	trans_reset		transport_reset; \/* transport device reset *\/$/;"	m	struct:us_data
+unusual_dev	usb.h	/^	struct us_unusual_dev   *unusual_dev;	 \/* device-filter entry     *\/$/;"	m	struct:us_data	typeref:struct:us_data::us_unusual_dev
+us_data	usb.h	/^struct us_data {$/;"	s
+us_unusual_dev	usb.h	/^struct us_unusual_dev {$/;"	s
+us_unusual_dev_list	usb.c	/^static struct us_unusual_dev us_unusual_dev_list[] = {$/;"	v	typeref:struct:us_unusual_dev	file:
+usb_stor_ATAPI_command	protocol.c	/^void usb_stor_ATAPI_command(struct scsi_cmnd *srb, struct us_data *us)$/;"	f
+usb_stor_Bulk_max_lun	transport.c	/^int usb_stor_Bulk_max_lun(struct us_data *us)$/;"	f
+usb_stor_Bulk_reset	transport.c	/^int usb_stor_Bulk_reset(struct us_data *us)$/;"	f
+usb_stor_Bulk_transport	transport.c	/^int usb_stor_Bulk_transport(struct scsi_cmnd *srb, struct us_data *us)$/;"	f
+usb_stor_CBI_transport	transport.c	/^int usb_stor_CBI_transport(struct scsi_cmnd *srb, struct us_data *us)$/;"	f
+usb_stor_CB_reset	transport.c	/^int usb_stor_CB_reset(struct us_data *us)$/;"	f
+usb_stor_CB_transport	transport.c	/^int usb_stor_CB_transport(struct scsi_cmnd *srb, struct us_data *us)$/;"	f
+usb_stor_access_xfer_buf	protocol.c	/^unsigned int usb_stor_access_xfer_buf(unsigned char *buffer,$/;"	f
+usb_stor_acquire_resources	usb.c	/^static int usb_stor_acquire_resources(struct us_data *us)$/;"	f	file:
+usb_stor_blocking_completion	transport.c	/^static void usb_stor_blocking_completion(struct urb *urb, struct pt_regs *regs)$/;"	f	file:
+usb_stor_bulk_transfer_buf	transport.c	/^int usb_stor_bulk_transfer_buf(struct us_data *us, unsigned int pipe,$/;"	f
+usb_stor_bulk_transfer_sg	transport.c	/^int usb_stor_bulk_transfer_sg(struct us_data* us, unsigned int pipe,$/;"	f
+usb_stor_bulk_transfer_sglist	transport.c	/^int usb_stor_bulk_transfer_sglist(struct us_data *us, unsigned int pipe,$/;"	f
+usb_stor_clear_halt	transport.c	/^int usb_stor_clear_halt(struct us_data *us, unsigned int pipe)$/;"	f
+usb_stor_control_msg	transport.c	/^int usb_stor_control_msg(struct us_data *us, unsigned int pipe,$/;"	f
+usb_stor_control_thread	usb.c	/^static int usb_stor_control_thread(void * __us)$/;"	f	file:
+usb_stor_ctrl_transfer	transport.c	/^int usb_stor_ctrl_transfer(struct us_data *us, unsigned int pipe,$/;"	f
+usb_stor_euscsi_init	initializers.c	/^int usb_stor_euscsi_init(struct us_data *us)$/;"	f
+usb_stor_exit	usb.c	/^module_exit(usb_stor_exit);$/;"	v
+usb_stor_exit	usb.c	/^static void __exit usb_stor_exit(void)$/;"	f	file:
+usb_stor_host_template	scsiglue.c	/^struct scsi_host_template usb_stor_host_template = {$/;"	v	typeref:struct:scsi_host_template
+usb_stor_init	usb.c	/^module_init(usb_stor_init);$/;"	v
+usb_stor_init	usb.c	/^static int __init usb_stor_init(void)$/;"	f	file:
+usb_stor_intr_transfer	transport.c	/^int usb_stor_intr_transfer(struct us_data *us, void *buf, unsigned int length)$/;"	f
+usb_stor_invoke_transport	transport.c	/^void usb_stor_invoke_transport(struct scsi_cmnd *srb, struct us_data *us)$/;"	f
+usb_stor_msg_common	transport.c	/^static int usb_stor_msg_common(struct us_data *us, int timeout)$/;"	f	file:
+usb_stor_qic157_command	protocol.c	/^void usb_stor_qic157_command(struct scsi_cmnd *srb, struct us_data *us)$/;"	f
+usb_stor_release_resources	usb.c	/^void usb_stor_release_resources(struct us_data *us)$/;"	f
+usb_stor_report_device_reset	scsiglue.c	/^void usb_stor_report_device_reset(struct us_data *us)$/;"	f
+usb_stor_reset_common	transport.c	/^static int usb_stor_reset_common(struct us_data *us,$/;"	f	file:
+usb_stor_scan_thread	usb.c	/^static int usb_stor_scan_thread(void * __us)$/;"	f	file:
+usb_stor_sense_invalidCDB	scsiglue.c	/^unsigned char usb_stor_sense_invalidCDB[18] = {$/;"	v
+usb_stor_sense_notready	scsiglue.c	/^unsigned char usb_stor_sense_notready[18] = {$/;"	v
+usb_stor_set_xfer_buf	protocol.c	/^void usb_stor_set_xfer_buf(unsigned char *buffer,$/;"	f
+usb_stor_stop_transport	transport.c	/^void usb_stor_stop_transport(struct us_data *us)$/;"	f
+usb_stor_transparent_scsi_command	protocol.c	/^void usb_stor_transparent_scsi_command(struct scsi_cmnd *srb,$/;"	f
+usb_stor_ucr61s2b_init	initializers.c	/^int usb_stor_ucr61s2b_init(struct us_data *us)$/;"	f
+usb_stor_ufi_command	protocol.c	/^void usb_stor_ufi_command(struct scsi_cmnd *srb, struct us_data *us)$/;"	f
+usb_storage_driver	usb.c	/^struct usb_driver usb_storage_driver = {$/;"	v	typeref:struct:usb_driver
+useProtocol	usb.h	/^	__u8  useProtocol;$/;"	m	struct:us_unusual_dev
+useTransport	usb.h	/^	__u8  useTransport;$/;"	m	struct:us_unusual_dev
+vendor	usb.h	/^	char			vendor[USB_STOR_STRING_LEN];$/;"	m	struct:us_data
+vendorName	usb.h	/^	const char* vendorName;$/;"	m	struct:us_unusual_dev
+xfer_buf_dir	protocol.h	/^enum xfer_buf_dir	{TO_XFER_BUF, FROM_XFER_BUF};$/;"	g
