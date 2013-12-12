@@ -32,24 +32,24 @@ Activity 之间传递数据
 Intent
 
 Intent Structure
-action：
+1.action：
 ACTION_EDIT 
 ACTION_MAIN
 ACTION_VIEW
 
-category：类别， Gives additional information about the action.
+2.category：类别， Gives additional information about the action.
 
 CATEGORY_LAUNCHER means it should appear in the Launcher as a top-level application
 CATEGORY_ALTERNATIVE means it should be included in a list of alternative actions the user can perform on a piece of data.
 
 
-data：uri形式
+3.data：uri形式
 
-type ： Specifies an explicit type (a MIME type) of the intent data.
+4.type ： Specifies an explicit type (a MIME type) of the intent data.
 
-component: 若以上找不到，则指定组件。
+5.component: 若以上找不到，则指定组件。
 
-extras：This is a Bundle of any additional information.
+6.extras：This is a Bundle of any additional information.
 
 
 ---------------------------

@@ -15,9 +15,8 @@
     st = status
     af = am --ignore-whitespace --3way
 
-[remote "origin"]
-	url = https://github.com/liushui312/note.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+[color]
+    ui = auto
 
 [http]
 	postBuffer = 524288000
