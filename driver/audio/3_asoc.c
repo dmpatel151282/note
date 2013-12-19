@@ -90,4 +90,3 @@ snd_soc_card取代了它，并且强化了snd_soc_pcm_runtime的作用，同时�
 两个数据结构snd_soc_codec_driver和snd_soc_platform_driver，用于明确代表
 Codec驱动和Platform驱动。
 
-

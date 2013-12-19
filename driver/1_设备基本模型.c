@@ -1,4 +1,3 @@
-===================================================================================
 Linux 设备模型组件
 
 device --> device_driver --> bus_type
@@ -19,7 +18,7 @@ struct device {
 };
 
 设备注册和注销:
-int device_register(struct device *dev);    // 在/sys/devices下创建一个对应的目录
+int device_register(struct device *dev);//在/sys/devices下创建一个对应的目录
 void device_unregister(struct device *dev); 
 设置私有数据：
 void dev_set_drvdata(struct device *dev, void *data);
@@ -98,7 +97,7 @@ struct bus_type_private {
 int bus_register(struct bus_type *bus);
 void bus_unregister(struct bus_type *bus);
 
-==============================================================================
+============================================================================
 系统中的设备类由 struct class 描述,表示某一类设备。所有的 class 对象都属于
 class_subsys 子系统,对应于sysfs文件系统中的/sys/class 目录。
 
@@ -125,7 +124,7 @@ class_unregister()
 class_create()  创建并注册
 class_detroy()
 
-=============================================================================
+============================================================================
 属性
 在bus 、device 、driver 和 class 层次上都分别定义了其属性结构体,包括
 bus_attribute、driver_attribute、class_attribute、这几个结构体的定义
@@ -162,12 +161,12 @@ class_create_file() driver_remove_file()
 xxx_create_file()函数中会调用 sysfs_create_file(), 会创建 对应 的 sysfs 文件节点,
 xxx_remove_file()函数中会调用 sysfs_remove_file(), 删除对应的 xxx 文件节点.
 
-======================================================================================
+============================================================================
 kobject --> kset
 device --> device_driver --> bus_type
                              class   
 
-kobject是隐藏在sysfs后的机制, sysfs中的每个目录在内核中存在一个对应的kobject.
+kobject是隐藏在sysfs后的机制, sysfs中的每个目录在内核中存在一个对应的kobject
 
 只要调用kobject_add函数, 就能在sysfs中显示kobject. kobject_add --> sysfs中创建目录
 kobject->parent --> 在parent->name目录下创建目录; kobject->name --> 目录名

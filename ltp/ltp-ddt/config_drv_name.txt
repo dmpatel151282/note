@@ -1,4 +1,6 @@
 
+get_modular_config_names.sh
+
 # allwinertech sunxi a23
 *rtc0)
     rtc="CONFIG_RTC_DRV_SUNXI:rtc0";; 
