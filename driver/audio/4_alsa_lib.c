@@ -61,10 +61,91 @@ snd_pcm_sframes_t snd_pcm_readi(snd_pcm_t *pcm,
 int snd_pcm_close(snd_pcm_t*)
 
 ----------------------------------------------------------------------
-snd_pcm_open 过程
-  1.snd_config_update()    刷新config配置
-    1.1 snd_config_update_r(&snd_config, &snd_config_global_update, NULL);
-  2.snd_pcm_open_noupdate(pcmp, snd_config, name, stream, mode, 0)
+typedef struct _snd_pcm snd_pcm_t
+struct _snd_pcm
+ type: snd_pcm_type_t
+ stream: snd_pcm_stream_t 
+ op_arg: snd_pcm_t *
+ setup: int : 1
+ ops: const snd_pcm_ops_t*
+ fast_ops: const snd_pcm_fast_ops_t*
+ mmap_channels: snd_pcm_channel_info_t *
+
+要确认结构体中的回调函数，找结构体初始化；
+ 1. 搜索 "->ops = "
+ 2. 搜索 "const snd_pcm_ops_t" 找snd_pcm_ops_t的实例
+
+----------------------------------------------------------------------
+snd_pcm_open() 获得snd_pcm_t句柄 
+
+ pcmp: snd_pcm_t**         用来保存pcm设备handle
+ name: const char*         要打开的pcm设备名[default]，-D hw:0,0 plughw:0,0
+ stream: snd_pcm_stream_t  
+ mode: int                 开打模式
+    SND_PCM_NONBLOCK           -N 
+    SND_PCM_NO_AUTO_RESAMPLE   --disable-resample
+    SND_PCM_NO_AUTO_CHANNELS   --disable-channels    
+    SND_PCM_NO_AUTO_FORMAT     --disable-format
+    SND_PCM_NO_SOFTVOL         --disable-softvol
+
+函数分析
+1.int snd_config_update(void)    刷新config配置
+  1.1 snd_config_update_r(&snd_config, &snd_config_global_update, NULL);
+2.snd_pcm_open_noupdate(pcmp, snd_config, name, stream, mode, 0)
+  2.1 snd_config_search_definition()
+  2.2 snd_config_set_hop(pcm_conf, hop)
+  2.3 snd_pcm_open_conf(pcmp, name, root, pcm_conf, stream, mode)
+    2.3.1 open_func = snd_dlobj_cache_get(lib, open_name,
+                SND_DLSYM_VERSION(SND_PCM_DLSYM_VERSION), 1);
+          //将获得lib库中_snd_pcm_xxx_open函数
+static const char *const build_in_pcms[] = {
+	"adpcm", "alaw", "copy", "dmix", "file", "hooks", "hw", "ladspa", 
+    "lfloat", "linear", "meter", "mulaw", "multi", "null", "empty", "plug", 
+    "rate", "route", "share","shm", "dsnoop", "dshare", "asym", "iec958", 
+    "softvol", "mmap_emul", NULL
+};
+
+    2.3.2 执行open_func() <==> _snd_pcm_xxx_open()
+           例： _snd_pcm_empty_open()
+        2.3.2.1 snd_pcm_open_named_slave()
+          2.3.2.1.1 snd_pcm_open_conf()   
+          //重复2.3  ==> _snd_pcm_hw_open() => snd_pcm_hw_open()
+            
+1.snd_pcm_hw_open() 
+  1.1 snd_ctl_hw_open()
+  1.2 fd=snd_open_device(filename, fmode); //filename为"/dev/snd/controlC0"
+  1.3 snd_pcm_hw_open_fd()  
+    //对设备文件ioctl:SNDRV_PCM_IOCTL_INFO SNDRV_PCM_IOCTL_PVERSION 
+    //                SNDRV_PCM_IOCTL_TSTAMP
+    1.3.1 snd_pcm_new()     //注意是lib里的函数，分配snd_pcm_t并初始化
+    1.3.2 pcm->ops = &snd_pcm_hw_ops;          //初始化snd_pcm_t
+          pcm->fast_ops = &snd_pcm_hw_fast_ops;
+    1.3.3 snd_pcm_hw_mmap_control(pcm)
+      1.3.3.1 mmap() //如果没有mmap,那么执行mmap映射内核空间驱动的声音缓冲区
+      1.3.3.2 snd_pcm_set_appl_ptr()
+
+------------------------------------------------------------------------
+snd_pcm_hw_params()
+
+
+
+
+函数分析
+1. _snd_pcm_hw_params_internal(pcm, params);
+  1.1 snd_pcm_hw_params_choose(pcm, params);
+  1.2 snd_pcm_sw_params_default(pcm, &sw);
+  1.3 snd_pcm_sw_params(pcm, &sw);
+  1.4 snd_pcm_mmap(pcm);
+    1.4.1 pcm->ops->mmap(pcm) <==> snd_pcm_hw_mmap()
+    1.4.2 snd_pcm_channel_info(pcm, i);
+      1.4.2.1 pcm->ops->channel_info(pcm, info) <==> snd_pcm_hw_info() 
+    1.4.3 switch (i->type) //i = &pcm->mmap_channels[c] 
+    // 针对映射的type，做相应的操作
+    // SND_PCM_AREA_MMAP <=> mmap; SND_PCM_AREA_SHM <=> shmget shmat shmctl
+    // SND_PCM_AREA_LOCAL <=> malloc
+
+2. snd_pcm_prepare(pcm);
+
 
 
 
