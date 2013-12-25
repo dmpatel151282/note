@@ -32,12 +32,15 @@ Module.markers
 *.patch
 *.gcno
 *.rej
+*.raw
+*.jpeg
 standby.code
 resume1.code
 
 #
 ## Top-level generic files
 #
+pdf/
 /tags
 /TAGS
 /vmlinux

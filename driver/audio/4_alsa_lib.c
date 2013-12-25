@@ -1,6 +1,6 @@
 Alsa Lib 
 
-Lib 移植不需要修改一丁点儿的源码，只需要重新编译 lib 以支持自己的平台。
+Lib 移植不需要修改一丁点儿的源码，只需要重新编译lib以支持自己的平台。
 
 编译过程如下：
 1.Configure
@@ -115,7 +115,7 @@ static const char *const build_in_pcms[] = {
   1.1 snd_ctl_hw_open()
   1.2 fd=snd_open_device(filename, fmode); //filename为"/dev/snd/controlC0"
   1.3 snd_pcm_hw_open_fd()  
-    //对设备文件ioctl:SNDRV_PCM_IOCTL_INFO SNDRV_PCM_IOCTL_PVERSION 
+    //对设备文件ioctl:SNDRV_PCM_IOCTL_INFO   SNDRV_PCM_IOCTL_PVERSION 
     //                SNDRV_PCM_IOCTL_TSTAMP
     1.3.1 snd_pcm_new()     //注意是lib里的函数，分配snd_pcm_t并初始化
     1.3.2 pcm->ops = &snd_pcm_hw_ops;          //初始化snd_pcm_t

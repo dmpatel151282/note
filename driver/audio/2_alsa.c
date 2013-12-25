@@ -79,21 +79,21 @@ struct snd_soc_card               | Machine 驱动
 snd_pcm_t               //pcm设备handle
 snd_pcm_stream_t        //PCM stream (direction)
 int snd_pcm_open(snd_pcm_t **pcmp, const char *name,         
-         snd_pcm_stream_t stream, int mode)                   //打开PCM设备，获得handle
+         snd_pcm_stream_t stream, int mode)    //打开PCM设备，获得handle
 
 snd_pcm_hw_params_t
-int snd_pcm_hw_params_malloc(snd_pcm_hw_params_t*)            //分配
-int snd_pcm_hw_params_any(snd_pcm_t*, snd_pcm_hw_params_t*)   //初始化硬件结构
+int snd_pcm_hw_params_malloc(snd_pcm_hw_params_t*)          //分配
+int snd_pcm_hw_params_any(snd_pcm_t*, snd_pcm_hw_params_t*) //初始化硬件结构
 snd_pcm_hw_params_set_access()
 snd_pcm_hw_params_set_format()
 snd_pcm_hw_params_set_rate_near()
 snd_pcm_hw_params_set_channels()
-int snd_pcm_hw_params(snd_pcm_t*, snd_pcm_hw_params_t*)       //设置硬件
+int snd_pcm_hw_params(snd_pcm_t*, snd_pcm_hw_params_t*)  //设置硬件
 snd_pcm_hw_params_free()
 
-int snd_pcm_prepare(snd_pcm_t*)                               //准备PCM硬件
+int snd_pcm_prepare(snd_pcm_t*)                          //准备PCM硬件
 
-snd_pcm_sframes_t snd_pcm_writei(snd_pcm_t *pcm,              //写PCM数据到声卡
+snd_pcm_sframes_t snd_pcm_writei(snd_pcm_t *pcm,         //写PCM数据到声卡
         const void *buffer, snd_pcm_uframes_t size)
 
 snd_pcm_sframes_t snd_pcm_readi(snd_pcm_t *pcm,              
@@ -126,10 +126,6 @@ int pcm_start(struct pcm *pcm);
 int pcm_stop(struct pcm *pcm);
 
 int pcm_close(struct pcm *pcm);
-
-
-
-
 
 ---------------------------------------------------------------------
 声卡
@@ -278,6 +274,9 @@ pcm设备的f_ops，并且把file->f_op替换为pcm设备的f_ops，紧接着直
 设备的f_ops->open()，然后返回。因为file->f_op已经被替换，以后，应用程序的
 所有read/write/ioctl调用都会进入pcm设备自己的回调函数中，也就是
 snd_pcm_f_ops结构中定义的回调。
+
+  |copy_from_user|       |DMA|           |I2S|     |AIF->DAC->PGA/Mixer|   
+ce------------>dma buffer---->I2S tx FIFO---->CODEC--------->SPK/HS/Earp  
 
 -------------------------------------------------------------------------
 Control接口

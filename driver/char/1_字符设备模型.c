@@ -2,13 +2,13 @@ app --> /dev/xxx --> file   --> filp
                                 private_data
                      inode  --> dev_t
 
-app --> open  --> swi --> sys_open (ISR) --> VFS --> chrdev[major] --> file_operations --> open 
-        read              sys_read                                                         read
-        write             sys_write                                                        write
+app --> open/read/write  --> swi --> sys_open (ISR) --> VFS 
+--> chrdev[major] --> file_operations --> open/read/write 
 
 1. 定义设备结构体:  cdev、私有数据及信号量等
-2. file_operations 结构体中成员函数
-    open    打开设备: inode --> container_of --> 设备结构体 --> filp->private_data 
+2. 实现file_operations 结构体中成员函数
+    open    打开设备: inode --> container_of --> 设备结构体 --> 
+                      filp->private_data 
                       inode --> iminor --> minor --> 确保真正要打开的设备
             申请IO内存及映射内存 request_mem_region() ioremap()
             实现硬件初始化 
@@ -45,13 +45,15 @@ MKDEV(int major, int minor)
 void cdev_init(struct cdev *, const struct file_operations *);
 //用于动态申请一个 cdev 内存
 struct cdev *cdev_alloc(void);
-int cdev_add(struct cdev *, dev_t, unsigned); //添加设备,一个驱动可添加多个设备
+//添加设备,一个驱动可添加多个设备
+int cdev_add(struct cdev *, dev_t, unsigned); 
 void cdev_del(struct cdev *);
 void cdev_put(struct cdev *p);
 void cd_forget(struct inode *);
 
 //在调用cdev_add()函数向系统注册字符设备之前, 应首先向系统申请设备号
-int alloc_chrdev_region(dev_t *dev, unsigned baseminor, unsigned count, const char *name);
+int alloc_chrdev_region(dev_t *dev, unsigned baseminor, 
+        unsigned count, const char *name);
 参数：
     dev，用来存设备编号
     baseminor，第一个次设备号
@@ -70,9 +72,10 @@ int register_chrdev_region(dev_t from, unsigned count, const char *name);
 void unregister_chrdev_region(dev_t from, unsigned count);
 
 
-unsigned long copy_from_user(void *to, const void _ _user *from, unsigned long count);
-unsigned long copy_to_user(void _ _user *to, const void *from, unsigned long count);
-
+unsigned long copy_from_user(void *to, const void __user *from, 
+        unsigned long count);
+unsigned long copy_to_user(void __user *to, const void *from, 
+        unsigned long count);
 
 老接口
 注册字符设备:
@@ -89,7 +92,7 @@ void unregister_chrdev(unsigned int major, const char *name)
 参数:
     major，主设备号 name, 设备名
 
-===========================================================================================
+============================================================================
 //文件描述符：每个打开的文件在内部用 file 结构描述
 //单个文件可能被打开多次, 有多个文件描述符 file 结构
 //linux/fs.h
@@ -100,7 +103,7 @@ struct file {
     ....
 };
 
-===========================================================================================
+============================================================================
 //一个文件对应一个 inode 结构 linux/fs.h
 //根据inode 结构取得设备编号: 
 unsigned int iminor(struct inode *inode)
@@ -114,35 +117,14 @@ struct inode {
     ....
 };
 
-============================================================================================
+============================================================================
 file_operations 定义了字符设备驱动提供给虚拟文件系统的接口函数。
 
-struct file_operations {
-	struct module *owner;
-	loff_t (*llseek) (struct file *, loff_t, int);
-	ssize_t (*read) (struct file *, char __user *, size_t, loff_t *);
-	ssize_t (*write) (struct file *, const char __user *, size_t, loff_t *);
-	ssize_t (*aio_read) (struct kiocb *, const struct iovec *, unsigned long, loff_t);
-	ssize_t (*aio_write) (struct kiocb *, const struct iovec *, unsigned long, loff_t);
-	int (*readdir) (struct file *, void *, filldir_t);
-	unsigned int (*poll) (struct file *, struct poll_table_struct *);
-	int (*ioctl) (struct inode *, struct file *, unsigned int, unsigned long);
-	long (*unlocked_ioctl) (struct file *, unsigned int, unsigned long);
-	long (*compat_ioctl) (struct file *, unsigned int, unsigned long);
-	int (*mmap) (struct file *, struct vm_area_struct *);
-	int (*open) (struct inode *, struct file *);
-	int (*flush) (struct file *, fl_owner_t id);
-	int (*release) (struct inode *, struct file *);
-	int (*fsync) (struct file *, struct dentry *, int datasync);
-	int (*aio_fsync) (struct kiocb *, int datasync);
-	int (*fasync) (int, struct file *, int);
-	int (*lock) (struct file *, int, struct file_lock *);
-	ssize_t (*sendpage) (struct file *, struct page *, int, size_t, loff_t *, int);
-	unsigned long (*get_unmapped_area)(struct file *, unsigned long, unsigned long, unsigned long, unsigned long);
-	int (*check_flags)(int);
-	int (*dir_notify)(struct file *filp, unsigned long arg);
-	int (*flock) (struct file *, int, struct file_lock *);
-	ssize_t (*splice_write)(struct pipe_inode_info *, struct file *, loff_t *, size_t, unsigned int);
-	ssize_t (*splice_read)(struct file *, loff_t *, struct pipe_inode_info *, size_t, unsigned int);
-	int (*setlease)(struct file *, long, struct file_lock **);
-};
+struct file_operations 
+open:int (*) (struct inode *, struct file *);
+release:int (*) (struct inode *, struct file *);
+read:ssize_t (*) (struct file *, char __user *, size_t, loff_t *);
+write:ssize_t (*) (struct file *, const char __user *, size_t, loff_t *);
+ioctl:int (*) (struct inode *, struct file *, unsigned int, unsigned long);
+mmap:int (*) (struct file *, struct vm_area_struct *);
+llseek: loff_t (*) (struct file *, loff_t, int);

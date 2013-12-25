@@ -1,3 +1,32 @@
+ASoC驱动有如下三部分构成：
+1.Platform
+ 1.1 CPU DAI (Digital Audio Interface)
+   在嵌入式系统里面通常指CPU的I2S、PCM总线控制器，负责将音频数据从
+ AIF FIFO搬运到CODEC（Playback的情形，Capture则方向相反）
+   cpu dai通过snd_soc_register_dai()来注册
+ 
+ 1.2 DMA：负责将音频数据从userspace通过dma搬运到AIF FIFO.
+   音频dma驱动通过snd_soc_register_platform()来注册.
+
+   实现音频DMA操作函数集，具体见snd_pcm_ops结构体定义
+
+   很多情况下，Platform特指音频dma驱动，并未包括cpu dai.
+   值得留意的是：某些情形下是不需要dma操作的，比如Modem和CODEC直连，因为
+ Modem本身已经把数据送到它的PCM FIFO了，这时只需启动PCM控制器把数据传输到
+ CODEC即可；这种情形下，Machine驱动dai_link中需要指定.platform_name = 
+ "snd-soc-dummy", 这是虚拟出来的Audio dma驱动。
+
+2.CODEC
+ 
+3.Machine
+   指某一款机器，它把cpu dai、codec dai、modem dai各个音频接口通过定义
+ dai_link链结起来，然后注册snd_soc_card。
+ 
+   作为链结Platform和Codec的载体，它必须定义dai_link为音频物理链路选定
+ Platform和Codec。处理机器特有的音频控件和音频事件，例如回放时打开外放功放。
+
+
+-------------------------------------------------------------------------
 转自： http://blog.csdn.net/droidphone/article/details/7165482
 
 1.  ASoC的由来

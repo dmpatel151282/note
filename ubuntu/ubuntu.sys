@@ -1,7 +1,4 @@
-﻿dpkg -l *apache*
-dpkg -L exuberant-ctags
-sudo apt-get remove apache2 --purge
-netstat –apn | grep 8080
+﻿netstat –apn | grep 8080
 
 --------------------------------------
 ubuntu下不能输入中文
@@ -24,7 +21,6 @@ ubuntu下不能输入中文
 gconf-editor 为GNOME桌面环境下的一个配置编辑软件
 ubuntu12.04 应该是dconf-tools
 ----------------------------------------------------
-
 find . -name "*.o"  | xargs rm -f
 
 

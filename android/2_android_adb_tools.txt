@@ -5,6 +5,11 @@
 1）mkdir ~/.android/
    vim ~/.android/adb_usb.ini 添加:设备的UID(?)，0x1f3a
 
+issue
+1）error: insufficient permissions for device
+	sudo adb kill-server
+	sudo adb start-server
+
 llusb
 sudo /etc/udev/rules.d/70-persistent-cd.rules 添加:
 SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="0003", MODE="0666"

@@ -30,12 +30,37 @@ Usage: tinypcminfo -D card -d device
 
 ---------------------------------------------------
 struct pcm_config
+channels: unsigned int
+rate: unsigned int
+period_size: unsigned int
+period_count: unsigned int
+format: enum pcm_format
+start_threshold: unsigned int
+stop_threshold: unsigned int
+silence_threshold: unsigned int
+avail_min: int
+
 struct pcm
-struct pcm_params
+fd: int
+flags: unsigned int
+running: int :1
+underruns: int
+buffer_size: unsigned int
+boundary: unsigned int
+config: pcm_config
+mmap_status: snd_pcm_mmap_status
+mmap_control: snd_pcm_mmap_control
+sync_ptr: snd_pcm_sync_ptr
 
 struct pcm *pcm_open(unsigned int card, unsigned int device,
         unsigned int flags, struct pcm_config *config);
+flags:
+PCM_OUT        
+PCM_IN    PCM_MMAP PCM_NOIRQ PCM_NORESTART       
+          
 int pcm_is_ready(struct pcm *pcm);
+
+struct pcm_params
 struct pcm_params *pcm_params_get(unsigned int card, unsigned int device,
         unsigned int flags);
 int pcm_get_config(struct pcm *pcm, struct pcm_config *config);
