@@ -1,0 +1,27 @@
+﻿本周工作(2013.10.28-2013.11.1)
+
+1、MonkeyTest单独测试每个app半个小时，未发现应用崩溃；
+2、MonkeyTest整体测试12h,发现SoundRecorder、google map、gallery3d等应用崩溃；
+3、解决SoundRecorder应用崩溃，原因是调用MediaRecorder类的start方法后，过快地调用stop方法，验证此问题；
+4、使用量产工具PhoenixUSBPro做自动刷机，并在jenkins创建window slave的自动刷机任务；
+5、熟悉走读规范，编写文档 50%；
+
+下周工作:
+1、解决MonkeyTest其它应用崩溃的问题；和克炬、洪波一起对比测试512M、1G内存，事件频率500ms和800ms下MonkeyTest；
+2、针对每周五的版本发布，跟踪压力测试，每天记录其完成情况；
+3、完成走读规范文档；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

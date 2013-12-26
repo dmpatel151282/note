@@ -1,0 +1,31 @@
+﻿本周工作内容(2013.11.18-2013.11.22)
+ 
+1、修改tigerreplay.bat脚本,增加判断机子状态；
+2、熟悉jenkins email-ext插件，在project中配置邮件；
+3、解决jenkins 在ubuntu下无法自动启动LiveSuit刷机工具（无法连接X-server）
+4、编写自动化测试的环境搭建，jenkins使用的文档;
+5、统计可用jenkins自动化测试的测试项；
+6、推广和介绍如何使用jenkins，搭建环境，并用jenkins实现自动化测试；
+  
+下周工作计划:
+1、向珠海的同事推广jenkins,让其熟悉jenkins的使用；
+2、增加可用jenkins自动化测试的测试项；
+3、继续学习jenkins，完善jenkins自动化测试；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

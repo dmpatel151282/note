@@ -1,0 +1,40 @@
+﻿本周工作内容(2013.12.02-2013.12.06)
+ 
+1、ltp-ddt 在P4的机子上做测试，目前可以测试rtc驱动，发现rtc的闹钟时间不准;
+--rtc自带的测试用例有6个，通过两个，失败两个，两个长时间测试未测
+--解决测试时出现：syntax error: bad substitution;
+原因：busybox上的shell一般为ash，语法较bash简单无法执行一些脚本；
+解决：编译一个bash，在P4上使用bash shell执行
+--测试时出现：Config Option and Module name not found.  
+解决：在get_modular_config_names.sh中，配置a23平台的驱动和对应的配置；
+2、解决编译ltp-ddt的alsa_test_suit时出现的错误；
+原因：需要alsa-lib库，未链接libdl.so、librt.so等
+3、了解音频驱动的基础知识，为后面测试音频驱动做准备；
+4、Alsa Lib 和 util 移植到板子上;
+--安装交叉编译工具，编译lib、util需root权限;
+--util中的程序在P4上，运行出现No such file or directory;
+原因：可能是未找到需要的动态库。未解决
+5、P1上验证#2318bug，跟踪android4.4压力测试；
+  
+下周工作计划:
+1、熟悉alsa-lib的接口，音频驱动的接口;
+2、熟悉ltp-ddt中自带的alsa测试用例代码，能够在P4测试音频驱动；
+3、每天记录android4.4的压力测试；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
