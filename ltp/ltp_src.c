@@ -1,13 +1,13 @@
 In the Package
 --------------
-testcases/*
+testcases/
     Contains all tests that run under the LTP as well as the "bin"
     directory, which has hardlinks to all the test executables.
 
-runtest/*
+runtest/
     It houses command lists that are used by ltp-pan for automated testing.
 
-pan/*
+pan/
     The pan directory contains a simple, lightweight test harness.  lpt-pan
     has the ability to run tests randomly and in parallel.See ltp-pan's man 
     page for more information.
@@ -35,6 +35,10 @@ pan/*
  ver_linux    ：获取硬件、软件、环境信息。
 
 ------------------------------------------------------------------------
+LTP工作原理
+  LTP测试套件通过执行测试脚本runalltests.sh(或runltp或runltplite.sh)或
+/testscripts内的测试脚本调用驱动程序pan执行/testcases内的测试项目.
+
 pan工作原理
   LTP测试套件有一个专门的测试驱动程序pan，具体的测试用例的执行都是由pan来
   调用执行，它可以跟踪孤儿进程和抓取测试的输出信息。
@@ -48,14 +52,11 @@ pan工作原理
   整理统计的工作由scanner来完成，scanner是一个测试结果分析工具，它会理解pan
   的输出格式，并输出成一个表格的形式来总结那些测试passed或failed.
 
-  LTP测试套件通过执行测试脚本runalltests.sh(或runltp或runltplite.sh)或
-  /testscripts内的测试脚本调用驱动程序pan执行/testcases内的测试项目.
-
 ltp-pan可执行文件的参数：
     -q   quiet_mode
     -e   track_exit_stats, exit non-zero if any test exists non-zero
     -S   run tests sequentially  
-    -p   formatted printing
+    -p   formatted printing,  => fmt_printf=1
     -O   [目录]     output buffering directory   
     -t   [time]     s|m|h|d 结尾
     -a   [zooname]  name of the zoo file to use
@@ -66,12 +67,67 @@ ltp-pan可执行文件的参数：
     -C   [failcmdfilename] the file where all failed commands will be
     -A   
     -d
-    -f
     -h
-    -r
+    -r   [reporttype] reporting type: none, rts
     -s
+    -x   [keep_active] number of tags to keep running, 默认1
+-------------------------------------------------------------------------
+ltp-pan 分析
+  main函数中，
+    1.处理参数
+       向logfile中写入：Test Start Time:  等
+    2.get_collection函数
+        get_collection(filename, optind, argc, argv);
+        2.1 buf = slurp(file);
+          2.1.1 fopen() 打开文件(${TMP}/alltests)
+          2.1.2 fstat()取得文件状态 
+          2.1.3 分配相应大小的buf，read() 将文件内容读取到该buf上
+        2.2 分配 struct collection, 将alltests文件中的每一行分别存在
+            struct coll_entry结构体中
+        2.3 最终返回 struct collection* 
+    3. 分配并置0, 结构体数组 struct tag_pgrp，个数keep_active 
+    4. 分配并置0, 结构体 struct orphan_pgrp
+    5. 产生一个48位种子随机数, arand48()
+    6. 处理参数-t
+    7. 处理-O 且没有-x 
+    8. 处理-o参数，freopen()
+    9. 处理-C参数，fopen()
+    10. 处理-a参数, zoo_open()
+                    zoo_mark_args()
+    11. Allocate N spaces for max-arg commands.
+            zoo_mark_cmdline()
+            zoo_clear()
+    12. sigemptyset(&sa.sa_mask); 绑定信号处理函数wait_handler
+        SIGALRM SIGINT SIGTERM SIGHUP SIGUSR1 SIGUSR2
+    13. while(1)
+      13.1 while
 
 
 
+/* One entry in the command line collection.  */
+struct coll_entry {
+    char *name;     /* tag name */
+    char *cmdline;      /* command line */
+    char *pcnt_f;       /* location of %f in the command line args, flag */
+    struct coll_entry *next;
+};
+
+struct collection {
+    int cnt;
+    struct coll_entry **ary;
+};
+
+struct tag_pgrp {
+    int pgrp;
+    int stopping;
+    time_t mystime;
+    struct coll_entry *cmd;
+    char output[PATH_MAX];
+};
+
+struct orphan_pgrp {
+    int pgrp;
+    struct orphan_pgrp *next;
+};
 
 --------------------------------------------------------------------------

@@ -40,7 +40,7 @@ resume1.code
 #
 ## Top-level generic files
 #
-pdf/
+book/
 /tags
 /TAGS
 /vmlinux

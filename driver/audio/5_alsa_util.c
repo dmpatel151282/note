@@ -5,7 +5,7 @@ Util 会生成用于播放，录制，配置音频的应用文件，对测试很
 编译过程如下： 
 1. Configure
 
-./configure --host=arm-none-linux-gnueabi --prefix=/home/zhkkk/github/out/alsa-lib/arm-linux/ CFLAGS="-I/home/zhkkk/github/out/alsa-lib/arm-linux/include" LDFLAGS="-L/home/zhkkk/github/out/alsa-lib/arm-linux/lib -lasound" --disable-alsamixer --disable-xmlto --with-alsa-inc-prefix=/home/zhkkk/github/out/alsa_lib/arm-linux/include --with-curses=ncurses
+./configure --host=arm-none-linux-gnueabi --prefix=/home/liushui/github/out/alsa-lib/arm-linux/ CFLAGS="-I/home/liushui/github/out/alsa-lib/arm-linux/include" LDFLAGS="-L/home/liushui/github/out/alsa-lib/arm-linux/lib -lasound" --disable-alsamixer --disable-xmlto --with-alsa-inc-prefix=/home/liushui/github/out/alsa_lib/arm-linux/include --with-curses=ncurses
 
   1）--host 指定编译器，与 lib 的配置选项相同
   2）--prefix 指定编译后文件的安装路径，与 lib 的配置选项相同

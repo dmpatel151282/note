@@ -6,10 +6,10 @@ Lib 移植不需要修改一丁点儿的源码，只需要重新编译lib以支�
 1.Configure
 
 静态库
-./configure --host=arm-none-linux-gnueabi --prefix=/home/zhkkk/github/out/alsa-lib/arm-linux/ --enable-static=yes --enable-shared=no --with-configdir=/data/local/share
+./configure --host=arm-none-linux-gnueabi --prefix=/home/liushui/github/out/alsa-lib/arm-linux/ --enable-static=yes --enable-shared=no --with-configdir=/data/local/share
 
 动态库
-./configure --host=arm-none-linux-gnueabi --prefix=/home/zhkkk/github/out/alsa-lib/arm-linux/ --enable-static=no --enable-shared=yes --with-configdir=/data/local/share
+./configure --host=arm-none-linux-gnueabi --prefix=/home/liushui/github/out/alsa-lib/arm-linux/ --enable-static=no --enable-shared=yes --with-configdir=/data/local/share
 
 配置会先对此命令中的配置项进行检查，然后实现配置。需要注意的是：
 配置如果出错，未必一定报错，而是会采用默认的配置选项。几个重要的配置项：
@@ -31,7 +31,7 @@ Lib 移植不需要修改一丁点儿的源码，只需要重新编译lib以支�
 
 4.安装到嵌入式平台
   1）lib 库文件，放在 /system/lib/ 中
-  2）conf 文件，应放在 /usr/local/share 中
+  2）conf 文件，应放在 /data/local/share 中
 -------------------------------------------------------------------------
 alsa-lib 重要的数据结构和函数接口
 
