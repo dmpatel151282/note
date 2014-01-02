@@ -162,4 +162,8 @@
     管道只能点对点通信, 读写端必须同时存在
     管道读端全关闭，再往管道写，会产生信号SIGPIPE
     
+#include <unistd.h>
+int pipe(int pipefd[2]); //创建管道
+pipefd[0]   读端
+pipefd[1]   写端
 

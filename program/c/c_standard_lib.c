@@ -82,7 +82,7 @@ strcasecmp
 strdup
 功能: 将字符串拷贝到新建的位置处
 strsep
-
+char *strpbrk(const char *s, const char *accept);
 ---------------------------------------------------------------------------
 #include <signal.h>
 

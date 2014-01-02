@@ -44,21 +44,43 @@ pan工作原理
   调用执行，它可以跟踪孤儿进程和抓取测试的输出信息。
 
   工作方式：
-    从一个测试命令文件中读取要测试的条目的要执行的命令行，然后等待该项测试
-    的结束，并记录详细的测试输出。默认状态下pan会随机选择一个命令行来运行，
-    可以指定在同一时间要执行测试的次数。
+    从一个测试命令文件中读取要测试的条目和要执行的命令行，然后等待该项测试
+    的结束，并记录详细的测试输出。默认状态下pan会随机选择一个命令行来运行
+    ，可以指定在同一时间要执行测试的次数(-x)。
 
   pan会记录测试产生的详细的格式复杂的输出，但它不进行数据的整理和统计，数据
   整理统计的工作由scanner来完成，scanner是一个测试结果分析工具，它会理解pan
   的输出格式，并输出成一个表格的形式来总结那些测试passed或failed.
+--------------------------------------------------------------------------
+ltp-pan.c 实现ltp-pan的主文件, 含main()
 
+zoolib.c (testcases/bin目录下)
+    A Zoo is a file used to record what test tags are running at the moment.
+If the system crashes, we should be able to look at the zoo file to find out
+what was currently running. This is especially helpful when running multiple
+tests at the same time.
+
+zoo file format:
+  80 characters per line, ending with a \n
+  available lines start with '#'
+  expected line fromat: pid_t,tag,cmdline
+  
+splitstr.c 分割字符串
+const char **splitstr(const char *str, const char *separator, int *argcount)
+str: 要分割的字符串
+separator: 以此为分割条件
+argcount: 分割后的字符串个数
+成功返回，分割后的字符串数组；失败返回NULL
+void splitstr_free(const char **p_return)
+
+-------------------------------------------------------------------------
 ltp-pan可执行文件的参数：
-    -q   quiet_mode
+    -q   quiet_mode, =>quiet_mode=1 
     -e   track_exit_stats, exit non-zero if any test exists non-zero
-    -S   run tests sequentially  
-    -p   formatted printing,  => fmt_printf=1
-    -O   [目录]     output buffering directory   
-    -t   [time]     s|m|h|d 结尾
+    -S   run tests sequentially, =>sequential=1  
+    -p   formatted printing,  =>fmt_printf=1
+    -O   [test_out_dir]     output buffering directory   
+    -t   [run_time]     s|m|h|d 结尾, =>timed=1
     -a   [zooname]  name of the zoo file to use
     -n   [panname]  tag given to pan
     -f   [filename] filename to read test tags from
@@ -66,43 +88,13 @@ ltp-pan可执行文件的参数：
     -o   [outputfile]
     -C   [failcmdfilename] the file where all failed commands will be
     -A   
-    -d
+    -d   [Debug] debug-level, 默认为0, 0xf00 0xf0 0xf 0xff 0xfff ...
     -h
     -r   [reporttype] reporting type: none, rts
-    -s
+    -s   [starts] number of tags to run, 默认-1
     -x   [keep_active] number of tags to keep running, 默认1
 -------------------------------------------------------------------------
 ltp-pan 分析
-  main函数中，
-    1.处理参数
-       向logfile中写入：Test Start Time:  等
-    2.get_collection函数
-        get_collection(filename, optind, argc, argv);
-        2.1 buf = slurp(file);
-          2.1.1 fopen() 打开文件(${TMP}/alltests)
-          2.1.2 fstat()取得文件状态 
-          2.1.3 分配相应大小的buf，read() 将文件内容读取到该buf上
-        2.2 分配 struct collection, 将alltests文件中的每一行分别存在
-            struct coll_entry结构体中
-        2.3 最终返回 struct collection* 
-    3. 分配并置0, 结构体数组 struct tag_pgrp，个数keep_active 
-    4. 分配并置0, 结构体 struct orphan_pgrp
-    5. 产生一个48位种子随机数, arand48()
-    6. 处理参数-t
-    7. 处理-O 且没有-x 
-    8. 处理-o参数，freopen()
-    9. 处理-C参数，fopen()
-    10. 处理-a参数, zoo_open()
-                    zoo_mark_args()
-    11. Allocate N spaces for max-arg commands.
-            zoo_mark_cmdline()
-            zoo_clear()
-    12. sigemptyset(&sa.sa_mask); 绑定信号处理函数wait_handler
-        SIGALRM SIGINT SIGTERM SIGHUP SIGUSR1 SIGUSR2
-    13. while(1)
-      13.1 while
-
-
 
 /* One entry in the command line collection.  */
 struct coll_entry {
@@ -118,7 +110,7 @@ struct collection {
 };
 
 struct tag_pgrp {
-    int pgrp;
+    int pgrp;         
     int stopping;
     time_t mystime;
     struct coll_entry *cmd;
@@ -130,4 +122,93 @@ struct orphan_pgrp {
     struct orphan_pgrp *next;
 };
 
+---------------------------------------------------------------------------
+main函数中，
+    1.处理参数, getopt()
+       向logfile中写入：Test Start Time:  等
+    2.get_collection函数
+        get_collection(filename, optind, argc, argv);
+        2.1 buf = slurp(file);
+          2.1.1 fopen() 打开文件(alltests)
+          2.1.2 fstat()取得文件状态 
+          2.1.3 分配相应大小的buf，read() 将文件内容读取到该buf上
+        2.2 分配 struct collection, 将alltests文件中的每一行分别存在
+            struct coll_entry结构体中
+        2.3 最终返回 struct collection* 
+    3. 分配并置0, 结构体数组running, struct tag_pgrp，个数keep_active 
+    4. 分配并置0, 结构体 struct orphan_pgrp
+    5. 产生一个48位种子随机数, arand48()
+    6. 处理参数-t和-s, 给starts赋值, starts = coll->cnt
+    7. 处理-O 且没有-x 
+    8. 处理-o参数，freopen()
+    9. 处理-C参数，fopen()
+    10. 处理-a参数, zoo_open()
+                    zoo_mark_args()
+    11. Allocate N spaces for max-arg commands.
+          对每个[keep_active]执行 zoo_mark_cmdline()
+          对每个[keep_active]执行 zoo_clear()
+    12. sigemptyset(&sa.sa_mask); 绑定信号处理函数wait_handler, sigaction()
+        SIGALRM SIGINT SIGTERM SIGHUP SIGUSR1 SIGUSR2
+    13. while(1), 
+      13.1 while, 对每个[keep_active] run_child()
+      13.2 如果之前接收过 SIGUSR1 信号，...
+           如果接收过 SIGUSR2 信号，propagate_signal()
+      13.3 check_pids()
+    14. while(1), 等待孤儿进程组
+    15. zoo_clear(zoofile, getpid())
+    16. 打印测试结果统计到[logfile]
+
+
 --------------------------------------------------------------------------
+run_child(coll->ary[c],running + i,quiet_mode,&failcnt,fmt_print,logfile)
+1.初始化 struct tag_pgrp；创建管道，pipe(errpipe)
+2.write_test_start()
+3.创建子进程，fork()
+子进程中：
+ 1.设置文件描述符标记，fcntl(errpipe[1], F_SETFD, 1);
+ 2.setpgrp() <==> setpgid(0, 0)
+ 3.若无-O，dup2(fileno(stdout), fileno(stderr))
+ 4.如果cmdline含"\"';|<>$\\"，在shell下执行cmd
+    execlp("sh", "sh", "-c", c_cmdline, (char *)0);
+   否则直接执行，execvp(arg_v[0], arg_v);
+   分别将错误信息写入errbuf字符串中
+ 5.将errbuf字符串的长度和内容写入管道errpipe[1]
+父进程中：
+ 1.从errpipe[0]中读取, read(errpipe[0], &errlen, sizeof(errlen))
+ 2.read(errpipe[0], errbuf, errlen); close(errpipe[0]);
+ 3.等待子进程的状态，waitpid(cpid, &status, 0);
+ 4.将结果写入logfile中
+ 5.write_test_end()
+ 6.zoo_mark_cmdline()
+-------------------------------------------------------------------
+static void propagate_signal(struct tag_pgrp *running, int keep_active,
+         struct orphan_pgrp *orphans)
+1. 对于每个[keep_active], 向tag_pgrp中的进程组发送信号, 并置stopping为1
+  kill(-running[i].pgrp, send_signal)
+2. check_orphans(orphans, send_signal);
+ 2.1 跳过进程组id pgrp为0的项
+ 2.2 kill(-(orph->pgrp), sig) 向孤儿进程组发送send_signal信号
+3. rec_signal = send_signal = 0;
+-------------------------------------------------------------------
+void wait_handler(int sig)
+{
+    static int lastsent = 0;
+    if (sig == 0) {
+        lastsent = 0;
+    } else {
+        rec_signal = sig;
+        if (sig == SIGUSR2)
+            return;
+        if (lastsent == 0)
+            send_signal = sig;
+        else if (lastsent == SIGUSR1)
+            send_signal = SIGINT;
+        else if (lastsent == sig)
+            send_signal = SIGTERM;
+        else if (lastsent == SIGTERM)
+            send_signal = SIGHUP;
+        else if (lastsent == SIGHUP)
+            send_signal = SIGKILL;
+        lastsent = send_signal;
+    }
+}

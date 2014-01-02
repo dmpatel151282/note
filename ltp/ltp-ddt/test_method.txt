@@ -69,5 +69,5 @@ issue:
   8.  测试时出现：aplay: pcm_write:1939: write error: Input/output error
 
 
-
+  9. 执行Idcheck.sh 出现"Failed to touch /etc/group or /etc/passwd"
 

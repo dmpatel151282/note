@@ -10,15 +10,16 @@ int main(void)
     if (fork() == 0)
     {
         printf("child pid = %d, %d\n", getpid(), getppid()); 
-        getchar();
+        //getchar();
+        for(;;) {}
         printf("child end!\n");
         exit(256);
     }
 
     printf("parent start!\n");
-    wait(&status);
-    printf("status = %d\n", WEXITSTATUS(status));
-    printf("exit = %d, signal = %d\n", WIFEXITED(status), WIFSIGNALED(status));
+    //wait(&status);
+    //printf("status = %d\n", WEXITSTATUS(status));
+    //printf("exit = %d, signal = %d\n", WIFEXITED(status), WIFSIGNALED(status));
 
     printf("parent pid = %d, %d\n", getpid(), getppid());
 
