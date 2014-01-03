@@ -18,3 +18,20 @@
     gmtime
     mktime
     strftime
+------------------------------------------------------------
+#include <sys/times.h>
+clock_t times(struct tms *buf); //获取当前进程时间，存于buf中
+成功返回      ，失败返回-1，并置errno
+
+typedef long clock_t;
+struct tms {
+    clock_t tms_utime;  /* user time */
+    clock_t tms_stime;  /* system time */
+    clock_t tms_cutime; /* user time of children */
+    clock_t tms_cstime; /* system time of children */
+};
+
+
+
+
+

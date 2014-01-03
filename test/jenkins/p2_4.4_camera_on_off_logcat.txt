@@ -1,0 +1,196 @@
+--------- beginning of /dev/log/main
+01-05 07:04:53.950 D/AndroidRuntime( 2926): 
+01-05 07:04:53.950 D/AndroidRuntime( 2926): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+01-05 07:04:53.960 D/AndroidRuntime( 2926): CheckJNI is OFF
+01-05 07:04:53.980 D/dalvikvm( 2926): Trying to load lib libjavacore.so 0x0
+01-05 07:04:53.990 D/dalvikvm( 2926): Added shared lib libjavacore.so 0x0
+01-05 07:04:53.990 D/dalvikvm( 2926): Trying to load lib libnativehelper.so 0x0
+01-05 07:04:53.990 D/dalvikvm( 2926): Added shared lib libnativehelper.so 0x0
+01-05 07:04:53.990 D/dalvikvm( 2926): No JNI_OnLoad found in libnativehelper.so 0x0, skipping init
+01-05 07:04:54.020 E/cutils-trace( 2926): Error opening trace file: No such file or directory (2)
+01-05 07:04:54.040 D/dalvikvm( 2926): Note: class Landroid/app/ActivityManagerNative; has 180 unimplemented (abstract) methods
+01-05 07:04:54.220 E/memtrack( 2926): Couldn't load memtrack module (No such file or directory)
+01-05 07:04:54.220 E/android.os.Debug( 2926): failed to load memtrack module: -2
+--------- beginning of /dev/log/system
+01-05 07:04:54.240 D/PowerManagerService(  437): mHoldBootFastWakeLock = true
+01-05 07:04:54.300 D/AndroidRuntime( 2926): Calling main entry com.android.commands.input.Input
+01-05 07:04:54.300 I/Input   ( 2926): injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_POWER, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=20825456, downTime=20825456, deviceId=-1, source=0x101 }
+01-05 07:04:54.310 D/SensorManager(  437): >>>>>>> set discard sensrtime =3
+01-05 07:04:54.310 I/PowerManagerService(  437): Waking up from sleep...
+01-05 07:04:54.310 I/Input   ( 2926): injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_POWER, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=20825456, downTime=20825456, deviceId=-1, source=0x101 }
+01-05 07:04:54.310 D/AndroidRuntime( 2926): Shutting down VM
+01-05 07:04:54.330 D/dalvikvm( 2926): GC_CONCURRENT freed 98K, 15% free 564K/664K, paused 1ms+0ms, total 4ms
+01-05 07:04:54.330 V/KeyguardServiceDelegate(  437): onScreenTurnedOn(showListener = com.android.internal.policy.impl.PhoneWindowManager$18@420912c8)
+01-05 07:04:54.330 V/KeyguardServiceDelegate(  437): **** SHOWN CALLED ****
+01-05 07:04:54.340 I/WindowManager(  437): No lock screen! windowToken=null
+01-05 07:04:54.340 D/SurfaceFlinger(  111): Screen acquired, type=0 flinger=0x42072450
+01-05 07:04:54.370 V/audio_hw_primary(  114): adev_set_parameters, screen_state=on
+01-05 07:04:54.430 D/dalvikvm(  437): GC_FOR_ALLOC freed 913K, 14% free 8839K/10268K, paused 45ms, total 45ms
+01-05 07:04:54.430 D/SensorManager(  437): discard gsensor data ...
+01-05 07:04:54.470 I/qtaguid (  437): Failed write_ctrl(s 1 10012) res=-1 errno=1
+01-05 07:04:54.470 W/NetworkManagementSocketTagger(  437): setKernelCountSet(10012, 1) failed with errno -1
+01-05 07:04:54.610 D/SensorManager(  437): discard gsensor data ...
+01-05 07:04:54.830 D/SensorManager(  437): discard gsensor data ...
+01-05 07:04:55.330 D/PowerManagerService(  437): mHoldBootFastWakeLock = true
+01-05 07:04:56.010 V/audio_hw_primary(  114): start_output_stream, line: 729
+01-05 07:04:56.010 V/codec_audio_plan_one(  114): in normal mode, speaker on,****LINE:106,FUNC:set_normal_path
+01-05 07:04:56.010 I/ActivityManager(  437): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.camera2/com.android.camera.CameraLauncher bnds=[426,895][506,975]} from pid 648
+01-05 07:04:56.090 D/gralloc (  111): ==USE CPU CACHE OP usage = 0x933==
+01-05 07:04:56.110 I/qtaguid (  437): Failed write_ctrl(s 1 10026) res=-1 errno=1
+01-05 07:04:56.110 W/NetworkManagementSocketTagger(  437): setKernelCountSet(10026, 1) failed with errno -1
+01-05 07:04:56.160 V/audio_hw_primary(  114): normal mode , speaker,****LINE:654,FUNC:select_output_device
+01-05 07:04:56.160 V/audio_hw_primary(  114): start_output_stream: card:0, port:0, rate:44100
+01-05 07:04:56.160 D/alsa_pcm(  114): pcm_open:,sparams.stop_threshold:1540, config->stop_threshold:0
+01-05 07:04:56.160 V/audio_hw_primary(  114): do not use out resampler
+01-05 07:04:56.160 I/InputDispatcher(  437): Dropping event because there is no touchable window at (387, 929).
+01-05 07:04:56.290 D/SensorManager( 2743): >>>>>>> set discard sensrtime =3
+01-05 07:04:56.290 V/CameraHolder( 2743): open camera 0
+01-05 07:04:56.290 I/AwesomePlayer(  114): setDataSource_l(URL suppressed)
+01-05 07:04:56.330 I/AwesomePlayer(  114): setDataSource_l(URL suppressed)
+01-05 07:04:56.370 I/CameraClient(  114): Opening camera 0
+01-05 07:04:56.370 D/HALCameraFactory(  114): Calling process is: com.android.camera2
+01-05 07:04:56.370 D/V4L2CameraDevice(  114): V4L2CameraDevice::openCameraDev
+01-05 07:04:57.040 D/V4L2CameraDevice(  114): AWHLABEL#camera#connectDevice:open-OK!
+01-05 07:04:57.040 D/HALCameraFactory(  114): Calling process is: com.android.camera2
+01-05 07:04:57.040 D/CameraHardware(  114): ........................... to do initDefaultParameters
+01-05 07:04:57.050 V/CAM_PhotoModule( 2743): Preview size is 640x480
+01-05 07:04:57.050 W/CAM_PhotoModule( 2743): startPreview: surfaceTexture is not ready.
+01-05 07:04:57.050 D/CameraHardware(  114): setVideoCaptureSize next version to do ......
+01-05 07:04:57.050 D/SensorManager( 2743): >>>>>>> set discard sensrtime =3
+01-05 07:04:57.060 D/SensorManager( 2743): discard gsensor data ...
+01-05 07:04:57.060 D/SensorManager( 2743): discard gsensor data ...
+01-05 07:04:57.080 D/SensorManager( 2743): discard gsensor data ...
+01-05 07:04:57.100 D/dalvikvm( 2743): GC_FOR_ALLOC freed 7667K, 28% free 20787K/28540K, paused 19ms, total 19ms
+01-05 07:04:57.110 I/dalvikvm-heap( 2743): Grow heap (frag case) to 27.656MB for 7680016-byte allocation
+01-05 07:04:57.130 D/dalvikvm( 2743): GC_FOR_ALLOC freed 74K, 2% free 28213K/28540K, paused 19ms, total 19ms
+01-05 07:04:57.170 D/dalvikvm( 2743): GC_CONCURRENT freed 15588K, 56% free 12651K/28540K, paused 3ms+4ms, total 36ms
+01-05 07:04:57.230 D/CameraStorage( 2743): External storage state=mounted
+01-05 07:04:57.310 I/ActivityManager(  437): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher/com.android.launcher2.Launcher} from pid 437
+01-05 07:04:57.360 D/gralloc (  111): ==USE CPU CACHE OP usage = 0x333==
+01-05 07:04:57.370 I/WindowManager(  437): Screenshot Window{421295c0 u0 Starting com.android.camera2} was monochrome(ff000000)! mSurfaceLayer=21015 minLayer=21010 maxLayer=21020
+01-05 07:04:57.400 V/CAM_UI  ( 2743): SurfaceTexture ready.
+01-05 07:04:57.410 V/CAM_PhotoModule( 2743): Preview size is 640x480
+01-05 07:04:57.440 V/CAM_PhotoModule( 2743): startPreview
+01-05 07:04:57.440 D/dalvikvm( 2743): GC_FOR_ALLOC freed 46K, 56% free 12796K/28540K, paused 20ms, total 20ms
+01-05 07:04:57.460 I/dalvikvm-heap( 2743): Grow heap (frag case) to 19.852MB for 7680016-byte allocation
+01-05 07:04:57.480 D/dalvikvm( 2743): GC_FOR_ALLOC freed 1K, 29% free 20294K/28540K, paused 26ms, total 26ms
+01-05 07:04:57.510 D/CameraHardware(  114): Starting camera: 800x600 -> NV12(yuv420sp)
+01-05 07:04:57.510 D/V4L2CameraDevice(  114): startDevice, wxh: 800x600, fmt: 842094158
+01-05 07:04:57.520 D/dalvikvm( 2743): GC_CONCURRENT freed 24K, 29% free 20296K/28540K, paused 3ms+5ms, total 37ms
+01-05 07:04:57.540 V/CAM_PhotoModule( 2743): stopPreview
+01-05 07:04:57.570 D/V4L2CameraDevice(  114): V4L2CameraDevice::stopDevice
+01-05 07:04:57.570 W/V4L2CameraDevice(  114): wait until capture thread pause or exit
+01-05 07:04:57.870 W/V4L2CameraDevice(  114): should stop capture now
+01-05 07:04:57.870 W/ActivityManager(  437): Activity pause timeout for ActivityRecord{42113978 u0 com.android.camera2/com.android.camera.CameraLauncher t5}
+01-05 07:04:57.910 D/V4L2CameraDevice(  114): AWHLABEL#camera#Close-OK!
+01-05 07:04:57.910 D/CallbackNotifier(  114): savePictureThread exit
+01-05 07:04:57.910 I/CameraClient(  114): Destroying camera 0
+01-05 07:04:57.990 W/InputMethodManagerService(  437): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@420d8868 attribute=android.view.inputmethod.EditorInfo@42058670, token = android.os.BinderProxy@420bc538
+01-05 07:04:58.050 W/CAM_UI  ( 2743): SurfaceTexture destroyed
+01-05 07:04:58.140 D/dalvikvm( 2743): GC_FOR_ALLOC freed 7531K, 56% free 12803K/28540K, paused 20ms, total 20ms
+01-05 07:04:58.150 I/dalvikvm-heap( 2743): Grow heap (frag case) to 19.859MB for 7680016-byte allocation
+01-05 07:04:58.170 D/dalvikvm( 2743): GC_FOR_ALLOC freed 2K, 29% free 20301K/28540K, paused 22ms, total 22ms
+01-05 07:04:58.200 D/dalvikvm( 2743): GC_CONCURRENT freed <1K, 29% free 20300K/28540K, paused 3ms+5ms, total 27ms
+01-05 07:04:58.330 D/dalvikvm( 2743): GC_FOR_ALLOC freed <1K, 29% free 20300K/28540K, paused 16ms, total 16ms
+01-05 07:04:58.340 I/dalvikvm-heap( 2743): Grow heap (frag case) to 27.180MB for 7680016-byte allocation
+01-05 07:04:58.360 D/dalvikvm( 2743): GC_FOR_ALLOC freed <1K, 3% free 27800K/28540K, paused 21ms, total 21ms
+01-05 07:04:58.390 D/dalvikvm( 2743): GC_CONCURRENT freed 0K, 3% free 27800K/28540K, paused 3ms+4ms, total 28ms
+01-05 07:04:58.430 D/dalvikvm(  648): GC_CONCURRENT freed 776K, 11% free 8028K/8928K, paused 4ms+5ms, total 50ms
+01-05 07:04:58.500 I/qtaguid (  437): Failed write_ctrl(s 0 10026) res=-1 errno=1
+01-05 07:04:58.500 W/NetworkManagementSocketTagger(  437): setKernelCountSet(10026, 0) failed with errno -1
+01-05 07:04:59.930 I/ActivityManager(  437): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher/com.android.launcher2.Launcher} from pid 437
+01-05 07:05:00.830 D/dalvikvm(  437): GC_FOR_ALLOC freed 1021K, 15% free 8794K/10268K, paused 64ms, total 66ms
+01-05 07:05:01.790 D/PowerManagerService(  437): mHoldBootFastWakeLock = true
+01-05 07:05:06.140 D/audio_hw_primary(  114): out_standby
+01-05 07:05:07.140 V/audio_hw_primary(  114): start_output_stream, line: 729
+01-05 07:05:07.140 V/codec_audio_plan_one(  114): in normal mode, speaker on,****LINE:106,FUNC:set_normal_path
+01-05 07:05:07.140 I/ActivityManager(  437): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.camera2/com.android.camera.CameraLauncher bnds=[426,895][506,975]} from pid 648
+01-05 07:05:07.230 I/qtaguid (  437): Failed write_ctrl(s 1 10026) res=-1 errno=1
+01-05 07:05:07.230 W/NetworkManagementSocketTagger(  437): setKernelCountSet(10026, 1) failed with errno -1
+01-05 07:05:07.300 V/audio_hw_primary(  114): normal mode , speaker,****LINE:654,FUNC:select_output_device
+01-05 07:05:07.300 V/audio_hw_primary(  114): start_output_stream: card:0, port:0, rate:44100
+01-05 07:05:07.300 D/alsa_pcm(  114): pcm_open:,sparams.stop_threshold:1540, config->stop_threshold:0
+01-05 07:05:07.300 V/audio_hw_primary(  114): do not use out resampler
+01-05 07:05:07.390 D/SensorManager( 2743): >>>>>>> set discard sensrtime =3
+01-05 07:05:07.390 V/CameraHolder( 2743): open camera 0
+01-05 07:05:07.390 I/AwesomePlayer(  114): setDataSource_l(URL suppressed)
+01-05 07:05:07.420 I/AwesomePlayer(  114): setDataSource_l(URL suppressed)
+01-05 07:05:07.440 I/CameraClient(  114): Opening camera 0
+01-05 07:05:07.440 D/HALCameraFactory(  114): Calling process is: com.android.camera2
+01-05 07:05:07.440 D/V4L2CameraDevice(  114): V4L2CameraDevice::openCameraDev
+01-05 07:05:08.120 D/V4L2CameraDevice(  114): AWHLABEL#camera#connectDevice:open-OK!
+01-05 07:05:08.120 D/HALCameraFactory(  114): Calling process is: com.android.camera2
+01-05 07:05:08.120 D/CameraHardware(  114): ........................... to do initDefaultParameters
+01-05 07:05:08.130 V/CAM_PhotoModule( 2743): Preview size is 640x480
+01-05 07:05:08.130 W/CAM_PhotoModule( 2743): startPreview: surfaceTexture is not ready.
+01-05 07:05:08.130 D/CameraHardware(  114): setVideoCaptureSize next version to do ......
+01-05 07:05:08.140 D/SensorManager( 2743): >>>>>>> set discard sensrtime =3
+01-05 07:05:08.170 D/SensorManager( 2743): discard gsensor data ...
+01-05 07:05:08.170 D/SensorManager( 2743): discard gsensor data ...
+01-05 07:05:08.170 D/SensorManager( 2743): discard gsensor data ...
+01-05 07:05:08.170 I/Choreographer( 2743): Skipped 58 frames!  The application may be doing too much work on its main thread.
+01-05 07:05:08.290 D/dalvikvm( 2743): GC_FOR_ALLOC freed 23089K, 81% free 5829K/29480K, paused 19ms, total 21ms
+01-05 07:05:08.320 D/dalvikvm( 2743): GC_CONCURRENT freed 6K, 79% free 6292K/29480K, paused 3ms+3ms, total 36ms
+01-05 07:05:08.690 D/dalvikvm( 2743): GC_CONCURRENT freed 563K, 79% free 6293K/29480K, paused 3ms+11ms, total 80ms
+01-05 07:05:08.710 V/CAM_UI  ( 2743): SurfaceTexture ready.
+01-05 07:05:08.720 V/CAM_PhotoModule( 2743): Preview size is 640x480
+01-05 07:05:08.720 V/CAM_PhotoModule( 2743): startPreview
+01-05 07:05:08.720 D/CameraHardware(  114): Starting camera: 800x600 -> NV12(yuv420sp)
+01-05 07:05:08.720 D/V4L2CameraDevice(  114): startDevice, wxh: 800x600, fmt: 842094158
+01-05 07:05:08.860 I/qtaguid (  437): Failed write_ctrl(s 0 10012) res=-1 errno=1
+01-05 07:05:08.860 W/NetworkManagementSocketTagger(  437): setKernelCountSet(10012, 0) failed with errno -1
+01-05 07:05:09.030 D/PreviewWindow(  114): onNextFrameAvailable: Adjusting preview windows 0x42749ea0 geometry to 800x600
+01-05 07:05:09.030 D/PreviewWindow(  114): preview format: HAL_PIXEL_FORMAT_YCrCb_420_SP
+01-05 07:05:10.400 D/audio_hw_primary(  114): out_standby
+01-05 07:05:14.120 V/audio_hw_primary(  114): start_output_stream, line: 729
+01-05 07:05:14.120 V/codec_audio_plan_one(  114): in normal mode, speaker on,****LINE:106,FUNC:set_normal_path
+01-05 07:05:14.270 V/audio_hw_primary(  114): normal mode , speaker,****LINE:654,FUNC:select_output_device
+01-05 07:05:14.270 V/audio_hw_primary(  114): start_output_stream: card:0, port:0, rate:44100
+01-05 07:05:14.270 D/alsa_pcm(  114): pcm_open:,sparams.stop_threshold:1540, config->stop_threshold:0
+01-05 07:05:14.270 V/audio_hw_primary(  114): do not use out resampler
+01-05 07:05:17.370 D/audio_hw_primary(  114): out_standby
+01-05 07:05:18.820 V/audio_hw_primary(  114): start_output_stream, line: 729
+01-05 07:05:18.820 V/codec_audio_plan_one(  114): in normal mode, speaker on,****LINE:106,FUNC:set_normal_path
+01-05 07:05:18.860 V/CAM_PhotoModule( 2743): stopPreview
+01-05 07:05:18.870 D/V4L2CameraDevice(  114): V4L2CameraDevice::stopDevice
+01-05 07:05:18.870 W/V4L2CameraDevice(  114): wait until capture thread pause or exit
+01-05 07:05:18.960 W/V4L2CameraDevice(  114): should stop capture now
+01-05 07:05:18.970 V/audio_hw_primary(  114): normal mode , speaker,****LINE:654,FUNC:select_output_device
+01-05 07:05:18.970 V/audio_hw_primary(  114): start_output_stream: card:0, port:0, rate:44100
+01-05 07:05:18.970 D/alsa_pcm(  114): pcm_open:,sparams.stop_threshold:1540, config->stop_threshold:0
+01-05 07:05:18.970 V/audio_hw_primary(  114): do not use out resampler
+01-05 07:05:19.020 D/V4L2CameraDevice(  114): AWHLABEL#camera#Close-OK!
+01-05 07:05:19.020 D/CallbackNotifier(  114): savePictureThread exit
+01-05 07:05:19.030 I/CameraClient(  114): Destroying camera 0
+01-05 07:05:19.140 I/qtaguid (  437): Failed write_ctrl(s 1 10012) res=-1 errno=1
+01-05 07:05:19.140 W/NetworkManagementSocketTagger(  437): setKernelCountSet(10012, 1) failed with errno -1
+01-05 07:05:19.180 W/InputMethodManagerService(  437): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@4205f8f8 attribute=android.view.inputmethod.EditorInfo@4203bbf8, token = android.os.BinderProxy@420bc538
+01-05 07:05:19.210 W/CAM_UI  ( 2743): SurfaceTexture destroyed
+01-05 07:05:19.630 I/qtaguid (  437): Failed write_ctrl(s 0 10026) res=-1 errno=1
+01-05 07:05:19.630 W/NetworkManagementSocketTagger(  437): setKernelCountSet(10026, 0) failed with errno -1
+01-05 07:05:19.650 E/WindowManager( 2743): 
+01-05 07:05:19.650 E/WindowManager( 2743): android.view.WindowLeaked: Activity com.android.camera.CameraActivity has leaked window com.android.internal.policy.impl.PhoneWindow$DecorView{433fc1f8 V.E..... R....... 0,0-580,201} that was originally added here
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.view.ViewRootImpl.<init>(ViewRootImpl.java:346)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.view.WindowManagerGlobal.addView(WindowManagerGlobal.java:248)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:69)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.app.Dialog.show(Dialog.java:286)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.app.AlertDialog$Builder.show(AlertDialog.java:951)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at com.android.camera.CameraActivity.showLocationDialog(CameraActivity.java:261)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at com.android.camera.CameraActivity$1.onReceive(CameraActivity.java:221)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:768)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.os.Handler.handleCallback(Handler.java:733)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.os.Handler.dispatchMessage(Handler.java:95)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.os.Looper.loop(Looper.java:137)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at android.app.ActivityThread.main(ActivityThread.java:4998)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at java.lang.reflect.Method.invokeNative(Native Method)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at java.lang.reflect.Method.invoke(Method.java:515)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:777)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:593)
+01-05 07:05:19.650 E/WindowManager( 2743): 	at dalvik.system.NativeStart.main(Native Method)
+01-05 07:05:23.860 D/audio_hw_primary(  114): out_standby
+01-05 07:05:25.200 V/audio_hw_primary(  114): start_output_stream, line: 729
+01-05 07:05:25.200 V/codec_audio_plan_one(  114): in normal mode, speaker on,****LINE:106,FUNC:set_normal_path
+01-05 07:05:25.350 V/audio_hw_primary(  114): normal mode , speaker,****LINE:654,FUNC:select_output_device
+01-05 07:05:25.350 V/audio_hw_primary(  114): start_output_stream: card:0, port:0, rate:44100
+01-05 07:05:25.350 D/alsa_pcm(  114): pcm_open:,sparams.stop_threshold:1540, config->stop_threshold:0
+01-05 07:05:25.350 V/audio_hw_primary(  114): do not use out resampler

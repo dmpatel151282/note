@@ -1,0 +1,465 @@
+<5>[20701.963291] [VFE]vfe_close
+<4>[20701.963316] [CSI][GC2035]disalbe oe!
+<5>[20701.975374] [VFE]mclk off
+<3>[20701.975416] [VFE_ERR]vfe dphy clock is null
+<5>[20701.980140] [VFE]vfe_close end
+<6>[20702.081671] qtaguid: ctrl_counterset(s 1 10012): insufficient priv from pid=485 tgid=437 uid=1000
+<4>[20699.130831] CPU1: Booted secondary processor
+<6>[20702.674688] qtaguid: ctrl_counterset(s 0 10026): insufficient priv from pid=485 tgid=437 uid=1000
+<5>[20703.831462] CPU1: shutdown
+<6>[20703.831486] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20703.832537] [hotplug]: cpu1 is killed! .
+<4>[20703.840876] CPU1: Booted secondary processor
+<5>[20711.831608] CPU1: shutdown
+<6>[20711.831630] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20711.832681] [hotplug]: cpu1 is killed! .
+<6>[20712.931762] healthd: battery l=0 v=3412 t=30.0 h=2 st=2 c=36 chg=u
+<4>[20711.841017] CPU1: Booted secondary processor
+<5>[20720.811444] CPU1: shutdown
+<6>[20720.811467] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20720.812518] [hotplug]: cpu1 is killed! .
+<4>[20720.820837] CPU1: Booted secondary processor
+<5>[20747.702509] CPU1: shutdown
+<6>[20747.702533] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20747.703600] [hotplug]: cpu1 is killed! .
+<6>[20772.931775] healthd: battery l=0 v=3554 t=30.0 h=2 st=2 c=44 chg=u
+<6>[20791.902153] healthd: battery l=0 v=3570 t=30.0 h=2 st=2 c=-41 chg=u
+<6>[20801.921866] healthd: battery l=0 v=2993 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20801.946375] healthd: battery l=0 v=2993 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20803.936326] healthd: battery l=0 v=3114 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20805.862053] healthd: battery l=0 v=3153 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20807.017658] healthd: battery l=0 v=3153 t=30.0 h=2 st=2 c=0 chg=u
+<6>[20807.972708] request_suspend_state: sleep (0->3) at 20807972669827 (1970-01-04 23:04:36.826563992 UTC)
+<6>[20807.983394] sunxi pconf set pin [PH6] func to [7]
+<6>[20807.988631] sunxi pconf set pin [PH6] pull to [0]
+<6>[20808.000337] sunxi pconf set pin [PH6] data to [0]
+<6>[20808.005612] sunxi pconf set pin [PH0] func to [7]
+<6>[20808.100146] sunxi pconf set pin [PH7] func to [7]
+<6>[20808.105382] sunxi pconf set pin [PH7] pull to [0]
+<6>[20808.113910] qtaguid: ctrl_counterset(s 0 10012): insufficient priv from pid=485 tgid=437 uid=1000
+<6>[20808.123917] sunxi pconf set pin [PH7] data to [1]
+<6>[20808.129166] sunxi pconf set pin [PD0] func to [7]
+<6>[20808.134420] sunxi pconf set pin [PD0] pull to [0]
+<6>[20808.139647] sunxi pconf set pin [PD1] func to [7]
+<6>[20808.153472] sunxi pconf set pin [PD1] pull to [0]
+<6>[20808.158728] sunxi pconf set pin [PD2] func to [7]
+<6>[20808.173260] sunxi pconf set pin [PD2] pull to [0]
+<6>[20808.178511] sunxi pconf set pin [PD3] func to [7]
+<6>[20808.189259] sunxi pconf set pin [PD3] pull to [0]
+<6>[20808.194582] sunxi pconf set pin [PD4] func to [7]
+<6>[20808.199805] sunxi pconf set pin [PD4] pull to [0]
+<6>[20808.205051] sunxi pconf set pin [PD5] func to [7]
+<6>[20808.210337] sunxi pconf set pin [PD5] pull to [0]
+<6>[20808.215623] sunxi pconf set pin [PD6] func to [7]
+<6>[20808.220885] sunxi pconf set pin [PD6] pull to [0]
+<6>[20808.226112] sunxi pconf set pin [PD7] func to [7]
+<6>[20808.231347] sunxi pconf set pin [PD7] pull to [0]
+<6>[20808.236574] sunxi pconf set pin [PD8] func to [7]
+<6>[20808.241806] sunxi pconf set pin [PD8] pull to [0]
+<6>[20808.247034] sunxi pconf set pin [PD9] func to [7]
+<6>[20808.252266] sunxi pconf set pin [PD9] pull to [0]
+<6>[20808.257495] sunxi pconf set pin [PD10] func to [7]
+<6>[20808.262843] sunxi pconf set pin [PD10] pull to [0]
+<6>[20808.268195] sunxi pconf set pin [PD11] func to [7]
+<6>[20808.273527] sunxi pconf set pin [PD11] pull to [0]
+<6>[20808.278850] sunxi pconf set pin [PD12] func to [7]
+<6>[20808.284179] sunxi pconf set pin [PD12] pull to [0]
+<6>[20808.289503] sunxi pconf set pin [PD13] func to [7]
+<6>[20808.294831] sunxi pconf set pin [PD13] pull to [0]
+<6>[20808.300227] sunxi pconf set pin [PD14] func to [7]
+<6>[20808.305547] sunxi pconf set pin [PD14] pull to [0]
+<6>[20808.310909] sunxi pconf set pin [PD15] func to [7]
+<6>[20808.316259] sunxi pconf set pin [PD15] pull to [0]
+<6>[20808.321643] sunxi pconf set pin [PD16] func to [7]
+<6>[20808.326963] sunxi pconf set pin [PD16] pull to [0]
+<6>[20808.332304] sunxi pconf set pin [PD17] func to [7]
+<6>[20808.337621] sunxi pconf set pin [PD17] pull to [0]
+<6>[20808.342956] sunxi pconf set pin [PD18] func to [7]
+<6>[20808.348275] sunxi pconf set pin [PD18] pull to [0]
+<6>[20808.353613] sunxi pconf set pin [PD19] func to [7]
+<6>[20808.358933] sunxi pconf set pin [PD19] pull to [0]
+<6>[20808.364301] sunxi pconf set pin [PD20] func to [7]
+<6>[20808.369647] sunxi pconf set pin [PD20] pull to [0]
+<6>[20808.374986] sunxi pconf set pin [PD21] func to [7]
+<6>[20808.380315] sunxi pconf set pin [PD21] pull to [0]
+<6>[20808.385640] sunxi pconf set pin [PD22] func to [7]
+<6>[20808.390970] sunxi pconf set pin [PD22] pull to [0]
+<6>[20808.396294] sunxi pconf set pin [PD23] func to [7]
+<6>[20808.401625] sunxi pconf set pin [PD23] pull to [0]
+<6>[20808.406951] sunxi pconf set pin [PD24] func to [7]
+<6>[20808.412296] sunxi pconf set pin [PD24] pull to [0]
+<6>[20808.417649] sunxi pconf set pin [PD25] func to [7]
+<6>[20808.423027] sunxi pconf set pin [PD25] pull to [0]
+<6>[20808.428356] sunxi pconf set pin [PD26] func to [7]
+<6>[20808.433691] sunxi pconf set pin [PD26] pull to [0]
+<6>[20808.439019] sunxi pconf set pin [PD27] func to [7]
+<6>[20808.444351] sunxi pconf set pin [PD27] pull to [0]
+<4>[20808.449782] axp pconf set pin [GPIO2] data to [0]
+<6>[20808.510086] [DISP]display early suspend done
+<5>[20808.514829] [VFE]vfe_suspend
+<5>[20808.518019] [VFE]set camera to standy off and power off!
+<5>[20808.548019] [VFE]mclk on
+<4>[20808.562854] [CSI][GC2035]enable oe!
+<4>[20808.590766] [VFE_WARN]os_gpio_write, hdl is NULL
+<5>[20808.607912] [VFE]mclk off
+<6>[20808.610852] sunxi pmx set pin [PE14] to 0
+<6>[20808.615353] sunxi pmx set pin [PE15] to 0
+<5>[20808.619805] [VFE]mclk on
+<5>[20808.720085] [VFE]mclk off
+<4>[20808.723003] [VFE_WARN]os_gpio_write, hdl is NULL
+<6>[20808.760469] sunxi pmx set pin [PE16] to 0
+<6>[20808.764928] sunxi pmx set pin [PE17] to 0
+<5>[20808.769376] [VFE]vfe_suspend done!
+<3>[20808.790338] mali_platform_adjust_gpu_freq(419): set pll8 clock rate success,freq = 120 Mhz!
+<3>[20808.799611] fasboot mode is true
+<4>[20808.803916] [vans] usb already in, do not need early suspend
+<6>[20809.329536] healthd: battery l=0 v=3144 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20810.420551] healthd: battery l=0 v=3263 t=30.0 h=2 st=2 c=0 chg=u
+<6>[20811.511216] healthd: battery l=0 v=3197 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20812.602024] healthd: battery l=0 v=3224 t=30.0 h=2 st=2 c=0 chg=u
+<6>[20813.692837] healthd: battery l=0 v=3197 t=30.0 h=2 st=2 c=0 chg=u
+<6>[20815.618464] healthd: battery l=0 v=3109 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20815.795612] request_suspend_state: wakeup (3->0) at 20815795588476 (1970-01-04 23:04:44.649483266 UTC)
+<4>[20815.806079] [vans] dramfreq_late_resume: usb already in
+<3>[20815.813218] mali_platform_adjust_gpu_freq(433): set pll8 clock rate success,freq = 408 Mhz!
+<4>[20747.711916] CPU1: Booted secondary processor
+<5>[20815.950106] [VFE]vfe_resume
+<5>[20815.950136] [VFE]vfe resume work start!
+<6>[20815.950176] sunxi pmx set pin [PE15] to 1
+<6>[20815.950188] sunxi pmx set pin [PE14] to 1
+<5>[20815.950197] [VFE]mclk on
+<4>[20815.950209] [VFE_WARN]os_gpio_write, hdl is NULL
+<4>[20815.950897] axp pconf set pin [GPIO2] data to [1]
+<6>[20815.958739] qtaguid: ctrl_counterset(s 1 10012): insufficient priv from pid=485 tgid=437 uid=1000
+<6>[20815.960342] sunxi pconf set pin [PH7] func to [1]
+<6>[20815.960503] sunxi pconf set pin [PH7] pull to [0]
+<6>[20815.960525] sunxi pconf set pin [PH7] data to [1]
+<6>[20815.960554] sunxi pconf set pin [PD0] func to [2]
+<6>[20815.960563] sunxi pconf set pin [PD0] pull to [0]
+<6>[20815.960585] sunxi pconf set pin [PD1] func to [2]
+<6>[20815.960599] sunxi pconf set pin [PD1] pull to [0]
+<6>[20815.960615] sunxi pconf set pin [PD2] func to [2]
+<6>[20815.960629] sunxi pconf set pin [PD2] pull to [0]
+<6>[20815.960644] sunxi pconf set pin [PD3] func to [2]
+<6>[20815.960664] sunxi pconf set pin [PD3] pull to [0]
+<6>[20815.960684] sunxi pconf set pin [PD4] func to [2]
+<6>[20815.960694] sunxi pconf set pin [PD4] pull to [0]
+<6>[20815.960713] sunxi pconf set pin [PD5] func to [2]
+<6>[20815.960724] sunxi pconf set pin [PD5] pull to [0]
+<6>[20815.960743] sunxi pconf set pin [PD6] func to [2]
+<6>[20815.960754] sunxi pconf set pin [PD6] pull to [0]
+<6>[20815.960821] sunxi pconf set pin [PD7] func to [2]
+<6>[20815.960831] sunxi pconf set pin [PD7] pull to [0]
+<6>[20815.960847] sunxi pconf set pin [PD8] func to [2]
+<6>[20815.960858] sunxi pconf set pin [PD8] pull to [0]
+<6>[20815.960873] sunxi pconf set pin [PD9] func to [2]
+<6>[20815.960884] sunxi pconf set pin [PD9] pull to [0]
+<6>[20815.960900] sunxi pconf set pin [PD10] func to [2]
+<6>[20815.960911] sunxi pconf set pin [PD10] pull to [0]
+<6>[20815.960926] sunxi pconf set pin [PD11] func to [2]
+<6>[20815.960937] sunxi pconf set pin [PD11] pull to [0]
+<6>[20815.960953] sunxi pconf set pin [PD12] func to [2]
+<6>[20815.960964] sunxi pconf set pin [PD12] pull to [0]
+<6>[20815.960981] sunxi pconf set pin [PD13] func to [2]
+<6>[20815.960991] sunxi pconf set pin [PD13] pull to [0]
+<6>[20815.961008] sunxi pconf set pin [PD14] func to [2]
+<6>[20815.961019] sunxi pconf set pin [PD14] pull to [0]
+<6>[20815.961035] sunxi pconf set pin [PD15] func to [2]
+<6>[20815.961046] sunxi pconf set pin [PD15] pull to [0]
+<6>[20815.961063] sunxi pconf set pin [PD16] func to [2]
+<6>[20815.961074] sunxi pconf set pin [PD16] pull to [0]
+<6>[20815.961091] sunxi pconf set pin [PD17] func to [2]
+<6>[20815.961102] sunxi pconf set pin [PD17] pull to [0]
+<6>[20815.961119] sunxi pconf set pin [PD18] func to [2]
+<6>[20815.961130] sunxi pconf set pin [PD18] pull to [0]
+<6>[20815.961148] sunxi pconf set pin [PD19] func to [2]
+<6>[20815.961159] sunxi pconf set pin [PD19] pull to [0]
+<6>[20815.961176] sunxi pconf set pin [PD20] func to [2]
+<6>[20815.961188] sunxi pconf set pin [PD20] pull to [0]
+<6>[20815.961205] sunxi pconf set pin [PD21] func to [2]
+<6>[20815.961216] sunxi pconf set pin [PD21] pull to [0]
+<6>[20815.961234] sunxi pconf set pin [PD22] func to [2]
+<6>[20815.961246] sunxi pconf set pin [PD22] pull to [0]
+<6>[20815.961263] sunxi pconf set pin [PD23] func to [2]
+<6>[20815.961275] sunxi pconf set pin [PD23] pull to [0]
+<6>[20815.961293] sunxi pconf set pin [PD24] func to [2]
+<6>[20815.961304] sunxi pconf set pin [PD24] pull to [0]
+<6>[20815.961322] sunxi pconf set pin [PD25] func to [2]
+<6>[20815.961334] sunxi pconf set pin [PD25] pull to [0]
+<6>[20815.961352] sunxi pconf set pin [PD26] func to [2]
+<6>[20815.961364] sunxi pconf set pin [PD26] pull to [0]
+<6>[20815.961382] sunxi pconf set pin [PD27] func to [2]
+<6>[20815.961394] sunxi pconf set pin [PD27] pull to [0]
+<4>[20815.994563] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+<6>[20816.230111] sunxi pconf set pin [PH0] func to [2]
+<6>[20816.370617] sunxi pconf set pin [PH6] func to [1]
+<6>[20816.375848] sunxi pconf set pin [PH6] pull to [0]
+<6>[20816.381124] sunxi pconf set pin [PH6] data to [1]
+<6>[20816.390052] [DISP]display late resume done
+<4>[20816.600056] [CSI][GC2035]disalbe oe!
+<5>[20816.616058] [VFE]mclk off
+<6>[20816.618997] sunxi pmx set pin [PE17] to 1
+<6>[20816.623480] sunxi pmx set pin [PE16] to 1
+<4>[20816.640028] [VFE_WARN]os_gpio_write, hdl is NULL
+<5>[20816.690034] [VFE]mclk on
+<6>[20816.774379] healthd: battery l=0 v=3250 t=30.0 h=2 st=2 c=-1 chg=u
+<5>[20816.900038] [VFE]mclk off
+<5>[20816.902971] [VFE]vfe resume work end!
+<5>[20817.856779] CPU1: shutdown
+<6>[20817.859796] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20817.869319] [hotplug]: cpu1 is killed! .
+<6>[20817.929560] request_suspend_state: sleep (0->3) at 20817929537332 (1970-01-04 23:04:46.783431747 UTC)
+<6>[20817.944078] sunxi pconf set pin [PH6] func to [7]
+<6>[20817.949345] sunxi pconf set pin [PH6] pull to [0]
+<6>[20817.957238] qtaguid: ctrl_counterset(s 0 10012): insufficient priv from pid=485 tgid=437 uid=1000
+<6>[20817.967220] sunxi pconf set pin [PH6] data to [0]
+<6>[20817.972595] sunxi pconf set pin [PH0] func to [7]
+<6>[20818.050142] sunxi pconf set pin [PH7] func to [7]
+<6>[20818.055396] sunxi pconf set pin [PH7] pull to [0]
+<6>[20818.062933] sunxi pconf set pin [PH7] data to [1]
+<6>[20818.068180] sunxi pconf set pin [PD0] func to [7]
+<6>[20818.073462] sunxi pconf set pin [PD0] pull to [0]
+<6>[20818.078691] sunxi pconf set pin [PD1] func to [7]
+<6>[20818.083929] sunxi pconf set pin [PD1] pull to [0]
+<6>[20818.089160] sunxi pconf set pin [PD2] func to [7]
+<6>[20818.094396] sunxi pconf set pin [PD2] pull to [0]
+<6>[20818.099626] sunxi pconf set pin [PD3] func to [7]
+<6>[20818.104862] sunxi pconf set pin [PD3] pull to [0]
+<6>[20818.110133] sunxi pconf set pin [PD4] func to [7]
+<6>[20818.117515] sunxi pconf set pin [PD4] pull to [0]
+<6>[20818.122759] sunxi pconf set pin [PD5] func to [7]
+<6>[20818.127981] sunxi pconf set pin [PD5] pull to [0]
+<6>[20818.133218] sunxi pconf set pin [PD6] func to [7]
+<6>[20818.138441] sunxi pconf set pin [PD6] pull to [0]
+<6>[20818.143678] sunxi pconf set pin [PD7] func to [7]
+<6>[20818.148899] sunxi pconf set pin [PD7] pull to [0]
+<6>[20818.154139] sunxi pconf set pin [PD8] func to [7]
+<6>[20818.159360] sunxi pconf set pin [PD8] pull to [0]
+<6>[20818.164613] sunxi pconf set pin [PD9] func to [7]
+<6>[20818.169859] sunxi pconf set pin [PD9] pull to [0]
+<6>[20818.175355] sunxi pconf set pin [PD10] func to [7]
+<6>[20818.180703] sunxi pconf set pin [PD10] pull to [0]
+<6>[20818.186027] sunxi pconf set pin [PD11] func to [7]
+<6>[20818.191359] sunxi pconf set pin [PD11] pull to [0]
+<6>[20818.196682] sunxi pconf set pin [PD12] func to [7]
+<6>[20818.202013] sunxi pconf set pin [PD12] pull to [0]
+<6>[20818.207336] sunxi pconf set pin [PD13] func to [7]
+<6>[20818.212689] sunxi pconf set pin [PD13] pull to [0]
+<6>[20818.218050] sunxi pconf set pin [PD14] func to [7]
+<6>[20818.223400] sunxi pconf set pin [PD14] pull to [0]
+<6>[20818.228725] sunxi pconf set pin [PD15] func to [7]
+<6>[20818.234057] sunxi pconf set pin [PD15] pull to [0]
+<6>[20818.239383] sunxi pconf set pin [PD16] func to [7]
+<6>[20818.244713] sunxi pconf set pin [PD16] pull to [0]
+<6>[20818.250050] sunxi pconf set pin [PD17] func to [7]
+<6>[20818.255367] sunxi pconf set pin [PD17] pull to [0]
+<6>[20818.260719] sunxi pconf set pin [PD18] func to [7]
+<6>[20818.266068] sunxi pconf set pin [PD18] pull to [0]
+<6>[20818.271407] sunxi pconf set pin [PD19] func to [7]
+<6>[20818.276725] sunxi pconf set pin [PD19] pull to [0]
+<6>[20818.282061] sunxi pconf set pin [PD20] func to [7]
+<6>[20818.287379] sunxi pconf set pin [PD20] pull to [0]
+<6>[20818.292713] sunxi pconf set pin [PD21] func to [7]
+<6>[20818.298033] sunxi pconf set pin [PD21] pull to [0]
+<6>[20818.303368] sunxi pconf set pin [PD22] func to [7]
+<6>[20818.308679] sunxi pconf set pin [PD22] pull to [0]
+<6>[20818.314031] sunxi pconf set pin [PD23] func to [7]
+<6>[20818.319420] sunxi pconf set pin [PD23] pull to [0]
+<6>[20818.324777] sunxi pconf set pin [PD24] func to [7]
+<6>[20818.330155] sunxi pconf set pin [PD24] pull to [0]
+<6>[20818.335485] sunxi pconf set pin [PD25] func to [7]
+<6>[20818.340820] sunxi pconf set pin [PD25] pull to [0]
+<6>[20818.346145] sunxi pconf set pin [PD26] func to [7]
+<6>[20818.351478] sunxi pconf set pin [PD26] pull to [0]
+<6>[20818.356836] sunxi pconf set pin [PD27] func to [7]
+<6>[20818.362187] sunxi pconf set pin [PD27] pull to [0]
+<4>[20818.367638] axp pconf set pin [GPIO2] data to [0]
+<6>[20818.430160] [DISP]display early suspend done
+<5>[20818.434903] [VFE]vfe_suspend
+<5>[20818.438233] [VFE]set camera to standy off and power off!
+<5>[20818.468211] [VFE]mclk on
+<4>[20818.483091] [CSI][GC2035]enable oe!
+<4>[20818.511010] [VFE_WARN]os_gpio_write, hdl is NULL
+<5>[20818.528158] [VFE]mclk off
+<6>[20818.531165] sunxi pmx set pin [PE14] to 0
+<6>[20818.535618] sunxi pmx set pin [PE15] to 0
+<5>[20818.540086] [VFE]mclk on
+<5>[20818.640838] [VFE]mclk off
+<4>[20818.643925] [VFE_WARN]os_gpio_write, hdl is NULL
+<6>[20818.680154] sunxi pmx set pin [PE16] to 0
+<6>[20818.684613] sunxi pmx set pin [PE17] to 0
+<5>[20818.689206] [VFE]vfe_suspend done!
+<3>[20818.710448] mali_platform_adjust_gpu_freq(419): set pll8 clock rate success,freq = 120 Mhz!
+<3>[20818.719721] fasboot mode is true
+<4>[20818.723621] [vans] usb already in, do not need early suspend
+<6>[20819.022293] healthd: battery l=0 v=3234 t=30.0 h=2 st=2 c=-1 chg=u
+<6>[20820.947375] healthd: battery l=0 v=3063 t=30.0 h=2 st=2 c=0 chg=u
+<6>[20822.103540] healthd: battery l=0 v=3239 t=30.0 h=2 st=2 c=1 chg=u
+<6>[20823.196146] healthd: battery l=0 v=3241 t=30.0 h=2 st=2 c=0 chg=u
+<6>[20824.288380] healthd: battery l=0 v=3190 t=30.0 h=2 st=2 c=0 chg=u
+<4>[20817.866187] CPU1: Booted secondary processor
+<6>[20825.381241] healthd: battery l=0 v=3248 t=30.0 h=2 st=2 c=0 chg=u
+<6>[20825.467950] request_suspend_state: wakeup (3->0) at 20825467927168 (1970-01-04 23:04:54.321821875 UTC)
+<4>[20825.479370] [vans] dramfreq_late_resume: usb already in
+<3>[20825.485322] mali_platform_adjust_gpu_freq(433): set pll8 clock rate success,freq = 408 Mhz!
+<6>[20825.604309] qtaguid: ctrl_counterset(s 1 10012): insufficient priv from pid=485 tgid=437 uid=1000
+<5>[20825.614347] [VFE]vfe_resume
+<4>[20825.617817] axp pconf set pin [GPIO2] data to [1]
+<5>[20825.627781] [VFE]vfe resume work start!
+<6>[20825.632166] sunxi pconf set pin [PH7] func to [1]
+<6>[20825.637495] sunxi pconf set pin [PH7] pull to [0]
+<6>[20825.642885] sunxi pmx set pin [PE15] to 1
+<6>[20825.647349] sunxi pmx set pin [PE14] to 1
+<6>[20825.651988] sunxi pconf set pin [PH7] data to [1]
+<6>[20825.657262] sunxi pconf set pin [PD0] func to [2]
+<5>[20825.662565] [VFE]mclk on
+<4>[20825.665403] [VFE_WARN]os_gpio_write, hdl is NULL
+<6>[20825.670611] sunxi pconf set pin [PD0] pull to [0]
+<6>[20825.675881] sunxi pconf set pin [PD1] func to [2]
+<6>[20825.681204] sunxi pconf set pin [PD1] pull to [0]
+<6>[20825.686552] sunxi pconf set pin [PD2] func to [2]
+<6>[20825.691883] sunxi pconf set pin [PD2] pull to [0]
+<6>[20825.704375] sunxi pconf set pin [PD3] func to [2]
+<6>[20825.709671] sunxi pconf set pin [PD3] pull to [0]
+<6>[20825.715087] sunxi pconf set pin [PD4] func to [2]
+<6>[20825.720421] sunxi pconf set pin [PD4] pull to [0]
+<6>[20825.725682] sunxi pconf set pin [PD5] func to [2]
+<6>[20825.730960] sunxi pconf set pin [PD5] pull to [0]
+<6>[20825.736201] sunxi pconf set pin [PD6] func to [2]
+<6>[20825.741459] sunxi pconf set pin [PD6] pull to [0]
+<6>[20825.746691] sunxi pconf set pin [PD7] func to [2]
+<6>[20825.752074] sunxi pconf set pin [PD7] pull to [0]
+<6>[20825.757347] sunxi pconf set pin [PD8] func to [2]
+<6>[20825.762917] sunxi pconf set pin [PD8] pull to [0]
+<6>[20825.768216] sunxi pconf set pin [PD9] func to [2]
+<6>[20825.773639] sunxi pconf set pin [PD9] pull to [0]
+<6>[20825.778933] sunxi pconf set pin [PD10] func to [2]
+<6>[20825.784298] sunxi pconf set pin [PD10] pull to [0]
+<6>[20825.789633] sunxi pconf set pin [PD11] func to [2]
+<6>[20825.794991] sunxi pconf set pin [PD11] pull to [0]
+<6>[20825.800342] sunxi pconf set pin [PD12] func to [2]
+<6>[20825.805676] sunxi pconf set pin [PD12] pull to [0]
+<6>[20825.811023] sunxi pconf set pin [PD13] func to [2]
+<6>[20825.816345] sunxi pconf set pin [PD13] pull to [0]
+<6>[20825.821731] sunxi pconf set pin [PD14] func to [2]
+<6>[20825.827082] sunxi pconf set pin [PD14] pull to [0]
+<4>[20825.832439] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+<6>[20825.832451] sunxi pconf set pin [PD15] func to [2]
+<6>[20825.832468] sunxi pconf set pin [PD15] pull to [0]
+<6>[20825.832485] sunxi pconf set pin [PD16] func to [2]
+<6>[20825.832497] sunxi pconf set pin [PD16] pull to [0]
+<6>[20825.832653] sunxi pconf set pin [PD17] func to [2]
+<6>[20825.832665] sunxi pconf set pin [PD17] pull to [0]
+<6>[20825.832683] sunxi pconf set pin [PD18] func to [2]
+<6>[20825.832699] sunxi pconf set pin [PD18] pull to [0]
+<6>[20825.832718] sunxi pconf set pin [PD19] func to [2]
+<6>[20825.832729] sunxi pconf set pin [PD19] pull to [0]
+<6>[20825.832752] sunxi pconf set pin [PD20] func to [2]
+<6>[20825.832763] sunxi pconf set pin [PD20] pull to [0]
+<6>[20825.832781] sunxi pconf set pin [PD21] func to [2]
+<6>[20825.832797] sunxi pconf set pin [PD21] pull to [0]
+<6>[20825.832815] sunxi pconf set pin [PD22] func to [2]
+<6>[20825.832827] sunxi pconf set pin [PD22] pull to [0]
+<6>[20825.832849] sunxi pconf set pin [PD23] func to [2]
+<6>[20825.832861] sunxi pconf set pin [PD23] pull to [0]
+<6>[20825.832879] sunxi pconf set pin [PD24] func to [2]
+<6>[20825.832895] sunxi pconf set pin [PD24] pull to [0]
+<6>[20825.832914] sunxi pconf set pin [PD25] func to [2]
+<6>[20825.832926] sunxi pconf set pin [PD25] pull to [0]
+<6>[20825.832949] sunxi pconf set pin [PD26] func to [2]
+<6>[20825.832961] sunxi pconf set pin [PD26] pull to [0]
+<6>[20825.832984] sunxi pconf set pin [PD27] func to [2]
+<6>[20825.832997] sunxi pconf set pin [PD27] pull to [0]
+<6>[20826.100113] sunxi pconf set pin [PH0] func to [2]
+<6>[20826.148453] sunxi pconf set pin [PH6] func to [1]
+<6>[20826.153871] sunxi pconf set pin [PH6] pull to [0]
+<6>[20826.159105] sunxi pconf set pin [PH6] data to [1]
+<6>[20826.170133] [DISP]display late resume done
+<4>[20826.440059] [CSI][GC2035]disalbe oe!
+<5>[20826.456059] [VFE]mclk off
+<6>[20826.459001] sunxi pmx set pin [PE17] to 1
+<6>[20826.463489] sunxi pmx set pin [PE16] to 1
+<6>[20826.474407] healthd: battery l=0 v=3232 t=30.0 h=2 st=2 c=0 chg=u
+<4>[20826.481268] [VFE_WARN]os_gpio_write, hdl is NULL
+<5>[20826.530083] [VFE]mclk on
+<5>[20826.740048] [VFE]mclk off
+<5>[20826.742977] [VFE]vfe resume work end!
+<5>[20827.142160] CPU1: shutdown
+<6>[20827.145181] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20827.151546] [hotplug]: cpu1 is killed! .
+<6>[20827.249582] qtaguid: ctrl_counterset(s 1 10026): insufficient priv from pid=485 tgid=437 uid=1000
+<5>[20827.530226] [VFE]vfe_open
+<3>[20827.539858] [VFE_ERR]vfe dphy clock is null
+<3>[20827.547664] [VFE_ERR]vfe dphy clock is null
+<5>[20827.558629] [VFE]vfe_open ok
+<4>[20827.562211] NOT_SUPPORT_THIS_FUNCTION:sun8iw3p1_isp_set_table_addr, line: 363
+<4>[20827.151558] CPU1: Booted secondary processor
+<5>[20827.600293] [VFE]mclk on
+<4>[20827.618464] [CSI][GC2035]enable oe!
+<4>[20827.624401] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+<5>[20828.718491] [VFE]buffer_setup, buffer count=7, size=720000
+<5>[20828.906035] [VFE]capture video mode!
+<5>[20829.016415] [VFE]capture video first frame done!
+<5>[20829.024194] [VFE]vfe_close
+<4>[20829.031737] [CSI][GC2035]disalbe oe!
+<5>[20829.048824] [VFE]mclk off
+<3>[20829.051936] [VFE_ERR]vfe dphy clock is null
+<5>[20829.056927] [VFE]vfe_close end
+<6>[20829.638688] qtaguid: ctrl_counterset(s 0 10026): insufficient priv from pid=485 tgid=437 uid=1000
+<4>[20831.591162] [Read_single_page] NFC_ReadRetry 2 cycles, ch =0, chip = 0
+<4>[20831.598471] [Read_single_page]	block = 2024, page = 246, RetryCount = 2  
+<4>[20831.606317] set retry default value:  32 49 62 ad 44 49 62 ad
+<6>[20832.931785] healthd: battery l=0 v=3423 t=30.0 h=2 st=2 c=41 chg=u
+<5>[20833.321657] CPU1: shutdown
+<6>[20833.324826] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20833.331835] [hotplug]: cpu1 is killed! .
+<4>[20833.331088] CPU1: Booted secondary processor
+<5>[20836.261792] CPU1: shutdown
+<6>[20836.264894] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20836.271293] [hotplug]: cpu1 is killed! .
+<6>[20838.330143] qtaguid: ctrl_counterset(s 1 10026): insufficient priv from pid=485 tgid=437 uid=1000
+<5>[20838.597694] [VFE]vfe_open
+<3>[20838.604322] [VFE_ERR]vfe dphy clock is null
+<3>[20838.609166] [VFE_ERR]vfe dphy clock is null
+<5>[20838.613980] [VFE]vfe_open ok
+<4>[20838.621156] NOT_SUPPORT_THIS_FUNCTION:sun8iw3p1_isp_set_table_addr, line: 363
+<5>[20838.652693] [VFE]mclk on
+<4>[20838.669475] [CSI][GC2035]enable oe!
+<4>[20838.674217] [CSI][GC2035]V4L2_IDENT_SENSOR=2035CPU1: Booted secondary processor
+<5>[20839.933089] [VFE]buffer_setup, buffer count=7, size=720000
+<6>[20840.004630] qtaguid: ctrl_counterset(s 0 10012): insufficient priv from pid=485 tgid=437 uid=1000
+<5>[20840.066243] [VFE]capture video mode!
+<5>[20840.176631] [VFE]capture video first frame done!
+<5>[20841.421760] CPU1: shutdown
+<6>[20841.425068] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20841.432072] [hotplug]: cpu1 is killed! .
+<4>[20841.642498] [Read_single_page] NFC_ReadRetry 2 cycles, ch =0, chip = 0
+<4>[20841.649862] [Read_single_page]	block = 2023, page = 0, RetryCount = 2  
+<4>[20841.659713] set retry default value:  32 49 62 ad 44 49 62 ad
+<4>[20841.678389] [Read_single_page] NFC_ReadRetry 3 cycles, ch =0, chip = 0
+<4>[20841.685763] [Read_single_page]	block = 2023, page = 2, RetryCount = 3  
+<4>[20841.693189] PHY_PageRead: ecc limit, 0xa, 0x0, 0x0, 0x0
+<4>[20841.698986] bank 0 block 0x7e7,page 0x2 
+<4>[20841.703426] secbitmap low: 0xffffffff, high 0x0 
+<4>[20841.708624] set retry default value:  32 49 62 ad 44 49 62 ad
+<4>[20846.465928] [Read_single_page] NFC_ReadRetry 3 cycles, ch =0, chip = 0
+<4>[20846.476281] [Read_single_page]	block = 2023, page = 8, RetryCount = 3  
+<4>[20846.486929] set retry default value:  32 49 62 ad 44 49 62 ad
+<5>[20850.114518] [VFE]vfe_close
+<4>[20850.125426] [CSI][GC2035]disalbe oe!
+<5>[20850.142121] [VFE]mclk off
+<3>[20850.145060] [VFE_ERR]vfe dphy clock is null
+<5>[20850.162439] [VFE]vfe_close end
+<4>[20841.430986] CPU1: Booted secondary processor
+<6>[20850.263035] qtaguid: ctrl_counterset(s 1 10012): insufficient priv from pid=485 tgid=437 uid=1000
+<6>[20850.773411] qtaguid: ctrl_counterset(s 0 10026): insufficient priv from pid=485 tgid=437 uid=1000
+<5>[20851.872268] CPU1: shutdown
+<6>[20851.875311] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20851.890238] [hotplug]: cpu1 is killed! .
+<4>[20856.516409] [Read_single_page] NFC_ReadRetry 3 cycles, ch =0, chip = 0
+<4>[20856.523901] [Read_single_page]	block = 2023, page = 16, RetryCount = 3  
+<4>[20856.536590] set retry default value:  32 49 62 ad 44 49 62 ad
+<4>[20851.880033] CPU1: Booted secondary processor
+<5>[20858.521633] CPU1: shutdown
+<6>[20858.524690] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[20858.530857] [hotplug]: cpu1 is killed! .
