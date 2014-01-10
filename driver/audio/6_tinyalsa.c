@@ -21,11 +21,12 @@ Usage: tinypcminfo -D card -d device
 -b : Sample bits
 
 ----------------------------------------------------
+external/tinyalsa/
 源码：
   pcm.c             for control interface
   mixer.c           for pcm interface
-  tinyplay.c        for play
-  tinycap.c         for capture
+  tinyplay.c        for tinyplay
+  tinycap.c         for tinycap
   tinymixer.c       for mixer
 
 ---------------------------------------------------

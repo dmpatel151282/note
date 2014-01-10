@@ -51,3 +51,7 @@ adb shell rm /system/bin/zcat
 adb shell ln -s /data/busybox /system/bin/zcat
 adb shell rm /system/bin/depmod
 adb shell ln -s /data/busybox /system/bin/depmod
+adb shell rm /system/bin/which
+adb shell ln -s /data/busybox /system/bin/which
+adb shell rm /system/bin/tail
+adb shell ln -s /data/busybox /system/bin/tail

@@ -26,7 +26,7 @@ int main(void)
         close(fd[1]);
         exit(0);
     }
-    /*close(fd[0]);*/  //读端关闭再写会产生信号
+    //close(fd[0]);  //读端关闭再写会产生信号
     /*close(fd[1]);*/
     /*wait(NULL);*/
     read(fd[0], buf, sizeof(buf));

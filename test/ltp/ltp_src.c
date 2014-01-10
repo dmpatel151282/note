@@ -159,9 +159,8 @@ main函数中，
     15. zoo_clear(zoofile, getpid())
     16. 打印测试结果统计到[logfile]
 
-
 --------------------------------------------------------------------------
-run_child(coll->ary[c],running + i,quiet_mode,&failcnt,fmt_print,logfile)
+13.1 run_child(coll->ary[c],running + i,quiet_mode,&failcnt,fmt_print,logfile)
 1.初始化 struct tag_pgrp；创建管道，pipe(errpipe)
 2.write_test_start()
 3.创建子进程，fork()

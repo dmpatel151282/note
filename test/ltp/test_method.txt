@@ -1,83 +1,72 @@
 
-1）初始测试
+ a) ./runltp -P am335x-evm -f ddt/lmbench -t 24h
 
- a) ./runltp -p -l /tmp/resultlog -d /tmp -o /tmp/ltpscreen -t 24h
-
+    -P:选择platform
     -p:人为指定日志格式,保证日志为可读格式                       
     -l:记录测试日志的文件
     -d:指定临时存储目录,默认为/tmp
     -o:直接打印测试输出到/tmp/ltpscreen.20111207
-    -t:指定测试的持续时间
-
- b) ./runalltests.sh                    
-
-
-2）压力测试
-
- 在使用testscripts/ltpstress.sh脚本之前需要对系统进行配置
-
-  -rsh必须配置完毕并再运行。
-  -内核支持NFS，并且安装NFS软件，通过网络测试。
-  -"sar"或"top"工具需要被安装，执行ltpstress时需要添加"sar"或"top"工具。 
-
-执行测试:
-./ltpstress.sh -d /tmp/sardata -l /tmp/ltpstress.log -I /tmp/iofile -i 5 -m 128 -t 24 -S 
-
-    -d:指定sar或top记录文件,默认/tmp/ltpstress.data 
-    -l:记录测试结果到/tmp/ltpstress.log (小写L)
-    -I:记录"iostat"结果到iofile,默认是/tmp/ltpstress.iostat (大写i)
-    -i:指定sar或top快照时间间隔,默认为10秒
-    -m: 指定最小的内存使用,默认为: RAM + 1/2 swap
-    -n:不对网络进行压力测试
-    -S :用sar捕捉数据
-    -T:利用LTP修改过的top工具捕捉数据
-    -t: 指定测试时间  
+    -t:指定测试的持续时,Define duration of the test in s,m,h,d.       
     
-3）用户自定义测试:
+    -x INSTANCES: Run multiple test instances in parallel.
+    -c <options>: Run test under additional background CPU load
+    -D <options>: Run test under additional background load on Secondary storage
+    -m <options>: Run test under additional background load on Main memory
+    -i <options>: Run test under additional background load on IO Bus
+    -n          : Run test with network traffic in background.
 
-  a) 创建命令文件，这个命令文件包括两部分: tag和test case
-        tag即为标签项,起到一个说明的目的,方便我们知道是干什么的.
-        test case即为要测试的项目,此部分为/opt/ltp/testcases/bin/下的命令
-        加上相关的选项
+The platform name specified with -P option must exist in the platforms/ dir.
+It is also possible to run tests without -P option, in such case the ltprun
+script won't filter test cases and it is possible that tests cases not
+supported by the platform you are running on will be called.
+---------------------------------------------------------------------------
+issue:
+  1.无法执行ltp-pan，/system/bin/sh: ./ltp-pan: No such file or directory
+原因：用readelf查看ltp-pan，它包含3个动态库。
+      有INTERP段，它指明了程序在加载过程中需要使用的动态链接加载器，如果指定
+      的这个加载器未找到，那么就会提示“ No such file or directory”
+解决：ltp-ddt源码，include/mk/config.mk中，CFLAGS=-static，LDFLAGS=-static
+      再重新编译；make clean; make ....
+    
+  2.测试时出现：testcases/bin/ddt/common/install_modules.sh[24]: 
+                udevadm: not found
 
-     例如:  self.sh 
-     #Tag       Test case
-     #------------------------------------
-     mtest01     mtest01 -p 10
-     mmstress    mmstress -x 100
-     fork01      fork01
-     chdir01     symlink01 -T chdir01
-     #------------------------------------
-     
-则可运行:
- ./runltp -p -l self.log -f /opt/ltp/self.sh
+  3.测试时出现：testcases/bin/ddt/common/common.sh: line 284: 
+                syntax error: bad substitution
+原因： busybox默认的shell为ash，有些语法是/bin/bash才有的
+解决： 编译或下载可执行文件bash，
+       adb push bash /system/bin/; 
+       ln -s /bin/sh /system/bin/bash;
+       ln -s /bin/bash /system/bin/bash;
+       
+  4. 测试时出现：Config Option and Module name not found.  
+原因：在get_modular_config_names.sh中，
+解决：在get_modular_config_names.sh中，加入
+        *rtc0)
+          rtc="CONFIG_RTC_DRV_SUNXI:rtc0";;
 
-  如果未指定日志文件存储路径将会默认保存到/opt/ltp/results/self.log下
-  如果-f选项后的文件不指定绝对路径,将会默认的到目录/opt/ltp/runtest下去寻找
+  5. 测试时出现：FATAL: error during prcessing alltests file by sed
+原因：部分testscenarios没有通过check_feature_support
 
-    b) 单独测试runtest目录里的项目,以tracing为例,则可
-        ./runltp -p -l tracing.log -f tracing
+  6. 测试时出现：/proc/config.gz: cannot execute binary file
+                 FATAL: Could not find CONFIG_RTC_HCTOSYS in config or 
+                 the option was not set to m or y
+原因：zcat命令不存在
+解决：ln -s /data/busybox /system/bin/zcat
 
-    c) 对runtest中文件进行修改,取消我们不需要测试的部分
+  7. 重启板子，/bin/目录、/usr目录消失; 
+解决：在板子的/system/etc/下创建install-recovery.sh; chmod 755 ..
+        #!/system/bin/sh
+        mkdir -p /usr/local/
+        cp /data/ltp/share -rf /usr/local/
+        mkdir /bin/
+        ln -s /system/bin/bash /bin/sh
+        ln -s /system/bin/bash /bin/bash
+        mkdir /lib/
+        cp /system/lib/ld-linux.so.3 /lib/ld-linux.so.3
 
------------------------------------------------------------------------
-issue
+  8.  测试时出现：aplay: pcm_write:1939: write error: Input/output error
 
-1.运行runltp出现： 
-    ./runltp: line 989: /data/ltp/IDcheck.sh: not found
-    WARNING: required users and groups not present
-    WARNING: some test cases may fail
-    ./runltp: line 989: /data/ltp/ver_linux: not found
-    WARNING: unable to display versions of software installed
 
-原因：在android shell环境下无法直接执行IDcheck.sh和ver_linux脚本.
-解决：修改Ver_linux和IDcheck.sh：
-        #!/bin/sh  ->   #!/system/bin/sh
-      更好的方法是：在开发板中：
-                        mkdir /bin; cd /bin; ln -s /data/busybox sh
+  9. 执行Idcheck.sh 出现"Failed to touch /etc/group or /etc/passwd"
 
-2.运行runltp出现：
-    FATAL: LTP not installed correctly
-    INFO:  Follow directions in INSTALL!
-
-原因：ltp 的默认安装路径是/opt/ltp

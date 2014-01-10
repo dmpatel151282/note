@@ -1,0 +1,11 @@
+# @name cpufreq test
+# @desc 
+# @requires 
+
+FREQ_SWITCH_ORDER_0.05_100000   source 'common.sh' ; do_cmd cpufreq_test.sh -f freq_switch -i 0.05 -n 100000 -s 1
+FREQ_SWITCH_RANDOM_0.05_100000   source 'common.sh'; do_cmd cpufreq_test.sh -f freq_switch -i 0.05 -n 100000 -s 0
+FREQ_SWITCH_RANDOM_1_10000    source 'common.sh'; do_cmd cpufreq_test.sh -f freq_switch -i 1 -n 10000 -s 0
+FREQ_SWITCH_ORDER_1_2000    source 'common.sh'; do_cmd cpufreq_test.sh -f freq_switch -i 1 -n 2000 -s 1
+CPU_HOTPLUG_0.5_5000    source 'common.sh'; do_cmd cpufreq_test.sh -f cpu_hotplug -i 0.5 -n 5000
+FREQ_SWITCH_ORDER_7200_1   source 'common.sh'; do_cmd cpufreq_test.sh -f freq_switch -i 7200 -n 1 -s 1
+#DHCPCD_SWITCH_5000   source 'common.sh'; do_cmd cpufreq_test.sh -f dhcpcd_switch -n 5000
