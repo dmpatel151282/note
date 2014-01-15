@@ -98,130 +98,47 @@
 
 四、Sed 流编辑器
 
-    删除(过滤输出) d
-        
-        指定删除第一行
+使用方法：
+  1. 在命令行上执行编辑指令, sed [-n][-e] 'command' file(s)  (分号分隔多个指令)
+  2. 编辑指令放在文件中, sed [-n] -f scriptfile file(s)
 
-            sed -e '1d' /etc/passwd             
+参数：
+  -e    只有多个指令时才需要，表示下一个参数为指令。或者用 
+  -r    替换-e，支持扩展正则表达式
+  -i    替换-e，对源文件内容进行实际操作
 
-        删除第二行到第四行
+  -n    sed默认输出每个输入行，此选项阻止自动输出 
 
-            sed -e '2,4d' /etc/passwd
+指令：
+  1.模式，选择要处理的行
+  2.过程，如何处理
 
-        删除第二和第四行
+1.模式
+  行号: N 
+        N,M   N到M行
 
-            sed -e '2d;4d' /etc/passwd
+  正则表达式:
+        /regular/
 
-        删除第一行到第三行和第五行
+2.过程
+  d  删除(过滤输出)
+     '行号d'
+     '/regular/d'
 
-            sed -e '1,3d;5d' /etc/passwd
+  s  替换
+     's/regular/replacement/'               全部替换
+     's/regular/replacement/g'              全部替换
+     's/regular/replacement/N'              把每行的第N个替换
 
-        删除匹配root的行
+     '行号s/regular/replacement/g'          
+     '/regular/s/regular/replacement/g'     行号和/regular/为模式匹配
 
-            sed -e '/root/d' /etc/passwd
+     replacement中包含&表示前面被替换的字符
 
-        删除匹配以ftp开头的行
-            
-            sed -e '/^ftp/d' /etc/passwd
-
-        删除匹配以bash为结尾的行
-            
-            sed -e '/bash$/d' /etc/passwd
-
-        删除空行
-            
-            sed -e '/^$/d' /etc/passwd
-
-        删除以小写字母开头的行
-            
-            sed -e '/^[a-z]/d' /etc/passwd
-
-            sed -e '/^[[:lower:]]/d' /etc/passwd
-
-        删除以大写字母开头的行
-            
-            sed -e '/^[A-Z]/d' /etc/passwd
-
-            sed -e '/^[[:upper:]]/d' /etc/passwd
-
-        删除以数字开头的行
-            
-            sed -e '/^[0-9]/d' /etc/passwd
-
-            sed -e '/^[[:digit:]]/d' /etc/passwd
-
-        删除以字母开头的行
-            
-            sed -e '/^[A-Za-z]/d' /etc/passwd
-
-        删除以空格开头的行
-            
-            sed -e '/^\ /d' /etc/passwd
-
-            sed -e '/^[[:blank:]]/d' /etc/passwd
-
-        删除以特殊符号开头的行
-            
-            sed -e '/^[[:punct:]]/d' /etc/passwd
-
-
-    打印 p
-        
-        打印第一行
-            
-            sed -ne '1p' /etc/passwd        不加n参数没有效果
-
-        打印匹配root开头的行
-            
-            sed -ne '/^root/p' /etc/passwd
-
-        打印以小写字母开头，和以nologin结尾的行
-            
-            sed -ne '/^[a-z]/p;/nologin$/p'
-
-        打印以root开头和以ftp开头的行
-            
-            sed -ne '/^root/p;/^ftp/p' /etc/passwd
-
-
-    替换 s
-    
-        把每行的第一个root替换成kyo
-            
-            sed -e 's/root/kyo/' /etc/passwd
-
-        把每行的root替换成kyo
-            
-            sed -e 's/root/kyo/g' /etc/passwd
-
-        把每行的第二个root替换成kyo
-            
-            sed -e 's/root/kyo/2' /etc/passwd
-
-        指定2到10行范围把root替换成kyo
-
-            sed -e '2,10s/root/kyo/g' /etc/passwd
-
-        把root替换成rootboot ,&代表前面被替换的字符
-            
-            sed -e 's/root/&boot/' /etc/passwd
-
-        把以bin开头的行到以adm开头的行，把a换成abc
-            
-            sed -e '/^bin/,/^adm/s/a/&bc/g'
-
-        支持扩展正则表达式把-e换成-r
-            
-            sed -r '/^a+/&b/g' 
-
-    
-    对源文件内容进行实际操作 ,把-e换成-i
-        
-        删除文件中第一行
-            
-            sed -i '1d' /tmp/passwd
-
-    
+  p  打印(sed默认输出每个输入行, 必须加-n参数)
+     '行号p'
+     '/regular/p'
+--------------------------------------------------------------------------------------------------------------------
     使用域进行定位
         
         \(\)将\(和\)之间的字符串定义为一个域，并且将匹配这个表达式保存到一个区域,一个正则表达式最多可以保存9个域，访问域\1到\9来表示
@@ -286,28 +203,22 @@
 
             sed -r 's/^([a-zA-Z]+)[^a-zA-Z]+[a-zA-Z]+[^a-zA-Z]+([a-zA-Z]+).*/\1\2/'
 
-    
-
-    basename `pwd`      取得当前目录名
-
-    dirname `pwd`       取得当前路径，不包含当前目录名
-
-    tac                 倒转文件里的内容
-
-    rev                 倒转文件里的单词顺序
-
 ==============================================================================
 
 五、awk
 
-
 Awk是一门编程语言，有很多版本，我们用的是GNU的gawk
 
-        
-        以:为分隔符打印第三列
+  1.命令行语法: awk 'instruction' file  (分号分隔多个指令)
+  2.用脚本文件: awk -f scriptfile file
 
-            awk -F : '{print $3}' /etc/passwd
+参数：
+  -f
+  -F    指定分隔符        
+  -v
 
+-------------------------------------------------------------------------------
+  awk -F : '{print $3}' /etc/passwd
 
         以:为分隔符统计/sbin/nologin有多少个
 

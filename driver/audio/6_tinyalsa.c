@@ -23,13 +23,17 @@ Usage: tinypcminfo -D card -d device
 ----------------------------------------------------
 external/tinyalsa/
 源码：
-  pcm.c             for control interface
-  mixer.c           for pcm interface
-  tinyplay.c        for tinyplay
-  tinycap.c         for tinycap
-  tinymixer.c       for mixer
+  pcm.c                 for pcm interface
+  mixer.c               for control interface
+  tinyplay.c            for tinyplay
+  tinycap.c             for tinycap
+  tinymixer.c           for mixer
+
+  tinyalsa/asoundlib.h
 
 ---------------------------------------------------
+pcm 接口
+
 struct pcm_config
 channels: unsigned int
 rate: unsigned int
@@ -53,13 +57,23 @@ mmap_status: snd_pcm_mmap_status
 mmap_control: snd_pcm_mmap_control
 sync_ptr: snd_pcm_sync_ptr
 
-struct pcm *pcm_open(unsigned int card, unsigned int device,
+1. struct pcm *pcm_open(unsigned int card, unsigned int device,
         unsigned int flags, struct pcm_config *config);
 flags:
 PCM_OUT        
 PCM_IN    PCM_MMAP PCM_NOIRQ PCM_NORESTART       
           
-int pcm_is_ready(struct pcm *pcm);
+2. int pcm_is_ready(struct pcm *pcm);
+
+3. unsigned int pcm_get_buffer_size(struct pcm *pcm);
+
+4.1 int pcm_write(struct pcm *pcm, const void *data, unsigned int count);
+  static unsigned int pcm_format_to_bits(enum pcm_format format);
+  ioctl(pcm->fd, SNDRV_PCM_IOCTL_WRITEI_FRAMES, &x)
+
+4.2 int pcm_read(struct pcm *pcm, void *data, unsigned int count);
+
+5. int pcm_close(struct pcm *pcm);
 
 struct pcm_params
 struct pcm_params *pcm_params_get(unsigned int card, unsigned int device,
@@ -67,10 +81,44 @@ struct pcm_params *pcm_params_get(unsigned int card, unsigned int device,
 int pcm_get_config(struct pcm *pcm, struct pcm_config *config);
 int pcm_set_config(struct pcm *pcm, struct pcm_config *config);
 
-int pcm_write(struct pcm *pcm, const void *data, unsigned int count);
-int pcm_read(struct pcm *pcm, void *data, unsigned int count);
-
 int pcm_start(struct pcm *pcm);
 int pcm_stop(struct pcm *pcm);
 
-int pcm_close(struct pcm *pcm);
+------------------------------------------------------------------------
+mixer 接口 
+
+struct mixer
+fd: int
+count: unsigned int
+ctl: struct mixer_ctl *
+info: struct snd_ctl_elem_info *
+
+struct mixer_ctl
+mixer: struct mixer *
+ename: char **
+info: struct snd_ctl_elem_info *
+
+struct snd_ctl_elem_info
+
+enum mixer_ctl_type
+MIXER_CTL_TYPE_BOOL,
+MIXER_CTL_TYPE_INT,
+MIXER_CTL_TYPE_ENUM,
+MIXER_CTL_TYPE_BYTE,
+MIXER_CTL_TYPE_IEC958,
+MIXER_CTL_TYPE_INT64,
+MIXER_CTL_TYPE_UNKNOWN,
+MIXER_CTL_TYPE_MAX,
+
+1. struct mixer *mixer_open(unsigned int card)
+
+2. static void tinymix_set_value(struct mixer *mixer, unsigned int id, unsigned int value)
+  struct mixer_ctl *mixer_get_ctl(struct mixer *mixer, unsigned int id)
+  enum mixer_ctl_type mixer_ctl_get_type(struct mixer_ctl *ctl)
+  unsigned int mixer_ctl_get_num_values(struct mixer_ctl *ctl)
+  int mixer_ctl_set_value(struct mixer_ctl *ctl, unsigned int id, int value)
+
+3. void mixer_close(struct mixer *mixer)
+
+struct mixer_ctl *mixer_get_ctl_by_name(struct mixer *mixer, const char *name);
+

@@ -4,13 +4,14 @@
  --增加参数处理和独立testcase文件，合并随即切换频点，顺序切换频点函数等
  --和罗勇分析，测试时，进程阻塞的问题，怀疑和之前加的bash有问题；
 2、用ltp-ddt测试ipc、mm等自带的内核相关的测试用例, 19个fail项;
-3、
+3、修改脚本，将testsuit中的audio测试用例移到ltp-ddt中, 后需修改测试程序，目前跑通一个；
+ --查看left_right_channel程序源码，修改mixer的设置，解决pcw_write时出错的问题；
+4、测试reboot;
+
 
 下周工作计划: 
-1、熟悉cpufreq_test脚本，和罗勇确定测试用例;
-2、分析ltp-pan如何处理信号;
-3、熟悉TigerRobot源码;
-
+1、熟悉audio接口，理解并跑通testsuit中的audio的codec驱动的关于mixer的3个测试用例;
+2、做出jenkins + ltp-ddt自动化测试的demo, 测试结果email发出；
 
 
 

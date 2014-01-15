@@ -1,9 +1,6 @@
 
-repo status
-repo branch
-repo forall -p -v -c 'git diff remotes/exdroid/kitkat-a23'
-make installclean
 
-repo status
-repo branch
-repo forall -p -v -c 'git diff remotes/lichee/sunxi-kitkat-a23'
+git diff                                工作区和暂存区的差异
+git diff HEAD                           工作区和HEAD(当前分支)的差异
+git diff --cached/--staged              暂存区和版本库的差异
+git diff remotes/[remotename]/[branch]
