@@ -1,18 +1,34 @@
-make
- 参数 
-    -e  将给出的变量覆盖makefile中的变量 
 
+make解释器执行脚本过程：
+    1. 装载Makefile Makefile include Makefile -->  依赖关系图
+    2. 根据用户指定的target找出全部依赖关系，并判断依赖条件中文件的时间戳。如果时间戳较新，就开始执行。
+
+make
+ 选项： 
+    -e  将命令参数给出的变量值覆盖makefile中的变量 
+    -t  更新文件的时间戳，不执行target对应的命令
+    -c  指定要执行的Makefile的路径，默认为当前目录
+    -f  指定Makefile名称，默认自动寻找Makefile或Makefile.mk
+    -n  只打印要执行的命令，不执行命令
+    -l  指定编译时所需的lib文件，如：lname 先找libname.so 再找libname.a 
 
 -------------------------------------------------------------------------
 一、变量
 精确展开像宏一样；
 全局;
 
-变量的定义：
+变量的定义与赋值：
 	foo = /src/path
-	var := ${foo} 只能使用前面已定义好了的变量，不能使用后面的变量。
-	var ?= foo    如果var没有被定义过,那么var的值就是“foo”，否则什么也不做
-	var += foo    追加变量值
+	var := ${foo}   只能使用前面已定义好了的变量，不能使用后面的变量。
+	var ?= foo      如果var没有被定义过,那么var的值就是“foo”，否则什么也不做
+	var += foo      追加变量值
+
+    立即赋值，读取脚本时就赋值
+    延时赋值，执行脚本时使用该变量，才赋值
+        a = b   a立即，b延时
+        a ?= b  a立即，b延时
+        a := b  a立即，b立即
+        a += b  a立即，b立即(在target后面，则延时)
 
 变量的使用: 
 	$var
@@ -22,6 +38,19 @@ make
 特殊变量：
   VPATH = src:../headers
   指定其它目录来寻找依赖文件等。目录由“冒号”分隔
+
+  CURDIR
+  MAKEFILE_LIST
+  VARIABLE
+  CC
+  CXX
+  CXXFLAGS
+  CPPFLAGS
+  LDLIBS
+  TARGET_ARCH
+
+
+--------------------------------------------------------------------------------
 
 二、规则
 
@@ -104,12 +133,23 @@ endif
 
 三、函数
 
+1.内置函数
 函数调用：
   $(<function> <arguments>) 或 ${<function> <arguments>}
 
+2.用户自定义
+   2.1 带参数       $(call <function>, <arguments>)
+   2.2 不带参数     $(<function>)   该类函数也称为宏
+
+函数定义： (命令不需加TAB键)
+    define fname
+    ...
+    endef
+
+
 函数名和参数之间以“空格”，而分隔参数间以逗号“,”分隔
 
-函数：
+内置函数：
 
 $(strip <string>)
 名称:去空格函数——strip。

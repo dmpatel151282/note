@@ -112,9 +112,24 @@ Shell介绍
 
     read命令:   echo "value" | read variable
 
-    eval
-        echo ${!DEVICE_TYPE}
-        eval MODULE_NAME=\$$DEVICE_TYPE
+    eval arg1 [arg2] ... [argN]
+        将表达式中的参数,或者表达式列表,组合起来,并且评估它们.包含在表达式中的任何变量
+        都将被扩展.结果将会被转化到命令中.
+
+      1、eval会把赋值语句中双引号之间的内容直接赋给‘=’前的变量，而不是当作字符串赋给变量
+        version="(2 4)" 是将字符串赋值给 version;
+        eval version="(2 4)" 执行时变成了 version=(2 4), 是把数组 (2 4) 赋值给 version;
+      
+      2、当在一个赋值语句的前面加上 eval 时，它就会将后面表达式中以 $ 开头的所有变量进行整体替换
+        var1="1234"
+        tmp=var
+        eval test="$"$tmp"1"  # 或者eval test=\$$tmp"1"，如果是eval test=$$tmp"1"会先把$$解释成进程号      
+        echo   $test
+        那么就会在屏幕上显示出：
+                 1234
+
+      3、最后一个参数 eval echo \$$#
+         变量当命令   CMD=$*;eval $CMD
 
   引用
     echo $a    删除空白符 

@@ -122,3 +122,7 @@ MIXER_CTL_TYPE_MAX,
 
 struct mixer_ctl *mixer_get_ctl_by_name(struct mixer *mixer, const char *name);
 
+mixer设置
+(1) by name
+  "Speaker Function"
+

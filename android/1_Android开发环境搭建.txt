@@ -34,6 +34,10 @@
     设置环境变量，在~/.bashrc 中加入:
         export PATH=/usr/local/android-sdk/tools:/usr/local/eclipse:$PATH
 
+1.5 导入android源码
+
+    android/development/ide/eclipse
+
 ----------------------------------------------------------------------------
 2.Android源代码工程环境
 
