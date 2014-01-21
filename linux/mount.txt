@@ -1,1 +1,0 @@
-sudo mount -t cifs -o username=zhengjinyong,password=tobemyself,noperm //172.20.1.86/zhengjinyong /home/zhkkk/server/172.20.1.86/

@@ -32,12 +32,14 @@ comand:
 
   2. repo sync
     开始同步,即分别克隆多个版本库到本地的工作区中。
-    在 repo sync 后面跟上项目的名称。项目的名称来自于 .repo/manifest.xml 
+    可以在 repo sync 后面跟上项目的名称。项目的名称来自于 .repo/manifest.xml 
   这个 XML 文件中 project 元素的 name 属性值。
     如果某个项目版本库尚不存在,则执行 repo sync 命令相当于执行 git clone
-    如果项目版本库已经存在,则执行
+  如果项目版本库已经存在,则执行
         git remote update           相当于对每一个remote源执行 fetch 操作。
         git rebase origin/branch    针对当前分支的跟踪分支执行 rebase 操作
+
+    如果在merge 的过程中出现冲突， 这需要手动运行  git rebase --continue
 
   3. repo start --all branch
     同时对多个版本库执行切换分支操作, 相当与git checkout -b
@@ -54,5 +56,11 @@ comand:
   目录下的引用来获取分支列表,以及分支的发布状态等。
 
   7. repo diff
+    显示提交的代码和当前工作目录代码之间的差异。
 
   8. repo forall -p -v -c 'git_cmd' 
+
+  9. repo update [project-list]
+    上传修改的代码 ，上传到 Gerrit (基于web 的代码review 系统), Gerrit 收到上传的代码，
+  会转换为一个个变更，从而可以让人们来review 修改的代码。
+

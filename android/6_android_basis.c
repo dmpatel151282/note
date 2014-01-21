@@ -33,24 +33,28 @@ Intent
 
 Intent Structure
 1.action：
+ACTION_MAIN         <==> android.intent.action.MAIN
 ACTION_EDIT 
-ACTION_MAIN
 ACTION_VIEW
+ACTION_PICK
+ACTION_GET_CONTENT
 
 2.category：类别， Gives additional information about the action.
 
-CATEGORY_LAUNCHER means it should appear in the Launcher as a top-level application
-CATEGORY_ALTERNATIVE means it should be included in a list of alternative actions the user can perform on a piece of data.
+CATEGORY_LAUNCHER   <==> android.intent.category.LAUNCHER 
 
+CATEGORY_DEFAULT
+
+CATEGORY_ALTERNATIVE
 
 3.data：uri形式
+    
 
 4.type ： Specifies an explicit type (a MIME type) of the intent data.
 
 5.component: 若以上找不到，则指定组件。
 
 6.extras：This is a Bundle of any additional information.
-
 
 ---------------------------
 通过静态变量传递数据
