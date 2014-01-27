@@ -23,7 +23,6 @@ modules.builtin
 Module.symvers
 Module.markers
 *.elf
-*.bin
 *.gz
 *.bz2
 *.lzma
@@ -33,7 +32,6 @@ Module.markers
 *.gcno
 *.rej
 *.raw
-*.jpeg
 standby.code
 resume1.code
 
