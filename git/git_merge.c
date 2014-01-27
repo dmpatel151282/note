@@ -1,11 +1,18 @@
 
-git checkout master
-git merge development
-
+git merge [选项...] <commit>...
+            
 常用选项
   --commit      自动提交，默认
   --no-commit   仅改变工作区的内容 
   -m            自动提交时所使用的注释
+
+  --abort
+
+<commit> 提交ID或对应的引用：分支、里程碑等
+
+
+git checkout master
+git merge development
 
 如果出现冲突，系统会自动以一种特殊的格式将冲突写入文件
 
