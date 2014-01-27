@@ -1,6 +1,6 @@
 tinyalsa
 
-部分支持PCM Interface 和 Control Interface
+部分支持 PCM Interface 和 Control Interface
 
 1. libtinyalsa.so
 

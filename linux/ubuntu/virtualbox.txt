@@ -5,17 +5,19 @@
   2. 先关闭虚拟机，打开虚拟机设置，切换到共享文件夹，点击右边的添加按钮
   3. 打开虚拟机，选择映射网络驱动器，文件夹：\\vboxsvr\xx 
 
+------------------------------------------------------------------------
 开启usb设备支持
   1. 安装扩展包
   2. sudo adduser liushui vboxusers
  
+
   1.增加一个名为usbfs的用户组,  sudo groupadd usbfs
   2.增加当前用户到工作组, sudo adduser liushui usbfs
   3.得到usbfs组的id, cat /etc/group | grep usbfs
   4.修改 /etc/fstab 文件, sudo vim /etc/fstab 在文件的末尾增加一行
-      none /proc/bus/usb usbfs devgid=1001,devmode=664 0 0
-      其中 devgid=1001，其中的1002就是刚才的usbfs的组id
-  5.为 /proc/bus/usb 增加权限
+      none /sys/bus/usb usbfs devgid=1001,devmode=664 0 0
+      其中 devgid 为 vboxusers组id
+  5.为 /sys/bus/usb 增加权限
       sudo chmod 777 /proc/bus/usb
       sudo chown liushui /proc/bus/usb
   6.重启电脑
@@ -28,15 +30,7 @@
 ---------------------------------------------------------------------------
 设备-> 共享粘帖板-> 双向
 ---------------------------------------------------------------------------
-1. vboxmanage modifyhd "<path>.vdi" --resize 20480
-2. 使用工具GParted （Gnome Partition Editor）将新增的空间分配给C盘
-3. 在VirtualBox里面，设置XP启动顺序光驱第一，光驱加载下载的gparted-liveISO。
-4.启动虚拟机XP进入GParted系统，将C盘扩容。
-5.退出GParted系统，移除光驱gparted-liveISO，重新启动XP，待检查磁盘完毕后即可
 
-建议：先备份原虚拟机，以免造成数据丢失
-
----------------------------------------------------------------------------
 设备：
   Host+D               安装增强功能
 
@@ -55,9 +49,10 @@
   Host+Q               退出(C)
 
 视图：
+  Host+C               切换到自动缩放模式           ***
+
   Host+F               切换到全屏模式
   Host+L               切换到无缝模式
-  Host+C               切换到自动缩放模式
   Host+A               切换到自动调整窗口大小
   Host+G               切换到自动调整显示尺寸
 

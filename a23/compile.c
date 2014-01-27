@@ -8,6 +8,12 @@ extract-bsp     //复制bImage和modules
 make -j8
 pack 或 pack -d
 
+
+make_ota_package
+make_ota_package_inc
+make_ota_target_file
+
+------------------------------------------------------------------------
 在Android源码整编后执行 make otapackage 命令即可生成OTA整包, 步骤如下
 1. 重新对system.img文件进行了打包；
 2. 生成差分资源包
