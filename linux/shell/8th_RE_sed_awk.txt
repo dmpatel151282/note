@@ -207,7 +207,7 @@
 
 五、awk
 
-Awk是一门编程语言，有很多版本，我们用的是GNU的gawk
+Awk是一门编程语言，有很多版本，我们用的是GNU的gawk, 行输入驱动
 
   1.命令行语法: awk 'instruction' file  (分号分隔多个指令)
   2.用脚本文件: awk -f scriptfile file
@@ -217,47 +217,121 @@ Awk是一门编程语言，有很多版本，我们用的是GNU的gawk
   -F    指定分隔符        
   -v
 
--------------------------------------------------------------------------------
+特殊符号：
+  $0         代表所有输入行
+  $1-n       代表一个输入行的第几个字段
+
+eg:
   awk -F : '{print $3}' /etc/passwd
 
-        以:为分隔符统计/sbin/nologin有多少个
+特殊例程： 后接语句块{}
+  BEGIN      在第一个输入行读入之前执行
+  END        在读完所有输入行后再执行
 
-            awk 'BEGIN{FS=":" ;count=0}{if($7 = "/sbin/nologin")count+=1}END{print count}' /etc/passwd
+eg:
+    以:为分隔符统计/sbin/nologin有多少个
+        awk 'BEGIN{FS=":" ;count=0}{if($7 = "/sbin/nologin")count+=1}END{print count}' /etc/passwd
 
-                BEGIN      在读记录之前执行
-                END        在读完记录后再执行
-                $0         代表所有记录
-                $1-n       代表一个记录的第几个字段
+主输入循环： 模式+过程
 
-        使用awk脚本
-            
-            #!/bin/awk
-            
-            BEGIN{              
-                FS=:
-                count=0         定义变量
-            }
+  1. 模式匹配
 
+    正则表达式： /regular/
+
+        N~/regular/    输入行的第N个字段匹配regular    的输入行
+        !N~/regular/   输入行的第N个字段不匹配regular  的输入行
+
+    关系表达式：<关系表达式>
+
+eg:
+    'NR==1{print $0}'
+
+  2. 过程
+    {}语句块
+
+eg:                
+    使用awk脚本
+        
+        #!/bin/awk
+        
+        BEGIN{              
+            FS=:
+            count=0         定义变量
+        }
+
+        {
+            if($7 == "/sbin/nologin")
             {
-                if($7 == "/sbin/nologin")
-                {
-                    count += 1
-                    print $0
-                }
+                count += 1
+                print $0
             }
+        }
 
-            END{
-                print "count="count 
-            }
-            
-            awk -f 1.awk /etc/passwd        运行上面的脚本
+        END{
+            print "count="count 
+        }
+        
+        awk -f 1.awk /etc/passwd        运行上面的脚本
 
-            FNR         当前处理到第几个文件
-            NF          当前多个个字段
-            NR          当前处理到第几个记录
-            OFS         输入指定字段分隔符
-            ORS         输出记录分隔符
+变量：
+  定义：直接赋值，大小写区分，
+    x = 1
+    y="hello"
+    z="hello" ",world"
+  引用：$ , 直接变量名
+    w = $1
 
+  常量：
+     字符串：必须用引号扩起来，eg，"red"
+     数字：eg, 123
+
+算术操作符：
+    +
+    -
+    *
+    /
+    %
+    ^   取幂
+
+赋值操作符：
+    ++
+    --
+    +=  -+ *= /+ %= ^=
+
+关系操作符：
+    <   >
+    <=  >=
+    ==  !=
+    ~   匹配    
+    !~  不匹配      
+    
+    注意：~ 和 !~ 后面可跟正则表达式常量和正则表达式变量
+            ~/regular/
+            或
+            re=/regular/
+            ~re
+布尔操作符
+    &&
+    ||
+    ！
+
+系统变量： 
+  FS          输入字段分隔符, 默认为空格        支持正则表达式
+  OFS         输出字段分隔符, 默认为空格
+  ORS         输出记录分隔符, 默认为换行符
+  NR          当前处理到第几个记录
+  NF          当前输入记录的字段个数
+  FNR         当前处理到第几个文件
+
+  FILENAME    当前处理的文件名字
+
+系统函数：
+  1. print      打印，以逗号为参数间隔
+     
+     无参数，输出当前行
+
+  2. if (<condition>) <statement>
+  
 
         打印所有行
             

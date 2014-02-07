@@ -1,0 +1,17 @@
+
+error
+err
+Cannot
+Unable
+
+-------------------------------------------------------------------------------
+
+EXT4-fs (nandi): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=remount-ro
+
+EXT4-fs error (device nande): htree_dirblock_to_tree:587: inode #279: block 4319: comm Error dump: sys: bad entry in directory: rec_len is smaller than minimal - offset=0(0), inode=0, rec_len=0, name_len=0
+
+fs_mgr: Cannot mount filesystem on /dev/block/by-name/system at /system
+
+-------------------------------------------------------------------------------
+
+[  219.732943] EXT4-fs error (device nande): ext4_readdir:213: inode #642: block 36406: comm ActivityManager: path /data/system: bad entry in directory: rec_len % 4 != 0 - offset=0(0), inode=4294967295, rec_len=65535, name_len=255

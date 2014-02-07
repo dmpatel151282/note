@@ -1,0 +1,1276 @@
+11-20 11:16:57.696 I/Kernel  (    0): <6>[   93.100365] sunxi pconf set pin [PH7] func to [7]
+11-20 11:16:57.697 I/Kernel  (    0): <6>[   93.100391] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.697 I/Kernel  (    0): <6>[   93.100409] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.697 W/Kernel  (    0): <4>[   93.100650] axp pconf set pin [GPIO2] data to [0]
+11-20 11:16:57.697 I/Kernel  (    0): <6>[   93.160087] [DISP]display early suspend done
+11-20 11:16:57.697 I/Kernel  (    0): <5>[   93.160110] [VFE]vfe_suspend
+11-20 11:16:57.697 I/Kernel  (    0): <5>[   93.160117] [VFE]set camera to standy off and power off!
+11-20 11:16:57.697 I/Kernel  (    0): <5>[   93.184242] [VFE]mclk on
+11-20 11:16:57.697 W/Kernel  (    0): <4>[   93.196337] [CSI][GC2035]enable oe!
+11-20 11:16:57.697 W/Kernel  (    0): <4>[   93.208424] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.697 I/Kernel  (    0): <5>[   93.2
+11-20 11:16:57.698 I/Kernel  (    0): 20102] [VFE]mclk off
+11-20 11:16:57.698 I/Kernel  (    0): <6>[   93.220152] sunxi pmx set pin [PE14] to 0
+11-20 11:16:57.698 I/Kernel  (    0): <6>[   93.220164] sunxi pmx set pin [PE15] to 0
+11-20 11:16:57.698 I/Kernel  (    0): <5>[   93.220187] [VFE]mclk on
+11-20 11:16:57.698 W/Kernel  (    0): <4>[   93.345119] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.698 I/Kernel  (    0): <5>[   93.357435] [VFE]mclk off
+11-20 11:16:57.698 I/Kernel  (    0): <6>[   93.357476] sunxi pmx set pin [PE16] to 0
+11-20 11:16:57.698 I/Kernel  (    0): <6>[   93.357491] sunxi pmx set pin [PE17] to 0
+11-20 11:16:57.698 I/Kernel  (    0): <5>[   93.357500] [VFE]vfe_suspend done!
+11-20 11:16:57.698 E/Kernel  (    0): <3>[   93.357783] mali_platform_adjust_gpu_freq(410): set pll8 clock rate success,freq = 120 Mhz!
+11-20 11:16:57.698 W/Kernel  (    0): <4>[   93.367658] [vans] usb already in, d
+11-20 11:16:57.698 W/Kernel  (    0): o not need early suspend
+11-20 11:16:57.698 W/Kernel  (    0): <4>[   97.997376] RTL871X: nolinked power save leave
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  101.991263] RTL871X: nolinked power save enter
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  113.002640] RTL871X: nolinked power save leave
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  117.001257] RTL871X: nolinked power save enter
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  128.015995] RTL871X: nolinked power save leave
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  132.011286] RTL871X: nolinked power save enter
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  143.029649] RTL871X: nolinked power save leave
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  147.021313] RTL871X: nolinked power save enter
+11-20 11:16:57.698 I/Kernel  (    0): <6>[  156.916392] request_suspend_state: wakeup (3->0) at 15691
+11-20 11:16:57.698 I/Kernel  (    0): 6367070 (2012-12-07 01:15:14.780462025 UTC)
+11-20 11:16:57.698 W/Kernel  (    0): <4>[  156.916447] [vans] usb already in, do not need late resume
+11-20 11:16:57.698 E/Kernel  (    0): <3>[  156.916486] mali_platform_adjust_gpu_freq(424): set pll8 clock rate success,freq = 408 Mhz!
+11-20 11:16:57.698 I/Kernel  (    0): <5>[  156.928835] [VFE]vfe_resume
+11-20 11:16:57.698 I/Kernel  (    0): <5>[  156.928894] [VFE]vfe resume work start!
+11-20 11:16:57.698 I/Kernel  (    0): <6>[  156.928957] sunxi pmx set pin [PE15] to 1
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  156.928974] sunxi pmx set pin [PE14] to 1
+11-20 11:16:57.699 I/Kernel  (    0): <5>[  156.930115] [VFE]mclk on
+11-20 11:16:57.699 W/Kernel  (    0): <4>[  156.933399] axp pconf set pin [GPIO2] data to [1]
+11-20 11:16:57.699 W/Kernel  (    0): <4>[  156.942200] [VFE_WARN]os_gpio_write,
+11-20 11:16:57.699 W/Kernel  (    0):  hdl is NULL
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  156.960360] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  156.970208] sunxi pconf set pin [PH7] func to [1]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  156.970237] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  156.970258] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.699 W/Kernel  (    0): <4>[  156.986447] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  157.210648] sunxi pconf set pin [PH0] func to [2]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  157.210748] sunxi pconf set pin [PH6] func to [1]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  157.210781] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[ 
+11-20 11:16:57.699 I/Kernel  (    0):  157.210808] sunxi pconf set pin [PH6] data to [1]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  157.220144] [DISP]display late resume done
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  157.270312] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  157.330091] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.699 I/Kernel  (    0): <6>[  157.330111] sunxi pconf set pin [PB5] func to [4]
+11-20 11:16:57.699 W/Kernel  (    0): <4>[  157.510059] [CSI][GC2035]disalbe oe!
+11-20 11:16:57.699 I/Kernel  (    0): <5>[  157.522104] [VFE]mclk off
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  157.522156] sunxi pmx set pin [PE17] to 1
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  157.522173] sunxi pmx set pin [PE16] to 1
+11-20 11:16:57.700 I/Kernel  (    0): <5>[  157.523409] [VFE]mclk on
+11-20 11:16:57.700 W/Kernel  (    0): <4>[  157.535439] [VFE_WARN]os_gpio_write, hdl i
+11-20 11:16:57.700 W/Kernel  (    0): s NULL
+11-20 11:16:57.700 W/Kernel  (    0): <4>[  157.723599] [CSI][GC0307]disalbe oe!
+11-20 11:16:57.700 I/Kernel  (    0): <5>[  157.830062] [VFE]mclk off
+11-20 11:16:57.700 I/Kernel  (    0): <5>[  157.830130] [VFE]vfe resume work end!
+11-20 11:16:57.700 W/Kernel  (    0): <4>[  158.032303] RTL871X: nolinked power save leave
+11-20 11:16:57.700 W/Kernel  (    0): <4>[   35.590833] CPU1: Booted secondary processor
+11-20 11:16:57.700 I/Kernel  (    0): <5>[  161.481494] CPU1: shutdown
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  161.481516] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  161.482567] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.700 W/Kernel  (    0): <4>[  162.031768] RTL871X: nolinked power save enter
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  162.923093] request_suspend_state: sleep (0->3) at 162923056789 (2012-12-07 01:15:20.787
+11-20 11:16:57.700 I/Kernel  (    0): 151370 UTC)
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  162.923211] sunxi pconf get pin [PB5] func [4]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  162.923228] sunxi pconf set pin [PB5] func to [1]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  162.923876] sunxi pconf set pin [PH6] func to [7]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  162.923901] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  162.923923] sunxi pconf set pin [PH6] data to [0]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  162.923964] sunxi pconf set pin [PH0] func to [7]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  163.030188] sunxi pconf set pin [PH7] func to [7]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  163.030212] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.700 I/Kernel  (    0): <6>[  163.030230] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.701 I/Kernel  (    0): 
+11-20 11:16:57.701 W/Kernel  (    0): <4>[  163.030379] axp pconf set pin [GPIO2] data to [0]
+11-20 11:16:57.701 I/Kernel  (    0): <6>[  163.070589] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.701 I/Kernel  (    0): <6>[  163.090148] [DISP]display early suspend done
+11-20 11:16:57.701 I/Kernel  (    0): <5>[  163.090170] [VFE]vfe_suspend
+11-20 11:16:57.701 I/Kernel  (    0): <5>[  163.090176] [VFE]set camera to standy off and power off!
+11-20 11:16:57.701 I/Kernel  (    0): <5>[  163.114306] [VFE]mclk on
+11-20 11:16:57.701 W/Kernel  (    0): <4>[  163.126385] [CSI][GC2035]enable oe!
+11-20 11:16:57.701 W/Kernel  (    0): <4>[  163.138466] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.701 I/Kernel  (    0): <5>[  163.150106] [VFE]mclk off
+11-20 11:16:57.701 I/Kernel  (    0): <6>[  163.150154] sunxi pmx set pin [PE14]
+11-20 11:16:57.701 I/Kernel  (    0):  to 0
+11-20 11:16:57.701 I/Kernel  (    0): <6>[  163.150168] sunxi pmx set pin [PE15] to 0
+11-20 11:16:57.701 I/Kernel  (    0): <5>[  163.150190] [VFE]mclk on
+11-20 11:16:57.701 W/Kernel  (    0): <4>[  163.275097] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.701 I/Kernel  (    0): <5>[  163.287405] [VFE]mclk off
+11-20 11:16:57.701 I/Kernel  (    0): <6>[  163.287434] sunxi pmx set pin [PE16] to 0
+11-20 11:16:57.701 I/Kernel  (    0): <6>[  163.287449] sunxi pmx set pin [PE17] to 0
+11-20 11:16:57.701 I/Kernel  (    0): <5>[  163.287457] [VFE]vfe_suspend done!
+11-20 11:16:57.701 E/Kernel  (    0): <3>[  163.287737] mali_platform_adjust_gpu_freq(410): set pll8 clock rate success,freq = 120 Mhz!
+11-20 11:16:57.701 W/Kernel  (    0): <4>[  163.297614] [vans] usb already in, do not need early suspend
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  173.031765] RTL871X: nolinked po
+11-20 11:16:57.702 W/Kernel  (    0): wer save leave
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  177.031266] RTL871X: nolinked power save enter
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  188.044520] RTL871X: nolinked power save leave
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  192.041492] RTL871X: nolinked power save enter
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  203.047823] RTL871X: nolinked power save leave
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  207.041284] RTL871X: nolinked power save enter
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  218.061326] RTL871X: nolinked power save leave
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  222.061543] RTL871X: nolinked power save enter
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  233.074926] RTL871X: nolinked power save leave
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  237.071316] RTL871X: nolinked power save enter
+11-20 11:16:57.702 W/Kernel  (    0): <4>[  248.088496] RT
+11-20 11:16:57.702 W/Kernel  (    0): L871X: nolinked power save leave
+11-20 11:16:57.703 W/Kernel  (    0): <4>[  252.081352] RTL871X: nolinked power save enter
+11-20 11:16:57.703 W/Kernel  (    0): <4>[  263.102543] RTL871X: nolinked power save leave
+11-20 11:16:57.703 W/Kernel  (    0): <4>[  267.101319] RTL871X: nolinked power save enter
+11-20 11:16:57.703 W/Kernel  (    0): <4>[  278.104124] RTL871X: nolinked power save leave
+11-20 11:16:57.703 W/Kernel  (    0): <4>[  282.101319] RTL871X: nolinked power save enter
+11-20 11:16:57.703 W/Kernel  (    0): <4>[  293.117542] RTL871X: nolinked power save leave
+11-20 11:16:57.703 W/Kernel  (    0): <4>[  297.111339] RTL871X: nolinked power save enter
+11-20 11:16:57.704 W/Kernel  (    0): <4>[  308.131882] RTL871X: nolinked power save leave
+11-20 11:16:57.704 W/Kernel  (    0): <4>[  161.490904] CPU1: Booted secondary processor
+11-20 11:16:57.704 I/Kernel  (    0): <5>[
+11-20 11:16:57.704 I/Kernel  (    0):  1884.901385] CPU1: shutdown
+11-20 11:16:57.704 I/Kernel  (    0): <6>[ 1884.901409] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.704 I/Kernel  (    0): <6>[ 1884.902458] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.704 W/Kernel  (    0): <4>[ 1884.910806] CPU1: Booted secondary processor
+11-20 11:16:57.704 I/Kernel  (    0): <5>[ 1890.371337] CPU1: shutdown
+11-20 11:16:57.704 I/Kernel  (    0): <6>[ 1890.371359] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.704 I/Kernel  (    0): <6>[ 1890.372408] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.704 I/Kernel  (    0): <6>[ 3059.861390] request_suspend_state: wakeup (3->0) at 3059861364634 (2012-12-07 02:03:37.725460006 UTC)
+11-20 11:16:57.704 W/Kernel  (    0): <4>[ 3059.861444] [vans] usb already in, do not need late resume
+11-20 11:16:57.704 E/Kernel  (    0): <3>[ 3059.861482] mali
+11-20 11:16:57.704 E/Kernel  (    0): _platform_adjust_gpu_freq(424): set pll8 clock rate success,freq = 408 Mhz!
+11-20 11:16:57.704 I/Kernel  (    0): <5>[ 3059.876343] [VFE]vfe_resume
+11-20 11:16:57.704 I/Kernel  (    0): <5>[ 3059.876397] [VFE]vfe resume work start!
+11-20 11:16:57.704 I/Kernel  (    0): <6>[ 3059.876458] sunxi pmx set pin [PE15] to 1
+11-20 11:16:57.704 I/Kernel  (    0): <6>[ 3059.876474] sunxi pmx set pin [PE14] to 1
+11-20 11:16:57.705 W/Kernel  (    0): <4>[ 3059.877246] axp pconf set pin [GPIO2] data to [1]
+11-20 11:16:57.705 I/Kernel  (    0): <5>[ 3059.877747] [VFE]mclk on
+11-20 11:16:57.705 W/Kernel  (    0): <4>[ 3059.889841] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.705 I/Kernel  (    0): <6>[ 3059.907355] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.705 I/Kernel  (    0): <6>[ 3059.9101
+11-20 11:16:57.707 I/Kernel  (    0): 77] sunxi pconf set pin [PH7] func to [1]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3059.910205] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3059.910227] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.707 W/Kernel  (    0): <4>[ 3059.934292] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.150831] sunxi pconf set pin [PH0] func to [2]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.150937] sunxi pconf set pin [PH6] func to [1]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.150964] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.150990] sunxi pconf set pin [PH6] data to [1]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.160132] [DISP]display late resume done
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.210130] sunxi pconf g
+11-20 11:16:57.707 I/Kernel  (    0): et pin [PB5] func [1]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.270051] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.707 I/Kernel  (    0): <6>[ 3060.270070] sunxi pconf set pin [PB5] func to [4]
+11-20 11:16:57.707 W/Kernel  (    0): <4>[ 3060.460088] [CSI][GC2035]disalbe oe!
+11-20 11:16:57.707 I/Kernel  (    0): <5>[ 3060.472147] [VFE]mclk off
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3060.472198] sunxi pmx set pin [PE17] to 1
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3060.472214] sunxi pmx set pin [PE16] to 1
+11-20 11:16:57.708 I/Kernel  (    0): <5>[ 3060.473449] [VFE]mclk on
+11-20 11:16:57.708 W/Kernel  (    0): <4>[ 3060.485482] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.708 W/Kernel  (    0): <4>[ 3060.671928] [CSI][GC0307]disalbe oe!
+11-20 11:16:57.708 I/Kernel  (    0): <5>[ 3060.780054] [VFE]mclk off
+11-20 11:16:57.708 I/Kernel  (    0): <5>[ 3060.780078] [VFE]vfe resume work end!
+11-20 11:16:57.708 W/Kernel  (    0): <4>[ 
+11-20 11:16:57.708 W/Kernel  (    0): 1890.380774] CPU1: Booted secondary processor
+11-20 11:16:57.708 I/Kernel  (    0): <5>[ 3065.871429] CPU1: shutdown
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3065.871451] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3065.872502] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.708 W/Kernel  (    0): <4>[ 3065.880840] CPU1: Booted secondary processor
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3086.135474] qtaguid: ctrl_counterset(s 1 10011): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3087.194889] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.708 I/Kernel  (    0): <5>[ 3088.491419] CPU1: shutdown
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3088.491441] [hotplug]: cpu(0) try
+11-20 11:16:57.708 I/Kernel  (    0):  to kill cpu(1)
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3088.492492] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.708 W/Kernel  (    0): <4>[ 3088.500815] CPU1: Booted secondary processor
+11-20 11:16:57.708 I/Kernel  (    0): <5>[ 3117.771497] CPU1: shutdown
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3117.771519] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3117.772555] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.708 W/Kernel  (    0): <4>[ 3117.780909] CPU1: Booted secondary processor
+11-20 11:16:57.708 I/Kernel  (    0): <5>[ 3192.571411] CPU1: shutdown
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3192.571433] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.708 I/Kernel  (    0): <6>[ 3192.572484] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.709 I/Kernel  (    0): <6>[ 3194.616757] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from
+11-20 11:16:57.711 I/Kernel  (    0):  pid=432 tgid=375 uid=1000
+11-20 11:16:57.711 W/Kernel  (    0): <4>[ 3192.580831] CPU1: Booted secondary processor
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3195.187695] qtaguid: ctrl_counterset(s 0 10011): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3197.356277] qtaguid: ctrl_counterset(s 1 10003): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3198.490587] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.711 I/Kernel  (    0): <5>[ 3200.111747] CPU1: shutdown
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3200.111772] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3200.112830] [hotplug]: cpu1 
+11-20 11:16:57.711 I/Kernel  (    0): is killed! .
+11-20 11:16:57.711 W/Kernel  (    0): <4>[ 3200.121164] CPU1: Booted secondary processor
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3202.322585] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3202.859030] qtaguid: ctrl_counterset(s 0 10003): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3204.648688] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.711 I/Kernel  (    0): <5>[ 3208.391352] CPU1: shutdown
+11-20 11:16:57.711 I/Kernel  (    0): <6>[ 3208.391374] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.712 I/Kernel  (    0): <6>[ 3208.392424] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.712 I/Kernel  (    0): <
+11-20 11:16:57.712 I/Kernel  (    0): 4>[ 3208.400785] CPU1: Booted secondary processor
+11-20 11:16:57.712 I/Kernel  (    0): <5>[ 3210.301459] CPU1: shutdown
+11-20 11:16:57.712 I/Kernel  (    0): <6>[ 3210.301476] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.712 I/Kernel  (    0): <6>[ 3210.302530] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3210.310871] CPU1: Booted secondary processor
+11-20 11:16:57.712 I/Kernel  (    0): <5>[ 3214.131739] CPU1: shutdown
+11-20 11:16:57.712 I/Kernel  (    0): <6>[ 3214.131754] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.712 I/Kernel  (    0): <6>[ 3214.132792] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3214.141049] CPU1: Booted secondary processor
+11-20 11:16:57.712 I/Kernel  (    0): <5>[ 3217.311577] CPU1: shutdown
+11-20 11:16:57.712 I/Kernel  (    0): <6>[ 3217.311599] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.712 I/Kernel  (    0): <6
+11-20 11:16:57.712 I/Kernel  (    0): >[ 3217.312650] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3217.320981] CPU1: Booted secondary processor
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3223.775024] RTL871X: rtw_set_802_11_connect(wlan0)  fw_state=0x00000008
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3223.973622] RTL871X: start auth
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3224.051863] RTL871X: auth success, start assoc
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3224.210236] RTL871X: assoc success
+11-20 11:16:57.712 I/Kernel  (    0): <6>[ 3224.211220] ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3224.228496] RTL871X: send eapol packet
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3224.351192] RTL871X: send eapol packet
+11-20 11:16:57.712 W/Kernel  (    0): <4>[ 3224.353651] RTL871X: set pairwise key to 
+11-20 11:16:57.713 W/Kernel  (    0): hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) camid:4
+11-20 11:16:57.713 W/Kernel  (    0): <4>[ 3224.353677] RTL871X: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+11-20 11:16:57.713 I/Kernel  (    0): <5>[ 3224.587783] init: starting 'dhcpcd_wlan0'
+11-20 11:16:57.713 E/Kernel  (    0): <3>[ 3224.591526] qtaguid: iface_stat: stat_update() wlan0 not found
+11-20 11:16:57.713 E/Kernel  (    0): <3>[ 3227.672547] qtaguid: iface_stat: stat_update() wlan0 not found
+11-20 11:16:57.715 I/Kernel  (    0): <5>[ 3228.141404] CPU1: shutdown
+11-20 11:16:57.715 I/Kernel  (    0): <6>[ 3228.141427] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.715 I/Kernel  (    0): <6>[ 3228.142478] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.715 E/Kernel  (    0): <3>[ 3231.736160] qtaguid: iface_stat: stat_updat
+11-20 11:16:57.715 E/Kernel  (    0): e() wlan0 not found
+11-20 11:16:57.715 E/Kernel  (    0): <3>[ 3233.651855] qtaguid: iface_stat: stat_update() wlan0 not found
+11-20 11:16:57.715 W/Kernel  (    0): <4>[ 3228.150819] CPU1: Booted secondary processor
+11-20 11:16:57.715 E/Kernel  (    0): <3>[ 3236.669850] qtaguid: iface_stat: stat_update() wlan0 not found
+11-20 11:16:57.715 E/Kernel  (    0): <3>[ 3237.152016] qtaguid: iface_stat: stat_update() wlan0 not found
+11-20 11:16:57.715 E/Kernel  (    0): <3>[ 3237.360929] qtaguid: iface_stat: stat_update() wlan0 not found
+11-20 11:16:57.715 E/Kernel  (    0): <3>[ 3237.517489] qtaguid: iface_stat: stat_update() wlan0 not found
+11-20 11:16:57.715 I/Kernel  (    0): <5>[ 3237.581724] CPU1: shutdown
+11-20 11:16:57.715 I/Kernel  (    0): <6>[ 3237.581744] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.716 I/Kernel  (    0): <6>[ 323
+11-20 11:16:57.716 I/Kernel  (    0): 7.582798] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.716 W/Kernel  (    0): <4>[ 3237.590617] CPU1: Booted secondary processor
+11-20 11:16:57.716 I/Kernel  (    0): <6>[ 3238.845474] binder: 375:435 transaction failed 29189, size 100-4
+11-20 11:16:57.716 I/Kernel  (    0): <6>[ 3238.845750] binder: 375:435 transaction failed 29189, size 100-4
+11-20 11:16:57.716 I/Kernel  (    0): <5>[ 3239.371429] CPU1: shutdown
+11-20 11:16:57.716 I/Kernel  (    0): <6>[ 3239.371451] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.716 I/Kernel  (    0): <6>[ 3239.372502] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.716 I/Kernel  (    0): <6>[ 3240.482928] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.717 W/Kernel  (    0): <4>[ 3239.380841] CPU1: Booted secondary 
+11-20 11:16:57.717 W/Kernel  (    0): processor
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3240.922103] sunxi-rtc sunxi-rtc: set time 2013-11-20 2:8:33
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3240.922277] sunxi-rtc sunxi-rtc: sunxi_rtc_gettime
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3240.922292] sunxi-rtc sunxi-rtc: read time 2013-11-20 2:8:33
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3242.274298] qtaguid: ctrl_tag(t 54 18446742978492891136 10029): insufficient priv from pid=1888 tgid=1426 uid=10013
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3242.361585] qtaguid: ctrl_counterset(s 1 10003): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3242.484360] qtaguid: ctrl_tag(t 56 18446742978492891136 10029): insufficient pri
+11-20 11:16:57.717 I/Kernel  (    0): v from pid=1888 tgid=1426 uid=10013
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3243.011082] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.717 W/Kernel  (    0): <4>[ 3243.880152] nand wait rb int time out, ch: 0
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3245.347841] qtaguid: ctrl_tag(t 54 18446742978492891136 10029): insufficient priv from pid=1991 tgid=1426 uid=10013
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3245.406646] qtaguid: ctrl_tag(t 64 18446742978492891136 10029): insufficient priv from pid=1996 tgid=1426 uid=10013
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3245.562805] qtaguid: ctrl_tag(t 66 18446742978492891136 10029): insuffi
+11-20 11:16:57.717 I/Kernel  (    0): cient priv from pid=1991 tgid=1426 uid=10013
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3245.741580] qtaguid: ctrl_tag(t 69 18446742978492891136 10029): insufficient priv from pid=1996 tgid=1426 uid=10013
+11-20 11:16:57.717 I/Kernel  (    0): <6>[ 3246.414143] qtaguid: ctrl_tag(t 73 18446742978492891136 10009): insufficient priv from pid=2049 tgid=1426 uid=10013
+11-20 11:16:57.717 D/Kernel  (    0): <7>[ 3248.680070] wlan0: no IPv6 routers present
+11-20 11:16:57.718 I/Kernel  (    0): <6>[ 3249.483384] qtaguid: ctrl_tag(t 74 18446742978492891136 10009): insufficient priv from pid=2129 tgid=1426 uid=10013
+11-20 11:16:57.718 I/Kernel  (    0): <5>[ 3259.772135] CPU1: shutdown
+11-20 11:16:57.718 I/Kernel  (    0): <6>[ 3259.772150] [
+11-20 11:16:57.718 I/Kernel  (    0): hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.718 I/Kernel  (    0): <6>[ 3259.773209] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.718 W/Kernel  (    0): <4>[ 3259.780032] CPU1: Booted secondary processor
+11-20 11:16:57.718 I/Kernel  (    0): <5>[ 3263.611535] CPU1: shutdown
+11-20 11:16:57.718 I/Kernel  (    0): <6>[ 3263.611557] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.718 I/Kernel  (    0): <6>[ 3263.612608] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.718 W/Kernel  (    0): <4>[ 3263.620901] CPU1: Booted secondary processor
+11-20 11:16:57.718 I/Kernel  (    0): <5>[ 3276.746450] CPU1: shutdown
+11-20 11:16:57.718 I/Kernel  (    0): <6>[ 3276.746466] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.718 I/Kernel  (    0): <6>[ 3276.747523] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.721 W/Kernel  (    0): <4>[ 3276.750268] CPU1: Booted secondary processor
+11-20 11:16:57.721 I/Kernel  (    0): <5>[ 3
+11-20 11:16:57.721 I/Kernel  (    0): 279.171463] CPU1: shutdown
+11-20 11:16:57.721 I/Kernel  (    0): <6>[ 3279.171485] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.721 I/Kernel  (    0): <6>[ 3279.172536] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.721 W/Kernel  (    0): <4>[ 3279.180852] CPU1: Booted secondary processor
+11-20 11:16:57.721 W/Kernel  (    0): <4>[ 3284.280080] nand wait rb int time out, ch: 0
+11-20 11:16:57.721 W/Kernel  (    0): <4>[ 3286.840088] nand wait rb int time out, ch: 0
+11-20 11:16:57.721 W/Kernel  (    0): <4>[ 3288.610065] nand wait rb int time out, ch: 0
+11-20 11:16:57.721 I/Kernel  (    0): <5>[ 3290.991522] CPU1: shutdown
+11-20 11:16:57.721 I/Kernel  (    0): <6>[ 3290.991544] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.721 I/Kernel  (    0): <6>[ 3290.992593] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.721 W/Kernel  (    0): <4>[ 3291.000913] CPU1: Booted secondary pro
+11-20 11:16:57.721 W/Kernel  (    0): cessor
+11-20 11:16:57.721 W/Kernel  (    0): <4>[ 3292.720086] nand wait rb int time out, ch: 0
+11-20 11:16:57.721 I/Kernel  (    0): <5>[ 3294.711498] CPU1: shutdown
+11-20 11:16:57.721 I/Kernel  (    0): <6>[ 3294.711521] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.722 I/Kernel  (    0): <6>[ 3294.712570] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.722 W/Kernel  (    0): <4>[ 3294.720907] CPU1: Booted secondary processor
+11-20 11:16:57.722 I/Kernel  (    0): <6>[ 3306.974154] binder: 375:435 transaction failed 29189, size 100-4
+11-20 11:16:57.722 I/Kernel  (    0): <6>[ 3306.974325] binder: 375:435 transaction failed 29189, size 100-4
+11-20 11:16:57.722 W/Kernel  (    0): <4>[ 3309.040177] nand wait rb int time out, ch: 0
+11-20 11:16:57.722 W/Kernel  (    0): <4>[ 3310.370037] nand wait rb int time out, ch: 0
+11-20 11:16:57.723 W/Kernel  (    0): <4>[ 3311.620059] nand w
+11-20 11:16:57.723 W/Kernel  (    0): ait rb int time out, ch: 0
+11-20 11:16:57.723 I/Kernel  (    0): <5>[ 3314.721503] CPU1: shutdown
+11-20 11:16:57.723 I/Kernel  (    0): <6>[ 3314.721524] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.723 I/Kernel  (    0): <6>[ 3314.722575] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.723 W/Kernel  (    0): <4>[ 3314.730905] CPU1: Booted secondary processor
+11-20 11:16:57.723 I/Kernel  (    0): <5>[ 3317.351664] CPU1: shutdown
+11-20 11:16:57.723 I/Kernel  (    0): <6>[ 3317.351687] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.723 I/Kernel  (    0): <6>[ 3317.352738] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.723 W/Kernel  (    0): <4>[ 3317.361077] CPU1: Booted secondary processor
+11-20 11:16:57.723 W/Kernel  (    0): <4>[ 3323.540061] nand wait rb int time out, ch: 0
+11-20 11:16:57.723 I/Kernel  (    0): <5>[ 3324.351518] CPU1: shutdown
+11-20 11:16:57.723 I/Kernel  (    0): <6>[ 3324.351539] [hotplug]: 
+11-20 11:16:57.723 I/Kernel  (    0): cpu(0) try to kill cpu(1)
+11-20 11:16:57.723 I/Kernel  (    0): <6>[ 3324.353158] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.723 I/Kernel  (    0): <6>[ 3328.071141] qtaguid: ctrl_counterset(s 1 10011): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.724 W/Kernel  (    0): <4>[ 3324.360923] CPU1: Booted secondary processor
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3328.867666] qtaguid: ctrl_counterset(s 0 10003): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.724 W/Kernel  (    0): <4>[ 3331.020082] nand wait rb int time out, ch: 0
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3331.856185] qtaguid: ctrl_counterset(s 1 10003): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3332.301803] qtaguid
+11-20 11:16:57.724 I/Kernel  (    0): : ctrl_counterset(s 0 10011): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.724 I/Kernel  (    0): <5>[ 3335.021536] CPU1: shutdown
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3335.021558] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3335.022608] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.724 W/Kernel  (    0): <4>[ 3335.030935] CPU1: Booted secondary processor
+11-20 11:16:57.724 I/Kernel  (    0): <5>[ 3352.931489] CPU1: shutdown
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3352.931510] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3352.932560] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.724 W/Kernel  (    0): <4>[ 3352.940894] CPU1: Booted secondary processor
+11-20 11:16:57.724 I/Kernel  (    0): <5>[ 3367.961932] CPU1: shutdown
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3367.961946] [hotplug]:
+11-20 11:16:57.724 I/Kernel  (    0):  cpu(0) try to kill cpu(1)
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3367.963003] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.724 W/Kernel  (    0): <4>[ 3367.971011] CPU1: Booted secondary processor
+11-20 11:16:57.724 I/Kernel  (    0): <5>[ 3379.141964] CPU1: shutdown
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3379.141979] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3379.143030] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.724 W/Kernel  (    0): <4>[ 3379.150031] CPU1: Booted secondary processor
+11-20 11:16:57.724 I/Kernel  (    0): <5>[ 3387.111598] CPU1: shutdown
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3387.111762] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.724 I/Kernel  (    0): <6>[ 3387.112803] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.724 W/Kernel  (    0): <4>[ 3387.120884] CPU1: Booted secondary processor
+11-20 11:16:57.725 I/Kernel  (    0): <5>[ 3389.33150
+11-20 11:16:57.725 I/Kernel  (    0): 6] CPU1: shutdown
+11-20 11:16:57.725 I/Kernel  (    0): <6>[ 3389.331529] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3389.332581] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.727 W/Kernel  (    0): <4>[ 3389.340910] CPU1: Booted secondary processor
+11-20 11:16:57.727 I/Kernel  (    0): <5>[ 3393.651807] CPU1: shutdown
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3393.651832] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3393.652878] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.727 W/Kernel  (    0): <4>[ 3393.660761] CPU1: Booted secondary processor
+11-20 11:16:57.727 I/Kernel  (    0): <5>[ 3429.591536] CPU1: shutdown
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3429.591558] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3429.592608] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.727 W/Kernel  (    0): <4>[ 3429.600935] CP
+11-20 11:16:57.727 W/Kernel  (    0): U1: Booted secondary processor
+11-20 11:16:57.727 I/Kernel  (    0): <5>[ 3438.931534] CPU1: shutdown
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3438.931567] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3438.932622] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.727 W/Kernel  (    0): <4>[ 3438.940956] CPU1: Booted secondary processor
+11-20 11:16:57.727 I/Kernel  (    0): <5>[ 3441.991459] CPU1: shutdown
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3441.991481] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3441.992531] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.727 W/Kernel  (    0): <4>[ 3442.000848] CPU1: Booted secondary processor
+11-20 11:16:57.727 I/Kernel  (    0): <5>[ 3452.731518] CPU1: shutdown
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3452.731540] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.727 I/Kernel  (    0): <6>[ 3452.732592] [ho
+11-20 11:16:57.728 I/Kernel  (    0): tplug]: cpu1 is killed! .
+11-20 11:16:57.728 W/Kernel  (    0): <4>[ 3452.740919] CPU1: Booted secondary processor
+11-20 11:16:57.728 I/Kernel  (    0): <5>[ 3456.771757] CPU1: shutdown
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3456.771784] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3456.772834] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.728 W/Kernel  (    0): <4>[ 3456.780715] CPU1: Booted secondary processor
+11-20 11:16:57.728 I/Kernel  (    0): <5>[ 3458.991529] CPU1: shutdown
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3458.991551] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3458.992600] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.728 W/Kernel  (    0): <4>[ 3459.000927] CPU1: Booted secondary processor
+11-20 11:16:57.728 I/Kernel  (    0): <5>[ 3460.422160] CPU1: shutdown
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3460.422175] [hotplug]: c
+11-20 11:16:57.728 I/Kernel  (    0): pu(0) try to kill cpu(1)
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3460.423218] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.728 W/Kernel  (    0): <4>[ 3460.430915] CPU1: Booted secondary processor
+11-20 11:16:57.728 I/Kernel  (    0): <5>[ 3466.731545] CPU1: shutdown
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3466.731566] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3466.732602] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.728 W/Kernel  (    0): <4>[ 3466.740941] CPU1: Booted secondary processor
+11-20 11:16:57.728 I/Kernel  (    0): <5>[ 3480.096798] CPU1: shutdown
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3480.096820] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3480.097872] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.728 W/Kernel  (    0): <4>[ 3480.106220] CPU1: Booted secondary processor
+11-20 11:16:57.728 I/Kernel  (    0): <5>[ 3484.931470]
+11-20 11:16:57.728 I/Kernel  (    0):  CPU1: shutdown
+11-20 11:16:57.728 I/Kernel  (    0): <6>[ 3484.931492] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.729 I/Kernel  (    0): <6>[ 3484.932542] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.729 I/Kernel  (    0): <6>[ 3537.782756] request_suspend_state: sleep (0->3) at 3537782732131 (2013-11-20 02:13:30.049734808 UTC)
+11-20 11:16:57.729 I/Kernel  (    0): <6>[ 3537.782839] sunxi pconf get pin [PB5] func [4]
+11-20 11:16:57.729 I/Kernel  (    0): <6>[ 3537.782854] sunxi pconf set pin [PB5] func to [1]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.783434] sunxi pconf set pin [PH6] func to [7]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.783460] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.783482] sunxi pconf set pin [PH6] data to [0]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.
+11-20 11:16:57.731 I/Kernel  (    0): 783518] sunxi pconf set pin [PH0] func to [7]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.890163] sunxi pconf set pin [PH7] func to [7]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.890188] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.890206] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.731 W/Kernel  (    0): <4>[ 3537.890352] axp pconf set pin [GPIO2] data to [0]
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.925426] qtaguid: ctrl_counterset(s 0 10003): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.731 I/Kernel  (    0): <6>[ 3537.950130] [DISP]display early suspend done
+11-20 11:16:57.731 I/Kernel  (    0): <5>[ 3537.950150] [VFE]vfe_suspend
+11-20 11:16:57.731 I/Kernel  (    0): <5>[ 3537.950156] [VFE]set camera to standy off and 
+11-20 11:16:57.731 I/Kernel  (    0): power off!
+11-20 11:16:57.731 I/Kernel  (    0): <5>[ 3537.974244] [VFE]mclk on
+11-20 11:16:57.731 W/Kernel  (    0): <4>[ 3484.940863] CPU1: Booted secondary processor
+11-20 11:16:57.731 W/Kernel  (    0): <4>[ 3537.986287] [CSI][GC2035]enable oe!
+11-20 11:16:57.731 W/Kernel  (    0): <4>[ 3537.998324] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.732 I/Kernel  (    0): <5>[ 3538.010054] [VFE]mclk off
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.010101] sunxi pmx set pin [PE14] to 0
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.010117] sunxi pmx set pin [PE15] to 0
+11-20 11:16:57.732 I/Kernel  (    0): <5>[ 3538.010139] [VFE]mclk on
+11-20 11:16:57.732 W/Kernel  (    0): <4>[ 3538.135226] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.732 I/Kernel  (    0): <5>[ 3538.146870] [VFE]mclk off
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.146913] sunxi pmx set pin [PE16] to 0
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.146928] sunxi pmx 
+11-20 11:16:57.732 I/Kernel  (    0): set pin [PE17] to 0
+11-20 11:16:57.732 I/Kernel  (    0): <5>[ 3538.146938] [VFE]vfe_suspend done!
+11-20 11:16:57.732 E/Kernel  (    0): <3>[ 3538.147222] mali_platform_adjust_gpu_freq(410): set pll8 clock rate success,freq = 120 Mhz!
+11-20 11:16:57.732 W/Kernel  (    0): <4>[ 3538.157112] [vans] usb already in, do not need early suspend
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.676583] request_suspend_state: wakeup (3->0) at 3538676557256 (2013-11-20 02:13:30.943559391 UTC)
+11-20 11:16:57.732 W/Kernel  (    0): <4>[ 3538.676640] [vans] usb already in, do not need late resume
+11-20 11:16:57.732 E/Kernel  (    0): <3>[ 3538.676942] mali_platform_adjust_gpu_freq(424): set pll8 clock rate success,freq = 408 Mhz!
+11-20 11:16:57.732 I/Kernel  (    0): <5>[ 3538.68632
+11-20 11:16:57.732 I/Kernel  (    0): 1] [VFE]vfe_resume
+11-20 11:16:57.732 W/Kernel  (    0): <4>[ 3538.686790] axp pconf set pin [GPIO2] data to [1]
+11-20 11:16:57.732 I/Kernel  (    0): <5>[ 3538.696774] [VFE]vfe resume work start!
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.696835] sunxi pmx set pin [PE15] to 1
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.696853] sunxi pmx set pin [PE14] to 1
+11-20 11:16:57.732 I/Kernel  (    0): <5>[ 3538.698135] [VFE]mclk on
+11-20 11:16:57.732 W/Kernel  (    0): <4>[ 3538.710085] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.718601] qtaguid: ctrl_counterset(s 1 10003): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.720178] sunxi pconf set pin [PH7] func to [1]
+11-20 11:16:57.732 I/Kernel  (    0): <6>[ 3538.720208] sunxi pconf set pin [PH7] pull 
+11-20 11:16:57.733 I/Kernel  (    0): to [0]
+11-20 11:16:57.733 I/Kernel  (    0): <6>[ 3538.720230] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.733 W/Kernel  (    0): <4>[ 3538.754376] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3538.960243] sunxi pconf set pin [PH0] func to [2]
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3538.960298] sunxi pconf set pin [PH6] func to [1]
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3538.960324] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3538.960348] sunxi pconf set pin [PH6] data to [1]
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3538.970232] [DISP]display late resume done
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3539.020100] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3539.080106] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.735 I/Kernel  (    0): <6>[ 3539.080126
+11-20 11:16:57.735 I/Kernel  (    0): ] sunxi pconf set pin [PB5] func to [4]
+11-20 11:16:57.735 W/Kernel  (    0): <4>[ 3539.270085] [CSI][GC2035]disalbe oe!
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3539.282152] [VFE]mclk off
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3539.282212] sunxi pmx set pin [PE17] to 1
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3539.282229] sunxi pmx set pin [PE16] to 1
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3539.283470] [VFE]mclk on
+11-20 11:16:57.736 W/Kernel  (    0): <4>[ 3539.295509] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.736 W/Kernel  (    0): <4>[ 3539.483408] [CSI][GC0307]disalbe oe!
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3539.590086] [VFE]mclk off
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3539.590112] [VFE]vfe resume work end!
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3540.601595] CPU1: shutdown
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3540.601617] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 354
+11-20 11:16:57.736 I/Kernel  (    0): 0.602667] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.736 W/Kernel  (    0): <4>[ 3540.610990] CPU1: Booted secondary processor
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3547.531650] CPU1: shutdown
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3547.531672] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3547.532722] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.736 W/Kernel  (    0): <4>[ 3547.541048] CPU1: Booted secondary processor
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3553.681594] CPU1: shutdown
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3553.681770] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3553.682923] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.736 W/Kernel  (    0): <4>[ 3553.691009] CPU1: Booted secondary processor
+11-20 11:16:57.736 I/Kernel  (    0): <5>[ 3580.561565] CPU1: shutdown
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3580.561588]
+11-20 11:16:57.736 I/Kernel  (    0):  [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.736 I/Kernel  (    0): <6>[ 3580.562638] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.736 W/Kernel  (    0): <4>[ 3580.570986] CPU1: Booted secondary processor
+11-20 11:16:57.739 I/Kernel  (    0): <5>[ 3589.417282] CPU1: shutdown
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3589.417305] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3589.418357] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.739 W/Kernel  (    0): <4>[ 3589.420027] CPU1: Booted secondary processor
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3590.394818] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3591.059502] qtaguid: ctrl_counterset(s 0 10003): insufficient priv from pid=432 
+11-20 11:16:57.739 I/Kernel  (    0): tgid=375 uid=1000
+11-20 11:16:57.739 I/Kernel  (    0): <5>[ 3593.161472] CPU1: shutdown
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3593.161504] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3593.162602] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.739 W/Kernel  (    0): <4>[ 3593.170917] CPU1: Booted secondary processor
+11-20 11:16:57.739 I/Kernel  (    0): <5>[ 3599.382304] CPU1: shutdown
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3599.382319] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3599.383361] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3656.415929] request_suspend_state: sleep (0->3) at 3656415903980 (2013-11-20 02:15:28.682907199 UTC)
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3656.416012] sunxi pconf get pin [PB5] func [4]
+11-20 11:16:57.739 I/Kernel  (    0): <6>[ 3656.416
+11-20 11:16:57.739 I/Kernel  (    0): 028] sunxi pconf set pin [PB5] func to [1]
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.416605] sunxi pconf set pin [PH6] func to [7]
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.416632] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.416654] sunxi pconf set pin [PH6] data to [0]
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.416689] sunxi pconf set pin [PH0] func to [7]
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.520197] sunxi pconf set pin [PH7] func to [7]
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.520222] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.520242] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.740 W/Kernel  (    0): <4>[ 3656.520416] axp pconf set pin [GPIO2] data to [0]
+11-20 11:16:57.740 W/Kernel  (    0): <4>[ 3599.391048] CPU
+11-20 11:16:57.740 W/Kernel  (    0): 1: Booted secondary processor
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.580173] [DISP]display early suspend done
+11-20 11:16:57.740 I/Kernel  (    0): <5>[ 3656.580196] [VFE]vfe_suspend
+11-20 11:16:57.740 I/Kernel  (    0): <5>[ 3656.580203] [VFE]set camera to standy off and power off!
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.586165] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.740 I/Kernel  (    0): <5>[ 3656.604348] [VFE]mclk on
+11-20 11:16:57.740 W/Kernel  (    0): <4>[ 3656.616431] [CSI][GC2035]enable oe!
+11-20 11:16:57.740 W/Kernel  (    0): <4>[ 3656.628512] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.740 I/Kernel  (    0): <5>[ 3656.640569] [VFE]mclk off
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.640617] sunxi pmx set pin [PE14] to 0
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.640630] sun
+11-20 11:16:57.740 I/Kernel  (    0): xi pmx set pin [PE15] to 0
+11-20 11:16:57.740 I/Kernel  (    0): <5>[ 3656.640652] [VFE]mclk on
+11-20 11:16:57.740 W/Kernel  (    0): <4>[ 3656.764873] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.740 I/Kernel  (    0): <5>[ 3656.777178] [VFE]mclk off
+11-20 11:16:57.740 I/Kernel  (    0): <6>[ 3656.777221] sunxi pmx set pin [PE16] to 0
+11-20 11:16:57.741 I/Kernel  (    0): <6>[ 3656.777236] sunxi pmx set pin [PE17] to 0
+11-20 11:16:57.741 I/Kernel  (    0): <5>[ 3656.777246] [VFE]vfe_suspend done!
+11-20 11:16:57.741 E/Kernel  (    0): <3>[ 3656.777528] mali_platform_adjust_gpu_freq(410): set pll8 clock rate success,freq = 120 Mhz!
+11-20 11:16:57.741 W/Kernel  (    0): <4>[ 3656.787270] [vans] usb already in, do not need early suspend
+11-20 11:16:57.741 I/Kernel  (    0): <5>[ 3658.131413] CPU1: shutdown
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3658.131434] [hotplug]: cpu
+11-20 11:16:57.743 I/Kernel  (    0): (0) try to kill cpu(1)
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3658.132485] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3672.138248] request_suspend_state: wakeup (3->0) at 3672138223903 (2013-11-20 02:15:44.405226497 UTC)
+11-20 11:16:57.743 W/Kernel  (    0): <4>[ 3672.138305] [vans] usb already in, do not need late resume
+11-20 11:16:57.743 E/Kernel  (    0): <3>[ 3672.138345] mali_platform_adjust_gpu_freq(424): set pll8 clock rate success,freq = 408 Mhz!
+11-20 11:16:57.743 I/Kernel  (    0): <5>[ 3672.155619] [VFE]vfe_resume
+11-20 11:16:57.743 I/Kernel  (    0): <5>[ 3672.155662] [VFE]vfe resume work start!
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3672.155705] sunxi pmx set pin [PE15] to 1
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3672.155721] sunxi pmx set pin [PE14] 
+11-20 11:16:57.743 I/Kernel  (    0): to 1
+11-20 11:16:57.743 W/Kernel  (    0): <4>[ 3672.156142] axp pconf set pin [GPIO2] data to [1]
+11-20 11:16:57.743 I/Kernel  (    0): <5>[ 3672.156986] [VFE]mclk on
+11-20 11:16:57.743 W/Kernel  (    0): <4>[ 3672.169081] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3672.190214] sunxi pconf set pin [PH7] func to [1]
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3672.190243] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3672.190265] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.743 I/Kernel  (    0): <6>[ 3672.197112] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.743 W/Kernel  (    0): <4>[ 3672.211844] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.430237] sunxi pconf set pin [
+11-20 11:16:57.744 I/Kernel  (    0): PH0] func to [2]
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.430285] sunxi pconf set pin [PH6] func to [1]
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.430308] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.430329] sunxi pconf set pin [PH6] data to [1]
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.440182] [DISP]display late resume done
+11-20 11:16:57.744 W/Kernel  (    0): <4>[ 3658.140846] CPU1: Booted secondary processor
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.490166] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.550077] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.550096] sunxi pconf set pin [PB5] func to [4]
+11-20 11:16:57.744 W/Kernel  (    0): <4>[ 3672.740071] [CSI][GC2035]disalbe oe!
+11-20 11:16:57.744 I/Kernel  (    0): <5>[ 3672.752132] [VFE
+11-20 11:16:57.744 I/Kernel  (    0): ]mclk off
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.752189] sunxi pmx set pin [PE17] to 1
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3672.752207] sunxi pmx set pin [PE16] to 1
+11-20 11:16:57.744 I/Kernel  (    0): <5>[ 3672.753446] [VFE]mclk on
+11-20 11:16:57.744 W/Kernel  (    0): <4>[ 3672.765487] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.744 W/Kernel  (    0): <4>[ 3672.952619] [CSI][GC0307]disalbe oe!
+11-20 11:16:57.744 I/Kernel  (    0): <5>[ 3673.060107] [VFE]mclk off
+11-20 11:16:57.744 I/Kernel  (    0): <5>[ 3673.060148] [VFE]vfe resume work end!
+11-20 11:16:57.744 I/Kernel  (    0): <5>[ 3674.121549] CPU1: shutdown
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3674.121572] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3674.122623] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.744 I/Kernel  (    0): <6>[ 3679.146414] qtaguid: ctrl_counterset(s 1 10049): insufficien
+11-20 11:16:57.745 I/Kernel  (    0): t priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.745 W/Kernel  (    0): <4>[ 3674.130942] CPU1: Booted secondary processor
+11-20 11:16:57.745 I/Kernel  (    0): <5>[ 3681.772216] CPU1: shutdown
+11-20 11:16:57.745 I/Kernel  (    0): <6>[ 3681.772239] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3681.773294] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.747 W/Kernel  (    0): <4>[ 3681.781618] CPU1: Booted secondary processor
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3687.582824] qtaguid: ctrl_counterset(s 0 10049): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.747 I/Kernel  (    0): <5>[ 3689.381579] CPU1: shutdown
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3689.381601] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3689.382652] [hotplug]: cpu1 is killed! 
+11-20 11:16:57.747 I/Kernel  (    0): .
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3696.378287] qtaguid: ctrl_counterset(s 1 10049): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.747 W/Kernel  (    0): <4>[ 3689.390978] CPU1: Booted secondary processor
+11-20 11:16:57.747 I/Kernel  (    0): <5>[ 3698.901597] CPU1: shutdown
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3698.901620] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3698.902672] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3699.822035] qtaguid: ctrl_counterset(s 0 10049): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.747 W/Kernel  (    0): <4>[ 3698.910989] CPU1: Booted secondary processor
+11-20 11:16:57.747 I/Kernel  (    0): <5>[ 3701.701583] CPU1: shutdown
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3701.701604] [hotplug]: cpu
+11-20 11:16:57.747 I/Kernel  (    0): (0) try to kill cpu(1)
+11-20 11:16:57.747 I/Kernel  (    0): <6>[ 3701.702655] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.747 W/Kernel  (    0): <4>[ 3701.710987] CPU1: Booted secondary processor
+11-20 11:16:57.747 I/Kernel  (    0): <5>[ 3708.841599] CPU1: shutdown
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3708.841621] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3708.842671] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3766.964718] request_suspend_state: sleep (0->3) at 3766964693074 (2013-11-20 02:17:19.231695793 UTC)
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3766.964800] sunxi pconf get pin [PB5] func [4]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3766.964814] sunxi pconf set pin [PB5] func to [1]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3766.965394] sunxi pconf set pin [P
+11-20 11:16:57.748 I/Kernel  (    0): H6] func to [7]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3766.965420] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3766.965441] sunxi pconf set pin [PH6] data to [0]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3766.965477] sunxi pconf set pin [PH0] func to [7]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3767.070226] sunxi pconf set pin [PH7] func to [7]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3767.070250] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3767.070268] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.748 W/Kernel  (    0): <4>[ 3767.070413] axp pconf set pin [GPIO2] data to [0]
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3767.130124] [DISP]display early suspend done
+11-20 11:16:57.748 I/Kernel  (    0): <5>[ 3767.130145] [VFE]vfe_suspend
+11-20 11:16:57.748 I/Kernel  (    0): <5>[ 3767.130151] 
+11-20 11:16:57.748 I/Kernel  (    0): [VFE]set camera to standy off and power off!
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3767.132845] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.748 I/Kernel  (    0): <5>[ 3767.154270] [VFE]mclk on
+11-20 11:16:57.748 W/Kernel  (    0): <4>[ 3767.166379] [CSI][GC2035]enable oe!
+11-20 11:16:57.748 W/Kernel  (    0): <4>[ 3767.178496] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.748 I/Kernel  (    0): <5>[ 3767.190114] [VFE]mclk off
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3767.190163] sunxi pmx set pin [PE14] to 0
+11-20 11:16:57.748 I/Kernel  (    0): <6>[ 3767.190176] sunxi pmx set pin [PE15] to 0
+11-20 11:16:57.749 I/Kernel  (    0): <5>[ 3767.190199] [VFE]mclk on
+11-20 11:16:57.749 W/Kernel  (    0): <4>[ 3708.850990] CPU1: Booted secondary processor
+11-20 11:16:57.749 W/Kernel  (    0): <4>[ 3767.313876] [VFE_WA
+11-20 11:16:57.751 W/Kernel  (    0): RN]os_gpio_write, hdl is NULL
+11-20 11:16:57.751 I/Kernel  (    0): <5>[ 3767.326173] [VFE]mclk off
+11-20 11:16:57.751 I/Kernel  (    0): <6>[ 3767.326212] sunxi pmx set pin [PE16] to 0
+11-20 11:16:57.751 I/Kernel  (    0): <6>[ 3767.326225] sunxi pmx set pin [PE17] to 0
+11-20 11:16:57.751 I/Kernel  (    0): <5>[ 3767.326234] [VFE]vfe_suspend done!
+11-20 11:16:57.751 E/Kernel  (    0): <3>[ 3767.326514] mali_platform_adjust_gpu_freq(410): set pll8 clock rate success,freq = 120 Mhz!
+11-20 11:16:57.751 W/Kernel  (    0): <4>[ 3767.336378] [vans] usb already in, do not need early suspend
+11-20 11:16:57.751 I/Kernel  (    0): <5>[ 3768.611456] CPU1: shutdown
+11-20 11:16:57.751 I/Kernel  (    0): <6>[ 3768.611478] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.751 I/Kernel  (    0): <6>[ 3768.612527] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.751 W/Kernel  (    0): <4>[ 4511.189
+11-20 11:16:57.753 W/Kernel  (    0): 152] [sw_udc]: IRQ: suspend
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230168] 
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230178] 
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230181] rmmod_device_driver
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230184] 
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230196] [sw_udc]: sunxi_usb_device_disable start
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230225] [sw_udc]: ep disable: ep2(0xc072ad94, ep2in-bulk, 128, 200)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230245] [sw_udc]: ep disable: ep2(0xc072ade0, ep2out-bulk, 0, 200)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230260] nuke: ep num is 2
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230305] [sw_udc]: close_usb_clock
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230335] [sw_udc]: sunxi_usb_device_disable end
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230363] [sw_udc]: dequeue: e
+11-20 11:16:57.753 W/Kernel  (    0): p(0xc072ad30, 1), _req(0xed481f48, 512, 0)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230385] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xee91a840)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230400] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xed481f40)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230414] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xed4818c0)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230428] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xed4489c0)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230443] [sw_udc]: ep disable: ep1(0xc072acfc, ep1in-bulk, 128, 200)
+11-20 11:16:57.753 W/Kernel  (    0): <4>[ 4511.230458] usb dev
+11-20 11:16:57.754 W/Kernel  (    0): ice is not active
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230464] [sw_udc]: ep disable: ep1(0xc072ad48, ep1out-bulk, 0, 200)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230478] usb device is not active
+11-20 11:16:57.754 I/Kernel  (    0): <6>[ 4511.230581] adb_release
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230591] [sw_udc]: sunxi_udc_pullup, is_on = 0
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230602] usb device is not active
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230609] [sw_udc]: dequeue: ep(0xc072ac98, 0), _req(0xee8b3848, 40, 40)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230629] [sw_udc]: free request: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef740)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230645] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512
+11-20 11:16:57.754 W/Kernel  (    0): ), req(0xedbef5c0)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230660] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef540)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230675] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.230690] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef640)
+11-20 11:16:57.754 I/Kernel  (    0): <6>[ 4511.230967] android_work: sent uevent USB_STATE=DISCONNECTED
+11-20 11:16:57.754 I/Kernel  (    0): <6>[ 4511.231265] adb_open
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.231295] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.754 I/Kernel  (    0): <6>[ 4511.231310] adb_bind
+11-20 11:16:57.754 I/Kernel  (    0): _config
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.231320] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.231333] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.231347] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.231359] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.754 W/Kernel  (    0): <4>[ 4511.231371] ep_matches, wrn: endpoint already claimed, ep(0xc072ad94, 0xef054540, ep2in-bulk)
+11-20 11:16:57.755 W/Kernel  (    0): <4
+11-20 11:16:57.755 W/Kernel  (    0): >[ 4511.231383] [sw_udc]: alloc request: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.755 W/Kernel  (    0): <4>[ 4511.231399] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef540)
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.231415] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef5c0)
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.231430] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef740)
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.231445] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef7c0)
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.231461] [sw_udc]: sunxi_udc_pullup, is_on =
+11-20 11:16:57.757 W/Kernel  (    0):  1
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.231471] usb device is not active
+11-20 11:16:57.757 I/Kernel  (    0): <6>[ 4511.269070] request_suspend_state: wakeup (3->0) at 4511269045428 (2013-11-20 02:29:43.536047314 UTC)
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.269133] [vans] usb already in, do not need late resume
+11-20 11:16:57.757 E/Kernel  (    0): <3>[ 4511.269172] mali_platform_adjust_gpu_freq(424): set pll8 clock rate success,freq = 408 Mhz!
+11-20 11:16:57.757 I/Kernel  (    0): <5>[ 4511.282102] [VFE]vfe_resume
+11-20 11:16:57.757 I/Kernel  (    0): <5>[ 4511.282142] [VFE]vfe resume work start!
+11-20 11:16:57.757 I/Kernel  (    0): <6>[ 4511.282187] sunxi pmx set pin [PE15] to 1
+11-20 11:16:57.757 I/Kernel  (    0): <6>[ 4511.282204] sunxi pmx set pin [PE14] to 1
+11-20 11:16:57.757 I/Kernel  (    0): <5>[ 4511.283478] [
+11-20 11:16:57.757 I/Kernel  (    0): VFE]mclk on
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.286085] axp pconf set pin [GPIO2] data to [1]
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.295541] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.757 I/Kernel  (    0): <6>[ 4511.320157] sunxi pconf set pin [PH7] func to [1]
+11-20 11:16:57.757 I/Kernel  (    0): <6>[ 4511.320182] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.757 I/Kernel  (    0): <6>[ 4511.320202] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.757 W/Kernel  (    0): <4>[ 4511.339950] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+11-20 11:16:57.757 I/Kernel  (    0): <6>[ 4511.359123] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 3768.620883] CPU1: Booted secondary processor
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.56
+11-20 11:16:57.758 I/Kernel  (    0): 0147] sunxi pconf set pin [PH0] func to [2]
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.560195] sunxi pconf set pin [PH6] func to [1]
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.560214] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.560232] sunxi pconf set pin [PH6] data to [1]
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.570281] [DISP]display late resume done
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.620093] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.680078] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.680099] sunxi pconf set pin [PB5] func to [4]
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4511.870074] [CSI][GC2035]disalbe oe!
+11-20 11:16:57.758 I/Kernel  (    0): <5>[ 4511.882138] [VFE]mclk off
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.8821
+11-20 11:16:57.758 I/Kernel  (    0): 98] sunxi pmx set pin [PE17] to 1
+11-20 11:16:57.758 I/Kernel  (    0): <6>[ 4511.882214] sunxi pmx set pin [PE16] to 1
+11-20 11:16:57.758 I/Kernel  (    0): <5>[ 4511.883454] [VFE]mclk on
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4511.895494] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4512.084618] [CSI][GC0307]disalbe oe!
+11-20 11:16:57.758 I/Kernel  (    0): <5>[ 4512.190062] [VFE]mclk off
+11-20 11:16:57.758 I/Kernel  (    0): <5>[ 4512.190086] [VFE]vfe resume work end!
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4512.267838] [dramfreq] freq_calc == df->previous_freq
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4517.470221] 
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4517.470246] 
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4517.470257] insmod_device_driver
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4517.470271] 
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4517.470311] [sw_udc]: sunxi_usb_device_enable start
+11-20 11:16:57.758 W/Kernel  (    0): <4>[ 4517.4
+11-20 11:16:57.759 W/Kernel  (    0): 70357] [sw_udc]: usb_vbase  = 0xf1c19000
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470402] [sw_udc]: sram_vbase = 0xf1c00000
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470474] [sw_udc]: open_usb_clock
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470581] [sw_udc]: usbd_stop_work
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470625] sunxi_udc_dma_probe version77..
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470745] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470798] [sw_udc]: usbd_start_work
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470836] [sw_udc]: usbd_start_work
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.470872] [sw_udc]: sunxi_usb_device_enable end
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.526367] [sw_udc]: IRQ: suspend
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.526477] [sw_udc
+11-20 11:16:57.759 W/Kernel  (    0): ]: ERR: usb speed is unkown
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.682230] [sw_udc]: IRQ: reset
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.682430] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.752791] [sw_udc]: 
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.752817] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.752829] [sw_udc]:  usb enter high speed.
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.752843] [sw_udc]: 
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.752852] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.759 I/Kernel  (    0): <6>[ 4517.753075] android_work: sent uevent USB_STATE=CONNECTED
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.757591] [sw_udc]: IRQ: reset
+11-20 11:16:57.759 W/Kernel  (    0): <4>[ 4517.757623] [sw_udc]: irq: reset happen, throw aw
+11-20 11:16:57.759 W/Kernel  (    0): ay all urb
+11-20 11:16:57.760 W/Kernel  (    0): <4>[ 4517.759264] [dramfreq] freq_calc == df->previous_freq
+11-20 11:16:57.760 W/Kernel  (    0): <4>[ 4517.824802] [sw_udc]: Set address 9
+11-20 11:16:57.767 I/Kernel  (    0): <6>[ 4517.845973] android_usb gadget: high-speed config #1: android
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846012] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846028] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846049] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846061] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512), fif
+11-20 11:16:57.767 W/Kernel  (    0): o(3584, 1024, 1)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846145] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846164] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846182] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846194] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846212] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846226] [sw_udc]: alloc request: ep(0xc072ad48
+11-20 11:16:57.767 W/Kernel  (    0): , ep1out-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846246] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4517.846259] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.767 I/Kernel  (    0): <6>[ 4517.846427] android_work: sent uevent USB_STATE=CONFIGURED
+11-20 11:16:57.767 I/Kernel  (    0): <5>[ 4518.981690] CPU1: shutdown
+11-20 11:16:57.767 I/Kernel  (    0): <6>[ 4518.981712] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.767 I/Kernel  (    0): <6>[ 4518.983226] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.767 W/Kernel  (    0): <4>[ 4522.844840] WRN:L1444(drivers/usb/sunxi_usb/udc/sunxi_udc.c):handle_ep0: ep0 setup e
+11-20 11:16:57.768 W/Kernel  (    0): nd
+11-20 11:16:57.768 W/Kernel  (    0): <4>[ 4522.844861] nuke: ep num is 0
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4580.904075] request_suspend_state: sleep (0->3) at 4580904050170 (2013-11-20 02:30:53.171052514 UTC)
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4580.904155] sunxi pconf get pin [PB5] func [4]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4580.904170] sunxi pconf set pin [PB5] func to [1]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4580.904746] sunxi pconf set pin [PH6] func to [7]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4580.904772] sunxi pconf set pin [PH6] pull to [0]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4580.904794] sunxi pconf set pin [PH6] data to [0]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4580.904829] sunxi pconf set pin [PH0] func to [7]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4581.010213] sunxi pconf set
+11-20 11:16:57.768 I/Kernel  (    0):  pin [PH7] func to [7]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4581.010236] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4581.010255] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.768 W/Kernel  (    0): <4>[ 4581.010411] axp pconf set pin [GPIO2] data to [0]
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4581.045903] qtaguid: ctrl_counterset(s 0 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.768 I/Kernel  (    0): <6>[ 4581.070126] [DISP]display early suspend done
+11-20 11:16:57.768 I/Kernel  (    0): <5>[ 4581.070146] [VFE]vfe_suspend
+11-20 11:16:57.768 I/Kernel  (    0): <5>[ 4581.070153] [VFE]set camera to standy off and power off!
+11-20 11:16:57.768 I/Kernel  (    0): <5>[ 4581.094245] [VFE]mclk on
+11-20 11:16:57.768 W/Kernel  (    0): <4>[ 4518.991046] CPU1: Booted second
+11-20 11:16:57.768 W/Kernel  (    0): ary processor
+11-20 11:16:57.768 W/Kernel  (    0): <4>[ 4581.106288] [CSI][GC2035]enable oe!
+11-20 11:16:57.768 W/Kernel  (    0): <4>[ 4581.118331] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.768 I/Kernel  (    0): <5>[ 4581.130050] [VFE]mclk off
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 4581.130110] sunxi pmx set pin [PE14] to 0
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 4581.130124] sunxi pmx set pin [PE15] to 0
+11-20 11:16:57.769 I/Kernel  (    0): <5>[ 4581.130146] [VFE]mclk on
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 4581.255149] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.769 I/Kernel  (    0): <5>[ 4581.267569] [VFE]mclk off
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 4581.267613] sunxi pmx set pin [PE16] to 0
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 4581.267629] sunxi pmx set pin [PE17] to 0
+11-20 11:16:57.769 I/Kernel  (    0): <5>[ 4581.267639] [VFE]vfe_suspend done!
+11-20 11:16:57.769 E/Kernel  (    0): <3>[ 4581.267920] 
+11-20 11:16:57.769 E/Kernel  (    0): mali_platform_adjust_gpu_freq(410): set pll8 clock rate success,freq = 120 Mhz!
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 4581.277778] [vans] usb already in, do not need early suspend
+11-20 11:16:57.769 I/Kernel  (    0): <5>[ 4583.191389] CPU1: shutdown
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 4583.191411] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 4583.192461] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 4583.200822] CPU1: Booted secondary processor
+11-20 11:16:57.769 I/Kernel  (    0): <5>[ 5049.291394] CPU1: shutdown
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 5049.291416] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 5049.292465] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 5049.540089] nand wait rb int time out,
+11-20 11:16:57.769 W/Kernel  (    0):  ch: 0
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 5049.300829] CPU1: Booted secondary processor
+11-20 11:16:57.769 I/Kernel  (    0): <5>[ 5054.191408] CPU1: shutdown
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 5054.191430] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.769 I/Kernel  (    0): <6>[ 5054.192478] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 5982.925226] RTL871X: send eapol packet
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 5982.926688] RTL871X: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+11-20 11:16:57.769 W/Kernel  (    0): <4>[ 6927.677517] [sw_udc]: IRQ: suspend
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.367002] [sw_udc]: IRQ: reset
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.367027] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.367039] nuke: ep num is 1
+11-20 11:16:57.770 W/Kernel  (    0): 
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.367054] nuke: ep num is 2
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.437838] [sw_udc]: Set address 5
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.439964] [sw_udc]: ep disable: ep2(0xc072ad94, ep2in-bulk, 128, 200)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.439989] [sw_udc]: ep disable: ep2(0xc072ade0, ep2out-bulk, 0, 200)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440004] nuke: ep num is 2
+11-20 11:16:57.770 I/Kernel  (    0): <6>[ 6931.440024] android_usb gadget: high-speed config #1: android
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440037] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440052] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+11-20 11:16:57.770 W/Kernel  (    0): 
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440074] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440088] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440175] [sw_udc]: dequeue: ep(0xc072ad30, 1), _req(0xd67f0748, 512, 0)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440198] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440214] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440229] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512),
+11-20 11:16:57.770 W/Kernel  (    0):  req(0xd678ebc0)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440243] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.770 W/Kernel  (    0): <4>[ 6931.440258] [sw_udc]: ep disable: ep1(0xc072acfc, ep1in-bulk, 128, 200)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440272] [sw_udc]: ep disable: ep1(0xc072ad48, ep1out-bulk, 0, 200)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440287] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440301] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440319] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512
+11-20 11:16:57.771 W/Kernel  (    0): )
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440333] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440353] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440368] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440383] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440397] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.771 I/Kernel  (    0): <6>[ 6931.440497] adb_release
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440
+11-20 11:16:57.771 W/Kernel  (    0): 507] [sw_udc]: sunxi_udc_pullup, is_on = 0
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440527] [sw_udc]: ep disable: ep2(0xc072ad94, ep2in-bulk, 128, 200)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440542] [sw_udc]: ep disable: ep2(0xc072ade0, ep2out-bulk, 0, 200)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440561] [sw_udc]: usbd_stop_work
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.440571] [sw_udc]: dequeue: ep(0xc072ac98, 0), _req(0xee8b3848, 0, 0)
+11-20 11:16:57.771 I/Kernel  (    0): <6>[ 6931.440713] android_work: sent uevent USB_STATE=DISCONNECTED
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.441356] [sw_udc]: dequeue: ep(0xc072ad30, 1), _req(0xd678ebc8, 512, 0)
+11-20 11:16:57.771 W/Kernel  (    0): <4>[ 6931.441382] [sw_udc]: free request: ep
+11-20 11:16:57.771 W/Kernel  (    0): (0xc072acfc, ep1in-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441398] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441413] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441427] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441442] [sw_udc]: ep disable: ep1(0xc072acfc, ep1in-bulk, 128, 200)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441458] [sw_udc]: ep disable: ep1(0xc072ad48, ep1out-bulk, 0, 200)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441493] [sw_udc]: free re
+11-20 11:16:57.772 W/Kernel  (    0): quest: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441510] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef540)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441525] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef5c0)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441540] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef740)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441555] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef7c0)
+11-20 11:16:57.772 I/Kernel  (    0): <6>[ 6931.441765] adb_open
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441793] ep_matches, wrn: endpoint already claimed, ep(
+11-20 11:16:57.772 W/Kernel  (    0): 0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.772 I/Kernel  (    0): <6>[ 6931.441806] adb_bind_config
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441817] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441829] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441842] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441855] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441867] ep_matches, wrn: endpo
+11-20 11:16:57.772 W/Kernel  (    0): int already claimed, ep(0xc072ad94, 0xef054540, ep2in-bulk)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441878] [sw_udc]: alloc request: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef740)
+11-20 11:16:57.772 W/Kernel  (    0): <4>[ 6931.441894] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef5c0)
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.441909] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef540)
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.441924] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.441939] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xe
+11-20 11:16:57.773 W/Kernel  (    0): dbef640)
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.441955] [sw_udc]: sunxi_udc_pullup, is_on = 1
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.441967] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.441980] [sw_udc]: usbd_start_work
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.497434] [sw_udc]: IRQ: suspend
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.497455] [sw_udc]: ERR: usb speed is unkown
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.611326] [sw_udc]: IRQ: reset
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.611348] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.681868] [sw_udc]: 
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.681883] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.681890] [sw_udc]:  usb enter high sp
+11-20 11:16:57.773 W/Kernel  (    0): eed.
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.681899] [sw_udc]: 
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.681904] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.773 I/Kernel  (    0): <6>[ 6931.682107] android_work: sent uevent USB_STATE=CONNECTED
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.682242] [sw_udc]: Set address 5
+11-20 11:16:57.773 I/Kernel  (    0): <6>[ 6931.684385] android_usb gadget: high-speed config #1: android
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.684418] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512)
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.684435] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+11-20 11:16:57.773 W/Kernel  (    0): <4>[ 6931.684459] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 51
+11-20 11:16:57.774 W/Kernel  (    0): 2)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684473] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684539] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684556] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684574] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684588] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684607] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-b
+11-20 11:16:57.774 W/Kernel  (    0): ulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684623] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684638] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.684653] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.774 I/Kernel  (    0): <6>[ 6931.684802] android_work: sent uevent USB_STATE=CONFIGURED
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 5054.200840] CPU1: Booted secondary processor
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6931.805647] nuke: ep num is 0
+11-20 11:16:57.774 I/Kernel  (    0): <6>[ 6931.902077] binder: 1547:1547 refcount change on 
+11-20 11:16:57.774 I/Kernel  (    0): invalid ref 46
+11-20 11:16:57.774 I/Kernel  (    0): <5>[ 6934.661405] CPU1: shutdown
+11-20 11:16:57.774 I/Kernel  (    0): <6>[ 6934.661426] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.774 I/Kernel  (    0): <6>[ 6934.662476] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6943.924676] [sw_udc]: IRQ: suspend
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6945.840111] [sw_udc]: IRQ: reset
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6945.840136] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6945.840148] nuke: ep num is 1
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6945.840164] nuke: ep num is 2
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6945.914094] [sw_udc]: IRQ: reset
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6945.914114] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.774 W/Kernel  (    0): <4>[ 6945.914126] nuke: ep num is 1
+11-20 11:16:57.775 W/Kernel  (    0): <4>
+11-20 11:16:57.775 W/Kernel  (    0): [ 6945.914140] nuke: ep num is 2
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6945.981397] [sw_udc]: Set address 5
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002237] [sw_udc]: ep disable: ep2(0xc072ad94, ep2in-bulk, 128, 200)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002264] [sw_udc]: ep disable: ep2(0xc072ade0, ep2out-bulk, 0, 200)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002279] nuke: ep num is 2
+11-20 11:16:57.775 I/Kernel  (    0): <6>[ 6946.002298] android_usb gadget: high-speed config #1: android
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002311] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002326] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+11-20 11:16:57.775 W/Kernel  (    0): <4>
+11-20 11:16:57.775 W/Kernel  (    0): [ 6946.002349] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002362] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002417] [sw_udc]: dequeue: ep(0xc072ad30, 1), _req(0xd67f0748, 512, 0)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002439] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002455] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002470] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req
+11-20 11:16:57.775 W/Kernel  (    0): (0xd678ebc0)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002484] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002498] [sw_udc]: ep disable: ep1(0xc072acfc, ep1in-bulk, 128, 200)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002512] [sw_udc]: ep disable: ep1(0xc072ad48, ep1out-bulk, 0, 200)
+11-20 11:16:57.775 W/Kernel  (    0): <4>[ 6946.002533] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002547] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002564] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512)
+11-20 11:16:57.776 W/Kernel  (    0): <4
+11-20 11:16:57.776 W/Kernel  (    0): >[ 6946.002578] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002597] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002612] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002627] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002642] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.776 I/Kernel  (    0): <6>[ 6946.002745] adb_release
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002755]
+11-20 11:16:57.776 W/Kernel  (    0):  [sw_udc]: sunxi_udc_pullup, is_on = 0
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002772] [sw_udc]: ep disable: ep2(0xc072ad94, ep2in-bulk, 128, 200)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002787] [sw_udc]: ep disable: ep2(0xc072ade0, ep2out-bulk, 0, 200)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002807] [sw_udc]: usbd_stop_work
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.002818] [sw_udc]: dequeue: ep(0xc072ac98, 0), _req(0xee8b3848, 0, 0)
+11-20 11:16:57.776 I/Kernel  (    0): <6>[ 6946.002960] android_work: sent uevent USB_STATE=DISCONNECTED
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.003509] [sw_udc]: dequeue: ep(0xc072ad30, 1), _req(0xd678ebc8, 512, 0)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.003533] [sw_udc]: free request: ep(0xc
+11-20 11:16:57.776 W/Kernel  (    0): 072acfc, ep1in-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.003550] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.003564] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.003578] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.776 W/Kernel  (    0): <4>[ 6946.003593] [sw_udc]: ep disable: ep1(0xc072acfc, ep1in-bulk, 128, 200)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003608] [sw_udc]: ep disable: ep1(0xc072ad48, ep1out-bulk, 0, 200)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003645] [sw_udc]: free reques
+11-20 11:16:57.787 W/Kernel  (    0): t: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef740)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003662] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef5c0)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003677] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef540)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003693] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003707] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef640)
+11-20 11:16:57.787 I/Kernel  (    0): <6>[ 6946.003915] adb_open
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003941] ep_matches, wrn: endpoint already claimed, ep(0xc0
+11-20 11:16:57.787 W/Kernel  (    0): 72acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.787 I/Kernel  (    0): <6>[ 6946.003955] adb_bind_config
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003966] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003978] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.003991] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.004004] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.004016] ep_matches, wrn: endpoint 
+11-20 11:16:57.787 W/Kernel  (    0): already claimed, ep(0xc072ad94, 0xef054540, ep2in-bulk)
+11-20 11:16:57.787 W/Kernel  (    0): <4>[ 6946.004027] [sw_udc]: alloc request: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.004043] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef540)
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.004058] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef5c0)
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.004073] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef740)
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.004088] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef
+11-20 11:16:57.788 W/Kernel  (    0): 7c0)
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.004103] [sw_udc]: sunxi_udc_pullup, is_on = 1
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.004114] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.004127] [sw_udc]: usbd_start_work
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.059585] [sw_udc]: IRQ: suspend
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.059606] [sw_udc]: ERR: usb speed is unkown
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.202747] [sw_udc]: IRQ: reset
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.202770] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.273407] [sw_udc]: 
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.273424] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.273431] [sw_udc]:  usb enter high speed.
+11-20 11:16:57.788 W/Kernel  (    0): 
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.273440] [sw_udc]: 
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.273445] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.788 I/Kernel  (    0): <6>[ 6946.273603] android_work: sent uevent USB_STATE=CONNECTED
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.278219] [sw_udc]: IRQ: reset
+11-20 11:16:57.788 W/Kernel  (    0): <4>[ 6946.278243] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.345431] [sw_udc]: Set address 6
+11-20 11:16:57.789 I/Kernel  (    0): <6>[ 6946.366357] android_usb gadget: high-speed config #1: android
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366391] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366408] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128
+11-20 11:16:57.789 W/Kernel  (    0): , 512), fifo(2560, 1024, 1)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366431] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366445] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366512] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366529] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366547] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366561] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out
+11-20 11:16:57.789 W/Kernel  (    0): -bulk, 0, 512), fifo(1536, 1024, 1)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366581] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366597] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366612] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6946.366626] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.789 I/Kernel  (    0): <6>[ 6946.366773] android_work: sent uevent USB_STATE=CONFIGURED
+11-20 11:16:57.789 W/Kernel  (    0): <4>[ 6934.670839] CPU1: Booted secondary 
+11-20 11:16:57.789 W/Kernel  (    0): processor
+11-20 11:16:57.789 I/Kernel  (    0): <5>[ 6948.541573] CPU1: shutdown
+11-20 11:16:57.789 I/Kernel  (    0): <6>[ 6948.541706] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.790 I/Kernel  (    0): <6>[ 6948.542743] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 6951.365451] WRN:L1444(drivers/usb/sunxi_usb/udc/sunxi_udc.c):handle_ep0: ep0 setup end
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 6951.365470] nuke: ep num is 0
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7108.849587] WRN:L1368(drivers/usb/sunxi_usb/udc/sunxi_udc.c):ERR: dev->driver->setup failed. (-22)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7180.977005] [sw_udc]: IRQ: reset
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7180.977030] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7180.977042] nuke: ep n
+11-20 11:16:57.790 W/Kernel  (    0): um is 1
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7180.977057] nuke: ep num is 2
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.049064] [sw_udc]: IRQ: reset
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.049087] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.049098] nuke: ep num is 1
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.049111] nuke: ep num is 2
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.116281] [sw_udc]: Set address 6
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136500] [sw_udc]: ep disable: ep2(0xc072ad94, ep2in-bulk, 128, 200)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136527] [sw_udc]: ep disable: ep2(0xc072ade0, ep2out-bulk, 0, 200)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136542] nuke: ep num is 2
+11-20 11:16:57.790 I/Kernel  (    0): <6>[ 7181.136561] android_usb gadget: high-speed config #1
+11-20 11:16:57.790 I/Kernel  (    0): : android
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136573] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136589] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136611] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136625] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136693] [sw_udc]: dequeue: ep(0xc072ad30, 1), _req(0xd678e3c8, 512, 0)
+11-20 11:16:57.790 W/Kernel  (    0): <4>[ 7181.136717] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512)
+11-20 11:16:57.791 W/Kernel  (    0): , req(0xe0d9bac0)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136732] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136746] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136761] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136775] [sw_udc]: ep disable: ep1(0xc072acfc, ep1in-bulk, 128, 200)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136790] [sw_udc]: ep disable: ep1(0xc072ad48, ep1out-bulk, 0, 200)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136805] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bul
+11-20 11:16:57.791 W/Kernel  (    0): k, 128, 512)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136819] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136837] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136851] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136870] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136885] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136900] [sw_udc]: alloc request: e
+11-20 11:16:57.791 W/Kernel  (    0): p(0xc072acfc, ep1in-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.136915] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.791 I/Kernel  (    0): <6>[ 7181.137017] adb_release
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.137026] [sw_udc]: sunxi_udc_pullup, is_on = 0
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.137045] [sw_udc]: ep disable: ep2(0xc072ad94, ep2in-bulk, 128, 200)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.137059] [sw_udc]: ep disable: ep2(0xc072ade0, ep2out-bulk, 0, 200)
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.137079] [sw_udc]: usbd_stop_work
+11-20 11:16:57.791 W/Kernel  (    0): <4>[ 7181.137089] [sw_udc]: dequeue: ep(0xc072ac98, 0), _req(0xee8b3848, 0, 0)
+11-20 11:16:57.791 I/Kernel  (    0): <6>[ 718
+11-20 11:16:57.792 I/Kernel  (    0): 1.137200] android_work: sent uevent USB_STATE=DISCONNECTED
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137757] [sw_udc]: dequeue: ep(0xc072ad30, 1), _req(0xd678ebc8, 512, 0)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137782] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137797] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137812] [sw_udc]: free request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137826] [sw_udc]: free request: ep(0xc072ad48, ep1out-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7
+11-20 11:16:57.792 W/Kernel  (    0): 181.137841] [sw_udc]: ep disable: ep1(0xc072acfc, ep1in-bulk, 128, 200)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137856] [sw_udc]: ep disable: ep1(0xc072ad48, ep1out-bulk, 0, 200)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137891] [sw_udc]: free request: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137908] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef540)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137923] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef5c0)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137938] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef740
+11-20 11:16:57.792 W/Kernel  (    0): )
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.137953] [sw_udc]: free request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef7c0)
+11-20 11:16:57.792 I/Kernel  (    0): <6>[ 7181.138147] adb_open
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.138173] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.792 I/Kernel  (    0): <6>[ 7181.138187] adb_bind_config
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.138197] ep_matches, wrn: endpoint already claimed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.138209] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.792 W/Kernel  (    0): <4>[ 7181.138223] ep_matches, wrn: endpoint already claim
+11-20 11:16:57.793 W/Kernel  (    0): ed, ep(0xc072acfc, 0xef18d080, ep1in-bulk)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138235] ep_matches, wrn: endpoint already claimed, ep(0xc072ad48, 0xef18d080, ep1out-bulk)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138248] ep_matches, wrn: endpoint already claimed, ep(0xc072ad94, 0xef054540, ep2in-bulk)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138258] [sw_udc]: alloc request: ep(0xc072ade0, ep2out-bulk, 512), req(0xedbef740)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138274] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef5c0)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138290] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xe
+11-20 11:16:57.793 W/Kernel  (    0): dbef540)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138305] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef6c0)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138320] [sw_udc]: alloc request: ep(0xc072ad94, ep2in-bulk, 512), req(0xedbef640)
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138335] [sw_udc]: sunxi_udc_pullup, is_on = 1
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138346] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.138358] [sw_udc]: usbd_start_work
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.193815] [sw_udc]: IRQ: suspend
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.193836] [sw_udc]: ERR: usb speed is unkown
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.345494] [sw_udc]: IRQ: reset
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.345
+11-20 11:16:57.793 W/Kernel  (    0): 518] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.416133] [sw_udc]: 
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.416150] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.416157] [sw_udc]:  usb enter high speed.
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.416166] [sw_udc]: 
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.416171] +++++++++++++++++++++++++++++++++++++
+11-20 11:16:57.793 I/Kernel  (    0): <6>[ 7181.416329] android_work: sent uevent USB_STATE=CONNECTED
+11-20 11:16:57.793 W/Kernel  (    0): <4>[ 7181.420969] [sw_udc]: IRQ: reset
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.420994] [sw_udc]: irq: reset happen, throw away all urb
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.487984] [sw_udc]: Set address 7
+11-20 11:16:57.794 I/Kernel  (    0): <6>[ 7181.508950] android_u
+11-20 11:16:57.794 I/Kernel  (    0): sb gadget: high-speed config #1: android
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.508982] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509000] [sw_udc]: ep enable: ep2(0xc072ad94, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509023] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509037] [sw_udc]: ep enable: ep2(0xc072ade0, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509095] [sw_udc]: ep enable: ep1(0xc072acfc, ep1in-bulk, 128, 512)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509110] [sw_udc]: ep enable: ep1(0xc
+11-20 11:16:57.794 W/Kernel  (    0): 072acfc, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509129] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509143] [sw_udc]: ep enable: ep1(0xc072ad48, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509163] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xe0d9bac0)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509178] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd67f0740)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.509200] [sw_udc]: alloc request: ep(0xc072acfc, ep1in-bulk, 512), req(0xd678ebc0)
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 7181.5
+11-20 11:16:57.794 W/Kernel  (    0): 09214] [sw_udc]: alloc request: ep(0xc072ad48, ep1out-bulk, 512), req(0xd678e3c0)
+11-20 11:16:57.794 I/Kernel  (    0): <6>[ 7181.509345] android_work: sent uevent USB_STATE=CONFIGURED
+11-20 11:16:57.794 W/Kernel  (    0): <4>[ 6948.550874] CPU1: Booted secondary processor
+11-20 11:16:57.795 I/Kernel  (    0): <5>[ 7183.521414] CPU1: shutdown
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7183.521435] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7183.522485] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.795 W/Kernel  (    0): <4>[ 7186.505648] WRN:L1444(drivers/usb/sunxi_usb/udc/sunxi_udc.c):handle_ep0: ep0 setup end
+11-20 11:16:57.795 W/Kernel  (    0): <4>[ 7186.505668] nuke: ep num is 0
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7315.917156] request_suspend_state: wakeup (3
+11-20 11:16:57.795 I/Kernel  (    0): ->0) at 7315917132975 (2013-11-20 03:16:28.184134903 UTC)
+11-20 11:16:57.795 W/Kernel  (    0): <4>[ 7315.917215] [vans] usb already in, do not need late resume
+11-20 11:16:57.795 E/Kernel  (    0): <3>[ 7315.917254] mali_platform_adjust_gpu_freq(424): set pll8 clock rate success,freq = 408 Mhz!
+11-20 11:16:57.795 I/Kernel  (    0): <5>[ 7315.934396] [VFE]vfe_resume
+11-20 11:16:57.795 I/Kernel  (    0): <5>[ 7315.934485] [VFE]vfe resume work start!
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7315.934531] sunxi pmx set pin [PE15] to 1
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7315.934547] sunxi pmx set pin [PE14] to 1
+11-20 11:16:57.795 W/Kernel  (    0): <4>[ 7315.934952] axp pconf set pin [GPIO2] data to [1]
+11-20 11:16:57.795 I/Kernel  (    0): <5>[ 7315.935811] [VFE]mclk on
+11-20 11:16:57.795 W/Kernel  (    0): <4>[ 7315.947879] [VFE_WARN]
+11-20 11:16:57.795 W/Kernel  (    0): os_gpio_write, hdl is NULL
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7315.970190] sunxi pconf set pin [PH7] func to [1]
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7315.970218] sunxi pconf set pin [PH7] pull to [0]
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7315.970240] sunxi pconf set pin [PH7] data to [0]
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7315.976780] qtaguid: ctrl_counterset(s 1 10031): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.795 W/Kernel  (    0): <4>[ 7315.991813] [CSI][GC2035]V4L2_IDENT_SENSOR=2035
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7316.210183] sunxi pconf set pin [PH0] func to [2]
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7316.210224] sunxi pconf set pin [PH6] func to [1]
+11-20 11:16:57.795 I/Kernel  (    0): <6>[ 7316.210243] sunxi pconf set pin [PH6] pul
+11-20 11:16:57.796 I/Kernel  (    0): l to [0]
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7316.210261] sunxi pconf set pin [PH6] data to [1]
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7316.220510] [DISP]display late resume done
+11-20 11:16:57.796 W/Kernel  (    0): <4>[ 7183.530851] CPU1: Booted secondary processor
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7316.270133] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7316.330145] sunxi pconf get pin [PB5] func [1]
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7316.330162] sunxi pconf set pin [PB5] func to [4]
+11-20 11:16:57.796 W/Kernel  (    0): <4>[ 7316.520089] [CSI][GC2035]disalbe oe!
+11-20 11:16:57.796 I/Kernel  (    0): <5>[ 7316.532152] [VFE]mclk off
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7316.532211] sunxi pmx set pin [PE17] to 1
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7316.532228] sunxi pmx set pin [PE16] to 1
+11-20 11:16:57.796 I/Kernel  (    0): <5>[ 7316.5334
+11-20 11:16:57.796 I/Kernel  (    0): 65] [VFE]mclk on
+11-20 11:16:57.796 W/Kernel  (    0): <4>[ 7316.545500] [VFE_WARN]os_gpio_write, hdl is NULL
+11-20 11:16:57.796 W/Kernel  (    0): <4>[ 7316.733132] [CSI][GC0307]disalbe oe!
+11-20 11:16:57.796 I/Kernel  (    0): <5>[ 7316.840125] [VFE]mclk off
+11-20 11:16:57.796 I/Kernel  (    0): <5>[ 7316.840167] [VFE]vfe resume work end!
+11-20 11:16:57.796 I/Kernel  (    0): <5>[ 7319.211503] CPU1: shutdown
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7319.211526] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7319.212578] [hotplug]: cpu1 is killed! .
+11-20 11:16:57.796 W/Kernel  (    0): <4>[ 7319.220871] CPU1: Booted secondary processor
+11-20 11:16:57.796 I/Kernel  (    0): <5>[ 7341.041496] CPU1: shutdown
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7341.041518] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:57.796 I/Kernel  (    0): <6>[ 7341.042606] [hotplug]: cpu1 is killed! .
+--------- beginning of /dev/log/main
+11-20 11:16:57.679 V/audio_hw_primary(  111): start_output_stream, line: 728
+11-20 11:16:57.679 V/codec_audio_pad(  111): in normal mode, headset or speaker on,****LINE:81,FUNC:set_normal_path
+--------- beginning of /dev/log/system
+11-20 11:16:57.699 I/ActivityManager(  375): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.soundrecorder/.SoundRecorder} from pid 555
+11-20 11:16:57.829 V/audio_hw_primary(  111): normal mode , speaker,****LINE:653,FUNC:select_output_device
+11-20 11:16:57.829 V/audio_hw_primary(  111): start_output_stream: card:0, port:0, rate:44100
+11-20 11:16:57.829 D/alsa_pcm(  111): pcm_open:,sparams.stop_threshold:1540, config->stop_threshold:0
+11-20 11:16:57.829 V/audio_hw_primary(  111): do not use out resampler
+11-20 11:16:57.895 I/Kernel  (    0): <6>[ 7345.628745] qtaguid: ctrl_counterset(s 1 10049): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:16:57.879 I/qtaguid (  375): Failed write_ctrl(s 1 10049) res=-1 errno=1
+11-20 11:16:57.879 W/NetworkManagementSocketTagger(  375): setKernelCountSet(10049, 1) failed with errno -1
+11-20 11:16:57.942 W/Kernel  (    0): <4>[ 7341.050896] CPU1: Booted secondary processor
+11-20 11:16:57.929 D/webviewglue( 1547): OnTrimMemory with EGL Context 0x0
+11-20 11:16:57.959 D/gralloc (  108): use system buffer 
+11-20 11:16:57.969 W/BufferQueue(  108): freeAllBuffersLocked called but mQueue is not empty
+11-20 11:16:57.969 D/gralloc (  108): use system buffer 
+11-20 11:16:58.099 I/ActivityManager(  375): Displayed com.android.soundrecorder/.SoundRecorder: +250ms
+11-20 11:16:59.549 D/gralloc (  108): use system buffer 
+11-20 11:16:59.619 D/CedarXRecorder(  111): Calling process is: com.android.soundrecorder !
+11-20 11:16:59.619 W/StagefrightRecorder(  111): Intended audio encoding bit rate (128000) is too large and will be set to (51200)
+11-20 11:16:59.619 V/audio_hw_primary(  111): to malloc in-buffer: period_size: 1024, frame_size: 2
+11-20 11:16:59.629 I/MPEG4Writer(  111): limits: 2147483647/0 bytes/us, bit rate: 51200 bps and the estimated moov size 3072 bytes
+11-20 11:16:59.629 V/audio_hw_primary(  111): in_set_parameters: input_source=1;routing=-2147483644
+11-20 11:16:59.639 V/audio_hw_primary(  111): start_input_stream, line: 1462
+11-20 11:16:59.639 V/codec_audio_pad(  111): normal record mode 4,****LINE:91,FUNC:set_normal_record_enable
+11-20 11:16:59.639 V/codec_audio_pad(  111): normal record mode 4,****LINE:97,FUNC:set_normal_record
+11-20 11:16:59.639 V/audio_hw_primary(  111): normal record,****LINE:721,FUNC:select_input_device
+11-20 11:16:59.639 V/audio_hw_primary(  111): do not use in resampler
+11-20 11:16:59.904 I/Kernel  (    0): <5>[ 7347.421422] CPU1: shutdown
+11-20 11:16:59.904 I/Kernel  (    0): <6>[ 7347.421444] [hotplug]: cpu(0) try to kill cpu(1)
+11-20 11:16:59.904 I/Kernel  (    0): <6>[ 7347.422482] [hotplug]: cpu1 is killed! .
+11-20 11:16:59.889 D/gralloc (  108): use system buffer 
+11-20 11:16:59.969 I/MPEG4Writer(  111): setStartTimestampUs: 238552
+11-20 11:16:59.969 I/MPEG4Writer(  111): Earliest track starting time: 238552
+11-20 11:17:01.029 D/dalvikvm(  375): GC_FOR_ALLOC freed 1793K, 28% free 8826K/12124K, paused 70ms, total 74ms
+11-20 11:17:01.049 D/MPEG4Writer(  111): Stopping Audio track
+11-20 11:17:01.049 I/MPEG4Writer(  111): Received total/0-length (49/0) buffers and encoded 48 frames. - audio
+11-20 11:17:01.049 I/MPEG4Writer(  111): Audio track drift time: 0 us
+11-20 11:17:01.049 D/MPEG4Writer(  111): Stopping Audio track source
+11-20 11:17:01.229 V/codec_audio_pad(  111): normal record mode 4,****LINE:91,FUNC:set_normal_record_enable
+11-20 11:17:01.229 V/codec_audio_pad(  111): normal record mode 4,****LINE:97,FUNC:set_normal_record
+11-20 11:17:01.229 V/audio_hw_primary(  111): normal record,****LINE:721,FUNC:select_input_device
+11-20 11:17:01.239 D/MPEG4Writer(  111): Audio track stopped
+11-20 11:17:01.239 D/MPEG4Writer(  111): Stopping writer thread
+11-20 11:17:01.239 D/MPEG4Writer(  111): 0 chunks are written in the last batch
+11-20 11:17:01.239 D/MPEG4Writer(  111): Writer thread stopped
+11-20 11:17:01.239 I/MPEG4Writer(  111): The mp4 file will not be streamable.
+11-20 11:17:01.239 D/MPEG4Writer(  111): Stopping Audio track
+11-20 11:17:01.379 V/codec_audio_pad(  111): normal record mode 4,****LINE:91,FUNC:set_normal_record_enable
+11-20 11:17:01.379 V/codec_audio_pad(  111): fm record mode 4,****LINE:184,FUNC:set_fm_record_enable
+11-20 11:17:01.379 D/audio_hw_primary(  111): adev_close_input_stream set voice record status
+11-20 11:17:01.479 W/MediaRecorder( 2588): mediarecorder went away with unhandled events
+11-20 11:17:01.533 I/Kernel  (    0): <6>[ 7349.266003] qtaguid: ctrl_counterset(s 0 10049): insufficient priv from pid=432 tgid=375 uid=1000
+11-20 11:17:01.519 I/qtaguid (  375): Failed write_ctrl(s 0 10049) res=-1 errno=1
+11-20 11:17:01.519 W/NetworkManagementSocketTagger(  375): setKernelCountSet(10049, 0) failed with errno -1
+11-20 11:17:02.728 W/Kernel  (    0): <4>[ 7347.430834] CPU1: Booted secondary processor
+11-20 11:17:02.719 D/audio_hw_primary(  111): out_standby

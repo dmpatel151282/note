@@ -112,17 +112,29 @@ MIXER_CTL_TYPE_MAX,
 
 1. struct mixer *mixer_open(unsigned int card)
 
-2. static void tinymix_set_value(struct mixer *mixer, unsigned int id, unsigned int value)
-  struct mixer_ctl *mixer_get_ctl(struct mixer *mixer, unsigned int id)
-  enum mixer_ctl_type mixer_ctl_get_type(struct mixer_ctl *ctl)
-  unsigned int mixer_ctl_get_num_values(struct mixer_ctl *ctl)
-  int mixer_ctl_set_value(struct mixer_ctl *ctl, unsigned int id, int value)
+2. mixer设置
+  static void tinymix_set_value(struct mixer *mixer, unsigned int id, unsigned int value)
+
+   2.1 获取 struct mixer_ctl 指针
+    (1) by id
+      struct mixer_ctl *mixer_get_ctl(struct mixer *mixer, unsigned int id)
+    (2) by name
+      struct mixer_ctl *mixer_get_ctl_by_name(struct mixer *mixer, const char *name);
+
+   2.2 enum mixer_ctl_type mixer_ctl_get_type(struct mixer_ctl *ctl)
+   2.3 unsigned int mixer_ctl_get_num_values(struct mixer_ctl *ctl)
+   2.4 int mixer_ctl_set_value(struct mixer_ctl *ctl, unsigned int id, int value)
+
+  id                    value
+
+  name                                      value
+  "Speaker Function"                          0         播放音乐
+  "Master Playback Volume"                    10        设置音量  
+  "MIC1_G boost stage output mixer control"   0
+
+  在sunxi/audiocodec/sun8iw3_sndcodec.c 中定义
+
 
 3. void mixer_close(struct mixer *mixer)
 
-struct mixer_ctl *mixer_get_ctl_by_name(struct mixer *mixer, const char *name);
-
-mixer设置
-(1) by name
-  "Speaker Function"
 
