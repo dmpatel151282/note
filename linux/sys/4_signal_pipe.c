@@ -127,15 +127,15 @@
       int setitimer(int which, const struct itimerval *value, 
                 struct itimerval *ovalue); 
       which:
-        TIMER_REAL：按实际时间计时，计时到达将给进程发送 SIGALRM 信号
+        ITIMER_REAL：按实际时间计时，计时到达将给进程发送 SIGALRM 信号
         99vIMER_VIRTUAL：仅当进程执行时才进行计时。发送 SIGVTALRM 信号
         99vIMER_PROF：当进程执行时和系统为该进程执行动作时都计时。
           与99vIMER_VIR-TUAL是一对，该定时器经常用来统计进程在用户态和内核态
           花费的时间。计时到达将发送 SIGPROF 信号给进程。 
 
       struct itimerval {
-          struct timeval it_interval; /* 下一次的取值 */
-          struct timeval it_value; /* 本次的设定值 */
+          struct timeval it_interval;   /* Interval time from second time */
+          struct timeval it_value;      /* Timeout first time */
       }; 
       struct timeval {
           long tv_sec; /* 秒 */

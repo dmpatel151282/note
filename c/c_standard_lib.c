@@ -190,7 +190,8 @@ void lcong48(unsigned short param[7]);
 ------------------------------------------------------------------------
 #include <time.h>
 int time(time_t*);
-ar *ctime(const time_t *timep);
+char *ctime(const time_t *timep);
+
 ------------------------------------------------------------------------
 #include <sys/types.h>
 #include <sys/stat.h>

@@ -23,8 +23,6 @@ Audio模块:  共12个测试用例
 
         后续：查看codec_judge_channel_left_right 程序源码，注意返回值
 
-    5. 
-
 CPU模块:  共27个测试用例
 
   已完成:
@@ -47,9 +45,21 @@ rtc:
   
 issue:
     1. sine_detector/audio_check_wav 工具未找到?
+    解决：找刘刚拿到源码
     2. 开关cpu1时，与自动调频有冲突，测试时是否能关掉自动调频?
-        固定开关核，写入1或2 > cpufreq/fantasys/hotplug_lock
+    解决：固定开关核，写入1或2 > cpufreq/fantasys/hotplug_lock
 
 --------------------------------------------------------------------------
 
+2014-2-10
+
+Audio模块:
+    5. audio_codec_capture 测试用例
+        修改audio_codec_capture_open源码，增加时间参数，以此为录音时间
+
+    6. 
+
+issue:
+    1. 运行audio_codec_capture失败，audio_check_wav 时出现 NOt A SINE signal
+    
 
