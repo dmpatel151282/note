@@ -1,8 +1,240 @@
 
-    tar -xf vim.tar -C ~
-    ls /usr/share/vim/vim70/colors/
+vim 帮助
 
-    vim ~/.vimrc
+  打开vim, 输入:help 命令
+
+  中文帮助手册的安装
+    1. 下载vimcdoc包
+    2. 解包后进入文件夹，sudo ./vimcdoc.sh -i
+
+  切换中英文帮助， set helplang=en  set helplang=cn
+  帮助文件的文本是utf-8编码的， set encoding=utf-8
+
+vim 常用命令
+    
+  %     跳转到配对的括号去
+  [[    跳转到代码块的开头去(但要求代码块中'{'必须单独占一行)
+  gD    跳转到局部变量的定义处
+  ''    跳转到光标上次停靠的地方, 是两个'
+  mx    设置书签,x只能是a-z的26个字母
+  `x    跳转到书签处("`"是1左边的键)
+  >     增加缩进,"x>"表示增加以下x行的缩进
+  <     减少缩进,"x<"表示减少以下x行的缩进 
+
+语法高亮
+  vimrc 加入
+    syntax enable
+    syntax on
+  配色方案       ls /usr/share/vim/vim73/colors/
+    colorscheme desert
+  语法文件(:help syntax.txt)
+    c语言：/usr/share/vim/vim64/syntax/c.vim
+
+---------------------------------------------------------------------------
+Ctags 的使用
+
+  使用
+    1. 生成tags:  源码根目录 ctags -R -f tagsname
+
+    一个目录下只有部分文件需要建立 tags ?
+    答：使用 find 命令查找文件，bash 做后续处理，生成一个文件列表，
+    如 project.files，最后使用 ctags -L project.files 命令
+
+    ctags 把.cpp当成c++来处理，.c当成c语言来处理，.h当成C++的头文件处理
+    如果你程序中有的.c文件其实是C++程序?  使用 --langmap=c++:+.c
+    --force-language=c++   把所有文件当成C++来处理了
+
+    --fields=[+|−]flags     用于指定每条标记的扩展字段域
+    --c-kinds=+p            增加 C语言的 tags记录类型, p 函数原型
+                            l 局部变量, x 外部变量
+
+    --extra=+q              增加额外的条目: f表示为每个文件增加一个条目，  
+                            q为每个类增加一个条目
+
+    2. 将tags文件加入到vim中来: set tags=/path/to/project/tagsname
+        在tagsname所在文件夹下，可以不用
+
+  技巧
+    在vimrc文件中初始把tags变量为 set tags=tags;  那么 vi会先在当前目录中
+    搜索tags文件，如果没有查找到，会到父级目录中查找tags文件，依次类推。
+
+  小瑕疵
+      增加了函数定义, 删除了变量定义等, tags文件不能自动rebuild, 
+    必须手动再运行一下命令: ctags -R --sort=yes -f tagsname
+---------------------------------------------------------------------------
+插件: TagList
+  安装  在 ~/.vim 目录下解压taglist_xx.zip
+  手册  :help taglist.txt
+
+  ~/.vimrc文件中添加:
+    let Tlist_Show_One_File=1
+    let Tlist_Exit_OnlyWindow=1
+
+  使用
+    打开命令 :Tlist
+
+    将鼠标移到某个tag, 单击左键即可跳转
+    ctrl+ww 或双击鼠标 切换窗口
+    光标移到某个tag, 按空格键查看完整的写法
+    
+---------------------------------------------------------------------------
+QuickFix 窗口
+
+  手册 :help quickfix
+
+  :make 产生错误
+
+  :cw   // 调出QuickFix窗口
+  :cn   // 切换到下一个结果
+  :cp   // 切换到上一个结果
+
+  可以在~/.vimrc中增加:
+    nmap <F6> :cn<cr>
+    nmap <F7> :cp<cr>
+
+--------------------------------------------------------------------------
+文件浏览器和窗口管理器 -- 插件: WinManager
+  安装  在 ~/.vim 目录下解压winmanager.zip
+  手册  :help winmanager
+
+文件浏览器 netrw.vim (标准的vim插件)
+
+  :e /dir/
+
+  在该界面上你可以用下面的一些命令来进行常用的目录和文件操作:
+      <F1>  显示帮助
+      <cr>  如果光标下是目录, 则进入该目录；如果光标下文件, 则打开该文件
+      -     返回上级目录
+      c     切换vim 当前工作目录正在浏览的目录
+      d     创建目录
+      D     删除目录或文件
+      i     切换显示方式
+      R     文件或目录重命名
+      s     选择排序方式
+      x     定制浏览方式, 使用你指定的程序打开该文件
+
+通过WinManager插件来将TagList窗口和netrw窗口整合起来
+
+  ~/.vimrc中增加:
+    let g:winManagerWindowLayout='FileExplorer|TagList'
+    nmap wm :WMToggle<cr>
+
+---------------------------------------------------------------------------
+Cscope 的使用
+  安装  
+    1. 下载源码包
+    2. ./configure && make && sudo make install 
+    3. .vimrc 加入 set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+  手册  :help if_cscop.txt
+
+  使用
+    1. 生成一个cscope的数据库: cscope -Rbq
+       cscope.in.out
+       cscope.out
+       cscope.po.out
+    2. 把刚才生成的cscope文件导入到vim中来
+        :cs add /path/to/project/cscope.out /path/to/project/
+
+
+    add   : 添加一个新的 cscope 数据库／连接。
+
+	用法	:cs add {file|dir} [pre-path] [flags]
+
+	    [pre-path] 用来通知 cscope 使用 -P [pre-path] 选项。
+	    [flags]    可以用来给 cscope 传递额外的选项。
+
+	例子 
+	    :cscope add /usr/local/cdb/cscope.out
+	    :cscope add /projects/vim/cscope.out /usr/local/vim
+	    :cscope add cscope.out /usr/local/vim -C
+
+---------------------------------------------------------------------------
+快速浏览和操作Buffer -- 插件: MiniBufExplorer
+
+  安装  将下载的 minibufexpl.vim 文件丢到 ~/.vim/plugin 文件夹中即可
+  手册  在minibufexpl.vim 文件的头部
+
+  vim有buffer(缓冲区)的概念 :help buffer
+
+  使用方法:
+      重新启动vim, 当你只编辑一个buffer的时候MiniBufExplorer派不上用场, 当你
+    打开第二个buffer的时候, MiniBufExplorer窗口就自动弹出来了
+
+----------------------------------------------------------------------------
+c/h文件间相互切换 -- 插件: A
+  
+  安装  将a.vim 放到 ~/.vim/plugin 文件夹中
+  手册  无
+
+  :A    在新Buffer中切换到c/h文件
+  :AS   横向分割窗口并打开c/h文件
+  :AV   纵向分割窗口并打开c/h文件
+  :AT   新建一个标签页并打开c/h文件
+
+  我在~/.vimrc中增加了一句:
+    nnoremap <silent> <F12> :A<CR>
+      意思是按F12时在一个新的buffer中打开c/h文件, 这样在写程序的时候就可以
+    不假思索地在c/h文件间进行切换.
+
+---------------------------------------------------------------------------
+在工程中查找 -- 插件: Grep
+
+  安装  把grep.vim 文件丢到 ~/.vim/plugin 文件夹就好了
+  手册  在grep.vim 文件头部
+
+  我在~/.vimrc中增加了下面这句:
+    nnoremap <silent> <F3> :Grep<CR>
+
+----------------------------------------------------------------------------
+高亮的书签 -- 插件: VisualMark
+
+  安装  把visualmark.vim 文件丢到 ~/.vim/plugin 文件夹就好了
+  手册  无
+
+  vim 有"书签"概念 :help Mark   不好用
+
+  使用
+    Ctrl+F2  mm  发现光标所在的行变高亮了
+    F2键正向在期间切换, 用Shift+F2反向在期间切换
+
+----------------------------------------------------------------------------
+自动补全
+  
+  该功能要tags文件的支持, 并且是ctags 5.6版本
+
+  全能补全 :help new-omni-completion
+
+  .vimrc文件加入
+    filetype plugin indent on
+    打开文件类型检测, 加了这句才可以用智能补全
+    set completeopt=longest,menu
+    关掉智能补全时的预览窗口
+  
+加速你的补全 -- 插件: SuperTab
+
+  安装  把supertab.vim 文件丢到 ~/.vim/plugin 文件夹就好了
+  手册  supertab.vim 文件头部, 和命令 ":SuperTabHelp"
+
+  .vimrc文件加入
+    let g:SuperTabRetainCompletionType=2
+    let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+
+  0 - 不记录上次的补全方式
+  1 - 记住上次的补全方式,直到用其他的补全命令改变它
+  2 - 记住上次的补全方式,直到按ESC退出插入模式为止
+  其他的补全方式 :help ins-completion  :help compl-omni
+
+  使用
+    按<Tab>就好了
+
+  问题:
+    与缩进冲突
+
+onmicppcomplete 插件
+
+----------------------------------------------------------------------------
+.vimrc 文件
     set ts=4        设置tab有多少空格
     set ai          自动对齐
     set nu
@@ -10,6 +242,7 @@
     set shiftwidth=4
         shift + .   向左向右缩进
         shift + ,
+
 -------------------------------------------------------------------------
     jklh     上下左右
     
@@ -20,7 +253,6 @@
 
     选中按=　　自动对齐 
 
-    ctags -Rn ./
     ctrl + ]
     ctrl + o
     ctrl + t
@@ -195,4 +427,15 @@
      “把方法列表放在屏幕的右侧 let Tlist_Use_Right_Window=1 
      “多文件时只显示当前文件的tag，其它的tag折叠 let Tlist_File_Fold_Auto_Close=1
 
+-----------------------------------------------------------
 
+折叠: 1）选中，zf
+      2）命令，开始行号,结束行号folder
+删除折叠： zd
+-------------------------------------------------------------------------
+多行缩进可以使用: 110,120> 来将110行到120行缩进
+-----------------------------------------------------------------------
+
+nt 查看文件树
+tl 调taglist
+：vertical res[ize] [N]  分屏窗口宽度

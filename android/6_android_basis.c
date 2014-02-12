@@ -60,8 +60,7 @@ CATEGORY_ALTERNATIVE
 通过静态变量传递数据
 
 布局文件
-  <button   android:id 
-  ></button>
+  <button   android:id ></button>
 
 activity类中：
 private Button button;

@@ -127,4 +127,3 @@ LOGDIR=`pwd`
 
 trap "exit_handle" INT 
 main "$@"
-
