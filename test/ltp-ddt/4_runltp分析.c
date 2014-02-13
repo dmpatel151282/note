@@ -1,6 +1,4 @@
 
-先手动执行./IDcheck.sh   创建所需的用户和用户组，不然会阻塞
-
 runltp 处理参数 -> bin/ltp-pan 
                     1.读取runtest中的文件
                     2.执行testcase中的脚本和可执行文件   
@@ -17,7 +15,7 @@ PLATFORM=a23-evm
   DRIVERS=       //逗号相隔
 在${TMP}/platform/下创建文件夹
 
-2.将-f指定的所有文件内容>>到${TMP}/alltests
+2.将-f指定的所有文件内容 >> 到${TMP}/alltests
 
 3.${LTPROOT}/IDcheck.sh
 
@@ -25,7 +23,8 @@ PLATFORM=a23-evm
 
 5.过滤需要块设备的test case
     sed -i "/DEVICE/d"  ${TMP}/alltests
-6.执行ltp-pan  +900
+
+6.执行ltp-pan
     /data/ltp/bin/ltp-pan  -e -S   -a 2183     -n 2183  -p  -f /tmp/ltp-XXXXLl1IIc/alltests -l /data/ltp/results/LTP_RUN_ON-2013_Dec_31-10h_58m_07s_2183.log  -C /data/ltp/output/LTP_RUN_ON-2013_Dec_31-10h_58m_07s_2183.failed
     
 7.处理测试结果
@@ -46,5 +45,3 @@ PLATFORM=a23-evm
 
 4. do_cmd rtc_tests -device $DEV_NODE  -ioctltest alarm -ioctltestarg 30 
      调用测试程序rtc_test测试；
-
-

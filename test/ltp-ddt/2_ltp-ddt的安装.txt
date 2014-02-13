@@ -14,20 +14,19 @@ compile
        CFLAGS          := -static
        LDFLAGS         := -static -pthread
   cp include/mk/features.mk.default include/mk/features.mk
-2）
-    cd linux-3.4
-    cp arch/arm/configs/xxx .config
-    make CROSS_COMPILE=arm-none-linux-gnueabi- headers_install 
+
+2）导出Linux内核头文件, 编译testcase/ddt/ 时需要
+
+    make ARCH=arm headers_install INSTALL_HDR_PATH=/some/path
+
+    ARCH               体系结构
+    INSTALL_HDR_PATH   
+
 
 3）编译
-  make CROSS_COMPILE=<CC PREFIX> SKIP_IDCHECK=1 KERNEL_INC=
-  <Kernel include directory> KERNEL_USR_INC=<Kernel usr include directory>
-  PLATFORM=<Platform name> 
 
   make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/liushui/server/86/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/liushui/server/86/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm 
 
-  编译模块
-    make CROSS_COMPILE=arm-none-linux-gnueabi- SKIP_IDCHECK=1 KERNEL_INC=/home/liushui/server/86/a23/lichee/linux-3.4/include KERNEL_USR_INC=/home/liushui/server/86/a23/lichee/linux-3.4/usr/include PLATFORM=a23-evm modules
 
 4）安装
   make DESTDIR=<destination directory> SKIP_IDCHECK=1 PLATFORM=<Platform name> install
@@ -73,7 +72,3 @@ HOW TO ADD NEW DDT TESTS
 You only need to add files to two directories:
   testcases/ddt: the test logic files (either c code or shell script)
   runtest/ddt  : the test scenario files. It calls the test logic files.
-
-
-
-

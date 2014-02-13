@@ -1,59 +1,9 @@
-In the Package
---------------
-testcases/
-    Contains all tests that run under the LTP as well as the "bin"
-    directory, which has hardlinks to all the test executables.
+ltp-pan 的工作原理
 
-runtest/
-    It houses command lists that are used by ltp-pan for automated testing.
+源码
+  1. ltp-pan.c   实现ltp-pan的主文件, 含main()
 
-pan/
-    The pan directory contains a simple, lightweight test harness.  lpt-pan
-    has the ability to run tests randomly and in parallel.
-
---------------------------------------------------------------------------
-源安装包目录列表:
-
- doc: 说明文件和帮助文档,这个目录中对LTP的内容和每个工具都有详细的说明
- testscripts: 可执行的测试脚本，不同方面的测试脚本的集合
- testcases: 所有LTP测试套件中所使用的测试用例的源码
- runtest: 是要执行的测试用例的命令集合，每个文件针对测试的不同方面
-          （用于链接testscripts内的测试脚本和testcases测试项目）
- include: LTP测试套件的头文件目录,定义了LTP自身的数据结构和函数结构
- lib: LTP测试套件运行时自身需要的库文件,定义了LTP自身的各种函数
- bin: 存放LTP测试的一些辅助脚本
- results: 测试结果默认存储目录
- output: 测试日志默认存储目录
- share: 脚本使用说明目录
- pan: 该目录存储的是LTP测试套件的测试驱动程序pan
-
-文件列表:
- IDcheck.sh   ：检查系统是否缺少执行LTP测试套件所需的用户和用户组，
-                如果缺少则为LTP测试套件创建所需的用户和用户组。
- runltplite.sh：用来测试LTP安装，也可用来对测试套件的子项目进行测试。
- ver_linux    ：获取硬件、软件、环境信息。
-
-------------------------------------------------------------------------
-LTP工作原理
-  LTP测试套件通过执行测试脚本runalltests.sh(或runltp或runltplite.sh)或
-/testscripts内的测试脚本调用驱动程序pan执行/testcases内的测试项目.
-
-pan工作原理
-  LTP测试套件有一个专门的测试驱动程序pan，具体的测试用例的执行都是由pan来
-  调用执行，它可以跟踪孤儿进程和抓取测试的输出信息。
-
-  工作方式：
-    从一个测试命令文件中读取要测试的条目和要执行的命令行，然后等待该项测试
-    的结束，并记录详细的测试输出。默认状态下pan会随机选择一个命令行来运行
-    ，可以指定在同一时间要执行测试的次数(-x)。
-
-  pan会记录测试产生的详细的格式复杂的输出，但它不进行数据的整理和统计，数据
-  整理统计的工作由scanner来完成，scanner是一个测试结果分析工具，它会理解pan
-  的输出格式，并输出成一个表格的形式来总结那些测试passed或failed.
---------------------------------------------------------------------------
-ltp-pan.c   实现ltp-pan的主文件, 含main()
-
-zoolib.c    (zoo文件在testcases/bin目录下)
+  2. zoolib.c    (zoo文件在testcases/bin目录下)
     A Zoo is a file used to record what test tags are running at the moment.
 If the system crashes, we should be able to look at the zoo file to find out
 what was currently running. This is especially helpful when running multiple
@@ -64,17 +14,18 @@ zoo file format:
   available lines start with '#'
   expected line fromat: pid_t,tag,cmdline
   
-splitstr.c 分割字符串
-const char **splitstr(const char *str, const char *separator, int *argcount)
-str: 要分割的字符串
-separator: 以此为分割条件
-argcount: 分割后的字符串个数
-成功返回，分割后的字符串数组；失败返回NULL
-void splitstr_free(const char **p_return)
+  3. splitstr.c 分割字符串
 
--------------------------------------------------------------------------
+    const char **splitstr(const char *str, const char *separator, int *argcount)
+    str: 要分割的字符串
+    separator: 以此为分割条件
+    argcount: 分割后的字符串个数
+    成功返回，分割后的字符串数组；失败返回NULL
+    void splitstr_free(const char **p_return)
+
+
 ltp-pan可执行文件的参数：
-    -q   quiet_mode, =>quiet_mode=1 
+    -q   quiet_mode, =>quiet_mode=1
     -e   track_exit_stats, exit non-zero if any test exists non-zero
     -S   run tests sequentially, =>sequential=1  
     -p   formatted printing,  =>fmt_printf=1
@@ -92,12 +43,13 @@ ltp-pan可执行文件的参数：
     -r   [reporttype] reporting type: none, rts
     -s   [starts] number of tags to run, 默认-1
     -x   [keep_active] number of tags to keep running, 默认1
+
 -------------------------------------------------------------------------
-ltp-pan 分析
+数据结构
 
 /* One entry in the command line collection.  */
 struct coll_entry {
-    char *name;     /* tag name */
+    char *name;         /* tag name */
     char *cmdline;      /* command line */
     char *pcnt_f;       /* location of %f in the command line args, flag */
     struct coll_entry *next;
@@ -124,6 +76,8 @@ struct orphan_pgrp {
 };
 
 ---------------------------------------------------------------------------
+主流程分析：
+
 main函数中，
     1.处理参数, getopt()
        向logfile中写入：Test Start Time:  等
@@ -181,6 +135,8 @@ main函数中，
  5.write_test_end()
  6.zoo_mark_cmdline()
 -------------------------------------------------------------------
+重要接口分析：
+
 static void propagate_signal(struct tag_pgrp *running, int keep_active,
          struct orphan_pgrp *orphans)
 1. 对于每个[keep_active], 向tag_pgrp中的进程组发送信号, 并置stopping为1
@@ -189,7 +145,8 @@ static void propagate_signal(struct tag_pgrp *running, int keep_active,
  2.1 跳过进程组id pgrp为0的项
  2.2 kill(-(orph->pgrp), sig) 向孤儿进程组发送send_signal信号
 3. rec_signal = send_signal = 0;
--------------------------------------------------------------------
+
+
 static int check_pids(struct tag_pgrp *running, int *num_active, 
     int keep_active, FILE * logfile, FILE * failcmdfile, 
     struct orphan_pgrp *orphans,int fmt_print, int *failcnt, int quiet_mode)
