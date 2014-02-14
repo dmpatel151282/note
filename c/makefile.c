@@ -5,12 +5,13 @@ make解释器执行脚本过程：
 
 make
  选项： 
-    -e  将命令参数给出的变量值覆盖makefile中的变量 
-    -t  更新文件的时间戳，不执行target对应的命令
-    -c  指定要执行的Makefile的路径，默认为当前目录
-    -f  指定Makefile名称，默认自动寻找Makefile或Makefile.mk
-    -n  只打印要执行的命令，不执行命令
-    -l  指定编译时所需的lib文件，如：lname 先找libname.so 再找libname.a 
+    -n      只打印要执行的命令，不执行命令
+    -C dir  Change to  directory dir before reading the makefiles or doing anything     
+    -e      将命令参数给出的变量值覆盖makefile中的变量 
+    -t      更新文件的时间戳，不执行target对应的命令
+    -c      指定要执行的Makefile的路径，默认为当前目录
+    -f      指定Makefile名称，默认自动寻找Makefile或Makefile.mk
+    -l      指定编译时所需的lib文件，如：lname 先找libname.so 再找libname.a 
 
 ----------------------------------------------------------------------------
 一、变量
@@ -198,13 +199,3 @@ vpath
 
 
 --------------------------------------------------------------------------
-Makefile.am
-   |
-   |automake
-   |
-Makefile.in
-   |
-   |configure
-   |
-Makefile
-

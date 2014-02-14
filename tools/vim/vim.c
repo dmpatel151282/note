@@ -10,6 +10,9 @@ vim 帮助
   切换中英文帮助， set helplang=en  set helplang=cn
   帮助文件的文本是utf-8编码的， set encoding=utf-8
 
+  要查看帮助文件，可能要先重新索引一下：
+  : helptags  ~/.vim/doc
+
 vim 常用命令
     
   %     跳转到配对的括号去
@@ -34,11 +37,11 @@ vim 常用命令
 Ctags 的使用
 
   使用
-    1. 生成tags:  源码根目录 ctags -R -f tagsname
+    1. 生成tags:  源码根目录 ctags -R 
 
     一个目录下只有部分文件需要建立 tags ?
     答：使用 find 命令查找文件，bash 做后续处理，生成一个文件列表，
-    如 project.files，最后使用 ctags -L project.files 命令
+    如 project.files，最后使用 ctags -R -L project.files 命令
 
     ctags 把.cpp当成c++来处理，.c当成c语言来处理，.h当成C++的头文件处理
     如果你程序中有的.c文件其实是C++程序?  使用 --langmap=c++:+.c
@@ -93,31 +96,23 @@ QuickFix 窗口
     nmap <F7> :cp<cr>
 
 --------------------------------------------------------------------------
-文件浏览器和窗口管理器 -- 插件: WinManager
-  安装  在 ~/.vim 目录下解压winmanager.zip
-  手册  :help winmanager
+文件浏览器 -- 插件: NERD_tree
+  安装
+  手册 :help NERD_tree
 
-文件浏览器 netrw.vim (标准的vim插件)
-
-  :e /dir/
-
-  在该界面上你可以用下面的一些命令来进行常用的目录和文件操作:
-      <F1>  显示帮助
-      <cr>  如果光标下是目录, 则进入该目录；如果光标下文件, 则打开该文件
-      -     返回上级目录
-      c     切换vim 当前工作目录正在浏览的目录
-      d     创建目录
-      D     删除目录或文件
-      i     切换显示方式
-      R     文件或目录重命名
-      s     选择排序方式
-      x     定制浏览方式, 使用你指定的程序打开该文件
-
-通过WinManager插件来将TagList窗口和netrw窗口整合起来
-
-  ~/.vimrc中增加:
-    let g:winManagerWindowLayout='FileExplorer|TagList'
-    nmap wm :WMToggle<cr>
+  使用：
+    打开 : NERDTree
+    
+    NERD_tree 常用命令(选中文件)：
+        t       在标签页中打开
+        ente    打开文件
+        r       刷新选中目录
+        m       显示文件系统菜单（文件/目录的添加、删除、移动操作） 
+                 <---- 导航到目的目录，然后按m调出nerd目录，然后选择你要的操作。
+        K       到第一个节点
+        J       到最后一个节点
+        u       打开上层目录
+        !       执行此文件
 
 ---------------------------------------------------------------------------
 Cscope 的使用
@@ -133,33 +128,40 @@ Cscope 的使用
        cscope.in.out
        cscope.out
        cscope.po.out
+       用:cs s 检查是否成功
+
+        -i cscope.files
+
     2. 把刚才生成的cscope文件导入到vim中来
         :cs add /path/to/project/cscope.out /path/to/project/
 
 
-    add   : 添加一个新的 cscope 数据库／连接。
+    add 用法 :cs add {file|dir} [pre-path] [flags]
 
-	用法	:cs add {file|dir} [pre-path] [flags]
+	    [pre-path] 用来通知 cscope 使用 -P [pre-path] 选项
+	    [flags]    可以用来给 cscope 传递额外的选项
 
-	    [pre-path] 用来通知 cscope 使用 -P [pre-path] 选项。
-	    [flags]    可以用来给 cscope 传递额外的选项。
+    find 用法 cs[cope] find c|d|e|f|g|i|s|t name
+        0 或 s  查找本符号(可以跳过注释)
+        1 或 g  查找本定义
+        2 或 d  查找本函数调用的函数
+        3 或 c  查找调用本函数的函数
+        4 或 t  查找本字符串
+        6 或 e  查找本 egrep 模式
+        7 或 f  查找本文件
+        8 或 i  查找包含本文件的文件
 
-	例子 
-	    :cscope add /usr/local/cdb/cscope.out
-	    :cscope add /projects/vim/cscope.out /usr/local/vim
-	    :cscope add cscope.out /usr/local/vim -C
+    ~/.vimrc中
+        nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+        nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+        nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
----------------------------------------------------------------------------
-快速浏览和操作Buffer -- 插件: MiniBufExplorer
-
-  安装  将下载的 minibufexpl.vim 文件丢到 ~/.vim/plugin 文件夹中即可
-  手册  在minibufexpl.vim 文件的头部
-
-  vim有buffer(缓冲区)的概念 :help buffer
-
-  使用方法:
-      重新启动vim, 当你只编辑一个buffer的时候MiniBufExplorer派不上用场, 当你
-    打开第二个buffer的时候, MiniBufExplorer窗口就自动弹出来了
+    <C-_>g的按法是先按"Ctrl+Shift+-", 然后很快再按"g"
 
 ----------------------------------------------------------------------------
 c/h文件间相互切换 -- 插件: A

@@ -128,7 +128,10 @@ MIXER_CTL_TYPE_MAX,
   id                    value
 
   name                                      value
-  "Speaker Function"                          0         播放音乐
+  "Speaker Function"                          0         headphone
+                                              1         spk
+                                              2         earpiece
+
   "Master Playback Volume"                    10        设置音量  
   "MIC1_G boost stage output mixer control"   0
 

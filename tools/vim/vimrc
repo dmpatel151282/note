@@ -29,7 +29,8 @@ set hlsearch                    "搜索时高亮显示被找到的文件
                                 "保持对大小写敏感
  
 set incsearch                  "输入搜索内容时就显示搜索结果
-set mouse=a                    "设定在任何模式下鼠标都可用
+"set mouse=a                    "设定在任何模式下鼠标都可用
+nmap <silent> ,s :set mouse=a<cr><cr>
 "set nobackup                    "覆盖文件时不备份
 set nocompatible                "设定gvim运行在增强模式下
 "set noignorecase                "默认区分大小写
@@ -70,9 +71,7 @@ set statusline=%F%m%r\ ASCII=\%b,HEX=\%B,%l,%c%V\ %L-%p%%
             "   %L              当前文件总行数
 
 
-
-
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "配色方案
 "colorscheme koehler             "设置配色方案
 
@@ -114,6 +113,16 @@ hi Cursor   guibg=#000000
 "hi StatusLine guifg=#00FF00
 "hi StatusLineNC guifg=#33FF33
 
+""""""""""""""""""""""""""""
+"ctags
+""""""""""""""""""""""""""""
+"映射,tg执行ctags命令
+nmap <silent> ,tg :!ctags -R --fields=+lS<cr><cr>
+vmap <silent> ,tg :!ctags -R --fields=+lS<cr><cr>
+nmap ,ts :!ctags -Rn --c++-kinds=+p --fields=+ialS --extra=+q -o ~/.vim/systags /usr/include /usr/local/include<cr><cr>
+
+set tags=tags;
+set tags+=~/.vim/systags
 
 """"""""""""""""""""""""""""
 "Tag list (ctags)
@@ -130,7 +139,9 @@ let Tlist_WinHeight=200       "taglist窗口高度
 let Tlist_WinWidth=20        "taglist窗口宽度
 "let Tlist_Use_Horiz_Window=1   "设置taglist窗口横向显示
 "映射F8打开关闭taglist窗口
-map <expr> <F8> bufloaded("__Tag_List__")?"q":":TlistOpen\<cr>"   
+"map <expr> <F8> bufloaded("__Tag_List__")?"q":":TlistOpen\<cr>"   
+
+nmap <silent> ,t :Tlist<cr><cr>
 
 """"""""""""""""""""""""""""
 "NERDTree
@@ -139,9 +150,9 @@ map <expr> <F8> bufloaded("__Tag_List__")?"q":":TlistOpen\<cr>"
 "let NERDTreeAutoCenter=1           "控制光标移动超过一定距离时，是否自动将焦点y调整到屏中心
 "let NERDTreeAutoCenterThreshold=1  "与上面配合使用
 "let NERDTreeCaseSensitiveSort=1    "排序时是否大小写敏感
-"let NERDTreeHighlightCursorline=1  "是否高亮显示光标所在行
+let NERDTreeHighlightCursorline=1  "是否高亮显示光标所在行
 "let NERDTreeBookmarksFile='/root/vim/bookmark.txt'  "指写书签文件
-let NERDTreeMouseMode=2            "指定鼠标模式：1为双击打开，3为单击打开，2为目录为单击打开，文件双击打开
+let NERDTreeMouseMode=1            "指定鼠标模式：1为双击打开，3为单击打开，2为目录为单击打开，文件双击打开
 "let NERDTreeQuitOnOpen=1           "打开文件后是否关闭NerdTree窗口
 let NERDTreeShowBookmarks=1        "是否默认显示书签列表
 let NERDTreeShowFiles=1            "是否默认显示文件
@@ -156,7 +167,23 @@ let NERDTreeShowHidden=1           "是否默认显示隐藏文件
 "winbufnr(winnr())   获取当前窗口的缓冲区ID
 "bufname(winbufnr(winnr()))  获取当前窗口缓冲区的名字
 "strpart(bufname(winbufnr(winnr())), 10)   截取从缓冲区名字第10字符开始到结束
-map <expr> <F7> bufloaded("NERD_tree_".strpart(bufname(winbufnr(winnr())),10))?"q":":NERDTree\<cr>"   
+"map <expr> <F7> bufloaded("NERD_tree_".strpart(bufname(winbufnr(winnr())),10))?"q":":NERDTree\<cr>"   
+
+nmap <silent> ,n :NERDTree<cr><cr>
+
+""""""""""""""""""""""""""""
+" cscope
+""""""""""""""""""""""""""""
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 
 """"""""""""""""""""""""""""
@@ -186,17 +213,6 @@ nnoremap <silent> <F3> :Rgrep<CR>
 
 
 """"""""""""""""""""""""""""
-"ctags
-""""""""""""""""""""""""""""
-"映射,tg执行ctags命令
-nmap <silent> ,tg :!ctags -R --fields=+lS<cr><cr>
-vmap <silent> ,tg :!ctags -R --fields=+lS<cr><cr>
-nmap ,ts :!ctags -Rn --c++-kinds=+p --fields=+ialS --extra=+q -o ~/.vim/systags /usr/include /usr/local/include<cr><cr>
-
-set tags=tags;
-set tags+=~/.vim/systags
-
-""""""""""""""""""""""""""""
 "SearchComplete
 """"""""""""""""""""""""""""
 
@@ -209,7 +225,6 @@ endfunction
 function GetDateTime()
     return strftime("%Y-%m-%d %H:%M")
 endfunction
-
 
 
 "添加文件说明信息
@@ -232,9 +247,6 @@ inoremap <silent> <C-S-1> <ESC>ggi/*<CR>
 \<CR>*<CR>
 \*******************************************************************************
 \<CR>*/<CR><CR>
-
-
-
 
 
 "添加函数说明信息
@@ -261,7 +273,6 @@ inoremap <silent> <F4> <CR>/*<CR>
 \<CR>*<CR>
 \*******************************************************************************
 \<CR>*/<CR><CR>
-
 
 
 "添加自定义代码块注释，以区别是自己添加的代码

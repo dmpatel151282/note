@@ -88,12 +88,13 @@ ltp-ddt 的使用方法
     [CHECK_TYPE=3 => Full Memory Leak & Thread Concurrency Check tracing children as well]
 
     通过create_valgrind_check.awk脚本
+    在每条测试用例的命令前加上：valgrind -q --leak-check=full --trace-children=yes
+                                valgrind -q --tool=helgrind --trace-children=yes
 
 ------------------------------------------------------------------------------------
     -a EMAIL_TO     EMAIL all your Reports to this E-mail Address   需安装mutt
     -g HTMLFILE     Create an additional HTML output format
     -e              Prints the date of the current LTP release
-    -F LOOPS,PERCENTAGE Induce PERCENTAGE Fault in the Kernel Subsystems, and, run each test for LOOPS loop
     -N              Run all the networking tests. 
     -r LTPROOT      Fully qualified path where testsuite is installed.
     -s PATTERN      Only run test cases which match PATTERN.
@@ -102,6 +103,9 @@ ltp-ddt 的使用方法
     -x INSTANCES    Run multiple instances of this testsuite.
     -b DEVICE       Some tests require an unmounted block device to run correctly.
     -B DEVICE_FS_TYPE The file system of test block devices.
+
+    -F LOOPS,PERCENTAGE Induce PERCENTAGE Fault in the Kernel Subsystems, and, run each test for LOOPS loop
+    需要/sys/kernel/debug/fail_io_timeout等接口
 ---------------------------------------------------------------------------
 issue:
 

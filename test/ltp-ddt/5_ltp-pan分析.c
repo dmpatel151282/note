@@ -90,8 +90,8 @@ main函数中，
         2.2 分配 struct collection, 将alltests文件中的每一行分别存在
             struct coll_entry结构体中
         2.3 最终返回 struct collection* 
-    3. 分配并置0, 结构体数组running, struct tag_pgrp，个数keep_active 
-    4. 分配并置0, 结构体 struct orphan_pgrp
+    3. 分配并置0, 结构体数组running(struct collection)，个数keep_active + 1
+    4. 分配并置0, 结构体orphans(struct orphan_pgrp)
     5. 产生一个48位种子随机数, arand48()
     6. 处理参数-t和-s, 给starts赋值, starts = coll->cnt
     7. 处理-O 且没有-x 
