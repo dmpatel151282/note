@@ -46,8 +46,6 @@ function do_tigerreplay() {
     LOG_NAME=${tiger_script%.lhs}"_logcat.txt"
     KMSG_LOGNAME=${tiger_script%.lhs}"_kmsg.txt"
 
-    #adb shell echo 8 > /proc/sys/kernel/printk
-
     adb push tigerreplay /system/bin/ || \
     {
         echo "push tigereplay failed!"
@@ -66,6 +64,8 @@ function do_tigerreplay() {
     adb shell "logcat -v time -f /mnt/sdcard/$LOG_NAME" &
 
     adb shell "rm /mnt/sdcard/$KMSG_LOGNAME"
+
+    adb shell dmesg -c 1>/dev/null 2>&1
     adb shell "cat /proc/kmsg > /mnt/sdcard/$KMSG_LOGNAME" &
     
     LCD_BL=`adb shell cat /sys/class/disp/disp/attr/lcd_bl | tr -d '\n\r'`
@@ -99,9 +99,9 @@ function exit_handle() {
 
 function main() {
     
-TIGER_SCRIPT=""
-LOOP_COUNT=3
-LOGDIR=`pwd`
+    TIGER_SCRIPT=""
+    LOOP_COUNT=3
+    LOGDIR=`pwd`
     
     while getopts f:c:l: arg
     do  case $arg in

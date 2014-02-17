@@ -63,7 +63,7 @@ Ctags 的使用
 
   小瑕疵
       增加了函数定义, 删除了变量定义等, tags文件不能自动rebuild, 
-    必须手动再运行一下命令: ctags -R --sort=yes -f tagsname
+    必须手动再运行一下命令: ctags -R --sort=yes
 ---------------------------------------------------------------------------
 插件: TagList
   安装  在 ~/.vim 目录下解压taglist_xx.zip
@@ -164,6 +164,41 @@ Cscope 的使用
     <C-_>g的按法是先按"Ctrl+Shift+-", 然后很快再按"g"
 
 ----------------------------------------------------------------------------
+自动补全
+  
+  该功能要tags文件的支持, 并且是ctags 5.6版本
+
+  全能补全 :help new-omni-completion
+
+  .vimrc文件加入
+    filetype plugin indent on
+    打开文件类型检测, 加了这句才可以用智能补全
+    set completeopt=longest,menu
+    关掉智能补全时的预览窗口
+  
+加速你的补全 -- 插件: SuperTab
+
+  安装  把supertab.vim 文件丢到 ~/.vim/plugin 文件夹就好了
+  手册  supertab.vim 文件头部, 和命令 ":SuperTabHelp"
+
+  .vimrc文件加入
+    let g:SuperTabRetainCompletionType=2
+    let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+
+  0 - 不记录上次的补全方式
+  1 - 记住上次的补全方式,直到用其他的补全命令改变它
+  2 - 记住上次的补全方式,直到按ESC退出插入模式为止
+  其他的补全方式 :help ins-completion  :help compl-omni
+
+  使用
+    按<Tab>就好了
+
+  问题:
+    与缩进冲突
+
+onmicppcomplete 插件
+
+----------------------------------------------------------------------------
 c/h文件间相互切换 -- 插件: A
   
   安装  将a.vim 放到 ~/.vim/plugin 文件夹中
@@ -200,40 +235,6 @@ c/h文件间相互切换 -- 插件: A
     Ctrl+F2  mm  发现光标所在的行变高亮了
     F2键正向在期间切换, 用Shift+F2反向在期间切换
 
-----------------------------------------------------------------------------
-自动补全
-  
-  该功能要tags文件的支持, 并且是ctags 5.6版本
-
-  全能补全 :help new-omni-completion
-
-  .vimrc文件加入
-    filetype plugin indent on
-    打开文件类型检测, 加了这句才可以用智能补全
-    set completeopt=longest,menu
-    关掉智能补全时的预览窗口
-  
-加速你的补全 -- 插件: SuperTab
-
-  安装  把supertab.vim 文件丢到 ~/.vim/plugin 文件夹就好了
-  手册  supertab.vim 文件头部, 和命令 ":SuperTabHelp"
-
-  .vimrc文件加入
-    let g:SuperTabRetainCompletionType=2
-    let g:SuperTabDefaultCompletionType="<C-X><C-O>"
-
-  0 - 不记录上次的补全方式
-  1 - 记住上次的补全方式,直到用其他的补全命令改变它
-  2 - 记住上次的补全方式,直到按ESC退出插入模式为止
-  其他的补全方式 :help ins-completion  :help compl-omni
-
-  使用
-    按<Tab>就好了
-
-  问题:
-    与缩进冲突
-
-onmicppcomplete 插件
 
 ----------------------------------------------------------------------------
 .vimrc 文件

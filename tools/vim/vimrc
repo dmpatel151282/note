@@ -3,8 +3,6 @@
 "source $VIMRUNTIME/menu.vim
 "behave mswin
 
-filetype plugin on
-
 "语言环境
 set encoding=utf-8
 langua message zh_CN.UTF-8
@@ -28,9 +26,10 @@ set hlsearch                    "搜索时高亮显示被找到的文件
 "set ignorecase smartcase       "搜索时忽略大小写，但有一个或以上大写字母仍
                                 "保持对大小写敏感
  
-set incsearch                  "输入搜索内容时就显示搜索结果
 "set mouse=a                    "设定在任何模式下鼠标都可用
 nmap <silent> ,s :set mouse=a<cr><cr>
+
+set incsearch                  "输入搜索内容时就显示搜索结果
 "set nobackup                    "覆盖文件时不备份
 set nocompatible                "设定gvim运行在增强模式下
 "set noignorecase                "默认区分大小写
@@ -117,8 +116,8 @@ hi Cursor   guibg=#000000
 "ctags
 """"""""""""""""""""""""""""
 "映射,tg执行ctags命令
-nmap <silent> ,tg :!ctags -R --fields=+lS<cr><cr>
-vmap <silent> ,tg :!ctags -R --fields=+lS<cr><cr>
+nmap <silent> ,tg :!ctags -R --c++-kinds=+p --fields=+ialS --extra=+q<cr><cr>
+vmap <silent> ,tg :!ctags -R --c++-kinds=+p --fields=+ialS --extra=+q<cr><cr>
 nmap ,ts :!ctags -Rn --c++-kinds=+p --fields=+ialS --extra=+q -o ~/.vim/systags /usr/include /usr/local/include<cr><cr>
 
 set tags=tags;
@@ -185,6 +184,11 @@ nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
+""""""""""""""""""""""
+" OmniCppComplete
+""""""""""""""""""""""
+set nocp
+filetype plugin on
 
 """"""""""""""""""""""""""""
 "MRU
@@ -196,10 +200,6 @@ nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 "映射F2打开和关闭MRU窗口，bufloaded是判断缓冲是否加载
 map <expr> <F2> bufloaded("__MRU_Files__")?"q":":MRU\<cr>"   
 
-
-""""""""""""""""""""""""""""
-"Omincppcomplete
-""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""
 "A
