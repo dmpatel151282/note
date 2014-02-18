@@ -57,13 +57,14 @@ trap exit_handle SIGINT SIGQUIT SIGTERM
 
 start_time=`date +%s`
 date=`date +%F_%H-%M-%S`
-TEST_RESULT="output/p2_${date}_result.txt"
+TEST_RESULT="output/${date}/p2_${date}_result.txt"
 
 pass_count=0
 fail_count=0
 total_count=0
 
-adb shell sh /data/ltp/runltp -P a23-evm -o p2_${date}_ltpscreen.txt -f math ddt/ion mm ipc -l p2_${date}_result.txt -C p2_${date}_failed.txt -p 
+adb shell sh /data/ltp/before_test.sh
+adb shell sh /data/ltp/runltp -o p2_${date}_ltpscreen.txt -f app/camera -l p2_${date}_result.txt -C p2_${date}_failed.txt -p 
 ret=$?
 
 if [ ! $ret -eq 0 ]; then
@@ -72,13 +73,21 @@ if [ ! $ret -eq 0 ]; then
     exit 1
 fi 
 
-adb pull /data/ltp/output/p2_${date}_failed.txt ./output
-adb pull /data/ltp/results/p2_${date}_result.txt ./output
-adb pull /data/ltp/output/p2_${date}_ltpscreen.txt ./output
+mkdir -p ./output/${date}/
+adb pull /data/ltp/output/p2_${date}_failed.txt ./output/${date}/
+adb pull /data/ltp/results/p2_${date}_result.txt ./output/${date}/
+adb pull /data/ltp/output/p2_${date}_ltpscreen.txt ./output/${date}/
+adb pull /data/ltp/output/logcat/   ./output/${date}/logcat
+
+adb shell "rm /data/ltp/output /data/ltp/results -rf" 
 
 end_time=`date +%s`
 run_time=$(($end_time - $start_time))
-echo "run_time: ${run_time}s"
+
+h=`expr $run_time / 3600`
+m=`expr $run_time / 60 % 60`
+s=`expr $run_time % 60`
+echo "run_time: ${h} h ${m} m ${s} s"
 
 create_jelly
 

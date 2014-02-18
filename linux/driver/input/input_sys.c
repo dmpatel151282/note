@@ -1,7 +1,5 @@
 Input子系统
 
-
---------------------------------------------------------------------------
 1. 数据结构
     input_dev   
     input_event 事件格式
@@ -50,12 +48,26 @@ void clk_put(struct clk *clk);
 
 /*  code, 事件编码; value, 事件对应值, 0 松开, 1 按下 */
 void input_report_key(struct input_dev *dev, unsigned int code, int value);
-
 void input_report_abs(struct input_dev *dev, unsigned int code, int value)
 void input_report_rel(struct input_dev *dev, unsigned int code, int value)
 void input_sync(struct input_dev *dev)
 
 void input_set_abs_params(struct input_dev *dev, int axis, int min, int max, int fuzz, int flat);
+
+----------------------------------------------------------------------------------
+调试
+    getevent sendevent 是android系统下的一个工具，可以模拟多种按键和触屏操作i
+  产生的是raw event，raw event经过event hub处理产生最终的gesture事件。
+  
+    源码：system/core/toolbox/ sendevent.c getevent.c
+  
+  getevent
+    查看所有/dev/input/event* 及对应驱动名字
+    监控当前的事件(鼠标事件,按键事件,拖动滑动等)
+    
+    type 键码 最后一个根据type不同而不同
+
+  sendevent
 
 -----------------------------------------------------------------------------------------------------------
 触摸平驱动
@@ -69,7 +81,6 @@ linux-2.6.28/arch/arm/mach-s3c6410/mach-smdk6410.c
         [*]   Touchscreens  --->
              < >   S3C touchscreen driver
                 
-
 tslib移植
 # ./autogen-clean.sh
 # ./autogen.sh 
@@ -77,7 +88,7 @@ tslib移植
 # make
     ts_test.c:(.text+0x1d4): undefined reference to `rpl_malloc'
 修改config.h
-    //#define malloc rpl_malloc
+    加入：#define malloc rpl_malloc
 # make
 # make install
 # vim /etc/ts.conf

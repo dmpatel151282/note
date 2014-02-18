@@ -3,7 +3,7 @@ Linux 设备模型组件
 device --> device_driver --> bus_type
                              class   
 
-系统中的任一设备在设备模型中都由一个 device 对象描述, 该对象用于
+  系统中的任一设备在设备模型中都由一个 device 对象描述, 该对象用于
 描述设备相关的信息,设备之间的层次关系,以及设备与总线、驱动的关系.
 
 struct device {
