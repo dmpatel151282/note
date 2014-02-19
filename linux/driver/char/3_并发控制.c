@@ -1,4 +1,5 @@
-并发(concurrency)指的是多个执行单元同时、并行被执行,而并发的执行单元对共享资源(硬件资源和软件上的全局变量、静态变量等)的访问则很容易导致竞态(race conditions).
+并发(concurrency)指的是多个执行单元同时、并行被执行,而并发的执行单元对共享资源
+(硬件资源和软件上的全局变量、静态变量等)的访问则很容易导致竞态(race conditions).
 
 竞态问题
     1.对称多处理器(SMP)的多个CPU
@@ -13,12 +14,12 @@
   访问共享资源的代码区域称为临界区(critical sections),临界区需要以某种互斥机制加以保护。
 
 互斥机制
-    自旋锁   spinlock
-    信号量   semaphore
-    互斥体   mutex
-    完成量   completion  线程之间
-    中断屏蔽 
-    原子操作
+    1. 自旋锁   spinlock
+    2. 信号量   semaphore
+    3. 互斥体   mutex
+    4. 完成量   completion  线程之间
+    5. 中断屏蔽 
+    6. 原子操作
 
 1.自旋锁 spinlock
 

@@ -1,3 +1,0 @@
---------- beginning of /dev/log/main
-02-17 15:05:32.250 I/wpa_supplicant( 2207): [CTRL_IFACE]wlan0: SCAN
-02-17 15:05:34.180 I/wpa_supplicant( 2207): [CTRL_IFACE]wlan0: BSS RANGE=0- MASK=0x21987

@@ -34,7 +34,7 @@ alsa-driver
 alsa-soc ：对alsa-driver的封装，针对嵌入式设备提供了一些增强的功能
     |
     |
-alsa-libs
+alsa-libs/tinyalsa 
     |
     |
  应用程序
@@ -43,7 +43,25 @@ alsa-libs
 重要数据结构和函数接口 
 
 1.alsa-driver层
-struct snd_card
+
+//include/sound/core.h
+声卡 struct snd_card
+  snd_card可以说是整个ALSA音频驱动最顶层的一个结构，整个声卡的软件逻辑结构
+开始于该结构，几乎所有与声音相关的逻辑设备都是在snd_card的管理之下，
+声卡驱动的第一个动作通常就是创建一个snd_card结构体
+    devices:
+
+声卡的创建
+int snd_card_create(int idx, const char *xid, struct module *module, int extra_size,
+            struct snd_card **card_ret)
+    idx:         该声卡的编号
+    xid:         声卡的标识符
+    extra_size:  额外分配的私有数据的大小
+    card:        返回所创建的snd_card实例的指针 
+
+声卡的注册
+int snd_card_register(struct snd_card *card)
+
 
 /* sound/pcm.h */
 struct snd_pcm
@@ -51,14 +69,28 @@ struct snd_pcm_hardware
 struct snd_pcm_ops
 struct snd_pcm_substream 
 struct snd_pcm_runtime
+struct snd_pcm_stream
 
 const struct file_operations snd_pcm_f_ops
 
 2.alsa-soc层 (liunx 3.4)
+
+include/sound/core.h
+struct snd_soc_card               
+  snd_card: snd_card*
+  dai_link: snd_soc_dai_link*
+  rtd: snd_soc_pcm_runtime*
+  rtd_aux: snd_soc_pcm_runtime*
+  drvdata: void*
+  probe(struct snd_soc_card*):int 
+  remove(struct snd_soc_card*):int
+
 <sound/soc-dai.h>
 struct snd_soc_dai
 struct snd_soc_dai_driver          dai: Digital Audio Interface 
 struct snd_soc_dai_ops 
+
+int snd_soc_register_dai(struct device *dev,struct snd_soc_dai_driver *dai_drv)
 
 <sound/soc.h>
 struct snd_soc_codec_driver       |
@@ -74,89 +106,8 @@ struct snd_soc_dai_link           | 负责连接
 
 struct snd_soc_card               | Machine 驱动
 
-3.alsa-lib
-
-snd_pcm_t               //pcm设备handle
-snd_pcm_stream_t        //PCM stream (direction)
-int snd_pcm_open(snd_pcm_t **pcmp, const char *name,         
-         snd_pcm_stream_t stream, int mode)    //打开PCM设备，获得handle
-
-snd_pcm_hw_params_t
-int snd_pcm_hw_params_malloc(snd_pcm_hw_params_t*)          //分配
-int snd_pcm_hw_params_any(snd_pcm_t*, snd_pcm_hw_params_t*) //初始化硬件结构
-snd_pcm_hw_params_set_access()
-snd_pcm_hw_params_set_format()
-snd_pcm_hw_params_set_rate_near()
-snd_pcm_hw_params_set_channels()
-int snd_pcm_hw_params(snd_pcm_t*, snd_pcm_hw_params_t*)  //设置硬件
-snd_pcm_hw_params_free()
-
-int snd_pcm_prepare(snd_pcm_t*)                          //准备PCM硬件
-
-snd_pcm_sframes_t snd_pcm_writei(snd_pcm_t *pcm,         //写PCM数据到声卡
-        const void *buffer, snd_pcm_uframes_t size)
-
-snd_pcm_sframes_t snd_pcm_readi(snd_pcm_t *pcm,              
-        void *buffer, snd_pcm_uframes_t size)
-
-int snd_pcm_close(snd_pcm_t*)
-
-undrerun 状态：播放时，音频数据传输的不够快,导致饥饿状态发生
-overrun 状态 ：录音时，音频数据来的太快,过度饱和
-
-4. tinyalsa
-    部分支持PCM Interface 和 Control Interface
-/* Asoundlib.h */
-struct pcm_config
-struct pcm
-struct pcm_params
-
-struct pcm *pcm_open(unsigned int card, unsigned int device,
-        unsigned int flags, struct pcm_config *config);
-int pcm_is_ready(struct pcm *pcm);
-struct pcm_params *pcm_params_get(unsigned int card, unsigned int device,
-        unsigned int flags);
-int pcm_get_config(struct pcm *pcm, struct pcm_config *config);
-int pcm_set_config(struct pcm *pcm, struct pcm_config *config);
-
-int pcm_write(struct pcm *pcm, const void *data, unsigned int count);
-int pcm_read(struct pcm *pcm, void *data, unsigned int count);
-
-int pcm_start(struct pcm *pcm);
-int pcm_stop(struct pcm *pcm);
-
-int pcm_close(struct pcm *pcm);
 
 ---------------------------------------------------------------------
-声卡
-struct snd_card
-
-snd_card可以说是整个ALSA音频驱动最顶层的一个结构，整个声卡的软件逻辑结构
-开始于该结构，几乎所有与声音相关的逻辑设备都是在snd_card的管理之下，
-声卡驱动的第一个动作通常就是创建一个snd_card结构体。
-
-include/sound/core.h
-struct snd_soc_card               
-  snd_card: snd_card*
-  dai_link: snd_soc_dai_link*
-  rtd: snd_soc_pcm_runtime*
-  rtd_aux: snd_soc_pcm_runtime*
-  drvdata: void*
-  probe(struct snd_soc_card*):int 
-  remove(struct snd_soc_card*):int
-
-声卡的创建
-int snd_card_create(index, id, THIS_MODULE, 0, &card);
-
-index         int, 该声卡的编号
-id            char, 声卡的标识符
-参数四        int, 额外分配的私有数据的大小
-card          struct snd_card, 返回所创建的snd_card实例的指针 
-
-声卡的注册
-int snd_card_register(struct snd_card *card)
-
--------------------------------------------------------------------
 功能部件（逻辑设备）
 
 每一种部件的创建最终会调用snd_device_new()来生成一个snd_device实例，
@@ -172,7 +123,7 @@ JACK    --    snd_jack_new()
 -------------------------------------------------------------------
 pcm 设备
 
-一个pcm实例由一个playback stream和一个capture stream组成，
+  一个pcm实例由一个playback stream和一个capture stream组成，
 这两个stream又分别有一个或多个substreams组成。
 
 结构体
@@ -280,9 +231,9 @@ ce------------>dma buffer---->I2S tx FIFO---->CODEC--------->SPK/HS/Earp
 
 -------------------------------------------------------------------------
 Control接口
-主要让用户空间的应用程序（alsa-lib）可以访问和控制音频codec芯片中的多路开关
+
+  主要让用户空间的应用程序（alsa-lib）可以访问和控制音频codec芯片中的多路开关
 ，滑动控件等。对于Mixer（混音）来说，Control接口显得尤为重要，从ALSA 0.9.x
 版本开始，所有的mixer工作都是通过control接口的API来实现的。
 
-<sound/control.h>定义了所有的Control API
-
+<sound/control.h> 定义了所有的Control API

@@ -60,6 +60,9 @@ snd_pcm_sframes_t snd_pcm_readi(snd_pcm_t *pcm,
 
 int snd_pcm_close(snd_pcm_t*)
 
+undrerun 状态：播放时，音频数据传输的不够快,导致饥饿状态发生
+overrun 状态 ：录音时，音频数据来的太快,过度饱和
+
 ----------------------------------------------------------------------
 typedef struct _snd_pcm snd_pcm_t
 struct _snd_pcm
