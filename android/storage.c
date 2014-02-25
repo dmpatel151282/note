@@ -1,4 +1,30 @@
-Android系统一共提供了四种数据存储方式。分别是：SharePreference、SQLite、Content Provider和File.
+Android系统一共提供了四种数据存储方式。分别是：SharePreference、SQLite、Content Provider 和 File.
+
+Content Provider    http://www.oschina.net/question/54100_34752
+  Content Provider 提供了一种多应用间数据共享的方式
+
+  标准的 Content Provider:
+    1. 联系人
+    2. 图片库
+    3. 音乐库、视频库
+
+  查询数据    
+    URI
+  修改数据    
+  添加数据    
+  删除数据
+
+数据模型:
+  Content Provider展示数据类似一个单个数据库表，每行有个带唯一值的数字字段，名为_ID，
+可用于对表中指定记录的定位； Content provider 返回的数据结构是Cursor对象。
+
+每个contentprovider定义一个唯一的公开的URI，用于指定到它的数据集。
+
+1. 首先需要获得一个ContentResolver的实例，可通过Activity的成员方法getContentResovler（）方法：
+    ContentResolver cr = getContentResolver();
+
+2. 
+       
 
 -------------------------------------------------------------------------------
 SharePreference
@@ -39,7 +65,6 @@ SharedPreferences对象本身只能获取数据而不支持存储和修改，存
 
 ------------------------------------------------------------------------------
 SQLite
-Content Provider
 
 ---------------------------------------------------------------------------------
 File

@@ -22,7 +22,7 @@ apt-get remove rhythmbox evolution bittorrent empathy --force-yes  -y
 
 echo ""
 echo "*********** 安装必要软件 *************"
-software=(vim git libncurse bison flex curl wget lynx unrar unzip chmsee ksnapshot ubuntu-tweak)
+software=(vim git libncurse minicom bison flex autoconf automake tree curl wget lynx unrar rar unzip chmsee ksnapshot ubuntu-tweak)
 function do_apt_get_install () {
     soft=$1
     echo ""

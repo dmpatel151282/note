@@ -14,16 +14,26 @@
 
 2. 实现Runnable接口，重写run函数
 
+//创建一个类，继承Runnable接口
 class 类名 implements Runnable {
     @Override
     pubilc void run() {}
 }
 
+//创建Runnable 实例
+Runnable runnable = new Runnable() {
+    @Override
+    public void run() { }
+};
+Thread mThread = new Thread(runnable);
+mThread.start();
+
+//
 new Thread(new Runnable() {
     @Override
-    pubilc void run() {
-    }
+    pubilc void run() { }
 }, "nameofThread").start();
+
 
 3. 实现Callable接口，重写call函数
 

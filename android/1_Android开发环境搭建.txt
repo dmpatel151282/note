@@ -18,13 +18,13 @@
 	1)sudo apt-get install eclpise
 	2)下载源码包;选择安装目录;在安装目录下解压即可
 
-1.3 ADT安装 (Android Developer Tools)
+1.3 ADT 插件和 NDK插件安装 (Android Developer Tools)
 	1)使用 Eclipse 的升级管理器来安装
 	    启动 Eclipse, 然后进入 Help > Install New Software;
 	    在 Available Software 对话框里，点击 Add...;
 	    出现 Add Site 对话框，在 Name 域里输入名字 (例如, "Android Plugin"),
 	    在 Location 域里输入 URL: http://dl-ssl.google.com/android/eclipse/;
-	    回到 Available Software 界面，你应该看到 "Developer Tools" 。选取 checkbox 。
+	    回到 Available Software 界面，你应该看到"Developer Tools"和"NDK Plugins"。选中。
 	    点击 Next, 接受 license agreement， 然后点击 Finish;
 	    重起 Eclipse;
 	2)手动安装ADT
@@ -34,7 +34,17 @@
     设置环境变量，在~/.bashrc 中加入:
         export PATH=/usr/local/android-sdk/tools:/usr/local/eclipse:$PATH
 
-1.5 导入android源码
+1.5 Android NDK安装
+    下载源码包;选择安装目录;在安装目录下解压;
+    设置环境变量，在~/.bashrc 中加入:
+        export NDK_HOME=/home/liushui/usr/android-ndk-r9c
+        export PATH=$PATH:$NDK_HOME
+
+1.6 CDT安装 (参考ADT安装)
+
+    Location域 http://download.eclipse.org/tools/cdt/releases/indigo
+
+1.7 导入android源码
 
     android/development/ide/eclipse
 
