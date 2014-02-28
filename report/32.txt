@@ -1,0 +1,25 @@
+﻿本周工作内容(2014.2.24-2014.1.28)
+ 
+1、查看CalledTest、CallerTest 源码，解决双卡双待测试时，重复挂断的问题；
+2、查看 TigerRobot源码，搭建NDK编译环境，分析android 4.4 下不能唤醒的问题，已和苗姐沟通，未解决；
+3、解决 P2 android 4.4 MonkeyTest 应用crash的问题;
+    解决soundrecorder, 未解决browser, 其他无源码；
+4、测试分区烧写工具在a23 android4.4 能否正常工作;
+
+下周工作计划: 
+1、解决TigerRobot休眠唤醒的问题；
+2、解决browser crash 的问题；
+3、编写ltp-ddt使用文档；
+
+
+
+
+
+
+
+
+
+
+
+
+

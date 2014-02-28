@@ -1,13 +1,17 @@
 #!/bin/bash
 
-DOC_PATH=
+DOC_PATH="/home/liushui/github/doc"
 USER="/home/liushui"
 install_dir="/home/liushui/usr"
 
-echo ""
-echo "********* 升级系统 ************"
-apt-add-repository ppa:tualatrix/ppa  #for ubuntu-tweak
-apt-get upgrade
+
+#echo ""
+#echo "********* 升级系统 ************"
+#apt-add-repository ppa:tualatrix/ppa        #for ubuntu-tweak
+#add-apt-repository ppa:phablet-team/tools   #for android-tools-adb
+#apt-get upgrade
+#echo "********* 系统升级完成 ************"
+
 
 echo""
 echo "********* 解决gedit乱码 *********"
@@ -18,71 +22,17 @@ echo ""
 echo "******** 删除一些没用的软件 ***********"
 apt-get remove totem totem-gstreamer totem-mozilla --force-yes  -y
 apt-get remove rhythmbox evolution bittorrent empathy --force-yes  -y
+echo "******** 删除软件完成 ***********"
 
 
 echo ""
 echo "*********** 安装必要软件 *************"
-software=(vim git libncurse minicom bison flex autoconf automake tree curl wget lynx unrar rar unzip chmsee ksnapshot ubuntu-tweak)
-function do_apt_get_install () {
-    soft=$1
-    echo ""
-    echo "********* install ${soft} ***********"
-    apt-get install ${soft} --force-yes -y
-    echo "********* install ${soft} successful! ***********"
-}
-for s in ${software[@]}
-do
-    do_apt_get_install $s
-done 
-
-echo ""
-echo "********* config vim  ***********"
-cp ${DOC_PATH}/vim/vim  ${USER}/.vim -frv
-cp ${DOC_PATH}/vim/.vimrc ${USER}/.vimrc -v
-echo "alias vi=vim " >> ${USER}/.bashrc
-source ${USER}/.bashrc
-
-echo ""
-echo "********* config git  ***********"
-
-
-echo ""
-echo "********* install android sdk ***********"
-sdk=`find ${DOC_PATH} -name android-sdk*.tgz`
-tar zxf ${sdk} -C ${install_dir}
-mv ${install_dir}/android-sdk-linux/ ${install_dir}/android-sdk/
-echo -e "\n#for android-sdk\nexport PATH=$PATH:${install_dir}/android-sdk/tools" >> ${USER}/.bashrc
-
-echo ""
-echo "********* install eclipse ***********"
-ecl=`find ${DOC_PATH} -name eclipse*.tar.gz`
-tar zxf ${ecl} -C ${install_dir}
-echo -e "\n#for eclipse\nexport PATH=$PATH:${install_dir}/eclipse" >> ${USER}/.bashrc
-
-echo ""
-echo "********* install arm-none-linux-gnueabi- **********"
-
-###################### allwinnertech ########################
-echo ""
-echo "********* install Livesuit *******************"
-apt-get install dkms --force-yes -y
-chmod +x ${DOC_PATH}/livesuit/LiveSuit.run || \
-{
-    echo "安装LiveSuit失败"
-    exit 
-}
-${DOC_PATH}/livesuit/LiveSuit.run
-echo "SUBSYSTEM!=\"usb_device\", ACTION!=\"add\", GOTO=\"objdev_rules_end\"
-#USBasp
-ATTRS{idVendor}==\"1f3a\", ATTRS{idProduct}==\"efe8\", GROUP=\"liushui\",
-MODE=\"0666\"
-LABEL=\"objdev_rules_end\"" > /etc/udev/rules.d/10-local.rules
-sudo service udev restart
-cp ${DOC_PATH}/livesuit/LiveSuit_unformat ${USER}/Bin/LiveSuit/bin/LiveSuit -v || \
-{
-    echo "修改默认不格式化刷机失败"
-}
-chmod 755 ${USER}/Bin/LiveSuit/bin/LiveSuit
-
-echo "*********** install LiveSuit successful! *************"
-
+apt-get install vim --force-yes -y
+apt-get install git --force-yes -y
+apt-get install minicom --force-yes -y
+apt-get install libncurse --force-yes -y
+apt-get install bison flex autoconf automake --force-yes -y
+apt-get install tree wget curl ubuntu-tweak --force-yes -y
+apt-get install zip unzip rar unrar --force-yes -y
+apt-get install ksnapshot --force-yes -y
+echo "********* 安装完成 ***********"

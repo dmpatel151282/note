@@ -1,10 +1,11 @@
 1. linux下搭建Android SDK环境 (eclipse)
 　　1.1. JDK安装
 　　1.2. Eclipse安装
-　　1.3. ADT安装
+　　1.3. ADT和NDK插件安装
 　　1.4. Android SDK安装
     1.5. Android NDK安装 
 
+---------------------------------------------------------------------------------
 1.1 JDK安装
 	1)sudo apt-get install default-jdk 或 sudo apt-get install sun-java6-jdk
 	2)下载 jdk-7u25-linux-i586.tar.gz;选择安装目录;在安装目录下解压即可
@@ -47,6 +48,9 @@
 1.7 导入android源码
 
     android/development/ide/eclipse
+
+Setting up Automatic NDK Builds in Eclipse
+http://mobilepearls.com/labs/ndk-builder-in-eclipse/
 
 ----------------------------------------------------------------------------
 2.Android源代码工程环境
