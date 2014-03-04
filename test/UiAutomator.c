@@ -5,10 +5,11 @@ UiAutomatorTestCase 类
 
 getUiDevice()
 
+---------------------------------------------------------------------------------------
 UiObject 类  
 这个对象可以理解为控件的对象。
 
-UiObject mItem = new UiObject(new UiSelector().text("English"));
+UiObject mItem = new UiObject(new UiSelector().text("English")); 
 
 通过 UiSelector
 
@@ -27,8 +28,7 @@ isClickable()
 isLongClickable()
 isScrollable()
 isScrollable()
-isSelected()
-    ----判断是否具备某个属性
+isSelected()                    ----判断是否具备某个属性
 
 -----------------------------------------------------------------------------
 UiCollection 对象
@@ -52,5 +52,15 @@ UiScrollable对象
 
 UiScrollable可以生成一个滚动动作的对象，其最大的作用就是可以实现滚动的查找某个元素。
 比如在“设置”菜单中，“语言和输入法”这个菜单比较靠下，需要滚动后才可以看到（找到）
+
+UiScrollable settingItems = new UiScrollable(
+                new UiSelector().scrollable(true));
+
+重要方法：
+    UiObject languageAndInputItem = settingItems.getChildByText(
+                new UiSelector().text("Language & input"), "Language & input", true);
+
+    setAsHorizontalList(); // 设置界面为水平，水平滑动
+    
 
 等待操作和添加Log的方法

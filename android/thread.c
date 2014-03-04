@@ -28,7 +28,7 @@ Runnable runnable = new Runnable() {
 Thread mThread = new Thread(runnable);
 mThread.start();
 
-//
+//简写
 new Thread(new Runnable() {
     @Override
     pubilc void run() { }
@@ -45,16 +45,16 @@ new Thread(new Runnable() {
 		         如果阻塞， -> 进入就绪状态
     4. 线程体执行完毕， -> 进入死亡状态
 
-  多线程同步：解决竞争
-    1. synchronized 方法：通过在方法声明中加入 synchronized关键字
-        每个类实例对应一把锁,这种机制确保了同一时刻对于每一个类实例，
-    其所有声明为 synchronized 的成员函数中至多只有一个处于可执行状态
-       （只要所有可能访问类成员变量的方法均被声明为 synchronized）
+多线程同步：解决竞争
+  1. synchronized 方法：通过在方法声明中加入 synchronized关键字
+      每个类实例对应一把锁,这种机制确保了同一时刻对于每一个类实例，
+  其所有声明为 synchronized 的成员函数中至多只有一个处于可执行状态
+     （只要所有可能访问类成员变量的方法均被声明为 synchronized）
 
-    2. synchronized 块：通过 synchronized关键字来声明synchronized 块
-        synchronized(syncObject) {
-        //允许访问控制的代码 
-        }
+  2. synchronized 块：通过 synchronized关键字来声明synchronized 块
+      synchronized(syncObject) {
+      //允许访问控制的代码 
+      }
 	    
 ------------------------------------------------------------------
 android 中线程

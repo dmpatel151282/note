@@ -1,6 +1,6 @@
 
   在Android中，Broadcast是一种广泛运用的在应用程序之间传输信息的机制，
-而BroadcastReceiver是对发送出来的 Broadcast进行过滤接受并响应的一类组件。
+而BroadcastReceiver是对发送出来的 Broadcast 进行过滤接受并响应的一类组件。
 
 1. 首先在需要发送信息的地方，把要发送的信息和用于过滤的信息(如Action、Category)装入一个Intent对象
 然后通过调用 sendBroadcast()或sendStickyBroadcast()方法，把 Intent对象以广播方式发送出去。

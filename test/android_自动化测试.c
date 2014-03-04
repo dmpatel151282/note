@@ -1,8 +1,6 @@
 
-自动化完成：
 
-
-Android自动化测试主要分为Monkeyrunner、Rubotium、UiAutomator、Monkey（在我看来这个不算）等。
+Android自动化测试主要分为Monkeyrunner、Rubotium、UiAutomator、MonkeyTset（在我看来这个不算）等。
 
 主要特点：
 
@@ -18,7 +16,7 @@ Android自动化测试主要分为Monkeyrunner、Rubotium、UiAutomator、Monkey
     优点：可以对所有操作进行自动化，操作简单；
     缺点：Android版本需要高于4.0，无法根据控件ID操作，相对来说功能较为局限，但也够用了；
 
-4、Monkey：准确来说，这不算是自动化测试，因为其只能产生随机的事件，无法按照既定的步骤操作；
+4、MonkeyTest：准确来说，这不算是自动化测试，因为其只能产生随机的事件，无法按照既定的步骤操作；
 
 由上面介绍可以有这样的结论：
     测试某个APK，可以选择Rubotium；
@@ -67,7 +65,7 @@ Android-sdk/tools/目录下，运行命令：
 
 8. push并运行jar
 
-adb push <jar文件路径> data/local/tmp
+adb push <jar文件路径> /data/local/tmp
 adb shell uiautomator runtest <jar文件名> -c <工程中的类名，包含包名>
 
 
