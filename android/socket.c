@@ -13,13 +13,21 @@
 
 3.1 基于TCP协议的Socket
   服务器端首先声明一个ServerSocket对象并且指定端口号，然后调用Serversocket的
-accept（）方法接收客户端的数据。accept（）方法在没有数据进行接收的处于堵塞状态。
+accept()方法接收客户端的数据。accept()方法在没有数据进行接收的处于堵塞状态。
 
 一旦接收到数据，通过 inputstream 读取接收的数据。
 
 客户端创建一个Socket对象，指定服务器端的ip地址和端口号，通过inputstream 读取数据，
 （Socket socket=new Socket("172.168.10.108",8080)）
 ，获取服务器发出的数据
+
+eg:
+服务器端
+    protected ServerSocket mServer;
+    mServer = new ServerSocket(mPort, int backlog); //mport 为int，端口
+
+    xxx Socket client = mServer.accept();
+
 
 3.2 基于UDP协议的数据传输
   服务器端首先创建一个DatagramSocket对象，并且指点监听的端口。接下来创建一个空的

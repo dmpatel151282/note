@@ -1,3 +1,49 @@
+
+UiAutomator 环境搭建
+  必备条件：
+  1、JDK              
+  2、SDK（API高于15）
+  3、Eclipse（安装ADT插件）
+  4、ANT（用于编译生成jar）
+  所需环境变量：
+      JAVA_HOME 
+      ANDROID_HOME 
+      ANT_HOME
+
+详细操作
+1.建立工程
+ 用Eclipse新建Java Project，注意，不是Android Project！
+
+2. 添加JUnit库
+
+3. 添加Android库
+  找到路径Android-sdk/platforms/android-17/下面的android.jar和uiautomator.jar添加进来
+
+4. 编写测试程序：在src中添加包，然后添加class文件
+
+5. 找到SDK ID
+
+Android-sdk/tools/目录下，运行命令：
+    android list
+        查看API大于15的SDK的ID值
+
+6. 创建build文件
+Android-sdk/tools/目录下，运行命令：
+    android create uitest-project -n <name> -t <android-sdk-ID> -p <path>
+
+上面的name就是将来生成的jar包的名字，可以自己定义，path是Eclipse新建的工程的路径；
+运行命令后，将会在工程的根目录下生成build.xml文件。
+
+7. 编译生成jar
+进入项目的工程目录，然后运行ant build，将使用ant编译生成jar
+在bin目录下生成jar文件。
+
+8. push并运行jar
+
+adb push <jar文件路径> /data/local/tmp
+adb shell uiautomator runtest <jar文件名> -c <工程中的类名，包含包名> -c  <工程中的类名，包含包名> ...
+
+--------------------------------------------------------------------------------------
 http://blog.csdn.net/u010961631/article/details/9616581
 public class xxx extends UiAutomatorTestCase
 

@@ -1,5 +1,28 @@
 
+软件测试的两个相关模型
+1. LFM(logical functional model)
+  根据用户的行为得到一个模型，然后根据这个模型进行测试用例设计，
+这样设计出来的用例和用户的实际操作是非常吻合的，从而保证了测试的高效率。
 
+2. POM(physical object model)
+  将功能从具体的界面元素中抽象出来，这样设计出来的用例即使界面元素发生变化，用例也不需要变化。 
+
+------------------------------------------------------------------------------------------
+http://www.uml.org.cn/zjjs/201208222.asp
+
+自动化测试框架，主要目的就是自动化调用执行某些测试用例，将执行结果与目标结果进行比较，
+用以达到测试特定目标的目的。而测试用例的针对目标可能是函数接口，功能模块，UI等等。
+
+自动化测试框架从功能上可以分为技术框架和执行框架。
+所谓技术框架一般针对于特定的测试目标，为了达到自动化测试而引入的技术或者方法，比如微软UI测试中的MSAA，UI Automation框架以及后续建立在UIAutomation上的POM/LFM
+
+而执行框架则侧重于对测试用例自动化执行的控制
+    1. 测试用例选择控制。
+    2. 自动化传递参数或者配置条件。 最可取的做法就是利用XML文档动态传参，好处是实现代码复用
+    3. 测试用例执行结果比对。
+    4. 测试结果记录与分析。
+
+-----------------------------------------------------------------------------------------------
 Android自动化测试主要分为Monkeyrunner、Rubotium、UiAutomator、MonkeyTset（在我看来这个不算）等。
 
 主要特点：
@@ -23,49 +46,16 @@ Android自动化测试主要分为Monkeyrunner、Rubotium、UiAutomator、Monkey
     测试过程可能涉及多个APK，选择UiAutomator；
     一些简单的测试，选择Monkeyrunner；
 
+--------------------------------------------------------------------------------------------------
+http://www.cnblogs.com/salomon/archive/2013/03/27/2984050.html
 
-UiAutomator 环境搭建
-  必备条件：
-  1、JDK              
-  2、SDK（API高于15）
-  3、Eclipse（安装ADT插件）
-  4、ANT（用于编译生成jar）
-  所需环境变量：
-      JAVA_HOME 
-      ANDROID_HOME 
-      ANT_HOME
+整个思路就是一个分层设计
+    控件的定义，和控件的操作分为两层，而测试方法调用底下两层，做为第三层。
+这么设计的好处是明显的：较少代码编写量，并可以在团队写代码中更加容易保持代码风格；代码易维护，
+改动任何一层代码对其他层影响较小；可以针对Android系统泛滥的弊端针对不同的android系统或手机，
+生成一种通用库，这样很容易做手机多机适配运行；另外针对POM层，只要代码格式设计完成，可以适当
+扩展Uiautomatorviewer以自动生成代码（我扩展了右边栏的TreeView，增加了双击自动生成代码保存到
+剪切板里，这样想要生成哪个控件的定义代码，双击，粘贴一下就行了，非常方便）设计图如下：
 
-详细操作
-1.建立工程
- 用Eclipse新建Java Project，注意，不是Android Project！
-
-2. 添加JUnit库
-
-3. 添加Android库
-  找到路径Android-sdk/platforms/android-17/下面的android.jar和uiautomator.jar添加进来
-
-4. 编写测试程序：在src中添加包，然后添加class文件
-
-5. 找到SDK ID
-
-Android-sdk/tools/目录下，运行命令：
-    android list
-        查看API大于15的SDK的ID值
-
-6. 创建build文件
-Android-sdk/tools/目录下，运行命令：
-    android create uitest-project -n <name> -t <android-sdk-ID> -p <path>
-
-上面的name就是将来生成的jar包的名字，可以自己定义，path是Eclipse新建的工程的路径；
-运行命令后，将会在工程的根目录下生成build.xml文件。
-
-7. 编译生成jar
-进入项目的工程目录，然后运行ant build，将使用ant编译生成jar
-在bin目录下生成jar文件。
-
-8. push并运行jar
-
-adb push <jar文件路径> /data/local/tmp
-adb shell uiautomator runtest <jar文件名> -c <工程中的类名，包含包名>
-
-
+  
+http://www.cnblogs.com/salomon/

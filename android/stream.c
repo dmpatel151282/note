@@ -29,6 +29,9 @@ BufferedReader类
     System.out.println(data); 
     }
 
+read(new char[1024]) 
+readline()
+
 ------------------------------------------------------------------------
 OutputStream  可写的字节流
 

@@ -1,31 +1,31 @@
 线程(运行不确定性)
 
 实现方式：
-1. 继承Thread类， 重写run函数
+1. 创建一个类，继承Thread类， 重写run函数
 
   创建:
-   class 类名 extends Thread{
-    public void run(){
-   	Thread.sleep(1000) //线程休眠1000毫秒，sleep使线程进入Block状态，并释放资源
-   }}
+    class 类名 extends Thread{
+     public void run(){
+    	Thread.sleep(1000) //线程休眠1000毫秒，sleep使线程进入Block状态，并释放资源
+    }}
 
    开启线程:
-   对象.start() //启动线程，run函数运行
+     对象.start() //启动线程，run函数运行
 
 2. 实现Runnable接口，重写run函数
 
-//创建一个类，继承Runnable接口
-class 类名 implements Runnable {
-    @Override
-    pubilc void run() {}
-}
+    //创建一个类，继承Runnable接口
+    class 类名 implements Runnable {
+        @Override
+        pubilc void run() {}
+    }
 
 //创建Runnable 实例
 Runnable runnable = new Runnable() {
     @Override
     public void run() { }
 };
-Thread mThread = new Thread(runnable);
+Thread mThread = new Thread(runnable);// Thread(runnable, threadname)
 mThread.start();
 
 //简写
