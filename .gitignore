@@ -22,23 +22,27 @@
 modules.builtin
 Module.symvers
 Module.markers
-*.elf
+
 *.gz
+*.tgz
 *.bz2
+*.pdf
+*.jar
+*.war
+*.deb
+*.vbox-extpack
+
+*.elf
 *.lzma
 *.xz
 *.lzo
-*.patch
 *.gcno
 *.rej
 *.raw
-standby.code
-resume1.code
 
 #
 ## Top-level generic files
 #
-book/
 /tags
 /TAGS
 /vmlinux
