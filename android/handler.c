@@ -12,18 +12,14 @@ Looper不停从消息队列中取出对象，没有对象则等待
     public void handleMessage(Message msg);
 
 使用：
-  1. 创建一个类 继承 handler类， 复写 handleMeassage(Message msg) 如打印消息等								
-  2. 创建其对象 handler
-  3. 创建Message对象： Message msg = handler.obtainMessage();
-		  msg.what = 2;
-		  handler.sendMessages(msg); //将消息放入消息队列
+  1. 主线程创建一个类 继承 handler类， 复写 handleMeassage(Message msg) 如打印消息等
+  2. 主线程创建其对象 handler
+  3. 工作线程创建Message对象： 
+        Message msg = handler.obtainMessage();
+		msg.what = 2;
+		handler.sendMessages(msg); //将消息放入消息队列
 					     //Looper将会取出msg，找出与之对应的handler
 					     //Looper将会调用其handler.handleMessage(Message msg);
-
-
-2 在主线程当中实现Handler的handleMessage（）方法
-
-3 在Worder Thread当中通过Handler发送消息。
 
 eg:
     内部类NetworkThread继承Thread，复写run方法。休眠2秒，s的值模拟从网络中获取的数据。

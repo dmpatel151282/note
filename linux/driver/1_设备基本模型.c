@@ -33,7 +33,7 @@ void dev_set_drvdata(struct device *dev, void *data);
 获取私有数据：
 void *dev_get_drvdata(const struct device *dev);
 
-device_create()      在/dev下创建设备文件
+device_create() 
 device_destroy()
 get_device()
 put_device()
