@@ -36,6 +36,10 @@ ltp-ddt 的使用方法
     -t:             指定测试的持续时,Define duration of the test in s,m,h,d.
     -q              Print less verbose output to screen. 安静模式
     -h              Help. Prints all available options.
+    -s PATTERN      Only run test cases which match PATTERN.
+    -r LTPROOT      Fully qualified path where testsuite is installed.
+
+    -T REPETITION   Execute the testsuite for REPETITION no. of times //用例前加 1_ITERATION_ 2_ITERATION_
 
     // 测试时，增加负载
     1. cpu 负载      
@@ -43,7 +47,7 @@ ltp-ddt 的使用方法
     -c NUM_PROCS    Run LTP under additional background CPU load 
                     [NUM_PROCS = no. of processes creating the CPU Load by spinning over sqrt()]
 
-    genload -cpu NUM_PROCS &
+    //genload -cpu NUM_PROCS &
 
     2. Secondary Storage 负载 
     -D <options>    Run LTP under additional background Load on Secondary Storage (Seperate by comma)
@@ -54,7 +58,7 @@ ltp-ddt 的使用方法
     [NUM_BYTES   = write these many bytes (defaults to 1GB, when value 0 or undefined)]
     [CLEAN_FLAG  = unlink file to which random data written, when value 1]
 
-    genload --hdd $NUM_PROCS --hdd-files $NUM_FILES --hdd-bytes $NUM_BYTES [--hdd-noclean] &
+    //genload --hdd $NUM_PROCS --hdd-files $NUM_FILES --hdd-bytes $NUM_BYTES [--hdd-noclean] &
 
     3. memory 负载
     -m <options>    Run LTP under additional background Load on Main memory (Seperate by comma)
@@ -65,7 +69,7 @@ ltp-ddt 的使用方法
     [BYTES       = malloc CHUNKS of BYTES bytes (default is 256MB when value 0 or undefined) ]
     [HANGUP_FLAG = hang in a sleep loop after memory allocated, when value 1]
 
-    genload --vm $NUM_PROCS --vm-chunks $CHUNKS --vm-bytes $BYTES [--vm-hang] &
+    //genload --vm $NUM_PROCS --vm-chunks $CHUNKS --vm-bytes $BYTES [--vm-hang] &
     
     4. IO 负载
 
@@ -73,7 +77,7 @@ ltp-ddt 的使用方法
 
     [NUM_PROCS   = no. of processes creating IO Bus Load by spinning over sync()]
 
-    genload --io $NUM_PROCS  &
+    //genload --io $NUM_PROCS  &
 
     5. network traffic 负载
     -n              Run LTP with network traffic in background.
@@ -91,16 +95,15 @@ ltp-ddt 的使用方法
     在每条测试用例的命令前加上：valgrind -q --leak-check=full --trace-children=yes
                                 valgrind -q --tool=helgrind --trace-children=yes
 
+    -N              Run all the networking tests. // scenario_group/network
+
+    -x INSTANCES    Run multiple instances of this testsuite.  // --> ltp-pan -x INSTANCES -O {tmp} 同时运行多个测试用例
+
 ------------------------------------------------------------------------------------
     -a EMAIL_TO     EMAIL all your Reports to this E-mail Address   需安装mutt
     -g HTMLFILE     Create an additional HTML output format
     -e              Prints the date of the current LTP release
-    -N              Run all the networking tests. 
-    -r LTPROOT      Fully qualified path where testsuite is installed.
-    -s PATTERN      Only run test cases which match PATTERN.
-    -T REPETITION   Execute the testsuite for REPETITION no. of times
     -w CMDFILEADDR  Uses wget to get the user's list of testcases.
-    -x INSTANCES    Run multiple instances of this testsuite.
     -b DEVICE       Some tests require an unmounted block device to run correctly.
     -B DEVICE_FS_TYPE The file system of test block devices.
 
