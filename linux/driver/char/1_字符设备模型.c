@@ -5,6 +5,7 @@ app --> /dev/xxx --> file   --> filp
 app --> open/read/write  --> swi --> sys_open (ISR) --> VFS 
 --> chrdev[major] --> file_operations --> open/read/write 
 
+--------------------------------------------------------------------------
 1. 定义设备结构体:  cdev、私有数据及信号量等
 2. 实现file_operations 结构体中成员函数
     open    打开设备: inode --> container_of --> 设备结构体 --> 

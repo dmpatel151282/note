@@ -8,9 +8,8 @@
 
 struct device_name_dev {
     const char *name;
-    int major;
-    volatile unsigned long gpio_base_phys,
-                           gpio_base_virt;
+    struct cdev cdev;
+    ...
 };
 
 #include "device_name.h"
