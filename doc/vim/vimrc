@@ -121,7 +121,7 @@ vmap <silent> ,tg :!ctags -R --c++-kinds=+p --fields=+ialS --extra=+q<cr><cr>
 nmap ,ts :!ctags -Rn --c++-kinds=+p --fields=+ialS --extra=+q -o ~/.vim/systags /usr/include /usr/local/include<cr><cr>
 
 set tags=tags;
-set tags+=~/.vim/systags
+nmap <silent> ,at :set tags+=~/.vim/systags<cr><cr>
 
 """"""""""""""""""""""""""""
 "Tag list (ctags)
@@ -190,10 +190,32 @@ nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 """"""""""""""""""""""
+" Omni Complete
+""""""""""""""""""""""
+filetype plugin indent on      "打开文件类型检测
+set completeopt=longest,menu   "关掉智能补全时的预览窗口
+
+""""""""""""""""""""""
 " OmniCppComplete
 """"""""""""""""""""""
 set nocp
+filetype plugin on 
+
+"如果下拉菜单弹出，回车映射为接受当前所选项目，否则，仍映射为回车
+inoremap <expr> <CR>    pumvisible()?"\<C-Y>":"\<CR>" 
+
+""""""""""""""""""""""""""""
+" Gtrans
+""""""""""""""""""""""""""""
+
+nmap <silent> .t :Gtrans<cr><cr>
+
+""""""""""""""""""""""""""""
+"txtbrowser
+""""""""""""""""""""""""""""
+syntax on
 filetype plugin on
+au BufRead,BufNewFile *.txt setlocal ft=txt
 
 """"""""""""""""""""""""""""
 "MRU 最近打开的历史文件

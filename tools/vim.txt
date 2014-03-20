@@ -40,6 +40,10 @@ vim 常用命令
     c语言：/usr/share/vim/vim64/syntax/c.vim
 
 ---------------------------------------------------------------------------
+txtbrowser
+    
+    
+---------------------------------------------------------------------------
 Ctags 的使用
 
   使用
@@ -173,18 +177,31 @@ Cscope 的使用
     <C-_>g的按法是先按"Ctrl+Shift+-", 然后很快再按"g"
 
 ----------------------------------------------------------------------------
-自动补全
-  
-  该功能要tags文件的支持, 并且是ctags 5.6版本
+自动补全 omni(自带)
 
   全能补全 :help new-omni-completion
+  
+  该功能要tags文件的支持, 并且是ctags 5.6版本
 
   .vimrc文件加入
     filetype plugin indent on
     打开文件类型检测, 加了这句才可以用智能补全
     set completeopt=longest,menu
     关掉智能补全时的预览窗口
+
+    1. 按下"CTRL-X CTRL-O" 开始智能补全
+    2. ”CTRL-P“和”CTRL-N“上下选择，
+    3. ”CTRL-E“停止补全并回到原来录入的文字
+    4. ”CTRL-Y“可以停止补全，并接受当前所选的项目
+
+OmniCppComplete插件 c++
+
+    set nocp
+    filetype plugin on 
   
+    ctags -R --c++-kinds=+p --fields=+iaS --extra=+q src 
+
+
 加速你的补全 -- 插件: SuperTab
 
   安装 把supertab.vim 文件丢到 ~/.vim/plugin 文件夹就好了
