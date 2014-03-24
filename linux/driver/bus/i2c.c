@@ -24,3 +24,12 @@ i2c 设备：
     ---------------------
 
 
+driver层
+
+定义一个 struct i2c_driver
+
+module_init：
+    i2c_add_driver
+
+module_exit：
+    i2c_del_driver

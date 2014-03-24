@@ -64,9 +64,9 @@ fail_count=0
 total_count=0
 
 adb shell sh /data/ltp/before_test.sh
-adb shell sh /data/ltp/runltp -o p2_${date}_ltpscreen.txt -f app/camera -l p2_${date}_result.txt -C p2_${date}_failed.txt -p 
+adb shell "rm /data/ltp/output /data/ltp/results -rf"
+adb shell sh /data/ltp/runltp -o p2_${date}_ltpscreen.txt -l p2_${date}_result.txt -C p2_${date}_failed.txt -p
 ret=$?
-
 if [ ! $ret -eq 0 ]; then
     echo "run ltp-ddt failed!"
     fail=1

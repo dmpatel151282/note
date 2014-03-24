@@ -37,6 +37,18 @@ int sysfs_create_file(struct kobject * kobj, const struct attribute * attr)
     echo  <==> store
     cat   <==> show 
 
+---------------------------------------------------------------------------------
+
+static DEVICE_ATTR(name, mode, xxx_show, xxx_store); 
+//宏DEVICE_ATTR 定义了 struct device_attribute dev_attr_##_name
+
+static struct attribute *xxx[] = {
+    &dev_attr_name.attr,
+    NULL
+};
+
+
+
 
 -------------------------------------------------------------------------------
 eg:
