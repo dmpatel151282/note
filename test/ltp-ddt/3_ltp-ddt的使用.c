@@ -16,6 +16,8 @@ ltp-ddt 的使用方法
     -f CMDFILES     Execute user defined list of testcases (separate with ',')
                     不指定默认执行，scenario_groups/default-ddt
 
+    -s PATTERN      Only run test cases which match PATTERN.
+
     -S SKIPFILE     Skip tests specified in SKIPFILE
 
     // 测试结果的输出
@@ -36,7 +38,6 @@ ltp-ddt 的使用方法
     -t:             指定测试的持续时,Define duration of the test in s,m,h,d.
     -q              Print less verbose output to screen. 安静模式
     -h              Help. Prints all available options.
-    -s PATTERN      Only run test cases which match PATTERN.
     -r LTPROOT      Fully qualified path where testsuite is installed.
 
     -T REPETITION   Execute the testsuite for REPETITION no. of times //用例前加 1_ITERATION_ 2_ITERATION_
