@@ -1,4 +1,24 @@
 Input子系统
+http://blog.csdn.net/ielife/article/details/7798952
+linux输入子系统
+    1. 输入子系统事件处理层（EventHandler）
+
+    2. 输入子系统核心层（InputCore）
+
+    3. 输入子系统设备驱动层
+      主要实现对硬件设备的读写访问，中断设置，并把硬件产生的事件转换为核心层定义的规范提交给事件处理层。
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
