@@ -31,10 +31,13 @@
 3. linux I2C 
 
 重要结构体：
-  1. struct i2c_driver
-    一套驱动方法：          //可用于多个client
+  1. struct i2c_driver          //一套驱动方法, 可用于多个client
+        id_table: struct i2c_device_id
+      //回调函数：          
         *attach_adapter
         *detach_client
+        *probe
+        *remove
 
   2. struct i2c_client
     从设备：
