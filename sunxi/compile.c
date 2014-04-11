@@ -1,5 +1,6 @@
 linux:
 ./build.sh config
+./build.sh package
 
 android:
 source build/envsetup.sh

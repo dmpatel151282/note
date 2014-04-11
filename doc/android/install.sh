@@ -45,7 +45,6 @@ if [ ! "$ret" -eq 0 ]; then
 fi
 echo "********* 安装android sdk 成功 *************"
 
-
 echo ""
 echo "********* install android ndk ***********"
 ndk_tar=`find ${DOC_PATH} -name android-ndk*.tar.bz2`

@@ -18,8 +18,11 @@ echo "******** 删除软件完成 ***********"
 
 echo ""
 echo "*********** 安装必要软件 *************"
+apt-get install zsh  autojump --force-yes -y
 apt-get install vim cscope --force-yes -y
 apt-get install git --force-yes -y
+apt-get install jekyll --force-yes -y
+
 apt-get install minicom --force-yes -y
 apt-get install libncurse --force-yes -y
 apt-get install bison flex autoconf automake --force-yes -y
@@ -28,3 +31,7 @@ apt-get install zip unzip rar unrar --force-yes -y
 apt-get install dos2unix --force-yes -y
 apt-get install ksnapshot --force-yes -y
 echo "********* 安装完成 ***********"
+
+echo ""
+echo "*********** 安装 oh-my-zsh *************"
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
