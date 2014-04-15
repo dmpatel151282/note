@@ -1,3 +1,3 @@
-note
+Note
 ====
-this my note
+this my note.

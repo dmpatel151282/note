@@ -3,6 +3,7 @@
 echo ""
 apt-add-repository ppa:tualatrix/ppa        #for ubuntu-tweak
 add-apt-repository ppa:phablet-team/tools   #for android-tools-adb
+add-apt-repository ppa:fcitx-team/nightly   #for fcitx-sogoupinyin
 apt-get update
 
 echo""
@@ -14,6 +15,9 @@ echo ""
 echo "******** 删除一些没用的软件 ***********"
 apt-get remove totem totem-gstreamer totem-mozilla --force-yes  -y
 apt-get remove rhythmbox evolution bittorrent empathy --force-yes  -y
+apt-get purge ibus ibus-gtk ibus-gtk3 --force-yes  -y
+killall ibus-daemon
+rm -rf ~/.config/ibus
 echo "******** 删除软件完成 ***********"
 
 echo ""
@@ -26,7 +30,8 @@ apt-get install jekyll --force-yes -y
 apt-get install minicom --force-yes -y
 apt-get install libncurse --force-yes -y
 apt-get install bison flex autoconf automake --force-yes -y
-apt-get install tree wget curl ubuntu-tweak --force-yes -y
+apt-get install ubuntu-tweak fcitx-sogoupinyin --force-yes -y
+apt-get install tree wget curl --force-yes -y
 apt-get install zip unzip rar unrar --force-yes -y
 apt-get install dos2unix --force-yes -y
 apt-get install ksnapshot --force-yes -y
@@ -34,4 +39,4 @@ echo "********* 安装完成 ***********"
 
 echo ""
 echo "*********** 安装 oh-my-zsh *************"
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+curl -L https://github.com/liushui312/oh-my-zsh/raw/master/tools/install.sh | sh
