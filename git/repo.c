@@ -59,6 +59,7 @@ comand:
     显示提交的代码和当前工作目录代码之间的差异。
 
   8. repo forall -p -v -c 'git_cmd' 
+        repo forall -p -v -c 'git checkout -b branch_name tag_name'
 
   9. repo update [project-list]
     上传修改的代码 ，上传到 Gerrit (基于web 的代码review 系统), Gerrit 收到上传的代码，
