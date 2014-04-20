@@ -3,7 +3,6 @@
 echo ""
 apt-add-repository ppa:tualatrix/ppa        #for ubuntu-tweak
 add-apt-repository ppa:phablet-team/tools   #for android-tools-adb
-add-apt-repository ppa:fcitx-team/nightly   #for fcitx-sogoupinyin
 apt-get update
 
 echo""
@@ -30,7 +29,7 @@ apt-get install jekyll --force-yes -y
 apt-get install minicom --force-yes -y
 apt-get install libncurse --force-yes -y
 apt-get install bison flex autoconf automake --force-yes -y
-apt-get install ubuntu-tweak fcitx-sogoupinyin --force-yes -y
+apt-get install ubuntu-tweak unity-control-center --force-yes -y
 apt-get install tree wget curl --force-yes -y
 apt-get install zip unzip rar unrar --force-yes -y
 apt-get install dos2unix --force-yes -y

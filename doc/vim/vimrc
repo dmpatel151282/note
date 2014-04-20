@@ -4,7 +4,7 @@
 "behave mswin
 
 "ÓïÑÔ»·¾³
-set encoding=utf-8
+"set encoding=utf-8
 langua message zh_CN.UTF-8
 
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr  "ÉèÖÃ×Ö·û
