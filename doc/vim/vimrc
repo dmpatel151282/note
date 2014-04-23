@@ -205,6 +205,17 @@ filetype plugin on
 inoremap <expr> <CR>    pumvisible()?"\<C-Y>":"\<CR>" 
 
 """"""""""""""""""""""""""""
+" javaComplete 手动javac Reflection，将Reflection.class 加入CLASSPATH
+""""""""""""""""""""""""""""
+"setlocal omnifunc=javacomplete#Complete
+autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType java set completefunc=javacomplete#Complete
+autocmd FileType java inoremap <expr><CR> pumvisible()?"\<C-Y>":"<CR>" 
+
+"inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
+"inoremap <buffer> <C-S-Space> <C-X><C-U><C-P>
+
+""""""""""""""""""""""""""""
 " Gtrans
 """"""""""""""""""""""""""""
 

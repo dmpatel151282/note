@@ -5,8 +5,9 @@ install_dir="${HOME}/usr"
 
 echo ""
 echo "********* install jdk ***********"
-jdk_tar=`find ${CUR_FILE_PATH} -name jdk*.tar.gz`
-tar zvxf ${jdk_tar} -C ${install_dir} | awk 'BEGIN{FS="/"}{if(NR == 1) print $1}' | xargs -t -i mv ${install_dir}/{} ${install_dir}/jdk/
+#jdk_tar=`find ${CUR_FILE_PATH} -name jdk*.tar.gz`
+#tar zvxf ${jdk_tar} -C ${install_dir} | awk 'BEGIN{FS="/"}{if(NR == 1) print $1}' | xargs -t -i mv ${install_dir}/{} ${install_dir}/jdk/
+sudo apt-get install sun-java6-jdk
 
 grep "JAVA_HOME" $HOME/.bashrc
 ret=$?
