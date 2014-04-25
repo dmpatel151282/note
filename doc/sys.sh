@@ -34,6 +34,7 @@ apt-get install tree wget curl --force-yes -y
 apt-get install zip unzip rar unrar --force-yes -y
 apt-get install dos2unix --force-yes -y
 apt-get install ksnapshot --force-yes -y
+apt-get install calibre --force-yes -y
 echo "********* 安装完成 ***********"
 
 echo ""
