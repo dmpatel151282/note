@@ -1,8 +1,4 @@
 
-sudo apt-get install vim
-sudo apt-get install git 
-
-
 1）su：认证失败
 允许 su 到 root
  sudo passwd 设置root密码

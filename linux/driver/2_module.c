@@ -1,4 +1,15 @@
 
+module_
+
+module_init(dev_name_init);  subsys_initcall();
+module_exit(dev_name_exit);  module_exit();
+
+MODULE_LICENSE("GPL");
+
+
+
+
+-------------------------------------------------------------------------------------
 Module 编译
 
 1. 在编译modules之前要先区内核所在的目录下执行 make modules_prepare

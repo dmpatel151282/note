@@ -1,4 +1,12 @@
 
+测试两个主要方面：
+1. UI界面测试
+    uiautomator
+2. 业务逻辑测试
+    Robolectric
+
+
+--------------------------------------------------------------------------------------------
 软件测试的两个相关模型
 1. LFM(logical functional model)
   根据用户的行为得到一个模型，然后根据这个模型进行测试用例设计，
@@ -23,7 +31,7 @@ http://www.uml.org.cn/zjjs/201208222.asp
     4. 测试结果记录与分析。
 
 -----------------------------------------------------------------------------------------------
-Android自动化测试主要分为Monkeyrunner、Rubotium、UiAutomator、MonkeyTset（在我看来这个不算）等。
+Android自动化测试的方法主要分为Monkeyrunner、Rubotium、UiAutomator、MonkeyTset（在我看来这个不算）等。
 
 主要特点：
 
