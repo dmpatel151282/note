@@ -25,7 +25,15 @@ set history=50                  "设置冒号命令和搜索命令历史列表长度为50
 set hlsearch                    "搜索时高亮显示被找到的文件
 "set ignorecase smartcase       "搜索时忽略大小写，但有一个或以上大写字母仍
                                 "保持对大小写敏感
- 
+                                "
+set textwidth=79  " lines longer than 79 columns will be broken
+set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
+set tabstop=4     " an hard TAB displays as 4 columns
+set expandtab     " insert spaces when hitting TABs
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround    " round indent to multiple of 'shiftwidth'
+set autoindent    " align the new line indent with the previous line
+
 "set mouse=a                    "设定在任何模式下鼠标都可用
 nmap <silent> ,s :set mouse=a<cr><cr>
 
