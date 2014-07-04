@@ -28,7 +28,8 @@ apt-get install jekyll --force-yes -y
 
 apt-get install minicom --force-yes -y
 apt-get install libncurse --force-yes -y
-apt-get install bison flex autoconf automake --force-yes -y
+apt-get install bison flex libxml2-utils autoconf automake --force-yes -y
+apt-get install gnupg gperf lzop gcc-4.4 g++-4.4 g++-4.4-multilib --force-yes -y
 apt-get install ubuntu-tweak unity-control-center --force-yes -y
 apt-get install tree wget curl --force-yes -y
 apt-get install zip unzip rar unrar --force-yes -y
@@ -36,6 +37,11 @@ apt-get install dos2unix --force-yes -y
 apt-get install ksnapshot --force-yes -y
 apt-get install calibre --force-yes -y
 echo "********* 安装完成 ***********"
+
+echo ""
+echo "*********** 动态库 ***********"
+ln -s -f /usr/local/mpc-0.9/lib/libmpc.so.2 /usr/lib/libmpc.so.2
+ln -s -f /usr/local/mpc-0.9/lib/libmpc.so /usr/lib/libmpc.so
 
 echo ""
 echo "*********** 安装 oh-my-zsh *************"
